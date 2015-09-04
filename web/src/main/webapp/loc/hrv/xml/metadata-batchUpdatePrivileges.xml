@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Zapisi metapodataka nisu nađeni</notfound>
+	<notowner>Zapisi metapodatka čije dozvole nisu ažurirane jer niste vlasnik</notowner>
+	<updated>Zapisi metapodataka s ažuriranim dozvolama</updated>
+	<resultstitle>Rezultati ažuriranja dozvola</resultstitle>
+</strings>

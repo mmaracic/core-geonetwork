@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <schematron.title>INSPIRE Stroga pravila</schematron.title>
+    <report.M44.spec><div>Specifikacija</div></report.M44.spec>
+    <assert.M44.date><div>Datum je obavezan kod usklađenosti.</div></assert.M44.date>
+    <assert.M44.title><div>Specifikacija je obavezna kod usklađenosti</div></assert.M44.title>
+    <assert.M44.conformityActual><div>Neispravna specifikacija usklađenosti:<br></br></div></assert.M44.conformityActual>
+    <assert.M44.conformityExpected><div><br></br>Očekivana specifikacija usklađenosti:<br></br></div></assert.M44.conformityExpected>
+    <report.M44.degree><div>Pronađena razina usklađenosti:</div></report.M44.degree>
+
+</strings>

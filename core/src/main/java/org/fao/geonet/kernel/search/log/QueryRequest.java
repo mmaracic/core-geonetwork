@@ -47,7 +47,7 @@ public class QueryRequest {
 	/** The date of the Query */
 	private Date date;
 	
-	/** the formatted date to insert into database (varchar field...) */
+	/** the formatted date to insert into geonetwork.database (varchar field...) */
 	private String formattedDate;
 	
 	/** The client IP making the search query */
@@ -260,7 +260,7 @@ public class QueryRequest {
                 }
             } else {
                 if (Log.isDebugEnabled(Geonet.SEARCH_LOGGER)) {
-                    Log.debug(Geonet.SEARCH_LOGGER, "No queryInfo objects to insert into database for this query: " + this.luceneQuery);
+                    Log.debug(Geonet.SEARCH_LOGGER, "No queryInfo objects to insert into geonetwork.database for this query: " + this.luceneQuery);
                 }
             }
         }

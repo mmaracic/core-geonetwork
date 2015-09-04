@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<heading>E-pošta</heading>
+	<message>E-pošta poslana.</message>
+	<text> Hvala.</text>
+	<errorEmail>
+		<p>Žao nam je, slanje poruke <font class="error">NIJE NEUSPJELO</font>.</p>
+		<p>Molimo provjerite upisane podatke te pokušajte ponovno.</p>
+    </errorEmail>
+</strings>

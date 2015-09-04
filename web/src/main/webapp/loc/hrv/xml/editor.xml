@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+	<cannotGet>Nije moguće dohvatiti naziv alata sa servera!</cannotGet>
+	<error>Pogreška</error>
+</strings>

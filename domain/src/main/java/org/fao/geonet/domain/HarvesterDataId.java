@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Access(AccessType.PROPERTY)
 public class HarvesterDataId implements Serializable {
     private String harvesterUuid;
-    private String key;
+    private String idKey;
 
     public HarvesterDataId() {
         // needed for JPA
@@ -25,7 +25,7 @@ public class HarvesterDataId implements Serializable {
 
     public HarvesterDataId(String harvesterUuid, String key) {
         setHarvesterUuid(harvesterUuid);
-        setKey(key);
+        setIdKey(key);
     }
 
     /**
@@ -50,8 +50,8 @@ public class HarvesterDataId implements Serializable {
      *
      * @return the key.
      */
-    public String getKey() {
-        return key;
+    public String getIdKey() {
+        return idKey;
     }
 
     /**
@@ -59,9 +59,9 @@ public class HarvesterDataId implements Serializable {
      * @param key  identifying the data entity (within the scope of the harvester).
      */
     @Column(nullable = false, length = 255)
-    public void setKey(String key) {
+    public void setIdKey(String key) {
         Assert.isTrue(key.length() <= 255);
-        this.key = key;
+        this.idKey = key;
     }
 
     @Override
@@ -72,7 +72,7 @@ public class HarvesterDataId implements Serializable {
         HarvesterDataId that = (HarvesterDataId) o;
 
         if (!harvesterUuid.equals(that.harvesterUuid)) return false;
-        if (!key.equals(that.key)) return false;
+        if (!idKey.equals(that.idKey)) return false;
 
         return true;
     }
@@ -80,7 +80,7 @@ public class HarvesterDataId implements Serializable {
     @Override
     public int hashCode() {
         int result = harvesterUuid.hashCode();
-        result = 31 * result + key.hashCode();
+        result = 31 * result + idKey.hashCode();
         return result;
     }
 
@@ -88,7 +88,7 @@ public class HarvesterDataId implements Serializable {
     public String toString() {
         return "ID {" +
                "harvesterUuid='" + harvesterUuid + '\'' +
-               ", key='" + key + '\'' +
+               ", key='" + idKey + '\'' +
                '}';
     }
 }

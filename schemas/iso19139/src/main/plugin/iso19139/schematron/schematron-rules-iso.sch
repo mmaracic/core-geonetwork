@@ -181,6 +181,17 @@ USA.
 			<sch:report
 				test="$emptyStatement = false()"
 				>$loc/strings/report.M13</sch:report>
+		</sch:rule>-->
+		
+		<sch:rule context="/gmd:MD_Metadata[gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' 
+			or gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='series']">
+			<sch:let name="emptyStatement" value="(count(gmd:dataQualityInfo/*/gmd:lineage/gmd:LI_Lineage/gmd:source) + count(gmd:dataQualityInfo/*/gmd:lineage/gmd:LI_Lineage/gmd:processStep)) = 0 and count(gmd:dataQualityInfo/*/gmd:lineage) > 0"/>
+			<sch:assert
+				test="$emptyStatement = true()"
+				>$loc/strings/alert.M13</sch:assert>
+			<sch:report
+				test="$emptyStatement = true()"
+				>$loc/strings/report.M13</sch:report>
 		</sch:rule>
 	</sch:pattern>
 	<!-- TEST  8 FXCHECK -->

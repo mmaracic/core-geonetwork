@@ -317,5 +317,13 @@
         <b>Example:</b> 'view', 'discovery', 'download', 'transformation', 'invoke', 'other'
     </div></alert.M60>
     <report.M60><div>Service type is:</div></report.M60>
+    
+    <alert.M80><div><h2>INSPIRE - Conformance reference date</h2><br/>
+        Conformity reference date is not set. Conformance reference date is compulsory.
+    </div></alert.M80>
+    <report.M80><div><h2>Conformance reference date is set.</h2></div></report.M80>
+    
+    <alert.M81><div><h2>Coupled resource is a reference to this metadata. Select another URL.</h2></div></alert.M81>
+    <report.M81><div><h2>Coupled resource is set</h2></div></report.M81>
     <!-- INSPIRE metadata rules translation / END -->
 </strings>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<heading>Greška vezana za prava</heading>
+	<message>Postoji mogućnost da nemate dovoljna prava za izvesti ovu operaciju.</message>
+	<button>Natrag</button>
+</strings>

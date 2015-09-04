@@ -35,7 +35,7 @@ public class HarvesterDataRepositoryTest extends AbstractSpringDataTest {
 
         for (HarvesterData harvesterData : found) {
             assertEquals(data1.getId().getHarvesterUuid(), harvesterData.getId().getHarvesterUuid());
-            if (harvesterData.getId().getKey().equals(data2.getId().getKey())) {
+            if (harvesterData.getId().getIdKey().equals(data2.getId().getIdKey())) {
                 fail("should not have found data2: "+data2);
             } else {
                 final boolean equalsData1 = data1.equals(harvesterData);

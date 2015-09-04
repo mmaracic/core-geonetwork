@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Metapodaci nisu pronađeni</notfound>
+	<notowner>Metapodatke ne možete obrisati jer niste njihov vlasnik.</notowner>
+	<updated>Metapodaci su obrisani.</updated>
+</strings>

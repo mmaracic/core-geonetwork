@@ -98,7 +98,7 @@ Example error response:
 ::
  
  <error id="error">
-   <message>Unique index or primary key violation: "CONSTRAINT_INDEX_1 ON PUBLIC.METADATA(UUID)"; SQL statement: INSERT INTO Metadata (id, schemaId, data, createDate, changeDate, source, uuid, is Template, isHarvested, root, owner, doctype, groupOwner) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23001-152]</message>
+   <message>Unique index or primary key violation: "CONSTRAINT_INDEX_1 ON PUBLIC.METADATA(UUID)"; SQL statement: insert into geonetwork.Metadata (id, schemaId, data, createDate, changeDate, source, uuid, is Template, isHarvested, root, owner, doctype, groupOwner) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23001-152]</message>
    <class>JdbcSQLException</class>
    <stack>..</stack>
    <request>...</request>

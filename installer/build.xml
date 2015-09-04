@@ -68,23 +68,23 @@
     <replace file="../web/target/inspire/data-db-default.sql">
       <replacefilter>
         <replacetoken>
-          <![CDATA[INSERT INTO Settings VALUES (721,720,'enable','false');]]></replacetoken>
+          <![CDATA[insert into geonetwork.Settings VALUES (721,720,'enable','false');]]></replacetoken>
         <replacevalue>
-          <![CDATA[INSERT INTO Settings VALUES (721,720,'enable','true');]]></replacevalue>
+          <![CDATA[insert into geonetwork.Settings VALUES (721,720,'enable','true');]]></replacevalue>
       </replacefilter>
 
       <replacefilter>
         <replacetoken>
-          <![CDATA[INSERT INTO Settings VALUES (722,720,'enableSearchPanel','false');]]></replacetoken>
+          <![CDATA[insert into geonetwork.Settings VALUES (722,720,'enableSearchPanel','false');]]></replacetoken>
         <replacevalue>
-          <![CDATA[INSERT INTO Settings VALUES (722,720,'enableSearchPanel','true');]]></replacevalue>
+          <![CDATA[insert into geonetwork.Settings VALUES (722,720,'enableSearchPanel','true');]]></replacevalue>
       </replacefilter>
 
       <replacefilter>
         <replacetoken>
-          <![CDATA[INSERT INTO Settings VALUES (913,910,'enableInspireView','false');]]></replacetoken>
+          <![CDATA[insert into geonetwork.Settings VALUES (913,910,'enableInspireView','false');]]></replacetoken>
         <replacevalue>
-          <![CDATA[INSERT INTO Settings VALUES (913,910,'enableInspireView','true');]]></replacevalue>
+          <![CDATA[insert into geonetwork.Settings VALUES (913,910,'enableInspireView','true');]]></replacevalue>
       </replacefilter>
     </replace>
   </target>

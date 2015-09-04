@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <!-- INSPIRE metadata rules translation / START -->
+    
+    <!-- List of pattern title -->
+    <identification>Identifikacija</identification>
+    <dataIdentification>Identifikacija podataka</dataIdentification>    
+    <serviceIdentification>Identifikacija usluge</serviceIdentification>
+    <theme>Ključne riječi i INSPIRE teme</theme>
+    <serviceTaxonomy>INSPIRE Service taksonomija</serviceTaxonomy>
+    <geo>Geografska lokacija</geo>
+    <temporal>Vremenska referenca</temporal>
+    <quality>Kontrola kvalitete</quality>
+    <conformity>Usklađenost</conformity>
+    <constraints>Ograničenja pristupa i korištenja</constraints>
+    <org>Odgovorna organizacija</org>
+    <metadata>Metapodaci o metapodacima</metadata>
+    
+    
+    <alert.M35><div><h2>Nedostaje naslov izvora.</h2></div></alert.M35>
+    <report.M35><div><h2>Nađen naslov izvora:</h2></div></report.M35>
+    <alert.M36><div><h2>Nedostaje sažetak izvora.</h2>
+        <br/>
+        <b>Primjer:</b><br/>
+        Skup podataka sadrži topografiju velikog mjerila(1:1.000), koja pokriva cijelu zemlju.
+    </div></alert.M36>
+    <report.M36><div><h2>Sažetak izvora je:</h2></div></report.M36>
+    <alert.M37><div><h2>Vrsta izvora nedostaje ili ima pogrešnu vrijednost.</h2>
+        <br/>
+        <b>Upute za implementaciju:</b><br/>
+        Vrijednosti koda opsega (MD_ScopeCode) u dosegu direktive (Pogledajte SC4 u 1.2) su:
+        <ul>
+            <li>skup podataka za prostorne skupove podataka;</li>
+            <li>niz za nizove prostornih skupova podataka;</li>
+            <li>usluge za usluge prostornih podataka.</li>
+        </ul> 
+        Svojstvo razine hijerarhije (hierarchyLevel) nije zadano s ISO
+        19115, ali je potrebno za usklađivanje s INSPIRE
+        pravilima za implementaciju metapodataka (Pogledajte SC2 u 1.2).        
+    </div></alert.M37>
+    <report.M37><div><h2>Vrsta izvora je: </h2></div></report.M37>
+    <alert.M38><div><h2>Neodstaje jedinstveni identifikator izvora</h2>
+        <br/>
+        <b>Upute za implementaciju</b><br/>        
+        Obavezno za skup podataka i niz skupa podataka.<br/>
+        <b>Primjer:</b> 527c4cac-070c-4bca-9aaf-92bece7be902
+    </div></alert.M38>
+    <report.M38><div>Jedinstveni identifikator izvora je:</div></report.M38>
+    <report.M38.codespace><div>Prostor imena jedinstvenog identifikatora izvora je:</div></report.M38.codespace>
+    <alert.M39><div><h2>INSPIRE - ISO kategorija teme obavezna</h2><br/>
+        Kategorije teme definirane u Part D 2 u INSPIRE
+        pravilima za implementaciju metapodataka su izvedene iz kategorija teme definiranih u B.5.27 od ISO 19115.
+        INSPIRE pravila za implementaciju metapodataka definiraju
+        INSPIRE podatkovne teme za koje su pojedine kateogrije teme primijenjive, 
+		npr., administrativne jedinice (Administrative units- I.4) i statističke jedinice (Statistical
+        units- III.1) su INSPIRE teme za koje je primijenjiva kateogrija teme granice (boundaries).
+        Vrijednost ISO 19115/ISO 19119 elementa metapodataka je vrijednost koja se pojavljuje 
+		u stupcu naziva ("name") tablice u B.5.27 od ISO 19115.
+    </div></alert.M39>
+    <report.M39><div>ISO kategorija teme je:</div></report.M39>
+    <alert.M40><div><h2>INSPIRE tema je obavezna</h2></div></alert.M40>
+    <report.M40><div> INSPIRE tema/e nađena/e.</div></report.M40>
+    <alert.M41><div><h2>INSPIRE - Geografski granični okvir je obavezan</h2><br/>
+        <ul>
+            <li>
+                Obavezno za prostorni skup podataka i niz.                
+            </li>
+            <li>
+                Uvjetno za prostorne usluge: Obvezno za usluge s
+                eksplicitnom zemljopisnom mjerom.              
+            </li>
+        </ul>
+        
+        <b>Upute za implementaciju</b>
+        <ul>
+            <li>
+                Postoje mnogi granični okviri koji definiraju geografsku lokaciju izvora
+				kao instance elementa 
+                identificationInfo[1]/*/extent/*/geographicElement imajući svojstva:
+                westBoundLongitude(najzapadnija geografska dužina), eastBoundLongitude(najistočnija geografska dužina),
+                southBoundLatitude(najjužnija geografska širina) and northBoundLatitude (najsjevernija geografska širina).
+				Četiri koordinate graničnog okvira potječu od iste instance.                
+            </li>
+            <li>
+               Granični okvir mora biti najmanji mogući.      
+            </li>
+            <li>
+                Ako granični okvir prelazi 180 meridijan, onda će vrijednost
+                najzapadnije geografske dužine (westBoundLongitude) biti veća od
+                vrijednosti najistočnije geografske dužine (eastBoundLongitude).      
+            </li>
+            <li>
+                Koordinate graničnog okvira su izražene u bilo kojem
+                geografskom koordinatnom referentnom sustavu s Greenwichu
+                Nultim meridijanom (Vidi SC13 u 1.2).   
+            </li>
+        </ul>      
+        
+    </div></alert.M41>
+    <alert.M41.N><div>Najsjevernija geografska širina (NorthBoundLongitude) nedostaje ili ima pogrešnu vrijednost</div></alert.M41.N>
+    <alert.M41.S><div>Najjužnija geografska širina (SouthBoundLongitude) nedostaje ili ima pogrešnu vrijednost</div></alert.M41.S>
+    <alert.M41.E><div>Najistočnija geografska dužina (EastBoundLongitude) nedostaje ili ima pogrešnu vrijednost</div></alert.M41.E>
+    <alert.M41.W><div>Najzapadnija geografska dužina (WestBoundLongitude) nedostaje ili ima pogrešnu vrijednost</div></alert.M41.W>
+    <report.M41.N><div>Najsjevernija geografska širina (NorthBoundLongitude) nađena:</div></report.M41.N>
+    <report.M41.S><div>Najjužnija geografska širina (SouthBoundLongitude) nađena:</div></report.M41.S>
+    <report.M41.E><div>Najistočnija geografska dužina (EastBoundLongitude) nađena:</div></report.M41.E>
+    <report.M41.W><div>Najzapadnija geografska dužina (WestBoundLongitude) nađena:</div></report.M41.W>
+    
+    <alert.M42><div><h2>INSPIRE - Vremenska referenca je obavezna</h2>
+        Nije nađena instanca vremenske reference.
+        <b>Upute za implementaciju</b><br/>
+        Svaka instanca vremenskog obuhvata može biti interval
+        datuma ili pojedini datum. Ukupni vremenski period
+        obuhvaćen sadržajem izvora može se sastojati
+        od jedne ili više instanci.<br/>
+        Ili datum referenciranja citiranog izvora (objava, zadnja revizija ili stvaranje).
+        <br/>
+        <b>Primjer:</b>
+        Od 1977-03-10T11:45:30 do 2005-01-15T09:10:00
+    </div></alert.M42>
+    <alert.M42.creation><div>Ne smije biti više od jedne instance 
+        MD_Metadata.identificationInfo[1].MD_Identification.citation.CI_Citation.date
+        deklarirane kao datuma stvaranja (tj. da CI_Date.dateType ima vrijednost stvaranja)</div></alert.M42.creation>
+    <report.M42.begin><div>Vremenski obuhvat (početak) pronađen: </div></report.M42.begin>
+    <report.M42.end><div>Vremenski obuhvat (početak) pronađen:  </div></report.M42.end>
+    <report.M42.publication><div>Datum objave izvora pronađen:</div></report.M42.publication>
+    <report.M42.creation><div>Datum stvaranja izvora pronađen:</div></report.M42.creation>
+    <report.M42.revision><div>Datum revizije izvora pronađen:</div></report.M42.revision>
+    
+    
+    <alert.M43><div><h2>INSPIRE - Podrijetlo je obavezno</h2><br/>
+        <ul>
+            <li>Obvezno za prostorni skup podataka i niz prostornih skupova podataka.</li>
+            <li>Nije primjenjivo za usluge.</li>
+        </ul>
+        Osim općeg objašnjenja znanja proizvođača podataka
+        o podrijetlu skupapodataka, moguće je ovdje staviti izjave o kvaliteti podataka.<br/>
+        Jedan ISO 19115 skup metapodataka može sadržavati više od jednog skupa
+        informacija o kvaliteti uputa za implementaciju, pri čemu svaki od njih ima jednu ili nijednu
+		izjavu o podrijetlu. Postojati će jedan i samo jedan skup informacija o kvaliteti i imati izjavu o podrijetlu (Vidi SC6 u 1.2).<br/>
+        <b>Primjer:</b>    Skup podataka je digitaliziran iz standardne 1:5.000 karte
+        
+    </div></alert.M43>
+    <report.M43><div><h2>Podrijetlo je postavljeno.</h2></div></report.M43>
+    
+    
+    <alert.M44><div><h2>INSPIRE - Usklađenost je obavezna (u DQ_DomainConsistency.result.DQ_ConformanceResult)</h2><br/>
+        <b>Upute za implementaciju</b> <br/>
+        Prva dva stupnja usklađenosti definirana u dijelu D 5
+        INSPIRE Pravila za implementaciju metapodataka mapiraju se na dvije
+        vrijednosti Booleove domene ISO 19115. Zadnja vrijednost
+        odgovara slučaju kada neme izjave o sukladnosti
+        u metapodacima za odgovarajuću specifikaciju.<br/>
+        
+        <b>Primjer:</b> naslov “INSPIRE Upute za implementaciju utvrdđuju
+		tehnička rješenja za interoperabilnost i
+		usklađivanje administrativnih granica”.
+                
+    </div></alert.M44>
+    <report.M44.nonev><div>Stupanj usklađenosti izvora još nije ocijenjen.</div></report.M44.nonev>
+    <report.M44.degree><div>Stupanj sukladnosti pronađen:</div></report.M44.degree>
+    <report.M44.spec><div>Specifikacija:</div></report.M44.spec>
+    
+    <alert.M45.rc><div><h2>Treba postojati barem jedna instanca
+        MD_Metadata.identificationInfo[1].MD_Identification.resourceConstraints</h2></div></alert.M45.rc>
+    <report.M45.ac><div>Nađeno ograničenje na javnom pristupu (accessConstraints):</div></report.M45.ac>
+    <report.M45.class><div>Nađeno ograničenje na javnom pristupu - klasifikaciji (classification):</div></report.M45.class>
+    <alert.M45.ca><div>Treba postojati barem jedan element 'accessConstraints' (ograničenja pristupa)</div></alert.M45.ca>	
+    <report.M45.ca><div> elemenata 'accessConstraints' (ograničenja pristupa) pronađeno.</div></report.M45.ca>	
+    <alert.M45.or><div>Ako postoji vrijednost 'otherConstraints' (Ograničenja javnog pristupa: ostala ograničenja) koje definira ograničenja javnom pristupu, vrijednost 'accessConstraints' (Ograničenja javnog pristupa: pristup) mora biti 'otherRestrictions' (Ostala ograničenja). Inače, 'otherConstraints' (Ograničenja javnog pristupa: ostala ograničenja) mora biti prazno. Provjerite popis ograničenja pristupa i tekstualno polje za Ograničenja javnog pristupa: ostala ograničenja.</div></alert.M45.or>
+    <report.M45.or><div>Nađeno ograničenje na javnom pristupu (otherConstraints):</div></report.M45.or>
+    <alert.M45.us><div>Uvjeti koji se primjenjuju na pristup i korištenje nedostaju</div></alert.M45.us>
+    <report.M45.us><div>Uvjeti koji se primjenjuju na pristup i korištenje nađeni:</div></report.M45.us>
+
+
+    <alert.M45><div><h2>INSPIRE - Uvjeti za pristup i korištenje obavezni</h2><br/>
+    </div></alert.M45>
+    <alert.M46><div><h2>INSPIRE - Ograničenja za javni pristup obavezna</h2></div></alert.M46>
+    
+    
+    
+    <alert.M47><div><h2>INSPIRE - Odgovorna organizacija za izvor je obavezna</h2><br/>
+        U odnosu na odgovornu organizaciju, ali mogu postojati
+        mnoge odgovorne organizacije za jedan izvor. Ime organizacije i e-mail su obavezni.
+        <br/>
+        Vidi identifikacijski dio / kontaktna točka.
+    </div></alert.M47>
+    <report.M47><div>Odgovorna organizacija za izvor pronađena.</div></report.M47>
+    <alert.M47.info><div>Ime organizacije i e-mail nisu nađeni za odgovornu organizaciju.</div></alert.M47.info>
+    <report.M47.info><div>Ime organizacije i e-mail nađeni za:</div></report.M47.info>
+    
+    <alert.M48><div><h2>INSPIRE - KOntakta točka za metapodatke je obavezna</h2><br/>
+        <b>Upute za implementaciju:</b><br/>
+        Uloga odgovorne organizacije koja služi kao kontaktna točka za metapodataka
+        je izvan opsega INSPIRE uputa za implementaciju
+        , ali ovo svojstvo je pod upravljanjem ISO 19115. 
+		Njegova vrijednost može biti inicijalno zadana kao pointOfContact (kontaktna točka, odgovorna organizacija).<br/>
+        Vidi dio za metapodatke.
+    </div></alert.M48>
+    <alert.M48.role><div>Kontakt uloga je prazna.</div></alert.M48.role>
+    <report.M48><div>Nađena kontaktna točka za metapodatke.</div></report.M48>
+    <alert.M48.info><div>Ime organizacije i e-mail nisu nađeni za kontaktnu točku za metapodatke.</div></alert.M48.info>
+    <report.M48.info><div>Ime organizacije i e-mail nađeni za:</div></report.M48.info>
+    
+    <alert.M49><div><h2>INSPIRE - Jezik metapodataka je obavezan</h2><br/>
+        Svojstvom jezika ne upravlja ISO 19115, ali
+        je upravljano za usklađivanje s INSPIRE pravilima 
+		za implementaciju metapodataka.
+    </div></alert.M49>
+    <report.M49><div>Jezik metapodataka je:</div></report.M49>
+    
+    <alert.M50><div><h2>Vremenska oznaka metapodataka nedostaje</h2></div></alert.M50>
+    <report.M50><div><h2>Vremenska oznaka metapodataka je:</h2></div></report.M50>
+    
+    
+    <alert.M51><div><h2>INSPIRE (usluga) - Vezani izvor je obvezan ako su dostupne veze sa skupovima podataka na kojima usluga radi</h2>
+        <br/>
+        <b>Upute za implementaciju:</b><br/>
+        Nisu primjenjive za skupove podataka i nizove skupova podataka<br/>
+        Uvjetno uslugama: obvezno ako su dostupne veze sa skupovima podataka na kojima usluga radi.<br/>
+        
+        <ul>
+            <li>Svojstva će se implementirati referencom (Vidi
+         SC11 u 1.2) i referentna vrijednost objekta MD_DataIdentification (identifikacija podataka)
+         je šifra elementa metapodataka 
+		 vezanog izvora kombinaciji izvora.</li>
+            <li>Za dosljednost, kod elementa metapodataka vezanog izvora
+         također bi trebao biti kod jednog od
+         jedinstvenih identifikatora izvora odgovarajućeg
+         vezanog izvora.</li>
+        </ul>
+    </div></alert.M51>
+    <report.M51><div>Nađeni vezani izvori: </div></report.M51>
+    <alert.M52><div><h2>INSPIRE - Nalaznik izvora je obvezan ako je povezanost dostupna</h2><br/>
+        Vidi napredni pogled / dio za raspodjelu / jedini izvor -element.
+        <br/>
+        <b>Upute za implementaciju:</b><br/>
+            <ul>
+                <li>Odredite valjan URL izvora. Ako nema izravne veze s
+            izvorom, pružiti link na kontaktnu točku
+            gdje je dostupno više informacija o izvoru.</li>
+                <li>Za uslugu, nalaznik izvora može biti jedan od sljedećih:</li>
+                <ul>
+                    <li>Link na dokument sposobnosti usluge;</li>
+                    <li>Link na WSDL dokument usluge(SOAP Binding);</li>
+                    <li>Link na web stranicu s daljnjim uputama</li>
+                    <li>Link na klijentsku aplikaciju koja izravno pristupa usluzi</li>
+                </ul>
+            </ul>
+            
+    </div></alert.M52>
+    <report.M52><div>Nalaznik izvora nađen:</div></report.M52>
+    <alert.M53><div><h2>INSPIRE - Može postojati nijedan ili jedan uvjet koji se primjenjuje na pristup i korištenje</h2><br/>
+        Ograničenja pristupa primijenjena da se osigura zaštita
+        privatnost ili intelektualno vlasništvo, i sva posebna ograničenja
+        ili ograničenja na dobivanje izvora.<br/>
+        <b>Primjer:</b> intellectualPropertyRights (prava na novčanu naknadu iz
+         i kontrolu nad raspodjelom nematerijalne imovine koja je
+         rezultat kreativnosti).
+        <br/>
+        Klasifikacija:
+        <b>Primjer:</b> ograničen (ne za opće objavljivanje)
+        <br/>
+        Ograničenje korištenja:
+        <b>Primjer:</b> nije za korištenje za navigaciju
+        <br/>
+    </div></alert.M53>
+    <alert.M54><div><h2>INSPIRE - Vrijednost ograničenja pristupa (accessConstraints) je otherRestrictions (druga ograničenja), ako i samo ako su primjerci drugih ograničenja (otherConstraints) koji izražavaju ograničenja ya javni pristup</h2></div></alert.M54>
+    <alert.M55><div><h2>INSPIRE (skupovi podataka i nizovi) - Jezik izvora je obvezan ako izvor sadrži tekstualne informacije</h2><br/>
+        Instanca svojstva jezika upravljana je s ISO
+        19.115, može biti zadana inicijalna vrijednost jezika uputa za implementaciju metapodataka
+        kada skup podataka ili niz skupova podataka ne
+        sadrži tekstualne informacije.
+        <br/>
+        <b>Upute za implementaciju:</b><br/>
+        Popis kodova (Vidi ISO/TS 19139) baziran na alpha-3 kodovima
+        ISO 639-2.
+    </div></alert.M55>
+    <report.M55><div>Jezik izvora je:</div></report.M55>
+    <alert.M56><div><h2>INSPIRE - Prostorna rezolucija je obvezna ako može biti specificirana ekvivalentna ljestvica, ili udaljenost rezolucije</h2><br/>
+        <b>Upute za implementaciju:</b>
+        <ul>
+            <li>
+                Svaka prostorna rezolucija je ili ekvivalentno skali ILI
+                donji uzorak udaljenosti.               
+            </li>
+            <li>
+                Kada su dvije ekvivalentne skale ili dva donja uzorka udaljenosti
+                izraženi, prostorna rezolucija je interval omeđen tim dvjema
+                vrijednostima.                 
+            </li>
+        </ul>
+        <b>Primjer:</b> 5000 (npr. karta 1:5000 skale)
+    </div></alert.M56>
+    <report.M56><div>Prostorna rezolucija je postavljena.</div></report.M56>
+    
+    <alert.M57><div><h2>[ISO19119 for services] - Ime operacije (OperationName) je obavezno</h2></div></alert.M57>
+    
+    <alert.M58><div>Nedostaje informacija o taksonomiji usluge (odabir jedne ili više ključnih riječi iz "INSPIRE-servis-taxonomy.rdf" leksikona sinonima)</div></alert.M58>
+    <report.M58><div> klasifikacija taksonomije usluge definirana.</div></report.M58>
+    <alert.M59><div><h2>[ISO19119 for services] - Točka spajanja (ConnectPoint) je obavezna</h2></div></alert.M59>
+    <alert.M60><div><h2>[ISO19119 for services] - Vrsta usluge (ServiceType) je obavezna</h2><br/>
+        Obavezno za usluge.<br/>
+        Nije primjenjivo za skupove podataka i nizove skupova podataka.<br/>
+        <b>Primjer:</b> 'view'(pregled), 'discovery'(pronalaženje), 'download'(preuzimanje), 'transformation'(transformacija), 'invoke'(pozivanje), 'other'(ostalo)
+    </div></alert.M60>
+    <report.M60><div>Vrsta usluge je:</div></report.M60>
+    
+    <alert.M80><div><h2>INSPIRE - Referentni datum specifikacije</h2><br/>
+        Referentni datum specifikacije nije postavljen. Datum je obavezno polje.
+    </div></alert.M80>
+    <report.M80><div><h2>Referentni datum specifikacije je postavljen.</h2></div></report.M80>
+    
+    <alert.M81><div><h2>Uparen izvor pokazuje na ove metapodatke. Odaberite neki drugi upareni izvor</h2></div></alert.M81>
+    <report.M81><div><h2>Uparen izvor je postavljen.</h2></div></report.M81>
+    
+    <!-- INSPIRE metadata rules translation / END -->
+</strings>

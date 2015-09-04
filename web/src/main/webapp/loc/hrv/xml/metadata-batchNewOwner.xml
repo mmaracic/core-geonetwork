@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<groups>Odaberite grupu kojoj ovaj korisnik pripada</groups>
+	<notfound>Zapisi metapodataka nisu nađeni</notfound>
+	<notowner>Zapisi metapodataka koji nisu prebačeni jer niste vlasnik</notowner>
+	<updated>Zapisi metapodataka prenesni novom vlasniku</updated>
+	<resultstitle>Rezultati prebacivanja novog vlasnika</resultstitle>
+	<users>Odaberite korisnika koji će biti novi vlasnik</users>
+</strings>

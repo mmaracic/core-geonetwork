@@ -278,7 +278,7 @@ a table, with some rows labelled as follows:
 - **Fragments matched** - Number of fragments that had identifiers that in the template used by the harvester.
 - **Existing datasets** - Number of metadata records for datasets that existed when the THREDDS harvester was run.
 - **Records built** - Number of records built by the harvester from the template and fragments.
-- **Could not insert** - Number of records that the harvester could not insert into the catalog (usually because the record was already present eg. in the Z3950 harvester this can occur if the same record is harvested from different servers).
+- **Could not insert** - Number of records that the harvester could not insert into geonetwork.the catalog (usually because the record was already present eg. in the Z3950 harvester this can occur if the same record is harvested from different servers).
 
 
 ==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============

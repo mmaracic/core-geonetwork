@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<heading>Pogreška kod pristupa izvoru</heading>
+	<message>Zatraženi izvor ne postoji ili mu nije moguće pristupiti. Postoji mogućnost da je uklonjen ili nemate prava pristupa. Treba kontaktirati osobu nadležnu za taj izvor podataka.</message>
+	<button>Natrag</button>
+</strings>

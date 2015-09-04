@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<delUserConf>Izbrisati korisnika iz baze podataka?</delUserConf>
+    <delUserCsw>Ovaj korisnik je kontakt za CSW ISO Profile, dali želite nastaviti?</delUserCsw>
+</strings>

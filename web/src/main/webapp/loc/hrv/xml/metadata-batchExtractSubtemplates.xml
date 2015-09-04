@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Zapisi metapodataka nisu nađeni</notfound>
+	<notowner>Zapisi metapodataka koji nisu mogli biti obrađeni jer niste vlasnik</notowner>
+	<updated>Zapisi metapodataka obrađeni da bi se izdvojili predlošci</updated>
+	<subtemplates>Predlošci izdvojeni</subtemplates>
+</strings>

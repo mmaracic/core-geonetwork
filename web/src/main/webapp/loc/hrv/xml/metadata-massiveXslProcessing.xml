@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Metapodaci nisu pronađeni</notfound>
+	<notowner>Metapodaci nisu obrađeni jer niste njihov vlasnik</notowner>
+	<updated>Obrađeni metapodaci</updated>
+    <notProcessFound>Proces (metapodataka) nije pronađen za tu shemu</notProcessFound>
+</strings>

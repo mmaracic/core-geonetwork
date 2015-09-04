@@ -245,6 +245,11 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
     </dependency>
+    <dependency>
+        <groupId>com.microsoft.sqlserver.jdbc</groupId>
+        <artifactId>sqljdbc4</artifactId>
+        <version>3.0</version>
+    </dependency>
 		<!-- Not permitted under oracle licensing rules
     <dependency>
       <groupId>ojdbc</groupId>

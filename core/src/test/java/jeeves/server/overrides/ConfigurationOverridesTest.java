@@ -107,8 +107,8 @@ public class ConfigurationOverridesTest {
 			assertEquals("(", lines.get(1).trim());
 			assertEquals("primary key(id,overridden)", lines.get(2).trim());
 			assertEquals(");", lines.get(3).trim());
-			assertEquals("INSERT INTO Settings VALUES (21,20,'host','localhost');", lines.get(4).trim());
-			assertEquals("INSERT INTO Settings VALUES (22,20,'port','8080');", lines.get(5).trim());
+			assertEquals("insert into geonetwork.Settings VALUES (21,20,'host','localhost');", lines.get(4).trim());
+			assertEquals("insert into geonetwork.Settings VALUES (22,20,'port','8080');", lines.get(5).trim());
     	}finally {
     		reader.close();
     	}

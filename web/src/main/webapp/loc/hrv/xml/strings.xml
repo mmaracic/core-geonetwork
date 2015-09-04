@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+
+	<hrv>
+		<name>Hrvatski</name>	<!-- Do not translate! -->
+		<code>HR</code>			<!-- Do not translate! -->
+	</hrv>
+	<eng>
+		<name>English</name>	<!-- Do not translate! -->
+		<code>EN</code>			<!-- Do not translate! -->
+	</eng>
+	<srp>
+		<name>Srpski</name>		<!-- Do not translate! -->
+		<code>SR</code>			<!-- Do not translate! -->
+	</srp>
+	<slv>
+		<name>Slovenščina</name><!-- Do not translate! -->
+		<code>SL</code>			<!-- Do not translate! -->
+	</slv>
+	<bos>
+		<name>Bosanski</name>	<!-- Do not translate! -->
+		<code>BA</code>			<!-- Do not translate! -->
+	</bos>
+    
+	<otherValue>Ostalo:</otherValue>
+	<warning>Upozorenje</warning>
+	<isAdmin>Administrator ?</isAdmin>
+	<anyLanguage>Bilo koji jezik</anyLanguage>
+	<nodata>Prazno</nodata>
+	<extractRegisterItems>Izvezi stavke registra</extractRegisterItems>
+	<selectXPath js="true">Unesite XPath da bi izdvojili XML kao predložak eg. /gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty</selectXPath>
+	<selectExtractTitle js="true">Unesite XPath kako bi izvezli naslov iz predloška</selectExtractTitle>
+	<batchExtractSubtemplatesTitle>Izvezite predloške iz odabranih metapodataka</batchExtractSubtemplatesTitle>
+	<extractSubtemplates>Izvezite predloške</extractSubtemplates>
+	<xpathToExtract>XPath za izvoz predloška</xpathToExtract>
+	<xsltToExtractTitle>XSLT za izvoz naslova iz predloška</xsltToExtractTitle>
+	<xpathToExtractTitle>XPath za izvoz naslova iz predloška</xpathToExtractTitle>
+	<categoryForSubtemplate>Kategorije za predloške</categoryForSubtemplate>
+	<makeChanges>Ja zaista želim učiniti ovo!</makeChanges>
+	<dontMakeChanges>U osnovi, ova operacija neće načiniti nikakve promjene na bazi podataka, tj. izvršava se u testnom modu. Odabirom ovog kontrolnog okvira testni mod se isključuje i promjene će biti spremljene u bazu.</dontMakeChanges>
+	<defaultStatusChangeMessage>Nema informacija</defaultStatusChangeMessage>
+	<createThesaurus>Kreiraj/Ažuriraj Thesaurus</createThesaurus>
+	<thesaurusType>Thesaurus vrsta</thesaurusType>
+	<changeLogMessage>Promijeni log poruku</changeLogMessage>
+	<status>Status</status>
+	<updateStatus>Ažuriraj status</updateStatus>
+	<batchUpdateStatusTitle>Status operacije batch ažuriranja</batchUpdateStatusTitle>
+	<startVersion>Započni verzioniranje</startVersion>
+	<batchStartVersionTitle>Početak batch verzioniranja</batchStartVersionTitle>
+  <editAttributes>Dodaj više detalja</editAttributes>
+  <subtemplate.admin>Obradi direktorije</subtemplate.admin>
+  <subtemplate.admin.desc>Dodaj/uredi/obriši direktorije (npr. direktoriji s kontaktima)</subtemplate.admin.desc>  
+	<surnameMandatory>Prezime je obvezno</surnameMandatory>
+	<firstnameMandatory>Ime je obvezno</firstnameMandatory>
+	<emailMandatory>E-mail adresa je obvezna</emailMandatory>
+	<forgottenPassword>Zaboravili ste vašu lozinku?</forgottenPassword>
+  <selectTemplate>Odaberite shemu</selectTemplate>
+  <mainTemplate>Specifikacija metapodataka NIPP-a</mainTemplate>
+	<useStopwords>Lucene indeks koristi stopwords u ovim jezicima:</useStopwords>    
+  <rebuildIndexMessage>Ako promjenite ove vrijednosti, preporuča se da obnovite Lucene indeks.</rebuildIndexMessage>
+	<!-- new strings - 2.7 -->
+	<notificationsDes>Slanje obavijesti poslužiteljima koji preuzimanju metapodatke</notificationsDes>
+	<metadata-templates-samples-add>Dodaj uzorke i primjere</metadata-templates-samples-add>
+	<metadata-schema-select>Odaberite schemu za odabir uzoraka i testnih podataka</metadata-schema-select>
+	<templatesSamples>Upravljaj uzorcima i testnim podacima</templatesSamples>
+	<simpleSearch>Jednostavna pretraga</simpleSearch>
+	<advancedSearch>Napredna pretraga</advancedSearch>
+	<remoteSearch>Udaljena pretraga</remoteSearch>
+	<displayRemoteHtml>Prikaži rezultate korištenjem dobivenog HTML-a sa servera?</displayRemoteHtml>
+  <noSearchCriteria js="true">Molimo unesite ili odaberite neke kriterije pretrage</noSearchCriteria>
+  <noServer js="true">Molimo odaberite poslužitelj za pretragu</noServer>
+	<anyWith>Sve - koji sadrže neku od ovih riječi</anyWith>
+	<anyWithExactPhrase>Sve - koji sadrže točno ovaj izraz</anyWithExactPhrase>
+	<anyWithAllWords>Sve - koji sadrže sve unesne riječi</anyWithAllWords>
+	<anyWithoutWords>Sve - bez ovih riječi</anyWithoutWords>
+	<dataDownload>Podaci za preuzimanje</dataDownload>
+	<addSchema>Dodaj schemu/profil metapodataka</addSchema>
+	<updateSchema>Ažuriraj schemu/profil metapodataka</updateSchema>
+	<deleteSchema>Obriši schemu/profil metapodataka</deleteSchema>
+	<selectSchema>Odaberi schemu/profil metapodataka</selectSchema>
+	<schemaFileName>Putanja do zip arhive sheme</schemaFileName>
+	<schemaUrl>URL do zip arhive sheme</schemaUrl>
+	<schemaUuid>UUID zapisa lokalnih metapodataka sa GeoNetwork Metadata Schema Archive (URL) kao online izvor</schemaUuid>
+	<add>Dodaj</add>
+	<schemaOps>Operacije nad schemom/profilom metapodataka</schemaOps>
+	<enterSchema>Unesite ime scheme koju treba unijeti</enterSchema>
+	<selectSchemaOperations>Lokacija od zip arhive scheme</selectSchemaOperations>
+	<showRemoteHTML>Prikaži HTML s remote servera</showRemoteHTML>
+		<searchStatistics>Statistika pretrage</searchStatistics>
+		<searchStatisticsDes>Pogledaj statistiku o pretragama izvršenim u aplikaciji</searchStatisticsDes>
+		<stat.byDay>po danu</stat.byDay>
+       <stat.byMonth>po mjesecu</stat.byMonth>
+       <stat.byWeek>po tjednu</stat.byWeek>
+       <stat.byYear>po godini</stat.byYear>
+       <stat.collapse>Zatvori</stat.collapse>
+			 <stat.numAutoGeneratedSearches>Broj autogeneriranih (guiservice) pretraga</stat.numAutoGeneratedSearches>
+       <stat.date>Datum</stat.date>
+       <stat.day>Dan</stat.day>
+       <stat.hits>Broj pogleda</stat.hits>
+       <stat.ip>IP</stat.ip>
+       <stat.noValue>bez vrijednosti</stat.noValue>
+       <stat.language>Jezik</stat.language>
+       <stat.month>Mjesec</stat.month>
+       <stat.numberOfSearch>Broj pretraga</stat.numberOfSearch>
+       <stat.requestDate>Datum zahtjeva</stat.requestDate>
+       <stat.spatialFilter>Prostorni filter</stat.spatialFilter>
+       <stat.totalsearches>Ukupne pretrage korisnika</stat.totalsearches>
+       <stat.year>Godina</stat.year>
+       <stat.mdSheet>Stranica metapodataka</stat.mdSheet>
+       <stat.noTitle>bez naslova</stat.noTitle>
+       <stat.csvExport>CSV export</stat.csvExport>
+       <stat.tabularStats>Tabularna statistika</stat.tabularStats>
+       <stat.tip1begin>Kliknite na link ispod za prikaz statistike u stvarnom vremenu, klik na malu strelicu </stat.tip1begin>
+       <stat.tip1end>kako bi ju sakrili</stat.tip1end>
+       <stat.lastMonthStats>Statistika za prošli mjesec</stat.lastMonthStats>
+       <stat.userIpText>IP adresa korisnika tijekom pretrage(broj pretraga po jedinstvenoj IP adresi)</stat.userIpText>
+       <stat.mostSearchedKeywords>Najviše tražene ključne riječi</stat.mostSearchedKeywords>
+       <stat.mostSearchedCategories>Najviše tražene kategorije</stat.mostSearchedCategories>
+       <stat.simpleVsAdvanced>Jednostavna vs Napredna pretraga</stat.simpleVsAdvanced>
+       <stat.mdPopularity>Popularnost metapodataka</stat.mdPopularity>
+       <stat.graphicalStats>Grafička statistika</stat.graphicalStats>
+       <stat.tip2>Odaberite datumsku jedinicu (godina, mjesec, dan) i vremenski raspon i kliknite "ok" kako bi vidjeli grafički prikaz</stat.tip2>
+       <stat.numberOfRequests>Broj zahtjeva</stat.numberOfRequests>
+        <stat.chooseDateFrom>Odaberite početni datum</stat.chooseDateFrom>
+       <stat.dateFrom>Početni datum</stat.dateFrom>
+       <stat.dateTo>Završni datum</stat.dateTo>
+       <stat.md>Metapodaci</stat.md>
+       <stat.popularity>Popluranost</stat.popularity>
+       <stat.totalSearches>Ukupne pretrage korisnika</stat.totalSearches>
+       <stat.numSearchesPerDay>Broj korisničkih pretraga po danu</stat.numSearchesPerDay>
+       <stat.numSearchesNoResult>Broj korisničkih pretraga bez rezultata</stat.numSearchesNoResult>
+       <stat.simpleAdvancedSearch>Jednostavna / napredna pretraga</stat.simpleAdvancedSearch>
+       <stat.searchedTerm>Traženi izrazi</stat.searchedTerm>
+       <stat.count>Broj</stat.count>
+       <stat.numSimpleSearch>Broj jednostavnih pretraga</stat.numSimpleSearch>
+       <stat.numAdvancedSearch>Broj naprednih pretraga</stat.numAdvancedSearch>
+       <stat.></stat.>
+       <stat.exportRequests>Izvoz tablice zahtjeva (jedan unos po korisničkom zahtjevu)</stat.exportRequests>
+       <stat.exportParams>Izvoz tablice parametara (zahtijevane ključne riječi, više unosa po korisničkom zahtjevu)</stat.exportParams>
+       <stat.csvSemiColumnDelimiter>Točka zarez znak odjeljivanja</stat.csvSemiColumnDelimiter>
+			 <stat.rightClickSaveAs>Desni klik na link kako bi spremili CSV file</stat.rightClickSaveAs>
+       <stat.searchedKeywords>Tražene ključne riječi</stat.searchedKeywords>
+       <stat.popuByGroup>Popularnost metapodataka po grupi</stat.popuByGroup>
+       <stat.popuByCatalog>Popularnost metapodataka po katalogu (node id)</stat.popuByCatalog>
+			 <stat.popularityByCategory>Popularnost metapodataka po kategoriji</stat.popularityByCategory>
+       <stat.mdType>Vrsta pretraživanih metapodataka</stat.mdType>
+       <stat.dsMsType>Metapodaci za skup podataka</stat.dsMsType>
+       <stat.serviceMdType>Metapodaci za usluge</stat.serviceMdType>
+       <stat.basicGeodataType>Osnovni geopodaci</stat.basicGeodataType>
+       <stat.allTypes>Sve</stat.allTypes>
+       <stat.seeAdminPage>Pogledajte sistemsku konfiguracijsku stranicu kako bi uključili svojstvo evidencije (log) podataka</stat.seeAdminPage>
+       <stat.logDisabled>Evidencija podataka je trenutno onemogućena</stat.logDisabled>
+       <stat.maintenance>Održavanje</stat.maintenance>
+       <stat.deleteTmpImages>Briše privremene grafičke i CSV datoteke</stat.deleteTmpImages>
+       <stat.deleteTmpFiles>Obrišite datoteke sada </stat.deleteTmpFiles>
+       <stat.filesDel> datoteka obrisano.</stat.filesDel>
+       <stat.warnCsvExport>Upozorenje: izvoz log tablica može potrajati nekoliko minuta</stat.warnCsvExport>
+       <stat.clickToDownload>Kliknite na link kako bi preuzeli CSV datoteku</stat.clickToDownload>
+	<!-- end new strings -->
+	
+	<drawRectangle js="true">Nacrtaj pravokutnik</drawRectangle>
+	<drawPolygon js="true">Nacrtaj poligon</drawPolygon>
+	<drawCircle js="true">Nacrtaj krug</drawCircle>
+	<geopublisher>GeoPublisher</geopublisher>
+    <geoPublisherWindowTitle js="true">Geo-publication: </geoPublisherWindowTitle>
+    <geopublisherHelp>Objavi ili ukloni skup podataka kao WMS ili WFS na udaljenom geoserver-u.</geopublisherHelp>
+    <publish js="true">Objavi</publish>
+    <publishTooltip js="true">Objavi trenutni skup podataka na udaljenom čvoru. Ako je skup podataka već objavljen na tom čvoru, biti će ažuriran.</publishTooltip>
+    <publishError js="true">Objavljivanje nije uspjelo.</publishError>
+    <publishErrorCode js="true">Kod greške:</publishErrorCode>
+    <publishSuccess js="true">Uspješno objavljivanje.</publishSuccess>
+	<publishLayerAdded js="true"> Sloj dodan na pregled mape.</publishLayerAdded>
+    <unpublish js="true">Ukloni</unpublish>
+    <unpublishTooltip js="true">Makni skup podataka sa udaljenog čvora.</unpublishTooltip>
+    <unpublishError js="true">Uklanjanje nije uspjelo. </unpublishError>
+    <unpublishSuccess js="true">Uspješno uklanjanje.</unpublishSuccess>
+    <check js="true">Provjera</check>
+    <errorConnectionRefused js="true">Konekcija odbijena.</errorConnectionRefused>
+    <errorDatasetNotFound js="true">Skup podataka nije pronađen.</errorDatasetNotFound>
+    <datasetFound js="true">Skup podataka pronađen i dodan na pregled mape.</datasetFound>
+    <checkFailure js="true">Greška pri provjeri skupa podataka na udaljenom čvoru.</checkFailure>
+    <addOnlineSource js="true">Dodaj WMS podatak na online izvor</addOnlineSource>
+    <statusInformation js="true">Informacija o statusu.</statusInformation>
+    <mapPreview js="true">Pregled mape</mapPreview>
+    <selectANode js="true">Odaberite čvor ...</selectANode>
+    <publishing js="true">Objavljivanje ...</publishing>
+	<logo>Konfiguracija logo sličica</logo>
+    <logoSelectionWindow js="true">Odaberite logo</logoSelectionWindow>
+    <chooseLogo>Odaberite logo</chooseLogo>
+    <orgLogo>Organizacijski logo</orgLogo>
+	<logoDes>Upravljanje logo sličicama za kataloge (node and harvesting logo)</logoDes>
+	<logoRegistered js="true">Registrirani logo-i</logoRegistered>
+	<logoAdd js="true">Dodaj novi logo</logoAdd>
+  <selectedLogo js="true">Odabrani logo:</selectedLogo>
+	<logoDel js="true">Ukloni</logoDel>
+	<logoForNode js="true">Koristi za katalog</logoForNode>
+  <logoForNodeFavicon js="true">Koristi kao favicon (ikona u pregledniku))</logoForNodeFavicon>
+	<logoSelect js="true">Odaberi sliku za logo ...</logoSelect>
+	<url>URL</url>
+	<createChild>Kreiraj dijete</createChild>
+	<updateChildren>Ažuriraj djecu</updateChildren>
+	<updateChildrenOk>Djeca ažurirana</updateChildrenOk>
+	<updateChildrenFailed>Neuspjelo ažuriranje djece</updateChildrenFailed>
+	<batchUpdateChildrenTitle>Ažuriraj djecu</batchUpdateChildrenTitle>
+	<updateMode>Odaberite strategiju ažuriranja djece od roditelja: </updateMode>
+	<addMode>Dodaj dijelove</addMode>
+	<replaceMode>Zamijeni dijelove</replaceMode>
+	<updateChildrenHelp>
+		<div>
+			<h2>Više detalja</h2>
+			Ažurirajte svu djecu koja se odnose na trenutni zapis metapodataka. Odaberite
+			strategiju koja se primijenjuje na sve glavne dijelove.
+			<br/>
+			<br/>
+			<b>Dodaj</b> će sačuvati dio djeteta i dodati ekvivalentni dio
+			roditelja nakon djeteta.
+			<b>Zamijeni </b> će zamijeniti dio djeteta sa ekvivalentnim dijelom roditelja.
+			<br/>
+			<br/>
+			Identifikator djeteta, skup znakova, jezik, identifikator roditelja,
+			razina hijerarhije, skup podataka URI i dio identifikacije (isključujući
+			mjere i ključne riječi) uvijek su sačuvani.
+			Lokacije roditelja se uvijek mijenjaju.
+			<br/>
+			<b>Dio distribucije i održavanja</b> su uvijek zamijenjeni (čak
+			i u modu dodaj) jer ISO19115 ne dopušta da bude više od jednog.
+		</div>
+	</updateChildrenHelp>
+	<otherActions>Ostale aktivnosti</otherActions>
+	<computeExtentFromKeywords>Odredi opseg (dodaj)</computeExtentFromKeywords>
+	<computeExtentFromKeywordsReplace>Odredi opseg (zamijeni)</computeExtentFromKeywordsReplace>
+	<computeExtentFromKeywordsHelp>Odredi opseg djelovanja analize ključnih riječi 
+	i potraži sličan koncept u svim raspoloživim rječnicima.
+	Jedan dodatak se dodaje za svaku ključnu riječ koja se podudara.
+	U "dodaj" modu, postojeći opseg je sačuvan. U "zamijeni" modu, postojeći granični okvir je uklonjen (vremenski, vertikalni 
+	i granični poligoni su sačuvani). Sačuvajte vaše zapise o metapodacima prije pokretanja akcije..</computeExtentFromKeywordsHelp>
+	<shortcutHelp js="true">Pomoć o prečacima ?</shortcutHelp>
+	<helpShortcutsEditor>
+		<h2>Prečaci u modu za uređivanje:</h2>
+		<hr/>
+		<ul>
+			<li>ctrl+shift+s: Pohrani promjene</li>
+			<li>ctrl+shift+v: Potvrdi dokument</li>
+			<li>ctrl+shift+q: Pohrani i zatvori promjene</li>
+			<li>ctrl+shift+t: Postavi sličicu za metapodatke</li>
+			<li>ctrl+shift+r: Resetiraj promjene</li>
+			<li>ctrl+shift+c: Otkaži promjene</li>
+		</ul>
+	</helpShortcutsEditor>
+	<validationReport js="true">Potvrdi izvještaj</validationReport>
+	<errorsOnly>Prikaži samo pogreške</errorsOnly>
+	<schematronReport>Uskladi s preporučenim metapodacima (Schematron)</schematronReport>
+	<xsdReport>Uskladi sa standardom metapodataka (XML Schema)</xsdReport>
+	<rules name="schematron-rules-inspire">INSPIRE pravila</rules>
+	<rules name="schematron-rules-iso">ISO 19115/19119 pravila</rules>
+	<rules name="schematron-rules-geonetwork">GeoNetwork preporuke</rules>	
+	<getCapabilitiesLayer js="true">GetCapabilities razina</getCapabilitiesLayer>
+	<ServiceUpdateError js="true">Pogreška pri ažuriranju usluga metapodataka</ServiceUpdateError>
+	<NotOwnerError js="true">Nemate ovlasti za ažuriranje ovog povezanog zapisa.</NotOwnerError>
+	<NoServiceURLError js="true">Provjerite je li odabrana (URL) usluga definirana.</NoServiceURLError>
+	<GetCapabilitiesDocumentError js="true">Pogreška pri učitavanju URL dokumenta za GetCapabilities uslugu: </GetCapabilitiesDocumentError>
+	<noOperatesOn>Nema povezanog skupa podataka</noOperatesOn>
+    <linkedDataset>Povezani skupovi podataka:</linkedDataset>
+    <linkedFeatureCatalogue>Povezani katalog obilježja:</linkedFeatureCatalogue>
+	<linkedFeatureCatalogueHelp>Dodaj odnos između trenutnih zapisa metapodataka
+	i kataloga obilježja u ISO19110 normi.</linkedFeatureCatalogueHelp>
+	<createLinkedFeatureCatalogue>Katalog obilježja za veze</createLinkedFeatureCatalogue>
+	<layerNameHelp js="true">Prilikom povezivanja metapodataka na usluge s jednim ili više
+ 	skupom podataka, povezani element izvora bi mogao sadržavati naziv kao što je definirano u OGC usluzi.
+	Popis usluga slojeva može pomoći editoru metapodataka za dodavanje postojeće vrijednosti.</layerNameHelp>
+	<layerName js="true">Ime sloja</layerName>
+	<createIfNotExistButton js="true">Izradi novi zapis metapodataka</createIfNotExistButton>
+	<associateService js="true">Povezivanje usluge metapodataka</associateService>
+	<associateDataset js="true">Povezivanje metapodataka</associateDataset>
+	<associateServiceHelp>Da biste dodali vezu na uslugu metapodataka, potražite uslugu i odredite naziv.</associateServiceHelp>
+	<associateDatasetHelp>Da biste dodali vezu na podatke, idite na ISO prikaz &gt; Identifikacijski dio koji definira utjecaj na elemente.</associateDatasetHelp>
+	<addParent> Dodaj ili ažuriraj dio roditelja metapodataka</addParent>
+	<createAssoService>Izradi vezu</createAssoService>
+	<updateMdd>Ažuriraj metapodatke za skup podataka</updateMdd>
+	<datasetCreate>Izradi metapodatke za skup podataka</datasetCreate>
+	<linkedServices> Povezane usluge metapodataka:</linkedServices>
+	<linkedServiceMetadataHelp>Da biste dodali vezu na uslugu, idite na ISO prikaz &gt; Kartica distribucije.</linkedServiceMetadataHelp>
+	<linkedParentMetadata> Roditelj/dijete metapodataka:</linkedParentMetadata>
+	<linkedParentMetadataHelp>Da biste dodali vezu na roditelja, idite na ISO prikaz &gt; Kartica metapodataka.</linkedParentMetadataHelp>
+	<linkedChildrenMetadata> Djeca metapodataka:</linkedChildrenMetadata>
+	<linkedChildrenMetadataHelp>Popis djece povezane s trenutnim zapisom metapodataka.</linkedChildrenMetadataHelp>
+	<linkedDatasetMetadata> Povezane grupe podataka:</linkedDatasetMetadata>
+	<serviceCreate>Izradi novu uslugu metapodataka</serviceCreate>
+	<parentSearch js="true">Traži zapis metapodataka za postavljanje roditelja trenutnom zapisu.</parentSearch>
+	<linkedMetadataSelectionWindowTitle js="true">Povezani odabir metapodataka</linkedMetadataSelectionWindowTitle>
+	<searchText js="true">Pretraga teksta</searchText>
+	<mdTitle js="true">Naslov metapodataka</mdTitle>
+	<createRelation js="true">Kreirajte vezu</createRelation>
+	<export>Izvoz (ZIP)</export>
+	<exportText>Izvoz (TXT)</exportText>	
+	<addXMLFragment>Dodaj iz rječnika ...</addXMLFragment>
+	<translateWithGoogle>Koristiti Google uslugu prevođenja za prijedlog prijevoda odabranog jezika.</translateWithGoogle>
+	<translateWithGoogle.maxSize js="true">Tekst za prevesti koji je veći od 5000 znakova (vidi http://code.google.com/apis/ajaxlanguage/terms.html).</translateWithGoogle.maxSize>
+	<translateWithGoogle.emptyInput js="true">Glavni unos jezika je prazan. Dodajte jezik prije korištenja usluge prevođenja.</translateWithGoogle.emptyInput>
+	<layersAdded js="true">Odabrani slojevi su dodani</layersAdded>
+	<registrationFailed js="true">Greška, neuspješna registracija:</registrationFailed>	
+	<tryAgain js="true">Probajte ponovo kasnije</tryAgain>
+	<cannotRetrieveGroup js="true">Grupe se ne mogu dohvatiti</cannotRetrieveGroup>
+	<selectNewOwner js="true">Odaberite korisnika koji će biti vlasnik</selectNewOwner>
+	<selectOwnerGroup js="true">Odaberite grupu kojoj odabrani korisnik pripada</selectOwnerGroup>
+	<selectOneFileDownload js="true">Odabrati barem jednu datoteku za preuzimanje!</selectOneFileDownload>
+	<checkEmail js="true">Ispunite ispravnu adresu e-pošte</checkEmail>
+	<addName js="true">Ispunite Ime i prezime i Institucija/tvrtka</addName>
+	<noComment js="true">Bez komentara</noComment>
+	<rateMetadataFailed js="true">Ne mogu ocijeniti metapodatke.</rateMetadataFailed>
+	<error js="true">Greška</error>
+	<errors>greške</errors>
+	<northSouth js="true">Sjever &lt; Jug</northSouth>
+	<north90 js="true">Sjever &gt; 90 stupnjeva</north90>
+	<south90 js="true">Jug &lt; -90 stupnjeva</south90>
+	<east180 js="true">Istok &gt; 180 stupnjeva</east180>
+	<west180 js="true">Zapad &lt; -180 stupnjeva</west180>
+	<eastWest js="true">Istok &lt; Zapad</eastWest>
+	<metadataSelectionError js="true">Greška pri odabiru metapodataka.</metadataSelectionError>
+	<closeWindow js="true">Zatvori prozor</closeWindow>
+	<loseYourChange js="true">Ako pritisnete OK izgubit ćete sve promjene koje ste napravili u metapodacima!</loseYourChange>
+	<errorDeleteElement js="true">Greška: Element se ne može brisati</errorDeleteElement>
+	<errorFromDoc js="true">iz dokumenta:</errorFromDoc>
+	<errorMoveElement js="true">Greška: Element se ne može maknuti </errorMoveElement>
+	<errorAddElement js="true">Greška: Element se ne može dodati </errorAddElement>
+	<errorSaveFailed js="true">Greška: Forma se ne može pohraniti</errorSaveFailed>
+	<errorOnAction js="true">Greška: Akcija se ne može izvesti </errorOnAction>
+	<errorChangeProtocol js="true">Datoteka je možda prenesena. Ne možete mijenjati protokol dok ne uklonite datoteku.</errorChangeProtocol>
+	<selectOneFileUpload js="true">Zadajte datoteku prije odabira prijenosa poataka!</selectOneFileUpload>
+	<uploadFailed js="true">Greška: Učitavanje neuspješno! - povratak </uploadFailed>
+	<uploadSetFileNameFailed js="true">Greška: Učitavanje uspješno, ali ne mogu postaviti ime datoteke!</uploadSetFileNameFailed>
+	<cannotGetTooltip js="true">Ne mogu dobiti alate sa servera</cannotGetTooltip>
+	<maxResults js="true">Broj rezultata</maxResults>
+	<perThesaurus js="true"> Po rječniku</perThesaurus>
+	<anyThesaurus js="true">Bilo koji rječnik</anyThesaurus>
+	<selectedKeywords js="true">Odabrane ključne riječi</selectedKeywords>
+	<foundKeywords js="true">Dostupne ključne riječi</foundKeywords>
+	<keywordSelectionWindowTitle js="true">Odabir ključnih riječi</keywordSelectionWindowTitle>
+	<crsSelectionWindowTitle js="true">Odabir referentnog koordinatnog sustava</crsSelectionWindowTitle>
+	<selectedCRS js="true">Odaberi koordinatni sustav</selectedCRS>
+	<foundCRS js="true">Dostupni koordinatni sustavi</foundCRS>
+	<about>O stranici</about>
+	<abstract>Sažetak</abstract>
+	<accept>Pošalji</accept>
+	<actionOnSelect>aktivnosti na odabiru</actionOnSelect>
+	<add js="true">dodaj</add>
+	<addNewMetadata>Dodaj nove metapodatke</addNewMetadata>
+	<address>Adresa:</address>
+	<admin>Upravljanje metapodacima</admin>
+	<Administrator>Administrator</Administrator>
+	<agrovocKeyword>Agrovoc ključne riječi</agrovocKeyword>
+	<all>Sve</all>
+	<any>- Bilo koja -</any>
+	<anytime>Bilo kada</anytime>
+	<appSchInfoTab>Aplikacijska shema</appSchInfoTab>
+	<assigned>Dodijeljeno</assigned>
+	<attrlabl>Oznaka atributa</attrlabl>
+	<availability>Dostupnost</availability>
+	<back>Natrag</back>
+	<backToDescription>Natrag na opis podataka</backToDescription>
+	<backToEditor>Povrat na uređivanje metapodataka</backToEditor>
+	<backToPreviousPage>Natrag na prethodnu stranicu</backToPreviousPage>
+	<batchImport>Uvoz svih datoteka metapodataka iz lokalnog direktorija</batchImport>
+	<batchImportTitle>Automatski uvoz</batchImportTitle>
+	<begdate>Datum početka</begdate>
+	<begtime>Vrijeme početka</begtime>
+	<bgFileDescChoice value="large_thumbnail">Velika slika</bgFileDescChoice>
+	<bgFileDescChoice value="thumbnail">Sličica</bgFileDescChoice>
+	<bookmarkDelicious>Bookmark on Delicious</bookmarkDelicious>
+	<bookmarkDigg>Bookmark on Digg</bookmarkDigg>
+	<bookmarkEmail>Pošalji referencu na ovaj zapis putem e-maila</bookmarkEmail>
+	<bookmarkFacebook>Bookmark on Facebook</bookmarkFacebook>
+	<bookmarkPermanent>Stalna poveznica na ovaj opis</bookmarkPermanent>
+	<bookmarkStumbleUpon>Bookmark na StumbleUpon</bookmarkStumbleUpon>
+	<bounding>Granične koordinate</bounding>
+	<boundingRelation value="encloses">obuhvaća</boundingRelation>
+	<boundingRelation value="equal">je</boundingRelation>
+	<boundingRelation value="fullyOutsideOf">u potpunosti je izvan</boundingRelation>
+	<boundingRelation value="overlaps">preklapa</boundingRelation>
+	<browse>Pretraži grafičke</browse>
+	<browsed>Pretraži opise grafičkih datoteka</browsed>
+	<browsen>Pretraži nazive grafičkih datoteka</browsen>
+	<browset>Pretraži vrste grafičkih datoteka</browset>
+	<byGroup>Prema grupi</byGroup>
+	<byPackage>Prema paketu</byPackage>
+	<cancel>Odustani</cancel>
+	<categories>kategorije</categories>
+	<category>Kategorija:</category>
+	<categoryManagement>Upravljanje kategorijama</categoryManagement>
+	<categoryManDes>Uređivanje i dodavanje kategorija</categoryManDes>
+	<categoryNameMandatory>Naziv kategorijne mora biti popunjen.</categoryNameMandatory>
+	<changeDate>Promjena datuma metapodataka</changeDate>
+	<checkusername>Provjeri</checkusername>
+	<choose>-Odaberi-</choose>
+	<chooseFile>Odaberite mjesto za učitavanje datoteke</chooseFile>
+	<chooseLargeThumbnail>Odaberite mjesto velike slike</chooseLargeThumbnail>
+	<chooseThumbnail>Odaberite mjesto male slike</chooseThumbnail>
+	<city>Grad:</city>
+	<clear js="true">Očisti</clear>
+	<clearAll>Očisti sve</clearAll>
+	<close js="true">Zatvori</close>
+	<completeTab>Napredni pogled</completeTab>
+	<completeTabEditor>Napredni editor</completeTabEditor>
+	<confirmCancel>Jeste li sigurni da želite napustiti editor? (Izgubit ćete sve nepohranjene promjene)</confirmCancel>
+    <confirmCancelCreate>Jeste li sigurni da želite odustati od izrade ovih metapodataka?</confirmCancelCreate>
+	<confirmDelete>Jeste li sigurni da želite izbrisati metapodatke iz baze podataka?</confirmDelete>
+	<confirmBatchDelete>Jeste li sigurni da želite izbrisati $1 odabranih metapodataka iz baze podataka?</confirmBatchDelete>
+	<confirmNewPassword>Potvrdi novu lozinku:</confirmNewPassword>
+	<confirmPassword>Potvrdi lozinku</confirmPassword>
+	<constraintsTab>Ograničenja</constraintsTab>
+	<contactUs>Kontakt</contactUs>
+	<contains>Sadrži</contains>
+	<contentInfoTab>Info sadržaj</contentInfoTab>
+	<convert>Pretvori</convert>
+	<copyright1>Autorska prava</copyright1>
+	<copyright2><p>Sva prava pridržana.<br/> Vaša opća autorska prava </p></copyright2>
+	<country>Država:</country>
+	<create>Izradi</create>
+	<createTip>Izradi nove metapodatke iz ovog predloška</createTip>
+	<crs code="EPSG:4326">WGS 84</crs>
+	<crs code="EPSG:3786">Svjetski ekvidistantni cilindrični (Sfera)</crs>
+  	<crs code="EPSG:3035">ETRS89 / ETRS-LAEA</crs>
+	<crs code="EPSG:4258">ETRS 89</crs>
+	<crs code="EPSG:3765">HTRS96 (GRS80)</crs>
+	<crs code="EPSG:900913">Google Mercator</crs>
+	<crs code="EPSG:2154">RGF93 / Lambert-93</crs>
+	<cswTest>Ispitivanje CSW ISO profila</cswTest>
+	<cswTestDesc>Ispitivanje sučelja za profil CSS ISO kataloga sučelja</cswTestDesc>
+	<dataQualityTab>Kvaliteta podataka</dataQualityTab>
+	<datasetIssued>Vremenski opseg</datasetIssued>
+	<datasetTab>Set podataka</datasetTab>
+	<dateModified>Promjena datuma</dateModified>
+	<dateRelChoice value="14">prije</dateRelChoice>
+	<dateRelChoice value="15">prije ili za vrijeme</dateRelChoice>
+	<dateRelChoice value="16">za vrijeme</dateRelChoice>
+	<dateRelChoice value="17">za vrijeme ili nakon</dateRelChoice>
+	<dateRelChoice value="18">nakon</dateRelChoice>
+	<dateRelChoice/>
+	<decline>Odbiti</decline>
+	<definition>Definicija</definition>
+	<del>Obriši</del>
+	<delete>Briši</delete>
+	<deleteCategory>Brisanje kategorije?</deleteCategory>
+	<deleteConfirmationTitle>Potvrdite brisanje metapodataka</deleteConfirmationTitle>	
+	<deleteGroup>Brisanje grupe?</deleteGroup>
+	<descriptionTab>Opis</descriptionTab>
+	<desSchema>Shema destinacije</desSchema>
+	<digital>Skup</digital>
+	<directory>Direktorij:</directory>
+	<dirParameter>(Potreban je 'dir' parametar)</dirParameter>
+	<disclaimer1>Naslov odricanja od odgovornosti</disclaimer1>
+	<disclaimer2>Tekst odricanja od odgovornosti</disclaimer2>
+	<distributionTab>Distribucija</distributionTab>
+	<down>down</down>
+	<download>Preuzimanje</download>
+	<downloadable>Preuzimanje</downloadable>
+	<downloadData>Podaci za preuzimanje</downloadData>
+	<downloadEmail>Preuzmite e-poštu</downloadEmail>
+	<downloadSelect>Preuzeti?</downloadSelect>
+	<downloadSelected>Preuzmite odabrano</downloadSelected>
+	<downloadSummary>Preuzmite sažetak</downloadSummary>
+	<downloadThemAll>Preuzmite sve lokalne</downloadThemAll>
+	<dsgpoly>Data Set G-Polygon</dsgpoly>
+	<durationDays>dan(a)</durationDays>
+	<durationHours>sat(i)</durationHours>
+	<durationMinutes>minuta(e)</durationMinutes>
+	<durationMonths>Mjesec(i)</durationMonths>
+	<durationNbDays>Broj dana:</durationNbDays>
+	<durationNbHours>Broj sati:</durationNbHours>
+	<durationNbMinutes>Broj minuta:</durationNbMinutes>
+	<durationNbMonths>Broj mjeseci:</durationNbMonths>
+	<durationNbSeconds>Broj sekundi:</durationNbSeconds>
+	<durationNbYears>Broj godina:</durationNbYears>
+	<durationSeconds>sekunda(e)</durationSeconds>
+	<durationSign>Trajanje</durationSign>
+	<durationYears>godina(e)</durationYears>
+	<dynamic>Usluga (servis) </dynamic>
+	<eastbc>Istočna granična koordinata</eastbc>
+	<edit>Uredi</edit>
+	<Editor>Uređivač</Editor>
+	<email>Adresa e-pošte:</email>
+	<emailAddressInvalid js="true">Neispravna email adresa</emailAddressInvalid>
+	<enclosing>Uključujući</enclosing>
+	<enclosingCoordinate>Obuhvačene koordinate </enclosingCoordinate>
+	<enddate>Završni datum</enddate>
+	<enttypl>Oznaka vrste objekta</enttypl>
+	<exactCoordinate>Točne koordinate </exactCoordinate>
+	<exactTerm>Točan pojam</exactTerm>
+	<extended>Napredno</extended>
+	<extensionInfoTab>Ext. Info</extensionInfoTab>
+	<extent>Opseg</extent>
+	<featuredMap>Izdvojene karte</featuredMap>
+	<feedback>Povratne informacije</feedback>
+	<feedbackCardTitle>Kontakt</feedbackCardTitle>
+	<feedbackComments>Sadržaj poruke:</feedbackComments>
+	<feedbackRequest>Unesite svoje podatke prije preuzimanja</feedbackRequest>
+	<file>Datoteka</file>
+	<fileType>Format datoteke:</fileType>
+	<fileUploadSuccessful>Uspješno učitavanje datoteke</fileUploadSuccessful>
+	<firstName>Ime:</firstName>
+	<firstNameMandatory js="true">Polje Imena je obavezno</firstNameMandatory>
+	<foundWords>Broj pronađenih pojmova:</foundWords>
+	<freeKeyword>Slobodne ključne riječi</freeKeyword>
+	<from>Od</from>
+	<fromDateSelector>Odaberite OD dana</fromDateSelector>
+	<fuzzy>Traži točnost</fuzzy>
+	<fuzzyImprecise>Neprecizno</fuzzyImprecise>
+	<fuzzyPrecise>Precizno</fuzzyPrecise>
+	<fuzzySearch>Postavite preciznost traženja (s točnim pojmom za pretraživanje prema fuzzy pretraživanju).</fuzzySearch>
+	<general>Opće</general>
+	<generalInfo>Opće informacije</generalInfo>
+	<generateUUID>Generiraj UUID za uvezene metapodatke</generateUUID>
+	<georss>Otvorite GeoRSS feed</georss>
+	<group>Grupa:</group>
+	<usergroups>User groups</usergroups>
+  	<choice>Choice</choice>
+  	<sequence>Sequence</sequence>
+	<groupManagement>Upravljanje grupama</groupManagement>
+	<groupManDes>Uređivanje i dodavanje grupa</groupManDes>
+	<groups>Grupe</groups>
+	<harvestingManagement>Upravljanje preuzimanjem metapodataka</harvestingManagement>
+	<harvestingManDes>Upravljanje preuzimanjem metapodataka (eng. harvesting)</harvestingManDes>
+	<help>Pomoć</help>
+    <helpLinkTooltip js="true">Pomoć</helpLinkTooltip>
+	<helpComplete>Kompletna pomoć</helpComplete>
+	<helperList>Prijedlozi: </helperList>
+	<hideAdvancedOptions>Sakrij napredne opcije</hideAdvancedOptions>
+	<highlights>Istaknuto</highlights>
+	<hitsPerPage>Po stranici</hitsPerPage>
+	<hitsPerPageChoice value="10">10</hitsPerPageChoice>
+	<hitsPerPageChoice value="100">100</hitsPerPageChoice>
+	<hitsPerPageChoice value="20">20</hitsPerPageChoice>
+	<hitsPerPageChoice value="50">50</hitsPerPageChoice>
+	<home>Početna stranica</home>
+	<i18n>Test i18n</i18n>
+	<i18nDesc>Ova usluga bi trebala pomoći GeoNetwork open source programerima da imaju lokalizirane datoteke za GUI.</i18nDesc>
+	<identificationTab>Identifikacija</identificationTab>
+	<identifier>Identifikator</identifier>
+	<imAreaInterest>Odaberite područje koje vas zanima</imAreaInterest>
+	<imPan>Pan</imPan>
+	<import>Uvoz</import>
+	<imZoomFull>Povratak na opseg cijele karte</imZoomFull>
+	<imZoomIn>Povećaj</imZoomIn>
+	<imZoomOut>Smanji</imZoomOut>
+	<imZoomToLayer>Povratak na odabrani opseg</imZoomToLayer>
+	<infoTitle>Info</infoTitle>
+	<insert>Umetni</insert>
+	<insertFileMode js="true">Prijenos datoteke</insertFileMode>
+	<insertMode>Način uvoza:</insertMode>
+	<insertPasteMode>Kopiraj/Zalijepi</insertPasteMode>
+	<interactiveMap>Interaktivna karta</interactiveMap>
+	<interMapInfo><h1>Podaci u interaktivnim kartama</h1><p>Možete pronaći interaktivne karte pretraživanjem digitalnih podataka u GeoNetwork interaktivnim kartama, ili izravnim povezivanjem s pre-konfiguriranim serverom karti. </p><p> Serveri koji podržavaju karte su <a href="http://www.opengeospatial.org" class="sm" target="_blank">Open GeoSpatial® Consortium</a> compliant WMS Map Servers and <a href="http://www.esri.com" class="sm" target="_blank">ESRI® ArcIMS</a>.</p></interMapInfo>
+	<intermapSearch>Geografsko pretraživanje</intermapSearch>
+	<isoAll>ISO sve</isoAll>
+	<isoCore>ISO jezgra</isoCore>
+	<isoMinimum>ISO Minimum</isoMinimum>
+	<keyword>Ključna riječ</keyword>
+	<keywords js="true">Ključne riječi</keywords>
+	<keywordshelp>Odaberite više ključnih riječi tako da držite pritisnutu Ctrl-tipku pri odabiru mišem</keywordshelp>
+	<kind>Tip organizacije:</kind>
+	<kindChoice value="company">Privatna tvrtka</kindChoice>
+	<kindChoice value="consultant">Nezavisni konzultant</kindChoice>
+	<kindChoice value="gov">Vlada</kindChoice>
+	<kindChoice value="int-org">Međunarodna organizacija</kindChoice>
+	<kindChoice value="ngo">Ne vladina organizacija</kindChoice>
+	<kindChoice value="other">Drugo</kindChoice>
+	<kindChoice value="uni">Sveučilište/istraživački centar</kindChoice>
+	<label>Oznaka</label>
+	<language>en</language>
+	<large_thumbnail>Kliknite da vidite veliki pregled slike</large_thumbnail>
+	<lastNameMandatory js="true">Polje prezimena je obavezno</lastNameMandatory>
+	<latitude>Latitude (između -90 i 90) u stupnjevima</latitude>
+	<latMax>Širina (sjever)</latMax>
+	<latMin>Širina (jug)</latMin>
+	<legend>Legenda</legend>
+	<link>Poveznica</link>
+	<links>Poveznice</links>
+	<loading>Učitavanje...</loading>
+	<local>Lokalno pretraživanje</local>
+	<localiz>Lokalizacija</localiz>
+	<localizationHelp>Važno! Ova forma omogućava dodavanje vrijednosti ključa u bazi podataka.Ključ ne može imati razmake.<br/> Nakon dodavanja vrijednosti ključa, koristite formu "Localization" u administracijskoj ploči za određivanje stvarnog naziva koji želite prikazati na web-stranici za različite jezike.</localizationHelp>
+	<localizDes>Dopušta promjenu lokaliziranih podataka poput grupe, kategorije, regije i dr.</localizDes>
+	<localType>Lokalan</localType>
+	<location>Gdje?</location>
+	<login>Prijava</login>
+	<loginCardTitle>Prijava / Registracija</loginCardTitle>
+	<loginwarning>Potrebno samo za site administraciju</loginwarning>
+	<logout>Odjava</logout>
+	<logoutDes>Obavlja odjavu</logoutDes>
+	<longitude>Longitude (između -180 i 180) u stupnjevima</longitude>
+	<longMax>Dužina (istok)</longMax>
+	<longMin>Dužina (zapad)</longMin>
+	<mainpageTitle>Metadata editor omogućuje pronalaženje izvora (resursa) skupova i nizova prostornih podataka te usluga (servisa) prostornih podataka</mainpageTitle>
+	<maintenanceTab>Održavanje</maintenanceTab>
+	<management>Upravljanje</management>
+	<mandatory>Obavezni</mandatory>
+	<mandatoryIf>Obavezni ako</mandatoryIf>
+	<mapType>Vrsta izvora (resursa) </mapType>
+	<mapViewerClose>Zatvori preglednik karte</mapViewerClose>
+	<mapViewerLoading>Učitavanje preglednika karte...</mapViewerLoading>
+	<mapViewerOpen>Otvori preglednik karte</mapViewerOpen>
+	<batchActions>Masovne operacije:</batchActions>
+	<batchDeleteTitle>Operacija masovnog brisanja</batchDeleteTitle>
+	<batchNewOwnerTitle>Operacija masovnog novog vlasnika</batchNewOwnerTitle>
+	<batchUpdateCategoriesTitle>Operacija ažuriranja kategorija</batchUpdateCategoriesTitle>
+	<batchUpdatePrivilegesTitle>Operacija ažuriranja povlastica</batchUpdatePrivilegesTitle>
+	<max>Maksimum</max>
+	<mdRating>Ocjena podataka</mdRating>
+	<mdUpdateError>Ažuriraj grešku</mdUpdateError>
+	<mefFile>MEF datoteka</mefFile>
+	<message>Pogrešno korisničko ime ili lozinka.<br/>Pritisnite tipku 'nazad' i pokušajte ponovno.</message>
+	<messageChanged>Metapodaci su promjenjeni od strane drugog korisnika. Molimo pokušajte ponovno.</messageChanged>
+	<messageDownload>Hvala na zahtjevu. Kliknite na tipku download kako bi preuzeli podatke</messageDownload>
+	<messageLargeFile>Datoteka je prevelika</messageLargeFile>
+	<messageMdUpdateError>Nažalost, došlo je do pogreške prilikom ažuriranja metapodataka.</messageMdUpdateError>
+	<messageNoPrivileges>Nemate povlastice da to učinite.</messageNoPrivileges>
+	<messageNotPerformed>Tražena operacija ne može biti izvedena.</messageNotPerformed>
+	<metadata.admin.index.desc>Obnovi Lucene indeks</metadata.admin.index.desc>
+	<metadata.admin.index.failed>Index operacija je bila neuspješna</metadata.admin.index.failed>
+	<metadata.admin.index.success>Indeks operacija je bila uspješna.</metadata.admin.index.success>
+	<metadata.admin.index.wait js="true">Indeksiranje u tijeku. Molimo pričekajte.</metadata.admin.index.wait>
+	<metadata.admin.index.optimize.desc>Optimiziraj Lucene indeks</metadata.admin.index.optimize.desc>
+	<metadata.admin.index.rebuildxlinks.desc>Očisti XLink Cache i obnovi Indeks zapisa s XLinks</metadata.admin.index.rebuildxlinks.desc>
+	<lucene.config.reload>Reload Lucene configuration</lucene.config.reload>
+	<reload>Reload</reload>
+	<rebuildxlinks>ObnovitiXLinks</rebuildxlinks>
+	<doYouReallyWantToDoThis js="true">Ovaj postupak može potrajati neko vrijeme na velikim katalozima, a ne bi se trebalo raditi tijekom vrhunca korištenja. Želite li nastaviti?</doYouReallyWantToDoThis>
+	<optimize>Optimiziraj</optimize>
+	<metadata.admin.index>Index manager</metadata.admin.index>
+    <metadata-samples>Uzorak metapodataka</metadata-samples>
+    <metadata-samples-add>Dodaj uzorak metapodataka</metadata-samples-add>
+    <metadata-samples-add-failed>Dodavanje uzorka metapodataka nije uspjelo</metadata-samples-add-failed>
+    <metadata-samples-add-success>Dodani uzorak metapodataka</metadata-samples-add-success>
+	<metadata-template-add-success>Predlošci metapodataka uspješno dodani.</metadata-template-add-success>
+	<metadata-template-order>Sortiraj predloške</metadata-template-order>	
+	<metadata-template-order-desc>Sortiraj predloške padajućim redosljedom</metadata-template-order-desc>	
+	<metadata-template-add-default>Dodaj predloške</metadata-template-add-default>	
+	<metadata-template-add-default-desc>Dodaj predloške padajućim redosljedom</metadata-template-add-default-desc>	
+    <metadata>Metapodaci</metadata>
+	<metadataAdded>Metapodaci dodani sa ID:</metadataAdded>
+	<metadataDeleted>Metapodaci brisani sa ID:</metadataDeleted>
+	<metadataInsertResults>Rezultat uvoza Metapodataka</metadataInsertResults>
+	<metadataJSForm>Metapodaci iz JS forme</metadataJSForm>
+  	<failOnError>Fail on error</failOnError>
+	<metadataRecordsProcessed>Ukupan broj obrađenih zapisa metapodataka:</metadataRecordsProcessed>
+  	<metadataRecordsAdded>Ukupan broj dodanih zapisa metapodataka:</metadataRecordsAdded>
+	<min>Minimum</min>
+    <minor>Manja obrada</minor>
+	<missing>NEDOSTAJE ili PRAZNO</missing>
+	<missingSeeTab>NEDOSTAJE - Pogledajte sljedeću grupu kartica u sidebaru: </missingSeeTab>
+	<more>više</more>
+	<moreinfo>Za više informacija možete nas kontaktirati putem e-pošte </moreinfo>
+	<name>Naziv:</name>
+	<nameSurname>Ime i prezime:</nameSurname>
+	<newCategory>Dodaj novu kategoriju</newCategory>
+	<newGroup>Dodaj novu grupu</newGroup>
+	<newMdDes>Dodavanje novih metapodatka koristeći predložak</newMdDes>
+	<newMdInsert>Novi metapodaci umetnuti:</newMdInsert>
+	<newMetadata>Novi metapodaci</newMetadata>
+	<newOwner>Novi vlasnik</newOwner>
+	<newPassword>Nova lozinka:</newPassword>
+	<newUser>Dodaj novog korisnika</newUser>
+	<next>Sljedeća</next>
+	<noCategory>Nema dostupne kategorije.</noCategory>
+	<noHelp>Nažalost, nema dostupne pomoći</noHelp>
+	<noInfo>Nažalost, nema dostupnih podataka</noInfo>
+	<noLogin>Niste prijavljeni u sustav</noLogin>
+	<none>Prazno</none>
+	<noOwnerRights>Privilegije/Zaključane kategorije: Nemate vlasnička prava</noOwnerRights>
+	<northbc>Sjeverna granična koordinata</northbc>
+	<noSelectedMd>Nema odabira, prvo odabrati jedan metapodatak. </noSelectedMd>
+	<noTemplatesAvailable>Nema raspoloživih predložaka, prvo unesite metapodatke. </noTemplatesAvailable>
+	<notfound>Nije nađeno</notfound>
+	<nothing>Nema akcije pri uvozu</nothing>
+	<online>Interaktivna karta</online>
+	<onlink>Povezanost Online</onlink>
+	<opensearch>GeoNetwork opensearch usluga dopušta pretraživanje kataloga metapodataka.</opensearch>
+	<operation>Operacija</operation>
+	<options>Mogućnosti</options>
+	<organisation>Institucija/tvrtka:</organisation>
+	<output>Izlaz</output>
+	<outputType id="full">Sve</outputType>
+	<outputType id="text">Samo tekst</outputType>
+	<overwrite>Prepiši preko metapodataka s istim UUID</overwrite>
+	<overwriteFile>Prepisati preko?</overwriteFile>
+	<owner>Vlasnik</owner>
+	<ownerRights>Brisanje/Povlastice/Otključane kategorije: Imate vlasnička prava</ownerRights>
+	<paper>Niz</paper>
+	<partial>Djelomično preklapanje</partial>
+	<partialCooordinate>Djelomične koordinate </partialCooordinate>
+	<password>Lozinka:</password>
+	<passwordDoNotMatch>Niste unijeli istu novu lozinku dva puta. Ponovno unesite lozinku.</passwordDoNotMatch>
+	<passwordEntry>Unesite svoju lozinku dvaput.</passwordEntry>
+	<passwordLength>Lozinka mora imati najmanje " + minLength + " znakova. Pokušajte ponovo.</passwordLength>
+	<passwordOldRequired>Stara lozinka je obvezna</passwordOldRequired>
+	<passwordSpace>Nažalost, razmaci nisu dopušteni u lozinci.</passwordSpace>
+	<persInfo>Osobni podaci</persInfo>
+	<usersAndGroups>Korisnici i grupe</usersAndGroups>
+	<classification>Thesauri i klasifikacijski sistemi</classification>
+	<layers>Slojevi</layers>
+	<services>Mrežni servisi</services>
+	<catalogueConfiguration>Postavke kataloga</catalogueConfiguration>
+	<indexConfiguration>Index postavke</indexConfiguration>
+	<io>Uvoz</io>
+	<placeKeyword>Mjesto ključne riječi</placeKeyword>
+	<porCatInfoTab>Katalog</porCatInfoTab>
+	<poweredBy>Pokretan od </poweredBy>
+	<previous>Prijašnja</previous>
+	<privileges>Povlastice</privileges>
+	<profile>Profil:</profile>
+	<profileChoice value="Administrator">Administrator</profileChoice>
+	<profileChoice value="Editor">Editor</profileChoice>
+	<profileChoice value="RegisteredUser">Registrirani korisnik</profileChoice>
+	<profileChoice value="Reviewer">Ocjena sadržaja</profileChoice>
+	<profileChoice value="UserAdmin">Administrator korisnika</profileChoice>
+	<profileChoice value="Monitor">System Monitor</profileChoice>
+	<progress>Tijek</progress>
+	<progressChoice value="complete">završeno</progressChoice>
+	<progressChoice value="in-work">u radu</progressChoice>
+	<progressChoice value="planned">planirano</progressChoice>
+	<progressChoice/>
+	<protocol>Protocol</protocol>
+  <protocolChoice show="y" value="ESRI:AIMS--http--configuration">ArcIMS konfiguracijska datoteka za uslugu mape (*.AXL)</protocolChoice>
+  <protocolChoice show="y" value="ESRI:AIMS--http-get-feature">ArcIMS usluga mape(internet dodatak)</protocolChoice>
+  <protocolChoice show="-" value="ESRI:AIMS--http-get-image">ArcIMS usluga mape(slika interneta)</protocolChoice>
+  <protocolChoice show="y" value="GLG:KML-2.0-http-get-map">Google Earth KML usluga (ver 2.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:CSW">OGC-CSW Katalog usluga za web</protocolChoice>
+  <protocolChoice show="-" value="OGC:KML">OGC-KML Keyhole jezik označavaanja(markup)</protocolChoice>
+  <protocolChoice show="-" value="OGC:GML">OGC-GML Geografski jezik označavanja</protocolChoice>
+  <protocolChoice show="-" value="OGC:ODS">OGC-ODS OpenLS Usluga direktorija</protocolChoice>
+  <protocolChoice show="-" value="OGC:OGS">OGC-ODS OpenLS Usluga ulazne točke(gateway)</protocolChoice>
+  <protocolChoice show="-" value="OGC:OUS">OGC-ODS OpenLS Pomoćna usluga(utility)</protocolChoice>
+  <protocolChoice show="-" value="OGC:OPS">OGC-ODS OpenLS Prezentacijska usluga</protocolChoice>
+  <protocolChoice show="-" value="OGC:ORS">OGC-ODS OpenLS Route usluga</protocolChoice>
+  <protocolChoice show="-" value="OGC:SOS">OGC-SOS Sensor Usluga promatranja</protocolChoice>
+  <protocolChoice show="-" value="OGC:SPS">OGC-SPS Sensor Usluga planiranja</protocolChoice>
+  <protocolChoice show="-" value="OGC:SAS">OGC-SAS Sensor Usluga za uzbunu</protocolChoice>
+  <protocolChoice show="-" value="OGC:WCS">OGC-WCS Usluga web pokrivenosti</protocolChoice>
+  <protocolChoice show="y" value="OGC:WCS-1.1.0-http-get-capabilities">OGC-WCS Usluga web pokrivenosti (ver 1.1.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WCTS">OGC-WCTS Usluga transformacije web koordinata</protocolChoice>
+  <protocolChoice show="-" value="OGC:WFS">OGC-WFS Usluga web dodataka</protocolChoice>
+  <protocolChoice show="y" value="OGC:WFS-1.0.0-http-get-capabilities">OGC-WFS Usluga web dodataka (ver 1.0.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WFS-G">OGC-WFS-G Usluga za geografski leksikon</protocolChoice>
+  <protocolChoice show="y" value="OGC:WMC-1.1.0-http-get-capabilities">OGC-WMC Kontekst web mape (ver 1.1)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WMS">OGC-WMS Usluga web mape</protocolChoice>
+  <protocolChoice show="-" value="OGC:WMS-1.1.1-http-get-capabilities">OGC-WMS Usluga mogućnosti(Capabilities)(ver 1.1.1)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WMS-1.3.0-http-get-capabilities">OGC-WMS Usluga mogućnosti(Capabilities) (ver 1.3.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WMS-1.1.1-http-get-map">OGC Usluga web mape (ver 1.1.1)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WMS-1.3.0-http-get-map">OGC Usluga web mape (ver 1.3.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:SOS-1.0.0-http-get-observation">OGC-SOS Get Observation (ver 1.0.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:SOS-1.0.0-http-post-observation">OGC-SOS Get Observation (POST) (ver 1.0.0)</protocolChoice>
+  <protocolChoice show="-" value="OGC:WNS">OGC-WNS Usluga web notifikacija</protocolChoice>
+  <protocolChoice show="-" value="OGC:WPS">OGC-WPS Usluga web obrade</protocolChoice>
+  <protocolChoice show="-" value="WWW:DOWNLOAD-1.0-ftp--download">Datoteka za preuzimanje putem FTP-a</protocolChoice>
+  <protocolChoice show="-" value="WWW:DOWNLOAD-1.0-http--download">Datoteka za preuzimanje</protocolChoice>
+  <protocolChoice show="-" value="FILE:GEO">GIS datoteka</protocolChoice>
+  <protocolChoice show="-" value="FILE:RASTER">GIS RASTER datoteka</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--ical">iCalendar (URL)</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--link">Web adresa (URL)</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--partners">Web adresa partnera (URL)</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--related">Povezani link (URL)</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--rss">RSS News feed (URL)</protocolChoice>
+  <protocolChoice show="y" value="WWW:LINK-1.0-http--samples">Pokazni proizvod (URL)</protocolChoice>
+  <protocolChoice show="-" value="DB:POSTGIS">PostGIS tablica</protocolChoice>
+	<protocolChoice show="-" value="DB:ORACLE">ORACLE tablica</protocolChoice>
+	<protocolChoice show="y" value="WWW:LINK-1.0-http--opendap">OPeNDAP URL</protocolChoice>
+	<protocolChoice show="y" value="RBNB:DATATURBINE">Data Turbine</protocolChoice>
+  <protocolChoice show="-" value="UKST">Nepoznata vrsta usluge</protocolChoice>
+	<pubdate>Datum publiciranja</pubdate>
+	<publicationDate>Datum publikacije</publicationDate>
+	<publisher>Izdavač</publisher>
+	<purpose>Svrha</purpose>
+	<rateIt>Ocijenite</rateIt>
+	<ratingMsg>Pritisnite tipku da biste ocijenili. Može potrajati dok ne postane vidljivo.</ratingMsg>
+	<rawMetadata>Uvez sirovih metapodataka</rawMetadata>
+	<rebuild>Obnovi</rebuild>
+	<recentAdditions>Nedavne promjene</recentAdditions>
+	<refSysTab>Referentni sustav</refSysTab>
+	<region>Županija</region>
+	<register>Prijava</register>
+	<registerChoose>Odabir </registerChoose>
+	<RegisteredUser>Registrirani korisnik</RegisteredUser>
+	<registerTitle>Obrazac za samoprijavu</registerTitle>
+	<registrationDetails>Ključni detalji registracije unešeni: </registrationDetails>
+	<remote>Remote pretraga</remote>
+	<remoteType>Remote</remoteType>
+	<remove>ukloni</remove>
+	<res>rezultati</res>
+	<reset>Poništi</reset>
+	<resetFeedbackForm>Resetiraj feedback formu</resetFeedbackForm>
+	<resetPassword>Resetiraj zaporku</resetPassword>
+	<resetSearch>Resetiraj formu pretraživanja</resetSearch>
+	<ress>Broj rezultata</ress>
+	<restrictTo>Ograniči na</restrictTo>
+	<result>Zadnji rezultati</result>
+  <searchResult>Rezultati pretrage</searchResult>
+  <resources>Izvori</resources>
+  <visualizationService>URL usluge vizualizacije (WMS)</visualizationService>
+	<resultsCoordinate>Rezultati koji odgovaraju koordinatama pretraživanja </resultsCoordinate>
+	<resultsFreeText>Rezultati koji odgovaraju slobodnom tekstu </resultsFreeText>
+	<resultsMatching>Rezultati koji odgovaraju zadanim kriterijima:</resultsMatching>
+	<Reviewer>Ocjena sadržaja</Reviewer>
+	<rss>Otvori RSS feed</rss>
+	<rtitle>Naslov</rtitle>
+	<save>Pohrani</save>
+	<saveAndClose>Pohrani i zatvori</saveAndClose>
+	<saveAndValidate>Provjeri</saveAndValidate>
+	<savepdf>Pohrani rezultate pretrage kao pdf</savepdf>
+	<printSelection>Ispis u PDF datoteku</printSelection>
+	<schema>Schema</schema>
+	<schematronError>Schematron Greška</schematronError>
+	<search>Traži</search>
+	<searchAllText>Što?</searchAllText>
+	<searchBox>Pretraživanje podataka i informacija</searchBox>
+	<searchIndex>Indeks pretraga</searchIndex>
+	<searching js="true">...Pretraživanje metapodataka...</searching>
+	<searchPage>Stranica pretraživanja</searchPage>
+	<searchPageDes>Skače na stranicu za pretraživanje metapodataka</searchPageDes>
+	<searchTemplates>Traži predloške</searchTemplates>
+	<searchText>Što?</searchText>
+	<searchUnused>Traži nedovršene metapodatke</searchUnused>
+	<searchUnusedTitle>Nedovršeni metapodaci</searchUnusedTitle>
+	<select>Odaberi: </select>
+	<selectAll>Odaberi sve metapodatke</selectAll>
+	<selectAllNotPossible>Previše pogotka! Mora biti manje od </selectAllNotPossible>
+	<selected> odabrano</selected>
+	<selectedOnly>Prikaži samo odabrano</selectedOnly>
+	<selection>Izbor</selection>
+	<selectNone>Poništi odabrane metapodatke</selectNone>
+	<server>Server</server>
+	<setAll>Postavi sve</setAll>
+	<setOnSave>Vrijednost će biti postavljena kada je zapis spremljen</setOnSave>
+	<shibLogin>Shib prijava</shibLogin>
+	<show>Metapodaci</show>
+	<showFileDownloadSummary>Pokaži birač preuzimanja datoteke</showFileDownloadSummary>
+	<simple>Jednostavno pretraživanje</simple>
+	<simpleTab>Zadani pogled</simpleTab>
+	<simpleTabEditor>Zadani editor</simpleTabEditor>
+	<singleFile>Datoteka (XML, SLD, WMC...)</singleFile>
+	<site>Stranica</site>
+	<siteId>ID stranice</siteId>
+	<sizeBytes>Veličina (bytes)</sizeBytes>
+	<sortBy>Sortiraj po</sortBy>
+	<sortByType id="changeDate">Promjena datuma</sortByType>
+	<sortByType id="popularity">Popularnost</sortByType>
+	<sortByType id="rating">Ocjena</sortByType>
+	<sortByType id="relevance">Relevantnost</sortByType>
+	<sortByType id="title">Naslov</sortByType>
+	<southbc>Južna granična koordinata</southbc>
+	<spacesNot js="true">Razmaci u ovom polju nisu dopušteni</spacesNot>
+	<spatial2Tab>Pro. Repr.</spatial2Tab>
+	<spatialTab>Pro. Info</spatialTab>
+	<startsWith>Počinje sa</startsWith>
+	<state>Općina:</state>
+	<styleSheet>Stil:</styleSheet>
+	<submit>Slanje</submit>
+	<subtemplate>Podpredložak</subtemplate>
+	<subtemplateTitle>naslov podpredloška</subtemplateTitle>
+	<summaryTab>Rezime</summaryTab>
+	<surName>Prezime:</surName>
+	<systemConfig>Konfiguracija sustava</systemConfig>
+	<systemConfigDes>Promjena parametra sustava</systemConfigDes>
+	<systemInfo>Informacije o sustavu</systemInfo>
+	<systemInfoDes>Pokazuje napredne informacije o katalogu, index-u, Javi, operacijskom sustavu</systemInfoDes>
+	<template>Predložak</template>
+	<Term>Uvjet</Term>
+	<thanks>Hvala vam za vaš trud. GeoNetwork</thanks>
+	<theme>ISO kategorija teme</theme>
+	<thumbnails>Sličice</thumbnails>
+	<timeout>Timeout</timeout>
+	<timeoutChoice value="10">nakon 10 sekundi</timeoutChoice>
+	<timeoutChoice value="20">nakon 20 sekundi</timeoutChoice>
+	<timeoutChoice value="30">nakon 30 sekundi</timeoutChoice>
+	<title>GeoNetwork - Portal prostornih podataka i informacija</title>
+	<to>Do</to>
+	<toDateSelector>Odaberite datum DO</toDateSelector>
+	<tools>Alati</tools>
+	<topic>Tema</topic>
+	<transferOwnership>Prijenos vlasništva</transferOwnership>
+	<transferOwnershipDes>Prijenos vlasništva metapodataka na drugog korisnika</transferOwnershipDes>
+	<type>Vrsta</type>
+	<typeOfMetadata>Tip metapodataka:</typeOfMetadata>
+	<up>up</up>
+	<update>Ažuriraj podatke</update>
+	<updateCategories>Ažuriraj kategorije</updateCategories>
+	<updateCategory>Ažuriraj kategoriju</updateCategory>
+	<updateGroup>Ažuriraj grupu</updateGroup>
+	<updatePrivileges>Ažuriraj povlastice</updatePrivileges>
+	<updateUserAccount>Ažuriraj korisnički račun </updateUserAccount>
+	<upload>Učitaj </upload>
+	<user>Korisnik</user>
+	<UserAdmin>Administrator korisnika</UserAdmin>
+	<userAtLeastOneGroup js="true">Selektirajte barem jednu grupu.</userAtLeastOneGroup>
+	<userDefined>- Korisnički definirano -</userDefined>
+	<userInfo>Promjena korisničkih podataka</userInfo>
+	<userInfoDes>Promjena korisničkih podataka</userInfoDes>
+	<userManagement>Upravljanje korisnicima</userManagement>
+	<userManDes>Uređivanje i dodavanje korisnika</userManDes>
+	<username>Korisničko ime:</username>
+	<usernameMandatory>Polje korisničkog imena je obvezno.</usernameMandatory>
+	<userPw>Promjena lozinke</userPw>
+	<userPwDes>Promjena lozinke</userPwDes>
+	<uuidAction>Akcija pri uvozu:</uuidAction>
+	<validate>Potvrda:</validate>
+	<assign>Dodijeli na trenutni katalog</assign>
+	<validityBegins>Valjanost počinje</validityBegins>
+	<validityEnds>i završava</validityEnds>
+	<view>Prikaži</view>
+	<viewInGE>Prikaži u Google Earth</viewInGE>
+	<waitGetCap js="true">Otvaram server slojeve, molimo pričekajte...</waitGetCap>
+	<westbc>Zapadna granična koordinata</westbc>
+	<what>Što?</what>
+	<when>Kada?</when>
+	<where>Gdje?</where>
+	<winInfo1>Ovaj prozor prikazati će GeoNetwork izvore. Ovaj prozor može biti skriven, ovisno o tome kako vaš preglednik upravlja prozorima. U ovom slučaju morat ćete ručno donijeti prozor u prvi plan kada je to potrebno.</winInfo1>
+	<winInfo2>Kroz pomoć, sličica (?) daje pristup objašnjenju. Kada aktivirate ovu ikonu, prikazati će se u ovom prozoru izvora.</winInfo2>
+	<wwwlink>Web poveznica</wwwlink>
+	<xmlInsert>Uvoz datoteke metapodataka u XML ili MEF formatu</xmlInsert>
+	<xmlInsertTitle>Uvoz datoteke</xmlInsertTitle>
+	<xmlTab>XML pogled</xmlTab>
+	<inspireTab>INSPIRE pogled</inspireTab>
+	<inspireSection>
+		<identification>
+			<title>Identifikacija</title>
+			<help>
+				<div>
+				Sljedeći elementi metapodataka biti će osigurani:
+				<ul>
+					<li>Naslov izvora:
+				Ovo je karakterističan, a često i jedinstven naziv izvora. Vrijednost domene ovog elementa je slobodan tekst.</li>
+					<li>Sažetak izvora:
+						Ovo je kratki sažetak sadržaja izvora. Vrijednost domene ovog elementa je slobodan tekst.</li>
+					<li>Vrsta resorsa:
+						Ovo je vrsta izvora koji se opisuju metapodatke. Vrijednost domene ovog elementa metapodataka je definirana  u dijelu D.1.</li>
+					<li>Lokator izvora:
+						Lokator izvora definira vezu(e) izvora i/ili link na dodatne informacije o izvoru. Vrijednost domene ovog elementa metapodataka je niz znakova, obično izražena kao Uniform Resource Locator (URL).</li>
+					<li>Jedinstveni identifikator izvora:
+						Vrijednost jedinstvenog identificira izvora. Vrijednost domene ovog elementa metapodataka je obvezan niz znakova koda, obično ih dodjeljuje vlasnik podataka i namespace niz znakova jedinstveno identificira kontekst identifikatora koda (na primjer, vlasnik  podataka).	</li>
+					<li>Kombinacija izvora:
+						Ako je izvor usluga prostornih podataka, ovaj element metapodataka utvrđuje usluge skupa(ova) prostornih podataka putem svojih jedinstvenih identifikatora izvora (URI). Vrijednost domene ovog elementa metapodataka je niz znakova koda, obično ih dodjeljuje vlasnik podataka i niz znakova namespace jedinstveno identificira kontekst identifikatora koda (na primjer, vlasnik podataka).</li>
+					<li>Jezik izvora:
+						Jezik korišteni unutar izvora. Vrijednost domene ovog elementa metapodataka je ograničena na jezike definirane u ISO 639-2.</li>
+				</ul>
+				</div>
+			</help>
+		</identification>
+		<classification>
+			<title>Klasifikacija prostornih podataka i usluga</title>
+			<help>
+				<div>
+					<ul>
+						<li>Kategorija teme:			
+						Kategorija teme je razrađena klasifikacijska shema koja pomaže u grupiranju i tematski baziranom pretraživanju raspoloživih prostornih podatkovnih izvora. Vrijednost domene ovog elementa metapodataka je definirana u dijelu D.2.</li>
+						<li>
+							Vrsta usluge prostornih podataka: 
+							Ovo je klasifikacija koja pomaže u traženju dostupnih prostornih podataka usluge. Posebna usluga bit će kategorizirana u samo jednoj kategoriji. Vrijednost domene ovog elementa metapodataka definirana je u dijelu D.3.
+						</li>
+					</ul>
+				</div>
+			</help>
+		</classification>
+		<keywords>
+			<title>Ključne riječi &amp; INSPIRE teme</title>
+			<help>
+				<div>
+					Prema INSPIRE ugrađenim pravilima za metapodatke, ako je izvor skup prostornih podataka ili skup serije prostornih podataka, barem jedna ključna riječ mora biti osigurana iz General Environmental Multi-lingual Thesaurus (GEMET)  koja opisuje relevantnu temu prostornih podataka kao što je definirano u dodatku I, II ili III INSPIRE Direktive 2007/2/EC.
+					<br/>					
+					Nazivi i definicije svih 34 INSPIRE tema prostornih podataka su integrirani u General Environmental Multi-lingual Thesaurus (GEMET) u 23 službene jezične zajednice: http://www.eionet.europa.eu/gemet/inspire_themes.
+					<br/>
+					Napominjemo da, osim teme INSPIRE prostornih podataka, mogu se dodati i druge ključne riječi. To može biti opisano kao slobodan tekst ili može potjecati iz bilo kojeg kontroliranog rječnika. Ako potječu iz kontroliranog rječnika (thesaurus), citat će biti osiguran, kao što je opisano u nastavku. 
+				</div>
+			</help>
+		</keywords>
+		<geoloc>
+			<title>Geografski položaj</title>
+			<help>
+				<div>
+					Zahtjev za geografski položaj iz članka 11.(2)(e) Direktive 2007/2/EC izražava se s elementom metapodataka geografskog graničnog okvira. To je opseg izvora podataka u geografskom prostoru, s obzirom na granični okvir. Granični okvir se zadaje najzapadnijom i najistočnijom dužinom te najjužnijom i najsjevernijom širinom u decimalnim stupnjevima.
+				</div>
+			</help>
+		</geoloc>
+		<temporal>
+			<title>Vremenska poveznica</title>
+			<help>
+				<div>
+					Ovaj element metapodataka rješava zahtjev da postoje informacije o vremenskoj dimenziji podataka kako je navedeno u članku 8.(2)(d) Direktive 2007/2/EC. Barem jedan od elemenata metapodataka navedenih u točkama 5.1 do 5.4 biti će osiguran. Vrijednost domene elemenata metapodataka iz točaka 5.1 - 5.4 je skup datuma. Svaki datum odnositi će se na vremenski referentni sustav i izražava se u obliku koji je kompatibilan tom sustavu. Referentni sustav bit će Gregorijanski kalendar, s datumima izraženim u skladu s ISO8601.
+					<br/>
+					Vremenski opseg određuje vremensko razdoblje pokriveno sadržajem izvora.
+					Ovo vremensko razdoblje može se izraziti kao bilo što od sljedećeg:
+					<ul>					
+						<li>individualni datum</li>
+						<li>interval od datuma izraženih kroz početni datum i krajnji datum intervala</li>
+						<li>mješavina pojedinih datuma i intervala datuma</li>
+					</ul>
+				</div>
+			</help>
+		</temporal>
+		<quality>
+			<title>Kvaliteta i valjanost</title>
+			<help>
+				<div> Zahtjevi iz članka 5(2) i članka 11(2) Direktive 2007/2/EC koji se odnose na kakvoću i valjanost prostornih podataka rješavati će se sljedećim elementima metapodataka: 
+					<ul>
+						<li>Podrijetlo:
+						Ovo je izjava o povijesti procesa i/ili ukupnoj kvaliteti skupine prostornih podataka. Gdje je prikladno može sadržavati izjavu da li je skup podataka bio je ovjeren i da li je osigurana kvaliteta, da li je službena verzija (ako postoji više verzija), i da li ima pravnu valjanost. Vrijednost domene ovog elementa metapodataka je slobodan tekst.</li>
+						<li>
+							Prostorna rezolucija:
+							Prostorna rezolucija odnosi se na razinu detalja skupine podataka. Izražava se kao skup od nula do više rezolucija udaljenosti (specifično za mrežne podatke i slikom, dobivenih proizvoda) ili ekvivalentnih ljestvica (specifično za karte ili map-derived proizvode). Ekvivalentna ljestvica se općenito izražava kao cjelobrojna vrijednost koja izražava nazivnik mjerila. Udaljenost rezolucije izražava se kao brojčana vrijednost povezana s jedinicama duljine.			
+						</li>
+					</ul>				
+				</div>
+			</help>
+		</quality>
+		<conformity>
+			<title>Usklađenosti</title>
+			<help>
+				<div>
+					Zahtjevi iz članka 5. (2) (a) i članka 11. (2) (d) Direktive 2007/2/EC koji se odnose na sukladnost, te stupanj usklađenosti s ugrađenim propisima donesenim na temelju članka 7(1) Direktive 2007/2/EC bit će riješeni sljedećim elementima metapodataka:
+					<ul>
+						<li>Specifikacija:					
+							Ovo je citat ugrađenih propisa donesenih na temelju članka 7(1) Direktive 2007/2/EC ili druge specifikacije na koji se određeni izvor odnosi. Izvor se može odnositi na više od jednog ugrađenog propisa donesenog na temelju članka 7(1) Direktive 2007/2/EC ili druge specifikacije.
+							Ovaj citat mora sadržavati najmanje naziv i referentni datum (datum izdavanja, datum zadnje revizije ili izrade) ugrađenih propisa donesenih na temelju članka 7(1) Direktive 2007/2/EC ili specifikacije.
+						</li>
+						<li>
+							Stupanj:					
+							Ovo je stupanj sukladnosti izvora s provedbenim propisima donesenim na temelju članka 7(1) Direktive 2007/2/EC ili druge specifikacije. Vrijednost domene ovog elementa metapodataka definirana je u dijelu D. 							
+						</li>
+					</ul>					
+				</div>
+			</help>
+		</conformity>
+		<constraint>
+			<title>Ograničenja vezana uz pristup i korištenje </title>
+			<help>
+				<div>
+					Ograničenja vezana uz pristup i korištenje bit će jedno ili oboje od sljedećeg:
+					<ul>
+						<li>
+							Uvjeta za pristup i korištenje:					
+							Ovaj element definira uvjete za pristup i korištenje skupova prostornih podataka i usluga, te gdje je primjenjivo, odgovarajuće naknade sukladno članku 5.(2)(b) i članka 11.(2)(f) Direktive 2007/2/EC. Vrijednost domene ovog elementa je slobodan tekst. Element mora biti zadan.
+							Ako nema uvjeta koji se odnose na pristup i korištenje izvora, koristiti će se "bez uvjeta". Ako uvjeti nisu poznati, koristit će se "uvjeti nepoznati". Ovaj element će također pružiti informacije o svim naknadama potrebnim za pristup i korištenje izvora, ako je moguće, ili upućuje na Uniform Resource Locator (URL) gdje je informacija o naknadama dostupna.							
+						</li>
+						<li>
+							Ograničenja javnog pristupa: 
+							Kad države članice ograničavaju javni pristup do setova prostornih podataka i usluga prostornih podataka iz članka 13. Direktive 2007/2/EC, ovaj element daje informacije o ograničenjima i njihovim razlozima. Ako ne postoje ograničenja javnog pristupa, ovaj element treba navesti tu činjenicu. Vrijednost domene ovog  elementa je slobodan tekst.							
+						</li>
+					</ul>					
+				</div>
+			</help>
+		</constraint>
+		<org>
+			<title>Organizacije odgovorne za uspostavu, upravljanje, održavanje i distribuciju</title>
+			<help>
+				<div>
+					Za potrebe članka 5.(2) točke d) i članka 11.(2)(g) Direktive 2007/2/EC, omogućena su sljedeća dva elementa.
+					<ul>
+						<li>
+							Odgovorne stranke:
+							Ovo je opis organizacije odgovorne za uspostavu, upravljanje, održavanje i distribuciju izvora. Ovaj opis uključuje:
+							(naziv organizacije kao slobodan tekst, kontakt e-mail adresa kao niz znakova)							
+						</li>
+						<li>
+							Uloga Odgovorne stranke:					
+							To je uloga odgovorne organizacije. Vrijednost domene ovog elementa je definirana u dijelu D.6.	
+						</li>
+					</ul>
+				</div>
+			</help>
+		</org>
+		<metadata>
+			<title>Metapodaci</title>
+			<help>Za potrebe članka 5.(1) Direktive 2007/2/EC.</help>
+		</metadata>
+	</inspireSection>
+	<inspireAddConformity>Dodaj INSPIRE conformity section</inspireAddConformity>
+	<xsdError>XSD Greška validacije</xsdError>
+	<yourRegistration js="true">Vaša registracija...</yourRegistration>
+	<zip>Poštanski broj:</zip>
+    	<header_meta>
+		<meta name="keywords" content="GeoNetwork opensource metadata ISO19115 ISO19139 ISO GIS remote sensing data shapefiles spatial data satellite images map maps interactive opengis geospatial CSW reference implementation mapping 19115 19139 geographic z39.50 catalog clearinghouse coverages grid raster data opensource open source network"/>
+		<meta name="description" content="GeoNetwork opensource provides Internet access to interactive maps, satellite imagery and related spatial databases. It's purpose is to improve access to and integrated use of spatial data and information. GeoNetwork opensource allows to easily share spatial data among different users"/>
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+		<meta name="DC.title" lang="English" content="GeoNetwork opensource portal to spatial data and information"/>
+		<meta name="DC.creator" content="GeoNetwork Team"/>
+		<meta name="DC.subject" lang="English" content="GeoNetwork opensource metadata ISO19115 ISO19139 ISO GIS remote sensing data shapefiles spatial data satellite images map maps interactive opengis mapping 19115 19139 geographic z39.50 catalog clearinghouse coverages grid raster data opensource open source network"/>
+		<meta name="DC.description" lang="English" content="GeoNetwork opensource provides Internet access to interactive maps, satellite imagery and related spatial databases. It's purpose is to improve access to and integrated use of spatial data and information. GeoNetwork opensource allows to easily share spatial data among different users"/>
+		<meta name="DC.publisher" content=""/>
+		<meta name="DC.date" content="02-07-2007"/>
+		<meta name="DC.type" scheme="DCMIType" content="InteractiveResource"/>
+		<meta name="DC.format" content="text/html; charset=UTF-8"/>
+		<meta name="DC.language" content="English French Spanish German Russian Chinese Dutch Portuguese"/>
+		<meta name="DC.coverage" content="Global"/>
+	</header_meta>
+	<mainpage1>
+		<h1>Editor metapodataka</h1>
+		<p>
+		Editor metapodataka služi za sustavno prikupljanje i održavanje metapodataka izvora (resursa) skupova, nizova skupova i usluga (servisa) prostornih podataka NIPP-a. On je osnova usluge otkrivanja prostornih podataka i ostalih geo i OGC usluga koje omogućuju  povećavanje razine interoperabilnost između davatelja i korisnika prostornih podataka.
+		</p><br/>
+		<p>
+		Namjena editora metapodataka je:
+		</p>		
+		<ul>
+			<li>sustavno prikupljanje i održavanje metapodataka prostornih podataka,</li>			
+			<li>pronalaženje izvora (resursa) prostornih podataka,</li>
+			<li>analiza pronađenih prostornih podataka,</li>
+			<li>dobivanje uvida u uvjete korištenja prostornih podataka,</li>
+			<li>pregledavanje prostornih podataka,</li>
+			<li>korištenje prostornih podataka.</li>
+		</ul>
+	</mainpage1>
+	<mainpage2>
+		<br/>
+		<p>
+		Osnova editora metapodataka je prilagođen GeoNetwork OpenSource. 
+		</p>
+	</mainpage2>
+	<mainhelp1> Kako pretraživati... </mainhelp1>
+	<mainhelp2> Sakrij pomoć... </mainhelp2>
+	<mainhelp3>
+		<p>
+			<font size="-2"> Možete pretraživati koristeći jednu ili kombinaciju ponuđenih opcija.<br/> Biti će prikazani samo rezultati koji zadovoljavaju sve kriterije. </font>
+		</p>
+		<p>
+			<font size="-2"> <b>Što?</b> traži pretraživanja odgovarajućeg teksta u svim poljima metapodataka.
+				<i> Kad unosite više od jedne riječi u polje <b>Slobodan tekst</b>, one će se tumačiti u sustavu kao odvojene s AND. </i>
+			</font>
+		</p>
+		<p>
+			<font size="-2"> <b>Tema</b> pretraživanje će pronaći karte koje odgovaraju određenoj temi. </font>
+		</p>
+		<p>
+			<font size="-2"> <b>Gdje?</b> pretraživanje će pronaći karte koje odgovaraju okviru odabranog područja. </font>
+		</p>
+		<p>
+			<font size="-2"> Odabir opcije "<b>
+					<input name="demo" type="checkbox" checked="checked"/> Uključujući</b> odabrano <b>područje</b>" naći će karte koje pokrivaju više od odabranog područja.<br/>
+				<i>Na primjer: Regionalne ili globalne karte koje, među ostalim, također pokrivaju i odabranu zemlju</i>
+			</font>
+		</p>
+		<p>
+			<font size="-2"> Odabir opcije "<b>
+					<input name="demo" type="checkbox" checked="checked"/> Djelomično preklapanje</b> odabrano <b>područje</b>" naći će karte koje djelomično pokrivaju odabrano područje. </font>
+		</p>
+	</mainhelp3>
+	<savexml>
+		<dc>Pohrani Dublin Core metapodatke kao XML</dc>
+		<fgdc>Pohrani FGDC metapodatke kao XML</fgdc>
+		<iso19115Esri>Pohrani ISO19115 metapodatke u XML za ESRI ArcCatalog</iso19115Esri>
+		<iso19139>Pohrani ISO19115/19139 metapodatke kao XML</iso19139>
+		<iso19139fra>Pohrani ISO19115/19139 Fra metapodatke kao XML</iso19139fra>
+	</savexml>
+	<thesaurus>
+	  <load>Load from GeoNetwork thesaurus repository</load>
+		<addelement>Dodaj element</addelement>
+		<admin>Upravljanje rječnicima</admin>
+		<broader>Širi pojam</broader>
+		<category>kategorija rječnika</category>
+		<consultation>Pogledaj rječnik</consultation>
+		<delete>Izbriši rječnik</delete>
+		<deleteelement>Izbriši element</deleteelement>
+		<download>Preuzmi rječnik</download>
+		<edit>Uredi rječnik</edit>
+		<editelement>Uredi element</editelement>
+		<edition>Uredi rječnik</edition>
+		<en>u</en>
+		<foundKeyWords>Broj nađenih pojmova</foundKeyWords>
+		<foundKeyWordsLimit>Maksimalni broj nađenih pojmova</foundKeyWordsLimit>
+		<keywordConfirm>Potvrdi ključnu riječ suzbijanje</keywordConfirm>
+		<keywordDescription>Definicija ključne riječi:</keywordDescription>
+		<management>Upravljanje rječnikom</management>
+		<manDes>Uređivanje i dodavanje rječnika</manDes>
+		<narrower>Uži pojam</narrower>
+		<related>Povezani pojam</related>
+		<thesaurus>Rječnik</thesaurus>
+		<unknown>Nepoznati rječnik</unknown>
+		<update>Ažuriraj rječnik</update>
+		<updateelement>Ažuriraj element</updateelement>
+		<upload>Učitaj rječnik</upload>
+	</thesaurus>
+	<layers>
+		<management>Upravljanje slojevima</management>
+		<manDes>Uređivanje i dodavanje slojeva</manDes>
+	</layers>
+	<services>
+		<monitor>Monitoring</monitor>
+		<monDes>Statistika korištenja mrežnih servisa</monDes>
+	</services>
+	<searchhelp>
+		<searchAllText>Unesi slobodan tekst</searchAllText>
+		<rtitle>Unesi naslov</rtitle>
+		<abstract>Unesi sažetak</abstract>
+		<keywords>Izaberi ključne riječi iz postojećeg zapisa metapodataka</keywords>
+
+		<thesaurus>Izaberi ključne riječi iz rječnika</thesaurus>
+	</searchhelp>
+    <inspire>
+        <serviceType>
+            <value id="discovery">Pronalaženje</value>
+            <value id="view">Pregled</value>
+            <value id="download">Preuzimanje</value>
+            <value id="transformation">Transformacija</value>
+            <value id="invoke">Pozivanje</value>
+            <value id="other">Ostale usluge (ostalo)</value>
+        </serviceType>
+        <spatialDataService>
+            <group label="Geographic human interaction services">
+                <value id="humanInteractionService">Geografske usluge ljudskog međudjelovanja</value>
+                <value id="humanCatalogueViewer">Preglednik kataloga</value>
+                <value id="humanGeographicViewer">Geografski preglednik</value>
+                <value id="humanGeographicSpreadsheetViewer">Geografski preglednik tablica</value>
+                <value id="humanServiceEditor">Uređivač usluga</value>
+                <value id="humanChainDefinitionEditor">Uređivač defincije niza</value>
+                <value id="humanWorkflowEnactmentManager">Upravitelj ozakonjenja poslovanja</value>
+                <value id="humanGeographicFeatureEditor">Uređivač geografskih svojstava</value>
+                <value id="humanGeographicSymbolEditor">Uređivač geografskih simbola</value>
+                <value id="humanFeatureGeneralizationEditor">Uređivač generalizacijskih svojstava</value>
+                <value id="humanGeographicDataStructureViewer">Preglednik geografske strukture podataka</value>
+            </group>
+            <group label="Geographic model/information management service">
+                <value id="infoManagementService">Usluga geografskog modela/upravljanja informacijama</value>
+                <value id="infoFeatureAccessService">Usluga za pristup svojstvu</value>
+                <value id="infoMapAccessService">Usluga za pristup mapi</value>
+                <value id="infoCoverageAccessService">Usluga za pristup pokrivenosti</value>
+                <value id="infoSensorDescriptionService">Usluga za opis senzora</value>
+                <value id="infoProductAccessService">Usluga za pristup proizvodu</value>
+                <value id="infoFeatureTypeService">Usluga za tip svojstva</value>
+                <value id="infoCatalogueService">Usluga kataloga</value>
+                <value id="infoRegistryService">Usluga registra</value>
+                <value id="infoGazetteerService">Usluga geografskog leksikona</value>
+                <value id="infoOrderHandlingService">Usluga za upravljanje narudžbama</value>
+                <value id="infoStandingOrderService">Usluga za postojeću narudžbu</value>
+            </group>
+            <group label="Geographic workflow/task management services">
+                <value id="taskManagementService">Usluge upravljanja geografskim tijekom poslovanja/zadaćama</value>
+                <value id="chainDefinitionService">Usluga definicije niza</value>
+                <value id="workflowEnactmentService">Usluga ozakonjenja poslovanja</value>
+                <value id="subscriptionService">Usluga pretplate</value>
+            </group>
+            <group label="Geographic processing services – spatial">
+                <value id="spatialProcessingService">Usluge geografskog procesiranja – prostorni</value>
+                <value id="spatialCoordinateConversionService">Usluga za pretvaranje koordinata </value>
+                <value id="spatialCoordinateTransformationService">Usluga za transformaciju koordinata </value>
+                <value id="spatialCoverageVectorConversionService">Usluga za pretvaranje pokrivenosti/vektora </value>
+                <value id="spatialImageCoordinateConversionService">Usluga za pretvaranje koordinata slike</value>
+                <value id="spatialRectificationService">Usluga za rektifikaciju</value>
+                <value id="spatialOrthorectificationService">Usluga za ortorektifikaciju</value>
+                <value id="spatialSensorGeometryModelAdjustmentService">Usluga za prilagodbu modela geometrije senzora</value>
+                <value id="spatialImageGeometryModelConversionService">Usluga za pretvaranje modela geometrije slike</value>
+                <value id="spatialSubsettingService">Usluga podskupa</value>
+                <value id="spatialSamplingService">Usluga uzorkovanja</value>
+                <value id="spatialTilingChangeService">Usluga za promjenu tla</value>
+                <value id="spatialDimensionMeasurementService">Usluga za mjerenje dimenzija</value>
+                <value id="spatialFeatureManipulationService">Usluge za manipulaciju svojstvima</value>
+                <value id="spatialFeatureMatchingService">Usluga za uspoređivanje svojstava</value>
+                <value id="spatialFeatureGeneralizationService">Usluga generalizacije svojstva</value>
+                <value id="spatialRouteDeterminationService">Usluga određivanja rute</value>
+                <value id="spatialPositioningService">Usluga pozicioniranja</value>
+                <value id="spatialProximityAnalysisService">Usluga analize udaljenosti</value>
+            </group>
+            <group label="Geographic processing services – thematic">
+                <value id="thematicProcessingService">Usluge geografskog procesiranja – tematski</value>
+                <value id="thematicGoparameterCalculationService">Usluga za izračun geoparametara</value>
+                <value id="thematicClassificationService">Usluga za tematsko klasificiranje</value>
+                <value id="thematicFeatureGeneralizationService">Usluge za generalizaciju svojstava</value>
+                <value id="thematicSubsettingService">Usluge za stvaranje podskupa</value>
+                <value id="thematicSpatialCountingService">Usluga za prostorno brojanje</value>
+                <value id="thematicChangeDetectionService">Usluga za detektiranje promjena</value>
+                <value id="thematicGeographicInformationExtractionService">Usluge za geografsko izdvajanje informacija</value>
+                <value id="thematicImageProcessingService">Usluga za procesiranje slika</value>
+                <value id="thematicReducedResolutionGenerationService">Usluga za generiranje smanjene rezolucije</value>
+                <value id="thematicImageManipulationService">Usluge za manipulaciju slika</value>
+                <value id="thematicImageUnderstandingService">Usluge za razumijevanje slika</value>
+                <value id="thematicImageSynthesisService">Usluge za sintezu slika</value>
+                <value id="thematicMultibandImageManipulationService">Manipulacija slika širokog spektra</value>
+                <value id="thematicObjectDetectionService">Usluga detekcije objekata</value>
+                <value id="thematicGeoparsingService">Usluga za geoparsiranje</value>
+                <value id="thematicGeocodingService">Usluga za geokodiranje</value>
+            </group>
+             <group label="Geographic processing services – temporal">
+                <value id="temporalProcessingService">Usluge za geografsko procesiranje – privremeni</value>
+                <value id="temporalReferenceSystemTransformationService"> Usluga za transformaciju sustava sa privremenom referencom</value>
+                <value id="temporalSubsettingService">Usluge za stvaranje podskupa</value>
+                <value id="temporalSamplingService">Usluge uzorkovanja</value>
+                <value id="temporalProximityAnalysisService">Usluga za analizu vremenske udaljenosti</value>
+            </group>
+            <group label="Geographic processing services – metadata">
+                <value id="metadataProcessingService">Usluge za geografsko procesiranje – metapodaci</value>
+                <value id="metadataStatisticalCalculationService">Usluga za statističke izračune</value>
+                <value id="metadataGeographicAnnotationService">Usluge za geografske zabilješke</value>
+            </group>
+            <group label="Geographic communication services">
+                <value id="comService">Usluge za geografsku komunikaciju</value>
+                <value id="comEncodingService">Usluga za šifriranje</value>
+                <value id="comTransferService">Usluga za transfer</value>
+                <value id="comGeographicCompressionService">Usluga za geografsku kompresiju</value>
+                <value id="comGeographicFormatConversionService">Usluga za pretvaranje geografskih formata</value>
+                <value id="comMessagingService">Usluga razmjene poruka</value>
+                <value id="comRemoteFileAndExecutableManagement">Remote upravljanje datotekama i njihovim izvršenjem</value>
+            </group>
+        </spatialDataService>
+        <conformity>
+            <value id="conformant">Sukladno</value>
+            <value id="notConformant">Nije sukladno</value>
+            <value id="notEvaluated">Nije ocijenjeno</value>
+        </conformity>
+        <what>
+            <l1>INSPIRE mogućnosti pretraživanja</l1>
+            <l2>INSPIRE metapodaci</l2>
+            <l3>Samo INSPIRE metapodaci</l3>
+            <l4>Sakrij INSPIRE mogućnosti</l4>
+            <l5>Prikaži INSPIRE mogućnosti</l5>
+            <l6>Dodatak </l6>
+            <l7>Vrsta izvora</l7>
+            <l8>Sve</l8>
+            <l9>Skupovi podataka i nizovi skupova podataka</l9>
+            <l10>Usluge (servisi) </l10>
+            <l11>Organizacija</l11>
+            <l12>Prikaži INSPIRE temu</l12>
+            <l13>Sakrij INSPIRE temu</l13>
+            <l14>INSPIRE tema</l14>
+            <l15>Vrsta usluge</l15>
+        </what>
+        <annex1>
+            <theme id="inspire_CoordinateRefSystems">Koordinatni referentni sustavi</theme>
+            <theme id="inspire_GeographicalGridSystems">Sustavi geografskih mreža</theme>
+            <theme id="inspire_GeographicalNames">Geografska imena</theme>
+            <theme id="inspire_AdministrativeUnits">Administrativne jedinice</theme>
+            <theme id="inspire_Addresses">Adrese</theme>
+            <theme id="inspire_CadastralParcels">Katastarske čestice</theme>
+            <theme id="inspire_TransportNetworks">Prometne mreže</theme>
+            <theme id="inspire_Hydrography">Hidrografija</theme>
+            <theme id="inspire_ProtectedSites">Zaštićena područja</theme>
+        </annex1>
+        <annex2>
+            <theme id="inspire_Elevation">Visina</theme>
+            <theme id="inspire_LandCover">Pokrivenost zemljišta</theme>
+            <theme id="inspire_Orthoimagery">Ortofoto</theme>
+            <theme id="inspire_Geology">Geologija</theme>
+        </annex2>
+        <annex3>
+            <theme id="inspire_StatisticalUnits">Statističke jedinice</theme>
+            <theme id="inspire_Buildings">Zgrade</theme>
+            <theme id="inspire_Soil">Tlo</theme>
+            <theme id="inspire_LandUse">Korištenje zemljišta</theme>
+            <theme id="inspire_HumanHealthAndSafety">Ljudsko zdravlje i sigurnost</theme>
+            <theme id="inspire_UtilityAndGovernmentServices">Komunalne i državne usluge</theme>
+            <theme id="inspire_EnvironmentalMonitoringFacilities">Objekti praćenja stanja okoliša</theme>
+            <theme id="inspire_ProductionAndIndustrialFacilities">Proizvodni i industrijski objekti</theme>
+            <theme id="inspire_AgriculturalAndAquacultureFacilities">Poljoprivredni i akvakulturni objekti</theme>
+            <theme id="inspire_PopulationDistribution-Demography">Raspodjela stanovništva - demografija</theme>
+            <theme id="inspire_AreaManagementRestrictionRegulationZonesAndReportingUnits">Područje zona upravljanja/ograničenja/regulacije i izvještajnih jedinica</theme>
+            <theme id="inspire_NaturalRiskZones">Zone prirodnih rizika</theme>
+            <theme id="inspire_AtmosphericConditions">Atmosferski uvjeti</theme>
+            <theme id="inspire_MeteorologicalGeographicalFeatures">Meteorološko-geografska obilježja</theme>
+            <theme id="inspire_OceanographicGeographicalFeatures">Oceanografska-geografska obilježja</theme>
+            <theme id="inspire_SeaRegions">Morske regije</theme>
+            <theme id="inspire_Bio-geographicalRegions">Biogeografske regije</theme>
+            <theme id="inspire_HabitatsAndBiotopes">Staništa i biotopi</theme>
+            <theme id="inspire_SpeciesDistribution">Raspodjela vrste</theme>
+            <theme id="inspire_EnergyResources">Energetski izvori</theme>
+            <theme id="inspire_MineralResources">Mineralni izvori</theme>
+        </annex3>
+    </inspire>
+    <selectMetadataFileAlert>Morate odabrati datoteku metapodataka za uvoz</selectMetadataFileAlert>        
+    <showMoreSearchFields>Prikaži/sakrij više polja za pretraživanje</showMoreSearchFields>
+    <searchEitherOfTheWords>Bilo koja od riječi</searchEitherOfTheWords>
+    <searchExactPhrase>Točna fraza</searchExactPhrase>
+    <searchAllWords>Sve riječi</searchAllWords>
+    <searchWithoutWords>Bez riječi</searchWithoutWords>
+    <showMap>Prikaži mapu</showMap>
+    <mapViewer>Preglednik mape</mapViewer>
+    <uuid>Jedinstveni identifikator</uuid>
+    <quickSearch>Brzi linkovi za pretragu</quickSearch>
+    <mymetadata>Moji metapodaci</mymetadata>
+    <catalogueRecords>Katalog metapodataka</catalogueRecords>
+    <harvestedRecords>Prikupljeni metapodaci (od drugih geoportala)</harvestedRecords>
+    <catalogueTemplates>Predlošci metapodataka</catalogueTemplates>
+    <addremove>Dodaj/Ukloni</addremove>
+    <enabled>Omogući</enabled>
+    <notifications>Obavijesti poslužiteljima</notifications>
+    <cswServer>CSW server</cswServer>
+    <cswServerDes>Definiraj CSW postavke (naslov, pristup ograničenja, ...)</cswServerDes>
+    <cswServerConfig>Konfiguracija CSW servera</cswServerConfig>
+    <cswServerEnable>Omogući</cswServerEnable>
+    <cswServerMetadataPublic>Umetanje metapodataka je javno (transakcija)</cswServerMetadataPublic>
+    <cswServerTitle>Naslov</cswServerTitle>
+    <cswServerAbstract>Sažetak</cswServerAbstract>
+    <cswServerFees>Naknade</cswServerFees>
+    <cswServerAccessConstraints>Ograničenja pristupa</cswServerAccessConstraints>
+    <cswServerContact>Kontakt</cswServerContact>
+    
+    <virtualcswServer>Konfiguracija virtualnih CSW pristupnih točaka</virtualcswServer>
+	<virtualcswServerDes>Konfiguracija virtualnih CSW servera</virtualcswServerDes>
+	<virtualcswServerConfig>Konfiguracija virtualnih CSW servera</virtualcswServerConfig>
+	<virtualcswInsert>Konfiguracija virtualnih CSW servera</virtualcswInsert>
+	<virtualcswServiceName>Naziv usluge</virtualcswServiceName>
+	<virtualcswServiceDescription>Opis usluge</virtualcswServiceDescription>
+	<virtualcswClassName>Klasa</virtualcswClassName>
+	<virtualcswNewService>Dodaj uslugu</virtualcswNewService>
+	<virtualcswParamName>Tip filtera</virtualcswParamName>
+	<virtualcswParamValue>Filter</virtualcswParamValue>
+	<virtualcswServicenameMandatory>Naziv usluge je obavezan.</virtualcswServicenameMandatory>
+	<virtualcswServicenameTooLong>Predugi naziv usluge (dozvoljeno 48 znakova)</virtualcswServicenameTooLong>
+	<virtualcswServicenameSpecialChars>Naziv usluge ne smije sadržavati specijalne znakove.</virtualcswServicenameSpecialChars>
+	<virtualcswClassnameMandatory>Klasa je obavezna.</virtualcswClassnameMandatory>
+	<virtualcswServiceNameStartsWith>Naziv usluge mora započeti s \"csw-\".</virtualcswServiceNameStartsWith>
+
+	<virtualcswUpdateService>Ažuriranje CSW virtualnog servera</virtualcswUpdateService>
+
+	<virtualcswAny>Slobodni tekst</virtualcswAny>
+	<virtualcswTitle>Naziv</virtualcswTitle>
+	<virtualcswAbstract>Sažetak</virtualcswAbstract>
+	<virtualcswKeywords>Ključna riječ</virtualcswKeywords>
+	<virtualcswDenominator>Nazivnik mjerila</virtualcswDenominator>
+	<virtualcswCatalog>Katalog</virtualcswCatalog>
+	<virtualcswGroup>Grupa</virtualcswGroup>
+	<virtualcswCategory>Kategorija</virtualcswCategory>
+	<virtualcswType>Tip izvora</virtualcswType>
+	
+    <customize-elementset>Prilagodi skup elemenata</customize-elementset>
+    <csw-server-disabled>CSW server je onemogućen.</csw-server-disabled>
+    <custom-elementset-intro>Definirajte elemente koji će biti uključeni u vašem setu elementa ovdje. Svaki element mora biti identificiran prema svojoj XPATH putanji u odnosu na korijenski direktorij. Ovi elementi i njihovi sljednici će biti uključeni u odgovorima prema CSW GetRecord zahtjevima sa parametrom ElementSetName=FULL.</custom-elementset-intro>
+    <custom-elementset-revert>Za povratak na zadani ElementSetName = FULL odgovori, brisanje svih elemenata iz ovog popisa.</custom-elementset-revert>
+    <custom-elementset-add>Dodaj element</custom-elementset-add>
+    <wmslayers>WMS slojevi</wmslayers>
+    <formatter.admin>Admin formatiranja metapodataka</formatter.admin>
+    <formatter.admin.des>Administracijsko sučelje za skupove formatiranja metapodataka</formatter.admin.des>
+	<monitor>Monitor</monitor>
+	<concealed>Skriveno</concealed>
+	<serviceNotAllowed>Nemate odgovarajuća prava za pristup usluzi {1}</serviceNotAllowed>
+
+	<advancedOptions.show>prikaži napredne mogućnosti</advancedOptions.show>
+	<advancedOptions.hide>sakrij napredne mogućnosti</advancedOptions.hide>
+	<latestDatasets>Zadnji</latestDatasets>
+	<popularDatasets>Popularno</popularDatasets>
+	<filter>Filter</filter>
+	<welcome.text>Sava GIS katalog metapodataka</welcome.text>
+	<tag_label>Ključne riječi</tag_label>
+	<map_label>Mapa</map_label>
+	
+	<signIn>Prijava</signIn>
+	<signInLabel>Prijava u katalog</signInLabel>
+  	<signOut>Odjava</signOut>
+	
+	
+	<identificationBox>Identifikacija</identificationBox>
+    <categorizationBox>Kategorizacija</categorizationBox>
+    <keywordBox>Ključna riječ</keywordBox>
+    <geolocationBox>Geografska lokacija</geolocationBox>
+    <temporalBox>Vremenska poveznica</temporalBox>
+    <qualityBox>Kvaliteta</qualityBox>
+    <conformantBox>Usklađenost za izvor podataka</conformantBox>
+    <limitationBox>Ograničenja pristupa i korištenja</limitationBox>
+    <organizationBox>Odgovorna organizacija za izvor podataka</organizationBox>
+    <metadataBox>Metapodaci</metadataBox>
+    
+    <groupNameSpaces js="true">Naziv grupe mora biti jedna riječ. Razmaci nisu dozvoljeni.</groupNameSpaces>
+    <groupNameRequired js="true">Naziv grupe je obavezno polje.</groupNameRequired>
+    <about.text><p>
+         Prvenstvena funkcionalnost <strong>Sava GIS kataloga metapodataka</strong> je pronalaženje, analiza i korištenje izvora (resursa) prostornih podataka. Zbog toga je na ovom geoportalu razvijena usluga za pronalaženje izvora prostornih podataka na osnovu metapodataka.
+		</p>
+		<p>		 
+		Sava GIS katalog metapodataka omogućuje uslugu (servis) otkrivanja skupova i usluga prostornih podataka. Nakon što se pretraživanjem metapodataka pronađe izvor prostornih podataka, na osnovu analize metapodataka, korisnik procjenjuje dali pronađeni izvor podataka zadovoljava njegove potrebe te koji su uvjeti pristupa i njihovog korištenja.
+		</p>
+		<p>
+		Jedan od ciljeva Sava GIS kataloga metapodataka je da omogućuje jednostavno pronalaženje, analizu i dijeljenje prostornih podataka i na taj način poveća interoperabilnost između davatelja i korisnika prostornih podataka i njegovih usluga. 
+		</p>		
+		<p>Osnova ovog geoportala je <a href="http://geonetwork-opensource.org" target="_blank">GeoNetwork opensource</a>.
+		</p>		 </about.text>
+    <statistics_label>Statistika po zemljama</statistics_label>
+    <header_title>Katalog metapodataka</header_title>
+	
+	<savaGisApp>Sava GIS</savaGisApp>
+</strings>

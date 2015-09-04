@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<heading>Pogreška autentikacije i autorizacije!</heading>
+	<message>Korisničko ime ili lozinka nisu ispravni.<br/>Odaberite 'Natrag' i pokušajte ponovno.</message>
+	<button>Natrag</button>
+</strings>

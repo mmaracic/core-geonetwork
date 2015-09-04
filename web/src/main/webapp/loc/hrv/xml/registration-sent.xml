@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <heading>Registracija je uspjela</heading>
+    <message>Vaša registracija je uspjela, molimo provjerite Vaše korisničko ime i lozinku koje su dostupne na Vašoj e-mail adresi.</message>
+    <errorEmailAddressAlreadyRegistered>
+		<p>Žao nam je, registracije je<font class="error">NEUSPJEŠNA</font> zato jer ste već registrirani korisnik.</p>
+    <p>Ako ste zaboravili lozinku, molimo kontaktirajte službu za korisnike<a href="mailto:zeljko.hecimovic@dgu.hr?subject=Forgotten password">zeljko.hecimovic@dgu.hr</a> or ph: xxx-xxxxxxxx</p>
+    <p>Resetirana lozinka će uskoro biti dostupna. </p>
+    </errorEmailAddressAlreadyRegistered>
+    <errorEmailToAddressFailed>
+		<p>Žao nam je, registracija je <font class="error">NEUSPJEŠNA</font> jer nismo u mogućnosti poslati e-poštu na adresu koju ste  dali.</p>
+		<p>Molimo provjerite Vaše podatke te pokušajte ponovno registraciju.</p>
+    </errorEmailToAddressFailed>
+    <errorProfileRequestFailed>
+		<p>Vaš zahtjev za pristup Editoru nije dostavljen.</p>
+		<p>Molimo vas kontaktirajte helpdesk na <a href="mailto:yourname@yoursite.org?subject=Forgotten password">yourname@yoursite.org</a> ili xxx-xxxxxxxx</p>
+    </errorProfileRequestFailed>
+</strings>
