@@ -33,9 +33,12 @@
     Add try/catch block to log out when a label id duplicated
     in loc files. XSLv3 could be useful for that.
     -->
-    <!--<xsl:message>#<xsl:value-of select="$name"/></xsl:message>
-    <xsl:message>#<xsl:value-of select="$xpath"/></xsl:message>
-    <xsl:message>#<xsl:value-of select="$parent"/></xsl:message>-->
+<!--    <xsl:message>Poziv funkcije</xsl:message>
+    <xsl:message>#Schema<xsl:value-of select="$schema"/></xsl:message>
+    <xsl:message>#Name<xsl:value-of select="$name"/></xsl:message>
+    <xsl:message>#Xpath<xsl:value-of select="$xpath"/></xsl:message>
+    <xsl:message>#ParentIsoType<xsl:value-of select="$parentIsoType"/></xsl:message>
+    <xsl:message>#Parent<xsl:value-of select="$parent"/></xsl:message>-->
     
     <xsl:variable name="escapedName">
       <xsl:choose>
@@ -49,13 +52,21 @@
       </xsl:choose>
     </xsl:variable>
     
-    <!-- Name with context in current schema -->
+      <!-- Name of the grandparent -->
+    <xsl:variable name="ancestors" select="tokenize($xpath,'/')"/>
+<!--      <xsl:message>Ancestors names'<xsl:value-of select="$ancestors"/></xsl:message>-->
+    <xsl:variable name="grandparent" select="$ancestors[last()-2]"/>
+<!--      <xsl:message>Grandparent name<xsl:value-of select="$grandparent"/></xsl:message>-->
+
+      <!-- Name with context in current schema -->
     <xsl:variable name="schemaLabelWithContext"
-      select="$labels/element[@name=$escapedName and (@context=$xpath or @context=$parent or @context=$parentIsoType)]"/>
+      select="$labels/element[@name=$escapedName and (@context=$xpath or @context=$parent or @context=$parentIsoType) and (@supercontext=$grandparent)]"/>
+<!--      <xsl:message>Label with context <xsl:value-of select="$schemaLabelWithContext"/></xsl:message>-->
     
     <!-- Name in current schema -->
-    <xsl:variable name="schemaLabel" select="$labels/element[@name=$escapedName and not(@context)]"/>
-
+    <xsl:variable name="schemaLabel" select="$labels/element[@name=$escapedName and not(@context) and not (@supercontext)]"/>
+<!--      <xsl:message>Label no context<xsl:value-of select="$schemaLabel"/></xsl:message>-->
+      
     <xsl:choose>
       <xsl:when test="$schemaLabelWithContext">
         <xsl:copy-of select="$schemaLabelWithContext" copy-namespaces="no"/>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Zapisi metapodataka nisu nađeni</notfound>
+	<notowner>Zapisi metapodataka ne mogu biti ažurirani jer niste vlasnik</notowner>
+	<updated>Ažurirani zapisi metapodataka</updated>
+    <notProcessFound>Proces ažuriranja za metapodatake nije pronađen za shemu metapodataka</notProcessFound>
+</strings>

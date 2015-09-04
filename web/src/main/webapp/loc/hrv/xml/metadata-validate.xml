@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<heading>Provjera metapodataka</heading>
+	<message>Provjera metapodataka po definicijama sheme je uspjela</message>
+	<schemaTronError>ali je došlo do pogreške(aka) u provjeri po shematron pravilima</schemaTronError>
+	<schemaTronValid>Provjera metapodataka po shematron pravilima je uspjela</schemaTronValid>
+	<schemaTronReport>Shematron izvješće je ovdje dostupno</schemaTronReport> 
+  <invalidElement>Nevažeći element. Neispravan sadržaj pronađen počevši s elementom: </invalidElement>
+  <onElementOf>Jedan od sljedećih elemenata </onElementOf>
+  <isExpected> se očekuje.</isExpected>
+  <isNotComplete> nije potpun.</isNotComplete>
+  <elementLocated>Roditeljski element je </elementLocated>
+  <missingElement>Nedostaje element. Sadržaj elementa: </missingElement>
+  <invalidValue>Vrijednost neispravna ili nedostaje.</invalidValue>
+  <notValidFor> nije valjana vrijednost za </notValidFor>
+  <xsdErrorIs>XSD greška je: </xsdErrorIs>
+  <inElement> u elementu </inElement>
+</strings>

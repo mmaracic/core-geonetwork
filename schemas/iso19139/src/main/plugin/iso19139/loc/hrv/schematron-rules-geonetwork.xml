@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <M500>[Language] - Jezik metapodataka nije definiran a drugi jezici su definirani. Glavni jezik metapodataka NE SMIJE biti definiran u dijelu za drugi jezik .</M500>
+    <alert.M500>
+        <div>Provjerite mogućnost da glavni jezik metapodataka nije definiran a elementi ostalih jezika (ie.
+            gmd:locale) postoje (pogledajte Napredni pregled / Metapodaci odjeljak). <br/>
+            <span class="validationReportSuggestion">Prijedlozi: Definirajte glavni jezik ili uklonite definiciju drugog jezika.</span></div>
+    </alert.M500>
+    <report.M500>Glavni jezik metapodataka je:</report.M500>
+    <alert.M501>
+        <div>Deklarirajte glavni jezik metapodataka samo jednom (pogledajte Napredni pregled / Metapodaci odjeljak). <br/>
+            <span class="validationReportSuggestion">Prijedozi: Uklonite ga iz dijela za drugi jezik.</span></div>
+    </alert.M501>
+    <report.M501>Nisu pronađeni dupli jezici.</report.M501>
+</strings>

@@ -91,6 +91,7 @@ import javax.xml.XMLConstants;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.URIResolver;
@@ -602,13 +603,27 @@ public final class Xml
                 //e.printStackTrace();
             } finally {
                 transFact.setURIResolver(new JeevesURIResolver());
-                Transformer t = transFact.newTransformer(srcSheet);
+                Transformer t = null;
+                try {
+                    t = transFact.newTransformer(srcSheet);
+                }
+                catch(TransformerConfigurationException ex){
+                    Log.warning(Log.ENGINE, "Stylesheet error!");
+                    ex.printStackTrace();
+                }
+               
                 if (params != null) {
                     for (Map.Entry<String, Object> param : params.entrySet()) {
                         t.setParameter(param.getKey(), param.getValue());
                     }
                 }
-                t.transform(srcXml, result);
+                try {
+                    t.transform(srcXml, result);
+                }
+                catch(TransformerException ex){
+                    Log.warning(Log.ENGINE, "Transformation error!");
+                    ex.printStackTrace();
+                }
             }
         }
 	}

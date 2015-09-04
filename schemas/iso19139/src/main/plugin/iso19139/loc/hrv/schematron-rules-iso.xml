@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <M6>Tekst (CharacterString) mora imati sadržaj ili njegov roditelj mora imati valjan nilReason atribut.</M6>
+    <M7>ograničenja CRS atributa</M7>
+    <M8>[ISOFTDS19139:2005-TableA1-Row24] - Potrebno je ime za kontakt</M8>
+    <M9>[ISOFTDS19139:2005-TableA1-Row07] - Ograničenje javnog pristupa (OtherConstraints) potrebno ako postoje druga ograničenja (otherRestrictions)</M9>
+    <M10>[ISOFTDS19139:2005-TableA1-Row16] - Za vrijednosti su potrebne mjerne jedinice.</M10>
+    <M11>[ISOFTDS19139:2005-TableA1-Row13] - Opis (description) potreban ako ne postoji domet izvora (sourceExtent)</M11>
+    <M12>[ISOFTDS19139:2005-TableA1-Row14] - Domet izvora (sourceExtent) potreban ako nema opisa (description)</M12>
+    <M13>[ISOFTDS19139:2005-TableA1-Row10] - Sadržaj obvezan za skup podataka ili niz</M13>
+    <M14>[ISOFTDS19139:2005-TableA1-Row11 Row12] - Podrijetlo</M14>
+    <M15>[ISOFTDS19139:2005-TableA1-Row12] - Korak procesa potreban ako nema izjave o podrijetlu ili izvora</M15>
+    <M16>[ISOFTDS19139:2005-TableA1-Row08] - Skup podataka mora imati izvješće ili podrijetlo</M16>
+    <M17>[ISOFTDS19139:2005-TableA1-Row09] - Opis razine (LevelDescription) nužan, osim ako se radi o skupu podataka ili nizu</M17>
+    <M18>[ISOFTDS19139:2005-TableA1-Row17] - Za vrijednosti gustoće potrebna mjerna jedinica</M18>
+    <M19>[ISOFTDS19139:2005-TableA1-Row18] - Format podataka obavezan</M19>
+    <M20>[ISOFTDS19139:2005-TableA1-Row23] - Element obuhvata obavezan</M20>
+    <M21>[ISOFTDS19139:2005-TableA1-Row04] - Skup podata mora imati obuhvat</M21>
+    <M22>[ISOFTDS19139:2005-TableA1-Row05] - Skup podataka ili niz moraju imati kategoriju teme</M22>
+    <M23>[ISOFTDS19139:2005-TableA1-Row06] - Za agregatni skup podataka moraju biti dokumentirani ili ime (aggregateDataSetName) ili identifikator (aggregateDataSetIdentifier)</M23>
+    <M24>[ISOFTDS19139:2005-TableA1-Row01] - Pokazatelj jezika</M24>
+    <M25>[ISOFTDS19139:2005-TableA1-Row02] - Pokazatelj skupa znakova</M25>
+    <M26>[ISOFTDS19139:2005-TableA1-Row19] - Detalj potreban ako nije jednostavn izraz</M26>
+    <M27>[ISOFTDS19139:2005-TableA1-Row20] - Uvjet</M27>
+    <M28>[ISOFTDS19139:2005-TableA1-Row21] - Domenski kod (DomainCode)</M28>
+    <M29>[ISOFTDS19139:2005-TableA1-Row22] - Kratko ime (ShortName)</M29>
+    <M30>[ISOFTDS19139:2005-TableA1-Row15] - Opis kontrolnih točaka potreban ukoliko su dostupne</M30>
+    <M61>[ISOFTDS19139:2005-TableA1] - Ime hijerarhijske razine (HierarchyLevelName) mora biti dokumentirano ako vrsta izvora (hierarchyLevel) ne sadrži skup podataka</M61>
+    
+    
+    <alert.M6><div>Kateogrija teme je obavezna ako je MD_Metadata.hierarchyLevel  'dataset' (skupu podatala) ili 'series' (niz), ili ne postoji.</div></alert.M6>
+    <report.M6>Kategorija teme je:</report.M6>
+    <alert.M6.characterString><div>Tekst (CharacterString) mora imati sadržaj ili nilReason atribut roditelja da bi bio legitiman.</div></alert.M6.characterString>
+    <alert.M6.directPosition><div>Prisutnost atributa dimenzije implicira prisutnost srsName atributa.</div></alert.M6.directPosition>
+    <alert.M7.axisAndSrs><div>Prisutnost axisLabels atributa implicira prisutnost srsName atributa.</div></alert.M7.axisAndSrs>
+    <alert.M7.uomAndSrs><div>Prisutnost uomLabels atributa implicira prisutnost srsName atributa.</div></alert.M7.uomAndSrs>
+    <alert.M7.uomAndAxis><div>Prisutnost uomLabels atributa implicira prisutnost axisLabels atributa i obrnuto.</div></alert.M7.uomAndAxis>
+    <alert.M8><div>Morate definirati jedno ili više od navedenog: osobu (individualName), ime organizacije (organisationName) ili poziciju (positionName).
+        <span class="validationReportSuggestion">Prijedlozi: Provjerite informacije o kontaktu za kontaktnu točku za metapodatake ili navedenu odgovornu organizaciju u dijelu za informacije na primjer.</span>
+    </div></alert.M8>
+    <report.M8>U kontaktu nađeno jedno ili više od navedenog: osoba (individualName), ime organizacije (organisationName) i pozicija (positionName):</report.M8>
+    <alert.M9.access><div>Ostala ograničenja trebaju biti definirana ako je ograničenje pristupa postavljeno na "Ostala ograničenja".<br/>
+        otherConstraints: documented if accessConstraints = 'otherRestrictions'.<br/>
+        <span class="validationReportSuggestion">Prijedlozi: Dodajte element za ostala ograničenja i objasnite razlog.</span>
+    </div></alert.M9.access>
+    <report.M9>
+        <div>Ostala ograničenja postavljena na:</div>
+    </report.M9>
+    <alert.M9.use><div>Ostala ograničenja trebaju biti definirana ako su ograničenja korištenja postavljena na "Ostala ograničenja".<br/>
+        otherConstraints: documented if useConstraints = 'otherRestrictions'.<br/>
+        <span class="validationReportSuggestion">Prijedlozi: Dodajte element za ostala ograničenja i objasnite razlog.</span>        
+    </div></alert.M9.use>
+    <alert.M9><div>Mjerna jedinica ('units') je obavezna ako su maksimalna ('maxValue') ili minimalna ('minValue') vrijednost postavljene.</div></alert.M9>
+    <report.M9.units>Mjerna jedinica:</report.M9.units>
+    <report.M9.max>Maksimalna vrijednost:</report.M9.max>
+    <report.M9.min>Minimalna vrijednost:</report.M9.min>
+    <alert.M11><div>Opis ('description') je obavezan ako domet izvora ('sourceExtent') nije dokumentiran.
+        <span class="validationReportSuggestion">Prijedlozi: Dodajte opis i/ili doseg izvora.</span>
+    </div></alert.M11>
+    <report.M11><div>Opis (description) i domet izvora (sourceExtent) su dokumentirani za podrijetlo (lineage).</div></report.M11>        
+    <alert.M13><div>Izjava o podrijetlu je obavezna ako nema definiranog izvora ili koraka procesa za skup podataka ili niz.<br/>
+        If (count(source) + count(processStep) =0) and (DQ_DataQuality.scope.level = 'dataset' or 'series') then statement is mandatory.</div></alert.M13>
+    <report.M13><div>Izjava o podrijetlu je dokumentirana.</div></report.M13>
+    <alert.M14><div>'source'(izvor) uloga je obavezna ako LI_Lineage.statement i 'processStep'(korak procesa) uloge nisu dokumentirane.<br/>
+        <span class="validationReportSuggestion">Prijedlozi: Definirajte izjavu o podrijetlu ili ulogu koraka procesa.</span>
+    </div></alert.M14>
+    <report.M14>Izvor (source) potreban ako nema izjave o podrijetlu (statement) ili koraka procesa (processStep).</report.M14>
+    <alert.M15><div>'processStep'(korak procesa) uloga je obavezna ako LI_Lineage.statement i 'source'(izvor) uloge nisu dokumentirane.<br/>
+        <span class="validationReportSuggestion">Prijedlozi: Definirajte izjavu o podrijetlu ili ulogu izvora.</span>        
+    </div></alert.M15>
+    <report.M15>Korak procesa potreban ako nema izjave o podrijetlu ili izvora.</report.M15>
+    <alert.M16><div>Uloge 'report'(izvješće) ili 'lineage'(podrijetlo) obavezne ako scope.DQ_Scope.level = 'dataset'.</div></alert.M16>
+    <report.M16><div>Izvješće ili podrijetlo su definirani.</div></report.M16>
+    <alert.M17><div>Opis razine ('levelDescription') je obavezan ako: 'level' notEqual 'dataset' or 'series'.</div></alert.M17>
+    <report.M17>Opis razine postavljen na:</report.M17>
+    <alert.M18><div>Jedinica gustoće ('densityUnits') je obavezna ako postoji gustoća ('density').</div></alert.M18>
+    <report.M18>Gustoća je:</report.M18>
+    <alert.M19><div>Potreban je jedan format kojeg koristi distributer.<br/>
+    count (distributionFormat + distributor/MD_Distributor/distributorFormat) &gt; 0.</div></alert.M19>
+    <report.M19> format(a) koje koristi distributer nađeno.</report.M19>
+    <alert.M20><div>U dijelu za doseg, jedan od sljedećih elemenata treba biti definiran : opis (description),geografski element (geographicElement),
+        vremenski element (temporalElement), vertikalni element (verticalElement).<br/>
+        count(description + geographicElement + temporalElement + verticalElement) &gt; 0.
+    </div></alert.M20>
+    <report.M20>Jedan opis (description),geografski element (geographicElement),
+        vremenski element (temporalElement), vertikalni element (verticalElement) nađen.</report.M20>
+    <alert.M21><div>Za skup podataka mora biti definiran doseg. <br/>
+    MD_Metadata.hierarchyLevel = 'dataset' (i.e. the default value of this property on the parent) implies count (extent.geographicElement.EX_GeographicBoundingBox) + count (extent.geographicElement.EX_GeographicDescription) &gt;=1.</div></alert.M21>
+    <report.M21>Doseg definiran za skup podataka.</report.M21>
+    <alert.M23><div>Ili ime ('aggregateDataSetName') ili identifikator('aggregateDataSetIdentifier') agregatnog skupa podataka moraju biti dokumentirani.</div></alert.M23>
+    <report.M23>ime ('aggregateDataSetName') ili identifikator('aggregateDataSetIdentifier') agregatnog skupa podataka dokumentirani.</report.M23>
+    <alert.M24><div>jezik ne postoji.</div></alert.M24>
+    <alert.M26.obligation><div>Obveza('obligation') je obavezna ako: 'dataType' notEqual 'codelist', 'enumeration' or 'codelistElement'.</div></alert.M26.obligation>
+    <alert.M26.maximumOccurence><div>Maksimalan broj pojavljivanja ('maximumOccurence') je obavezan ako: 'dataType' notEqual 'codelist', 'enumeration' or 'codelistElement'.</div></alert.M26.maximumOccurence>
+    <alert.M26.domainValue><div> Domenska vrijednsot ('domainValue') je obavezna ako: 'dataType' notEqual 'codelist', 'enumeration' or 'codelistElement'.</div></alert.M26.domainValue>
+    <alert.M27><div>Ako 'obligation'(obveza) = 'conditional'(uvjetna) onda 'condition'(uvjet) obavezan.</div></alert.M27>
+    <report.M27>Uvjet definiran elementom uvjeta.</report.M27>
+    <alert.M28><div>Ako 'dataType'(tip podataka) = 'codelistElement' onda 'domainCode'(domenski kod) obavezan.</div></alert.M28>
+    <report.M28>Domenski kod dokumentiran za element šifarnika.</report.M28>
+    <alert.M29><div> Kratko ime ('shortName') je obvezno ako: 'dataType' not equal to 'codelistElement'.</div></alert.M29>
+    <report.M29>Kratko ime dokumentirano za nijedan element šifarnika.</report.M29>
+    <alert.M30><div>Opis kontrolnih točaka ('checkPointDescription') je obavezan ako je dostupnost kontrolnih tročaka('checkPointAvailability') = 1 ili true.</div></alert.M30>
+    <report.M30>Opis kontrolnih točaka je dokumentiran.</report.M30>
+    <alert.M61><div>Ime hijerarhijske razine (hierarchyLevelName) ako vrsta izvora (hierarchyLevel) ne sadrži skup podataka('dataset').</div></alert.M61>
+    <report.M61>Ime hijerarhijske razine je:</report.M61>
+    
+    <alert.requiredAbstract>Identifikacija Sažetak je obavezan element</alert.requiredAbstract>
+    <report.requiredAbstract>Identifikacija Pronađen sažetak</report.requiredAbstract>
+    <alert.requiredTitle>Identifikacija Naziv je obavezan element</alert.requiredTitle>
+    <report.requiredTitle>Identifikacija Pronađen naziv</report.requiredTitle>
+    <alert.requiredDate>Identifikacija Datum je obavezan element</alert.requiredDate>
+    <report.requiredDate>Identifikacija Pronađen datum</report.requiredDate>
+    <alert.requiredDateType>Identifikacija Vrsta izvora je obavezan element</alert.requiredDateType>
+    <report.requiredDateType>Identifikacija Citation Pronađena vrsta izvora</report.requiredDateType>
+    <alert.requiredContact>Kontakt je obavezan element</alert.requiredContact>
+    <report.requiredContact>Kontakt pronađen</report.requiredContact>
+    <alert.requiredLanguage>Jezik je obavezan element</alert.requiredLanguage>
+    <report.requiredLanguage>Jezik pronađen</report.requiredLanguage>
+    <alert.requiredLanguage>Identifikacija Jezik je obavezan element</alert.requiredLanguage>
+    <report.requiredLanguage>Identifikacija Jezik pronađen</report.requiredLanguage>
+    <alert.requiredCitation>Identifikacija Navod je obavezan element</alert.requiredCitation>
+    <report.requiredCitation>Identifikacija Navod pronađen</report.requiredCitation>
+    <requiredElements>Required Elements</requiredElements>
+    <requireCitation>Citation</requireCitation>    
+</strings>

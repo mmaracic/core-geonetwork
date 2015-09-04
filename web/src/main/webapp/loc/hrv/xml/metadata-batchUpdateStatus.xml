@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<notfound>Zapisi metapodataka nisu nađeni</notfound>
+	<notowner>Zapisi metapodataka čiji status nije ažuriran jer niste vlasnik</notowner>
+	<updated>Zapisi metapodataka s ažuriranim statusom</updated>
+	<resultstitle>Rezultati ažuriranja statusa</resultstitle>
+</strings>

@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	
+ * Hide in edit mode : If some codelist needs to be hidden
+ in edit mode, the hideInEditMode attribute could be added
+ to any entries.
+ 
+ eg.
+	<entry hideInEditMode="true">
+	
+ This will restrict the number of available entries for end
+ user editors and keep all records ISO compatible when using
+ codelist (eg. harvested records could use codelist hidden
+ in local node and needs to be displayed in view mode).
+ 
+ By default, this attribute is not used.
+-->
+<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd">
+	<!-- ==================================================== -->
+	<codelist name="serviceType">
+		<entry>
+			<code>discovery</code>
+			<label>pronalaženje</label>
+			<description>Usluga pronalaženja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>view</code>
+			<label>pregled</label>
+			<description>Usluga pregleda</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>download</code>
+			<label>preuzimanje</label>
+			<description>Usluga preuzimanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>transformation</code>
+			<label>transformacija</label>
+			<description>Usluga transformacije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>invoke</code>
+			<label>pozivanje</label>
+			<description>Usluga pozivanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>other</code>
+			<label>ostalo</label>
+			<description>Ostale usluge</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:CI_DateTypeCode">
+		<entry>
+			<code>creation</code>
+			<label>Stvoreno</label>
+			<description>Datum kada je izvor podataka stvoren</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>publication</code>
+			<label>Objavljeno</label>
+			<description>Datum kada je izvor podataka objavljen</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>revision</code>
+			<label>Revidirano</label>
+			<description>Datum kada je izvor podataka pregledan ili ponovno pregledan te poboljšan ili dopunjen</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:CI_OnLineFunctionCode">
+		<entry>
+			<code>download</code>
+			<label>Download</label>
+			<description>Online instrukcije za prebacivanje podataka sa jednog izvora ili sistema na drugi</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>information</code>
+			<label>Informacije</label>
+			<description>Online informacije o izvoru</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>offlineAccess</code>
+			<label>Offline pristup</label>
+			<description>Online instrukcije za preuzimanje izvora od poslužitelja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>order</code>
+			<label>Narudžba</label>
+			<description>Online narudžbeni proces za preuzimanje izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>search</code>
+			<label>Pretraživanje</label>
+			<description>Online sučelje za pretraživanje informacija o izvoru</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:CI_PresentationFormCode">
+		<entry>
+			<code>documentDigital</code>
+			<label>Digitalni dokument</label>
+			<description>Digitalna reprezentacija primarno textualnog sadržaja (može sadržavati i ilustracije)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>imageDigital</code>
+			<label>Digitalna slika</label>
+			<description>Digitalna reprezentacija primarno textualnog sadržaja (može sadržavati i ilustracije) na papiru, fotografskom materijalu 
+			ili drugom mediju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>documentHardcopy</code>
+			<label>Tvrda kopija dokumenta</label>
+			<description>Prirodna ili ljudski stvorena obilježja, objetki i aktivnosti dobijeni očitavanjem vizualnog
+			ili bilo kojeg drugog dijela elektromagnetskog spektra pomoću senzora poput termalnog infracrvenog 
+			ili visokorezolucijskog radara, te pohranjeno u digitalni format</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>imageHardcopy</code>
+			<label>Tvrda kopija slike</label>
+			<description>Prirodna ili ljudski stvorena obilježja, objetki i aktivnosti dobijeni očitavanjem vizualnog
+			ili bilo kojeg drugog dijela elektromagnetskog spektra pomoću senzora poput termalnog infracrvenog 
+			ili visokorezolucijskog radara, te pohranjeno na papir, fotografiju, ili drugi tip medija koji korisnik može 
+			izravno koristiti</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>mapDigital</code>
+			<label>Digitalna karta</label>
+			<description>Karta u rasterskom ili vektorskom formatu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>mapHardcopy</code>
+			<label>Tvrda kopija karte</label>
+			<description>Karta isprintana na papir, fotografski materijal ili drugi tip medija koji korisnik može izravno koristiti</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>modelDigital</code>
+			<label>Digitalni model</label>
+			<description>Multidimenzionalna digitalna reprezentacija značajke, procesa, itd.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>modelHardcopy</code>
+			<label>Hardcopy model</label>
+			<description>Trodimenzionalan, fizički model</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>profileDigital</code>
+			<label>Digitalni profil</label>
+			<description>Vertikalni presjek (cross-section) u digitalnom formatu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>profileHardcopy</code>
+			<label>Tvrda kopija profila</label>
+			<description>Vertikalni presjek (cross-section) isprintani na papir, itd.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>tableDigital</code>
+			<label>Digitalna tablica</label>
+			<description>Sistematski prikazana digitalna reprezentacija činjenica ili grafova u obliku tablice</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>tableHardcopy</code>
+			<label>Tvrda kopija tablice</label>
+			<description>Sistematski prikazana reprezentacija činjenica ili grafova u obliku tablice, isprintana na papir,
+			fotografski materijal, ili drugi tip medija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>videoDigital</code>
+			<label>Digitalni video</label>
+			<description>Digitalna video snimka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>videoHardcopy</code>
+			<label>Tvrda kopija video snimke</label>
+			<description>Video snimka na filmu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:CI_RoleCode">
+		<entry>
+			<code>custodian</code>
+			<label>Čuvar</label>
+			<description>Organizacija koja prihvaća odgovornost za izvor podataka i osigurava prikladnu brigu i održavanje izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>resourceProvider</code>
+			<label>Dobavljač izvora</label>
+			<description>Organizacija koja osigurava izvor</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>owner</code>
+			<label>Vlasnik</label>
+			<description>Vlasnik izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>user</code>
+			<label>Korisnik</label>
+			<description>Korisnik izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>distributor</code>
+			<label>Distributor</label>
+			<description>Distributor izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>originator</code>
+			<label>Stvaratelj</label>
+			<description>Kreator izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>pointOfContact</code>
+			<label>Točka kontakta</label>
+			<description>Organizacija koja se može kontaktirati da bi se dobile informacije o izvoru ili se stekao izvor</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>principalInvestigator</code>
+			<label>Glavni istraživač</label>
+			<description>Ključna organizacija odgovorna za prikupljanje informacija i obavljanje istraživanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>processor</code>
+			<label>Obrađivač</label>
+			<description>Organizacija koje je obradila podatke na način da je izvor izmijenjen</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>publisher</code>
+			<label>Izdavač</label>
+			<description>Izdavač izvora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>author</code>
+			<label>Autor</label>
+			<description>Autor izvora</description>
+		</entry>
+		<!-- ISO PROFIL CHE ONLY 
+		<entry>
+			<code>editor</code>
+			<label>Editor</label>
+			<description></description>
+		</entry>
+		<entry>
+			<code>partner</code>
+			<label>Partner</label>
+			<description></description>
+		</entry>-->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:DQ_EvaluationMethodTypeCode">
+		<entry>
+			<code>directInternal</code>
+			<label>Direktno interno</label>
+			<description>Metoda evaluiranja kvalitete skupa podataka bazirana na inspekciji elemenata
+			unutar skupa podataka, gdje su svi potrebni podaci interni skupu podataka koji se evaluira</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>directExternal</code>
+			<label>Direktno vanjsko</label>
+			<description>Metoda evaluiranja kvalitete skupa podataka bazirana na inspekciji elemenata
+			unutar skupa podataka, gdje su potrebni vanjski (iz drugih skupova podataka) referentni podatci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>indirect</code>
+			<label>Indirektno</label>
+			<description>Metoda evaluiranja kvalitete skupa podataka bazirana na vanjskom znanju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:DS_AssociationTypeCode">
+		<entry>
+			<code>crossReference</code>
+			<label>Unakrsna referenca</label>
+			<description>Referenca iz jednog skupa podataka prema drugom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>largerWorkCitation</code>
+			<label>Citiranje većeg rada</label>
+			<description>Referenca na glavni skup podataka kojih je ovaj skup podataka dio</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>partOfSeamlessDatabase</code>
+			<label>Dio bešavne baze podataka</label>
+			<description>Dio istog strukturiranog skupa podataka koji se nalazi na računalu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>source</code>
+			<label>Izvor</label>
+			<description>Informacije o mapiranju i ucrtavanju iz kojeg potiče sadržaj skupa podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>stereoMate</code>
+			<label>Stereo mate</label>
+			<description>Dio skupa fotografija koje kada se koriste zajedno predstavljaju trodimenzionalne fotografije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:DS_InitiativeTypeCode">
+		<entry>
+			<code>campaign</code>
+			<label>Kampanja</label>
+			<description>Serija organiziranih, planiranih akcija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>collection</code>
+			<label>Kolekcija</label>
+			<description>Akumulacija skupova podataka sastavljena zbog specifične svrhe</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>exercise</code>
+			<label>Vježba</label>
+			<description>Specifićne performanse funkcije ili grupe funkcija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>experiment</code>
+			<label>Eksperiment</label>
+			<description>Proces dizajniran kako bi se utvrdilo je li nešto efektivno i valjano</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>investigation</code>
+			<label>Istraživanje</label>
+			<description>Pretraga ili sistematsko ispitivanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>mission</code>
+			<label>Misija</label>
+			<description>Specifična operacija sustava za prikup podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>sensor</code>
+			<label>Senzor</label>
+			<description>Uređaj ili dio opreme koji detektira ili snima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>operation</code>
+			<label>Operacija</label>
+			<description>Akcija koje je dio serije akcija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>platform</code>
+			<label>Platforma</label>
+			<description>Vozilo ili drugi tip baze koja sadrži senzor</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>process</code>
+			<label>Proces</label>
+			<description>Metoda rađenja nečega što sadrži više koraka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>program</code>
+			<label>Program</label>
+			<description>Specifično planirana aktivnost</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>project</code>
+			<label>Projekt</label>
+			<description>Organiziran pothvat, istraživanje ili razvoj</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>study</code>
+			<label>Studija</label>
+			<description>Pregled ili istraga</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>task</code>
+			<label>Zadatak</label>
+			<description>Jedinica rada</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>trial</code>
+			<label>Trial</label>
+			<description>Proces testiranja kako bi se otkrilo ili demonstriralo nešto</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_CellGeometryCode">
+		<entry>
+			<code>point</code>
+			<label>Točka</label>
+			<description>Svaka čelija predstavlja točku</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>area</code>
+			<label>Površina</label>
+			<description>Svaka čelija predstavlja površinu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_CharacterSetCode">
+		<entry>
+			<code>ucs2</code>
+			<label>UCS2</label>
+			<description>16-bit univerzalni skup znakova fiksirane veličine, baziran na ISO/IEC 10646</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>ucs4</code>
+			<label>UCS4</label>
+			<description>32-bit univerzalni skup znakova fiksirane veličine, baziran na ISO/IEC 10646</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>utf7</code>
+			<label>UTF7</label>
+			<description>7-bit prenosivi format univerzalnog skupa znakova promjenjive veličine, baziran na ISO/IEC 10646</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>utf8</code>
+			<label>UTF8</label>
+			<description>8-bit prenosivi format univerzalnog skupa znakova promjenjive veličine, baziran na ISO/IEC 10646</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>utf16</code>
+			<label>UTF16</label>
+			<description>16-bit prenosivi format univerzalnog skupa znakova promjenjive veličine, baziran na ISO/IEC 10646</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part1</code>
+			<label>8859 1. dio</label>
+			<description>ISO/IEC 8859-1, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 1. dio: Latinični alfabet 1</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part2</code>
+			<label>8859 2. dio</label>
+			<description>ISO/IEC 8859-2, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 2. dio: Latinični alfabet 2</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part3</code>
+			<label>8859 3. dio</label>
+			<description>ISO/IEC 8859-3, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 3. dio: Latinični alfabet 3</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part4</code>
+			<label>8859 4. dio</label>
+			<description>ISO/IEC 8859-4, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 4. dio: Latinični alfabet 4</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part5</code>
+			<label>8859 5. dio</label>
+			<description>ISO/IEC 8859-5, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 5. dio: Latinični/ćirilični alfabet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part6</code>
+			<label>8859 6. dio</label>
+			<description>ISO/IEC 8859-6, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 6. dio: Latinični/arapski alfabet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part7</code>
+			<label>8859 7. dio</label>
+			<description>ISO/IEC 8859-7, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 7. dio: Latinični/grčki alfabet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part8</code>
+			<label>8859 8. dio</label>
+			<description>ISO/IEC 8859-8, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 8. dio: Latinični/hebrejski alfabet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part9</code>
+			<label>8859 9. dio</label>
+			<description>ISO/IEC 8859-9, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 9. dio: Latinični alfabet 5</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part10</code>
+			<label>8859 10. dio</label>
+			<description>ISO/IEC 8859-10, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 10. dio: Latinični alfabet 6</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part11</code>
+			<label>8859 11. dio</label>
+			<description>ISO/IEC 8859-11, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 11. dio: Latinični/tajlandski alfabet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part13</code>
+			<label>8859 13. dio</label>
+			<description>ISO/IEC 8859-13, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 13. dio: Latinični alfabet 7</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part14</code>
+			<label>8859 14. dio</label>
+			<description>ISO/IEC 8859-14, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 14. dio: Latinični alfabet 8 (Keltski)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part15</code>
+			<label>8859 15. dio</label>
+			<description>ISO/IEC 8859-15, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 15. dio: Latinični alfabet 9</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8859part16</code>
+			<label>8859 16. dio</label>
+			<description>ISO/IEC 8859-16, Informacijska tehnologija - 8-bitni jednobajtno kodirani skupovi grafičkih 
+			znakova - 16. dio: Latinični alfabet 10</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>jis</code>
+			<label>JIS</label>
+			<description>Skup japanskih znakova za digitalnu transmisiju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>shiftJIS</code>
+			<label>Shift JIS</label>
+			<description>Skup japanskih znakova korišten na MS-DOS računalima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>eucJP</code>
+			<label>EUC JP</label>
+			<description>Skup japanskih znakova korišten na UNIX operacijskim sustavima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>usAscii</code>
+			<label>US ASCII</label>
+			<description>ASCII skup znakova Sjedinjenih Američkih Država (ISO 646 US)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>ebcdic</code>
+			<label>EBCDIC</label>
+			<description>IBM mainframe skup znakova</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>eucKR</code>
+			<label>EUC KR</label>
+			<description>Korejski skup znakova</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>big5</code>
+			<label>Big 5</label>mainframe
+			<description>Tradicionalni kineski skup znakova korišten u Taiwanu, Hong Kongu i drugim područjima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>GB2312</code>
+			<label>GB2312</label>
+			<description>Pojednostavljeni kineski skup znakova</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_ClassificationCode">
+		<entry>
+			<code>unclassified</code>
+			<label>Nije povjerljiv podatak</label>
+			<description>Slobodno za javno objavljivanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>restricted</code>
+			<label>Ograničeno</label>
+			<description>Nije slobodno za javno objavljivanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>confidential</code>
+			<label>Povjerljivo</label>
+			<description>Dostupno povjerljivim entitetima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>secret</code>
+			<label>Tajno</label>
+			<description>Tajno ili namjenjeno da bi bilo tajno, nepoznato ili skriveno od svih osim izabrane 
+			skupine ljudi</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>topSecret</code>
+			<label>Stroga tajna</label>
+			<description>Najviši stupanj tajnosti</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_CoverageContentTypeCode">
+		<entry>
+			<code>image</code>
+			<label>Slika</label>
+			<description>Suvisla numerička reprezentacija fizičkog parametra koja ne odgovara
+			stvarnoj vrijednosti fizičkog parametra</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>thematicClassification</code>
+			<label>Tematska klasifikacija</label>
+			<description>Kodna vrijednost bez kvantitativnog značenja, koristi se kako bi prikazala
+			fizičku kvantitetu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>physicalMeasurement</code>
+			<label>Fizička mjera</label>
+			<description>Kvantitativna vrijednost u fizičkim jedinicama</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_DatatypeCode">
+		<entry>
+			<code>class</code>
+			<label>Klasa</label>
+			<description>Opis skupa objekata koji dijele ista obilježja, operacije,
+			metode, odnose i ponašanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>codelist</code>
+			<label>Kodna lista</label>
+			<description>Opis skupa objekata koji dijele ista obilježja, operacije,
+			metode, odnose i ponašanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>enumeration</code>
+			<label>Enumerator</label>
+			<description>Tip podataka čije instance čine listu imenovanih vrijednost</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>codelistElement</code>
+			<label>Element kodne liste</label>
+			<description>Dozvoljena vrijednost kodne liste ili enumeracije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>abstractClass</code>
+			<label>Apstraktna klasa</label>
+			<description>Klasa koju nije moguće direktno instancirati</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>aggregateClass</code>
+			<label>Agregatna klasa</label>
+			<description>Klasa koja je sačinjena od klasa s kojima je povezana u agregatni odnos</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>specifiedClass</code>
+			<label>Specificirana klasa</label>
+			<description>Podklasa koju je moguće zamijeniti nadklasom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>datatypeClass</code>
+			<label>Klasa tipa podataka</label>
+			<description>Klasa koja ne sadrži operacije (ili sadrži malen broj operacija), te čija je glavna svrha čuvanje apstraktnog
+			stanja druge klase za prijenos, pohranu, enkodiranje ili perzistentno pohranjivanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>interfaceClass</code>
+			<label>Sučelje</label>
+			<description>Imenovani set operacija koje opisuju ponašanje elementa</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>unionClass</code>
+			<label>Unijska klasa (Union class)</label>
+			<description>Klasa koja opisuje selekciju jednog od specificiranih tipova</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>metaClass</code>
+			<label>Meta klasa</label>
+			<description>Klasa čije instance su klase</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>typeClass</code>
+			<label>Tipska klasa</label>
+			<description>Klasa koja se koristi za specifikaciju domene instanca (objekata), zajedno sa
+			operacijama primjenjivim na objekte. Tip može imati atribute i asocijacije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>characterString</code>
+			<label>Niz znakova (Character string)</label>
+			<description>Polje za slobodan tekst</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>integer</code>
+			<label>Cijeli broj (Integer)</label>
+			<description>Numeričko polje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>association</code>
+			<label>Asocijacija</label>
+			<description>Semantički odnos dvije klase koji uključuje veze između njihovih instanci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_DimensionNameTypeCode">
+		<entry>
+			<code>row</code>
+			<label>Redak</label>
+			<description>Ordinata (y os)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>column</code>
+			<label>Stupac</label>
+			<description>Apscisa (x os)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>vertical</code>
+			<label>Okomita os</label>
+			<description>Aplikata (z os)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>track</code>
+			<label>Track</label>
+			<description>Uz smjer kretanja točke koja se skenira</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>crossTrack</code>
+			<label>Cross track</label>
+			<description>Okomito na smjer kretanja točke koja se skenira</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>line</code>
+			<label>Linija</label>
+			<description>Linija skeniranja senzora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>sample</code>
+			<label>Uzorak</label>
+			<description>Element uzduž linije skeniranja senzora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>time</code>
+			<label>Vrijeme</label>
+			<description>Trajanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_GeometricObjectTypeCode">
+		<entry>
+			<code>complex</code>
+			<label>Complex</label>
+			<description>Skup geometrijskih primitiva čija se granica može prikazati unijom drugih primitiva</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>composite</code>
+			<label>Kompozit</label>
+			<description>Povezan skup krivulja, tijela ili površina</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>curve</code>
+			<label>Krivulja</label>
+			<description>1-dimenzionalni geometrijski primitiv, predstavlja kontinuiranu sliku
+			linije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>point</code>
+			<label>Točka</label>
+			<description>Nula-dimenzionalni geometrijski primitiv, prestavlja poziciju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>solid</code>
+			<label>Tijelo</label>
+			<description>Povezan 3-dimenzionalan geometrijski primitiv, predstavlja kontinuiranu
+			sliku dijela prostora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>surface</code>
+			<label>Površina</label>
+			<description>Povezan 2-dimenzionalan geometrijski primitiv, predstavlja kontinuiranu sliku dijela 
+			ravnine</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_ImagingConditionCode">
+		<entry>
+			<code>blurredImage</code>
+			<label>Zamagljena slika</label>
+			<description>Dio slike koji je zamagljen</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>cloud</code>
+			<label>Oblak</label>
+			<description>Dio slike koji je parcijalno zaklonjen oblakom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>degradingObliquity</code>
+			<label>Degradirajuća zabluda</label>
+			<description>Oštar kut između eliptičke ravnine (ravnina Zemljine orbite) i ravnine 
+			nebeskog ekvatora  </description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>fog</code>
+			<label>Magla</label>
+			<description>Dio slike koji je parcijalno zaklonjen maglom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>heavySmokeOrDust</code>
+			<label>Puno dima ili prašina</label>
+			<description>Dio slike koji je djelomično zaklonjen dimom ili prašinom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>night</code>
+			<label>Noć</label>
+			<description>Noćna fotografija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>rain</code>
+			<label>Kiša</label>
+			<description>Fotografija je fotografirana za vrijeme kiše</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>semiDarkness</code>
+			<label>Polumrak</label>
+			<description>Fotografija je fotografirana u polumračnim uvjetima</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>shadow</code>
+			<label>Sjena</label>
+			<description>Dio slike koji je zaklonjen sjenom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>snow</code>
+			<label>Snijeg</label>
+			<description>Dio slike koji je zaklonjen snijegom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>terrainMasking</code>
+			<label>Maskiranje terena</label>
+			<description>Nedostatak podataka za zadani prostor uzrokovan relativnom lokacijom
+			topografskih obilježja koja zaklanjaju putanju prikupljanja između kolektora
+			i subjekata</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_KeywordTypeCode">
+		<entry>
+			<code>discipline</code>
+			<label>Disciplina</label>
+			<description>Ključna riječ koja identificira ogranak instrukcija ili specijalizirano
+			učenje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>place</code>
+			<label>Mjesto</label>
+			<description>Ključna riječ identificira lokaciju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>stratum</code>
+			<label>Sloj</label>
+			<description>Ključna riječ identificira sloj(slojeve) bilo kojeg taloženog materijala</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>temporal</code>
+			<label>Vremenski</label>
+			<description>Ključna riječ identificira vremenski period</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>theme</code>
+			<label>Tema</label>
+			<description>Ključna riječ identificira određeni subjekt ili temu</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_MaintenanceFrequencyCode">
+		<entry>
+			<code>continual</code>
+			<label>Stalno</label>
+			<description>Podatak se stalno i često ažurira</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>daily</code>
+			<label>Dnevno</label>
+			<description>Podatak se ažurira svaki dan</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>weekly</code>
+			<label>Tjedno</label>
+			<description>Podatak se ažurira tjedno</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>fortnightly</code>
+			<label>Dvotjedno</label>
+			<description>Podatak se ažurira svaka dva tjedna</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>monthly</code>
+			<label>Mjesečno</label>
+			<description>Podatak se ažurira svaki mjesec</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>quarterly</code>
+			<label>Tromjesečno</label>
+			<description>Podatak se ažurira svaka tri mjesec</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>biannually</code>
+			<label>Polugodišnje</label>
+			<description>Podatak se ažurira dva put godišnje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>annually</code>
+			<label>Godišnje</label>
+			<description>Podatak se ažurira svake godine</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->				
+		<entry>
+			<code>threeYears</code>
+			<label>Trogodišnje</label>
+			<description>Podatak se ažurira svake tri godine</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->				
+		<entry>
+			<code>fiveYears</code>
+			<label>Petogodišnje</label>
+			<description>Podatak se ažurira svakih pet godina</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>asNeeded</code>
+			<label>Prema potrebi</label>
+			<description>Podatak se ažurira kada se smatra potrebno</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>irregular</code>
+			<label>Neredovito</label>
+			<description>Podatak se ažurira u intervalima koji su nepravilnog trajanja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>notPlanned</code>
+			<label>Ne planirano</label>
+			<description>Nema planova za ažuriranje podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>unknown</code>
+			<label>Nepoznatno</label>
+			<description>Učestalost održavanja podataka nije poznata</description>
+		</entry>
+		<!-- ISO PROFIL CHE ONLY
+		<entry>
+			<code>userDefined</code>
+			<label>User defined</label>
+			<description></description>
+		</entry>
+		-->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_MediumFormatCode">
+		<entry>
+			<code>cpio</code>
+			<label>CPIO</label>
+			<description>CoPy In / Out (UNIX format datoteka i komandi)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>tar</code>
+			<label>TAR</label>
+			<description>Tape ARchive</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>highSierra</code>
+			<label>High sierra</label>
+			<description>High sierra datotečni sustav</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>iso9660</code>
+			<label>ISO9660</label>
+			<description>Datotečni sustav i procesiranje informacija za CD-ROM</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>iso9660RockRidge</code>
+			<label>ISO9660 Rock Ridge</label>
+			<description>Rock ridge protokol razmjene (UNIX)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>iso9660AppleHFS</code>
+			<label>ISO9660 Apple HFS</label>
+			<description>Hijerarhijski datotečni sustav (Macintosh)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_MediumNameCode">
+		<entry>
+			<code>cdRom</code>
+			<label>CDROM</label>
+			<description>Read-only optički disk</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>dvd</code>
+			<label>DVD</label>
+			<description>"Digital versatile disk"</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>dvdRom</code>
+			<label>DVDROM</label>
+			<description>Digital versatile disk, read only</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>3halfInchFloppy</code>
+			<label>3.5 Inčni Floppy Disk</label>
+			<description>3.5 inčni magnetski disk</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>5quarterInchFloppy</code>
+			<label>5.25 Inčni Floppy</label>
+			<description>5.25 inčni magnetski disk</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>7trackTape</code>
+			<label>7 Tračna traka</label>
+			<description>7 tračna magnetska traka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>9trackTape</code>
+			<label>9 Tračna traka</label>
+			<description>9 tračna magnetska traka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>3480Cartridge</code>
+			<label>3480 Cartridge</label>
+			<description>3480 cartridge tape drive</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>3490Cartridge</code>
+			<label>3490 Cartridge</label>
+			<description>3490 cartridge tape drive</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>3580Cartridge</code>
+			<label>3580 Cartridge</label>
+			<description>3580 cartridge tape drive</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>4mmCartridgeTape</code>
+			<label>4 mm Cartridge tape</label>
+			<description>4 millimetre magnetic tape</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>8mmCartridgeTape</code>
+			<label>8 mm Cartridge tape</label>
+			<description>8 millimetre magnetic tape</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>1quarterInchCartridgeTape</code>
+			<label>1 Quarter inch cartridge tape</label>
+			<description>0,25 inch magnetic tape</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>digitalLinearTap</code>
+			<label>Digital linear tape</label>
+			<description>Half inch cartridge streaming tape drive</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>onLine</code>
+			<label>Online</label>
+			<description>Direktna računalna veza</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>satellite</code>
+			<label>Satelit</label>
+			<description>Satelitska veza</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>telephoneLink</code>
+			<label>Telefonska veza</label>
+			<description>Komunikacija pomoću telefonske mreže</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>hardcopy</code>
+			<label>Tvrda kopija</label>
+			<description>Brošura ili letak s informacijama</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<!-- ISO PROFIL CHE ONLY 
+		<entry>
+			<code>zip100</code>
+			<label>Zip100</label>
+			<description></description>
+		</entry>
+		<entry>
+			<code>zip250</code>
+			<label>Zip250</label>
+			<description></description>
+		</entry>      <entry>
+			<code>e-mail</code>
+			<label>E-mail</label>
+			<description></description>
+		</entry>      <entry>
+			<code>zip</code>
+			<label>Zip</label>
+			<description></description>
+		</entry>      <entry>
+			<code>jaz</code>
+			<label>Jaz</label>
+			<description></description>
+		</entry>      <entry>
+			<code>other</code>
+			<label>Other</label>
+			<description></description>
+		</entry>-->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_ObligationCode">
+		<entry>
+			<code>mandatory</code>
+			<label>Obavezno</label>
+			<description>Element je uvijek potreban</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>optional</code>
+			<label>Opcionalno</label>
+			<description>Element nije nužno potreban</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>conditional</code>
+			<label>Uvjetno</label>
+			<description>Element je potreban kada je postignut određen uvjet</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_PixelOrientationCode">
+		<entry>
+			<code>center</code>
+			<label>Centralno</label>
+			<description>Točka na pola puta između donjeg lijevog i gornjeg desnog piksela</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>lowerLeft</code>
+			<label>Donji lijevi</label>
+			<description>Ugao piksela koji je najbliži izvorištu SRS; ukoliko su dva na istoj udaljenosti od ishodišta
+			uzima se onaj sa najmanjom x-vrijednošću</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>lowerRight</code>
+			<label>Donji desni</label>
+			<description>Idući ugao u smjeru obrnutom od kazaljke na satu u odnosu na donji lijevi</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>upperRight</code>
+			<label>Gornji desni</label>
+			<description>Idući ugao u smjeru obrnutom od kazaljke na satu u odnosu na donji desni</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>upperLeft</code>
+			<label>Gornji lijevi</label>
+			<description>Idući ugao u smjeru obrnutom od kazaljke na satu u odnosu na gornji desni</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_ProgressCode">
+		<entry>
+			<code>completed</code>
+			<label>Završeno</label>
+			<description>Produkcija podataka je završena</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>historicalArchive</code>
+			<label>Povijesna arhiva</label>
+			<description>Podatci su pohranjeni na offline storage facility</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>obsolete</code>
+			<label>Zastario</label>
+			<description>Podatci više nisu relevantni</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>onGoing</code>
+			<label>Tekući</label>
+			<description>Podatci se kontinuirano osvježavaju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>planned</code>
+			<label>Planiran</label>
+			<description>Određen je datum kada će se podatci kreirati ili osvježiti</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>required</code>
+			<label>Potreban</label>
+			<description>Podatci moraju biti generirani ili osvježeni</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>underDevelopment</code>
+			<label>U razvoju</label>
+			<description>Podatci su trenutno u procesu stvaranja</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry hideInEditMode="true">
+      <code>notobsolete</code>
+      <label>Ažuran</label>
+      <description></description>
+    </entry>
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_RestrictionCode">
+		<entry>
+			<code>copyright</code>
+			<label>Autorsko pravo</label>
+			<description>Ekskluzivna prava nad publiciranjem, produkcijom ili prodajom prava za literarni, dramaturški, muzički ili umjetnički rad ili na korištenje komercijalnog otiska ili labele, dodijeljene zakonom na određeno vrijeme autoru, kompozitoru, umjetniku, distributeru.
+			</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>patent</code>
+			<label>Patent</label>
+			<description>Ekskluzivno pravo za izradu, prodaju, korištenje ili licenciranje izuma ili otkrića.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>patentPending</code>
+			<label>Zatražen patent</label>
+			<description>Proizvedene ili prodane informaciju za koje se čeka patent.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>trademark</code>
+			<label>Zaštitni znak</label>
+			<description>Ime, simbol ili drugo sredstvo identifikacije proizvoda, službeno registriranog i legalno ograničenog na korištenje vlasniku ili proizvođaču.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>license</code>
+			<label>Licenca</label>
+			<description>Formalno odobrenje da se nešto može raditi.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>intellectualPropertyRights</code>
+			<label>Prava intelektualnog vlasništva</label>
+			<description>Prava na financijsku dobit na osnovu i kontrolom distribucije ne-materijalnih dobara koji su rezultat kreativnosti. </description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>restricted</code>
+			<label>Ograničeno</label>
+			<description>Zadržavanje od prava generalne distribucije ili objavljivanja.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>otherRestrictions</code>
+			<label>Ostala ograničenja</label>
+			<description>Ograničenja koja nisu navedena.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_ScopeCode">
+
+		<entry hideInEditMode="true">
+			<code>attribute</code>
+			<label>Atribut</label>
+			<description>Informacije se odnose na klasu atributa</description>
+		</entry>
+						
+		<entry hideInEditMode="true">
+			<code>attributeType</code>
+			<label>Tip atributa</label>
+			<description>Informacije se odnose na karakteristike obilježja</description>
+		</entry>
+	
+		<entry hideInEditMode="true">
+			<code>collectionHardware</code>
+			<label>Kolekcijski hardware (Collection hardware)</label>
+			<description>Informacije se odnose na klasu kolekcijskog hardwarea</description>
+		</entry>
+	
+		<entry hideInEditMode="true">
+			<code>collectionSession</code>
+			<label>Kolekcijska sjednica</label>
+			<description>Informacije se odnose na kolekcijsku sjednicu</description>
+		</entry>
+
+		<entry>
+			<code>dataset</code>
+			<label>Skup</label>
+			<description>Informacije se odnose na skup prostornih podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>series</code>
+			<label>Niz</label>
+			<description>Informacije se odnose na niz skupova prostornih podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<entry hideInEditMode="true">
+			<code>nonGeographicDataset</code>
+			<label>Ne-prostorni skup podataka</label>
+			<description>Informacije se odnose na podatke koji nisu prostorni</description>
+		</entry>
+	
+		<entry hideInEditMode="true">
+			<code>dimensionGroup</code>
+			<label>Dimenzijska grupa</label>
+			<description>Informacije se odnose na dimenzijsku grupu</description>
+		</entry>
+
+		<entry hideInEditMode="true">
+			<code>feature</code>
+			<label>Obilježje</label>
+			<description>Informacije se odnose na obilježje</description>
+		</entry>
+	
+		<entry hideInEditMode="true">
+			<code>featureType</code>
+			<label>Tip obilježja</label>
+			<description>Informacije se odnose na tip obilježja</description>
+		</entry>
+
+		<entry hideInEditMode="true">
+			<code>propertyType</code>
+			<label>Property type</label>
+			<description>Information applies to a property type</description>
+		</entry>
+
+		<entry hideInEditMode="true">
+			<code>fieldSession</code>
+			<label>Field session</label>
+			<description>Information applies to a field session</description>
+		</entry>
+
+		<entry hideInEditMode="true">
+			<code>software</code>
+			<label>Software</label>
+			<description>Informacije se odnose na računalni program ili rutinu</description>
+		</entry>
+	
+		<entry>
+			<code>service</code>
+			<label>Usluga</label>
+			<description>Informacije se odnose na mogućnost koju poslužitelj usluga čini dostupnom 
+			korisniku usluge putem skupa sučelja koja definiraju određeno ponašanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<entry hideInEditMode="true">
+			<code>model</code>
+			<label>Model</label>
+			<description>Informacije se odnose na kopiju ili imitaciju postojećeg hipotetskog objekta</description>
+		</entry>
+		
+		<entry hideInEditMode="true">
+			<code>tile</code>
+			<label>Naziv</label>
+			<description>Informacije se odnose na naziv, prostorni podskup ili geografske podatke</description>
+		</entry>
+
+		<!-- ISO PROFIL CHE ONLY
+		<entry>
+			<code>project</code>
+			<label>Project</label>
+			<description></description>
+		</entry>
+		<entry>
+			<code>stationSite</code>
+			<label>Station site</label>
+			<description></description>
+		</entry>
+		<entry>
+			<code>publication</code>
+			<label>Publication</label>
+			<description>Publication</description>
+		</entry>-->
+		
+		<!-- Used for facet translation only and not displayed in editor -->
+		<entry hideInEditMode="true">
+			<code>map</code>
+			<label>Map</label>
+			<description></description>
+		</entry>
+		<entry hideInEditMode="true">
+			<code>staticMap</code>
+			<label>Static map</label>
+			<description></description>
+		</entry>
+		<entry hideInEditMode="true">
+			<code>interactiveMap</code>
+			<label>Interactive map</label>
+			<description></description>
+		</entry>
+    <entry hideInEditMode="true">
+      <code>featureCatalog</code>
+      <label>Katalog značajki</label>
+      <description></description>
+    </entry>
+	</codelist>
+	<codelist name="gmd:MD_ScopeCode" displayIf="/ancestor::node()[name()='gmd:MD_Metadata']/gmd:identificationInfo/srv:SV_ServiceIdentification">
+		<entry>
+			<code>service</code>
+			<label>Usluga</label>
+			<description>Informacija se odnosi na sposobnost koju izvor usluge nudi korisniku kroz skup sučelja koja definiranju ponašanje kao na primjer primjer korištenja.</description>
+		</entry>
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_SpatialRepresentationTypeCode">
+		<entry>
+			<code>vector</code>
+			<label>Vektor</label>
+			<description>Vektorski podatci su korišteni kako bi se prikazali prostorni podatci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>grid</code>
+			<label>Mreža (grid)</label>
+			<description>Mrežni (grid) podatci su korišteni kako bi se prikazali prostorni podatci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>textTable</code>
+			<label>Tekst, tablica</label>
+			<description>Tekstualne ili tablične informacije su korištene kako bi se prikazali prostorni podatci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>tin</code>
+			<label>TIN</label>
+			<description>Triangulirana nepravilna mreža (Triangulated irregular network)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>stereoModel</code>
+			<label>Stereo model</label>
+			<description>3-dimenzionalni pogled formiran presjecanjem homolognih zraka para slika koje se prekrivaju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>video</code>
+			<label>Video</label>
+			<description>Scena iz video snimke</description>
+		</entry>
+		<!-- ISO PROFIL CHE ONLY
+		<entry>
+			<code>paperMap</code>
+			<label>Paper map</label>
+			<description></description>
+		</entry>-->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_TopicCategoryCode">
+		<entry>
+			<code>farming</code>
+			<label>Uzgoj</label>
+			<description>Uzgoj životinja i/ili uzgoj biljaka. 
+			Primjeri: poljoprivreda, navodnjavanje, marikultura, plantaže, uzgoj stoke, 
+			bolesti i nametnici na usjevima i stoci</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>biota</code>
+			<label>Živi svijet</label>
+			<description>Flora i/ili fauna u prirodnom okruženju.
+			Primjeri: divlje životinje, vegetacija, biološke znanosti, ekologija, divljina, 
+			morske životinje, močvare, staništa</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>boundaries</code>
+			<label>Granice</label>
+			<description>Administrativni opisi zemljišta.
+			Primjeri: političke i upravne granice</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>climatologyMeteorologyAtmosphere</code>
+			<label>Klimatologija, meteorologija, atmosfera</label>
+			<description>Procesi i fenomeni u atmosferi.
+			Primjeri: oblaci, vrijeme, klima, atmosferski uvjeti, klimatske promjene,
+			padaline</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>economy</code>
+			<label>Ekonomija</label>
+			<description>Ekonomske aktivnosti, uvjeti i zapošljavanje.
+			Primjeri: proizvodnja, rad, prihod, trgovina, industrija, turizam i ekoturizam, šumarstvo, 
+			ribarstvo, komercijalan ili nekomercijalan izlov, istraživanje i iskorištavanje izvora kao 
+			što su minerali, nafta i plin</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>elevation</code>
+			<label>Visina</label>
+			<description>visina iznad ili ispod razine mora.
+			Primjeri: visina, batimetrija, digitalni modeli visina, nagib, izvedeni proizvodi</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>environment</code>
+			<label>Okoliš</label>
+			<description>sastavnice okoliša, zaštita i očuvanje.
+			Primjeri: zagađenje okoliša, skladištenje i tretiranje otpada, procjena utjecaja na okoliš, 
+			praćenje opasnosti po okoliš, prirodni rezervati, krajolik</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>geoscientificInformation</code>
+			<label>Geo znanstvene informacije</label>
+			<description>informacije koje se odnose na znanost o Zemlji.
+			Primjeri: geofizička obilježja i procesi, geologija, minerali, znanost povezana s ustrojstvom, 
+			strukturom i podrijetlom Zemljinih stijena, opasnosti od potresa, vulkanske aktivnosti, 
+			klizišta, informacije o sili teži, tlu, permafrostu, hidrogeologiji, eroziji</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>health</code>
+			<label>Zdravlje</label>
+			<description>zdravlje, zdravstvene usluge, ljudska ekologija i sigurnost.
+			Primjeri: bolesti, faktori koji utječu na zdravlje, higijena, uživanje opijata, 
+			mentalno i fizičko zdravlje, zdravstvene usluge</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>imageryBaseMapsEarthCover</code>
+			<label>Slikovna osnovne karte zemljin pokrov</label>
+			<description>osnovne karte. Primjeri: Zemljin pokrov, topografske karte, snimke, 
+			neklasificirane snimke, bilješke</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>intelligenceMilitary</code>
+			<label>Obavještajna vojna</label>
+			<description>vojne baze, objekti, aktivnosti. Primjeri: vojarne, poligoni za obuku, 
+			vojne prometnice, prikupljanje informacija</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>inlandWaters</code>
+			<label>Kopnene vode</label>
+			<description>obilježja kopnenih voda, sustavi odvodnje i njihove značajke.
+			Primjeri: rijeke i glečeri, slana jezera, planovi korištenja voda, ustave, tokovi, poplave, 
+			kvaliteta vode, hidrografski dijagrami</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>location</code>
+			<label>Lokacija</label>
+			<description>položajne informacije i usluge. Primjeri: adrese, geodetske mreže, 
+			kontrolne točke, poštanske zone i usluge, geografska imena</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>oceans</code>
+			<label>Oceani</label>
+			<description>značajke i obilježja slanih voda (bez kopnenih voda).
+			Primjeri: plima i oseka, plimni valovi, obalne informacije, morski grebeni</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>planningCadastre</code>
+			<label>Planiranje katastar</label>
+			<description>informacije korištene za planiranje budućeg korištenja zemlje
+			Primjeri: karte korištenja zemlje, prostorni i urbanistički planovi, katastarske izmjere, 
+			vlasništvo nad zemljom</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>society</code>
+			<label>Društvo</label>
+			<description>karakteristike društva i kulture. Primjeri: naselja, antropologija, arheologija, 
+			edukacija, tradicionalna vjerovanja, načini i običaji, demografski podaci, rekreativna područja 
+			i aktivnosti, procjena socijalnih utjecaja, kriminal i pravosuđe, informacije o popisu stanovništava</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>structure</code>
+			<label>Struktura</label>
+			<description>ljudske građevine. Primjeri: zgrade, muzeji, crkve, tvornice, stanovanje, 
+			spomenici, dućani, tornjevi</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>transportation</code>
+			<label>Promet</label>
+			<description>sredstva za prijevoz ljudi i/ili robe. Primjeri: ceste, zračne luke/piste, rute 
+			dostave, tuneli, nautičke karte, lokacija vozila ili plovila, aeronautičke karte, željeznice</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>utilitiesCommunication</code>
+			<label>Infrastrukturni sustavi</label>
+			<description>energetski, vodeni i otpadni sustavi i komunikacijska infrastruktura i usluge.
+			Primjeri: hidroelektrane, geotermalni, solarni i nuklearni izvori energije, čišćenje i distribucija vode, 
+			skupljanje otpadnih voda i njihovo skladištenje, električna i plinska distribucija, komunikacija podataka, 
+			telekomunikacija, radio, komunikacijske mreže</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MD_TopologyLevelCode">
+		<entry>
+			<code>geometryOnly</code>
+			<label>Samo geometrija</label>
+			<description>Geometrijski objekti bez dodatnih struktura koje opisuju topologiju</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>topology1D</code>
+			<label>Topology 1D</label>
+			<description>1-dimenzionalna topološka struktura (obično nazivana "chain-node" topologija)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>planarGraph</code>
+			<label>Planaran graf</label>
+			<description>1-dimenzionalna topološka struktura koja je planarna. (Planarni graf je graf koji
+			se može smjestiti u ravninu bez presijecanja bridova, tj. tako da se dva brida geometrijski ne sijeku
+			niti u jednoj točki, osim eventualno u vrhu s kojim su oba incidentni)
+			</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>fullPlanarGraph</code>
+			<label>Full planar graph</label>
+			<description>2-dimenzionalna topološka struktura koja je planarna. (2D topološka struktura
+			se obično naziva "full" topologijom u 2D kartografskom okruženju)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>surfaceGraph</code>
+			<label>Površinski graf (surface graph)</label>
+			<description>1-dimenzionalna topološka struktura koja je izomorfna podskupu površine.
+			(Geometrijska struktura je izomorfna topološkoj strukturi ukoliko su njihovi elementi
+			u jedan-na-jedan, dimenzionalno i s očuvanjem granica, odnosu jedan prema drugom.)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>fullSurfaceGraph</code>
+			<label>Potpuni površinski graf</label>
+			<description>2-dimenzionalna topološka struktura koje je izomorfna podskupu površine</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>topology3D</code>
+			<label>Topologija 3D</label>
+			<description>3-dimenzionalna topološka struktura. (Topološka struktura je skup
+			topoloških primitiva koji su zatvoreni pod graničnim operacijama)</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>fullTopology3D</code>
+			<label>Potpuna topologija 3D</label>
+			<description>Potpuna pokrivenost 3D euklidskog prostora</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>abstract</code>
+			<label>Apstraktna</label>
+			<description>Topološka struktura bez specificirane geometrijske realizacije</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="gmd:MX_ScopeCode">
+	<!--
+		<entry>
+			<code>attribute</code>
+			<label>Atribut</label>
+			<description>Informacije se odnose na klasu atributa</description>
+		</entry>
+				
+		<entry>
+			<code>attributeType</code>
+			<label>Tip atributa</label>
+			<description>Informacije se odnose na karakteristike obilježja</description>
+		</entry>
+
+		<entry>
+			<code>collectionHardware</code>
+			<label>Kolekcijski hardware (Collection hardware)</label>
+			<description>Informacije se odnose na klasu kolekcijskog hardwarea</description>
+		</entry>
+
+		<entry>
+			<code>collectionSession</code>
+			<label>Kolekcijska sjednica</label>
+			<description>Informacije se odnose na kolekcijsku sjednicu</description>
+		</entry>
+		-->
+		<entry>
+			<code>dataset</code>
+			<label>Skup</label>
+			<description>Informacije se odnose na skup prostornih podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>series</code>
+			<label>Niz</label>
+			<description>Informacije se odnose na niz skupova prostornih podataka</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<!--
+		<entry>
+			<code>nonGeographicDataset</code>
+			<label>Ne-prostorni skup podataka</label>
+			<description>Informacije se odnose na podatke koji nisu prostorni</description>
+		</entry>
+	
+		<entry>
+			<code>dimensionGroup</code>
+			<label>Dimenzijska grupa</label>
+			<description>Informacije se odnose na dimenzijsku grupu</description>
+		</entry>
+	
+		<entry>
+			<code>feature</code>
+			<label>Obilježje</label>
+			<description>Informacije se odnose na obilježje</description>
+		</entry>
+	
+		<entry>
+			<code>featureType</code>
+			<label>Tip obilježja</label>
+			<description>Informacije se odnose na tip obilježja</description>
+		</entry>
+
+		<entry>
+			<code>propertyType</code>
+			<label>Property type</label>
+			<description>Information applies to a property type</description>
+		</entry>
+
+		<entry>
+			<code>fieldSession</code>
+			<label>Field session</label>
+			<description>Information applies to a field session</description>
+		</entry>
+	
+		<entry>
+			<code>software</code>
+			<label>Software</label>
+			<description>Informacije se odnosa na računalni program ili rutinu</description>
+		</entry>
+		-->
+		<entry>
+			<code>service</code>
+			<label>Usluga</label>
+			<description>Informacije se odnose na mogućnost koju poslužitelj usluga čini dostupnom 
+			korisniku usluge putem skupa sučelja koja definiraju određeno ponašanje</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<!--
+		<entry>
+			<code>model</code>
+			<label>Model</label>
+			<description>Informacije se odnose na kopiju ili imitaciju postojećeg hipotetskog objekta</description>
+		</entry>
+	
+		<entry>
+			<code>tile</code>
+			<label>Naziv</label>
+			<description>Informacije se odnose na naziv, prostorni podskup ili geografske podatke</description>
+		</entry>
+
+		<entry>
+			<code>initiative</code>
+			<label>Inicijativa</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao inicijativa (DS_Initiative)</description>
+		</entry>
+
+		<entry>
+			<code>stereomate</code>
+			<label>Stereo mate</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao stereo mate (DS_StereoMate)</description>
+		</entry>
+	
+		<entry>
+			<code>sensor</code>
+			<label>Senzor</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao senzor (DS_Sensor)</description>
+		</entry>
+	
+		<entry>
+			<code>platformSeries</code>
+			<label>Platformska serija</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao platformska serija (DS_PlatformSeries)</description>
+		</entry>
+
+		<entry>
+			<code>sensorSeries</code>
+			<label>Senzorska serija</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao senzorska serija (DS_SensorSeries)</description>
+		</entry>
+
+		<entry>
+			<code>productionSeries</code>
+			<label>Produkcijska serija</label>
+			<description>Referencirajući entitet se odnosi na prijenosni agregat koji je izvorno 
+			identificiran kao produkcijska serija (DS_ProductionSeries)</description>
+		</entry>
+
+		<entry>
+			<code>transferAggregate</code>
+			<label>Prijenosni agregat</label>
+			<description>Referencirajući entitet se odnosi na prenosni agregat koji ne postoji
+			izvan prijenosnog konteksta</description>
+		</entry>
+	
+		<entry>
+			<code>otherAggregate</code>
+			<label>Drugi agregat</label>
+			<description>Referencirajući entitet se odnosi na prenosni agregat koji ne postoji
+			izvan prijenosnog konteksta, ali koji ne pripada određenom agregatnom tipu</description>
+		</entry>
+		-->
+	</codelist>
+	<!-- ==================================================== -->
+	<codelist name="srv:DCPList">
+			<entry>
+					<description>DCP je XML</description>
+					<code>XML</code>
+					<label>XML</label>
+			</entry>
+			<entry>
+					<description>DCP je CORBA</description>
+					<code>CORBA</code>
+					<label>CORBA</label>
+			</entry>
+			<entry>
+					<description>DCP je JAVA</description>
+					<code>JAVA</code>
+					<label>JAVA</label>
+			</entry>
+			<entry>
+					<description>DCP je COM</description>
+					<code>COM</code>
+					<label>COM</label>
+			</entry>
+			<entry>
+					<description>DCP je SQL</description>
+					<code>SQL</code>
+					<label>SQL</label>
+			</entry>
+			<entry>
+					<description>DCP je WebServis</description>
+					<code>WebServices</code>
+					<label>Web usluga</label>
+			</entry>
+	</codelist>
+	<!--=== CouplingType from ISO19119 ===-->
+	<codelist name="srv:SV_CouplingType">
+			<entry>
+					<code>tight</code>
+					<label>Čvrsto povezano (tightly coupled)</label>
+					<description>Čvrsto povezano: podatci asocirani</description>
+			</entry>
+			<entry>
+					<code>mixed</code>
+					<label>Miješano</label>
+					<description>Miješano povezano: podatci asocirani; dodatno, vanjski podatci se mmogu procesirati</description>
+			</entry>
+			<entry>
+					<code>loose</code>
+					<label>Labavo povezano</label>
+					<description>Labavo povezano: bez asociranih podataka</description>
+			</entry>
+	</codelist>
+	<codelist name="srv:SV_ParameterDirection">
+		<entry>
+			<code>in</code>
+			<label>Ulaz</label>
+		</entry>
+		<entry>
+			<code>out</code>
+			<label>Izlaz</label>
+		</entry>
+		<entry>
+			<code>in/out</code>
+			<label>Ulaz/izlaz</label>
+		</entry>
+	</codelist>
+  <codelist name="gco:nilReason">
+    <entry>
+      <code>missing</code>
+      <label>Nedostaje</label>
+    </entry>
+    <entry>
+      <code>inapplicable</code>
+      <label>Nije primjenjivo</label>
+    </entry>
+    <entry>
+      <code>template</code>
+      <label>Predložak</label>
+    </entry>
+    <entry>
+      <code>unknown</code>
+      <label>Nepoznato</label>
+    </entry>
+    <entry>
+      <code>withheld</code>
+      <label>Uskraćeno</label>
+    </entry>
+  </codelist>
+
+  <codelist name="indeterminatePosition">
+    <entry>
+      <code>after</code>
+      <label>After</label>
+    </entry>
+    <entry>
+      <code>before</code>
+      <label>Before</label>
+    </entry>
+    <entry>
+      <code>now</code>
+      <label>Now</label>
+    </entry>
+    <entry>
+      <code>unknown</code>
+      <label>Unknown</label>
+
+    </entry>
+  </codelist>	
+</codelists>

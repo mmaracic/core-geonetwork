@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <updatedRecords>
+      <username>Vlasnik (Korisničko ime)</username>
+      <surname>Vlasnik (Prezime)</surname>
+      <name>Vlasnik (Ime)</name>
+      <email>Vlasnik (Email)</email>
+      <groupName>Grupa</groupName>
+      <groupOwnerMail>Grupa (Admin Email)</groupOwnerMail>
+      <changedate>Datum posljednje izmjene</changedate>
+      <recordName>Naziv zapisa</recordName>
+      <uuid>UUID metapodatka</uuid>
+    </updatedRecords>
+
+    <internalRecords>
+      <username>Vlasnik (Korisničko ime)</username>
+      <surname>Vlasnik (Prezime)</surname>
+      <name>Vlasnik (Ime)</name>
+      <email>Vlasnik (Email)</email>
+      <profile>Vlasnik (User Role)</profile>
+      <groupName>Grupa (Name)</groupName>
+      <groupOwnerMail>Grupa (Admin Email)</groupOwnerMail>
+      <createdate>Datum stvaranja</createdate>
+      <recordName>Naziv zapisa</recordName>
+      <uuid>UUID metapodatka</uuid>
+    </internalRecords>
+
+    <users>
+      <username>Korisničko ime</username>
+      <surname>Prezime</surname>
+      <name>Ime</name>
+      <email>Email</email>
+      <userGroups>Grupe/Uloge korisnika</userGroups>
+      <lastlogindate>Datum zadnje prijave</lastlogindate>
+    </users>
+
+    <dataDownloads>
+      <username>Preuzimatelj (Korisničko ime)</username>
+      <surname>Preuzimatelj (Prezime)</surname>
+      <name>Preuzimatelj (Ime)</name>
+      <email>Preuzimatelj (Email)</email>
+      <profile>Preuzimatelj (Uloga)</profile>
+      <userGroups>Grupa</userGroups>
+      <uploadname>Naziv</uploadname>
+      <filename>Naziv datoteke</filename>
+      <downloaddate>Datum preuzimanja</downloaddate>
+      <recordName>Naziv zapisa</recordName>
+      <uuid>UUID metapodatka</uuid>
+      <requestername>Ime tražitelja</requestername>
+      <requestermail>EMail tražitelja</requestermail>
+      <requesterorg>Tvrtka tražitelja</requesterorg>
+      <requestercomments>Komentari tražitelja</requestercomments>
+      <expiry_datetime>Datum i vrijeme isteka</expiry_datetime>
+    </dataDownloads>
+
+    <dataUploads>
+      <username>Pošiljatelj (Korisničko ime)</username>
+      <surname>Pošiljatelj (Prezime)</surname>
+      <name>Pošiljatelj (Ime)</name>
+      <email>Pošiljatelj (Email)</email>
+      <profile>Pošiljatelj (Uloga)</profile>
+      <userGroups>Grupa</userGroups>
+      <uploaddesc>Naziv</uploaddesc>
+      <filename>Naziv datoteke</filename>
+      <uploaddate>Datum slanja</uploaddate>
+      <recordname>Naziv zapisa</recordname>
+      <uuid>UUID metapodatka</uuid>
+      <expiry_datetime>Datum i vrijeme isteka</expiry_datetime>
+    </dataUploads>
+</strings>

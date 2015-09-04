@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n>
+  <viewInGE>Pregled u Google Eearthu</viewInGE>
+  <warning>Upozorenje!</warning>
+  <addA>Dodavanje </addA>
+  <nojs>Javascript nije omogućen. Omogućite ga ili kliknite na <a
+    href="catalog.search.nojs">ovu poveznicu</a> za pretraživanje sa ograničenim mogućnostima.</nojs>
+  <selectView>Odabir pregleda</selectView>
+  <moreTabs>Više informacija</moreTabs>
+  <nodeChangeWarning>Upozorenje o promjeni čvora</nodeChangeWarning>
+  <nodeChangeInfo>Upozorenje: Više niste u istom čvoru u koji ste se prijavili.</nodeChangeInfo>
+  <nodeChangeBack>Ako se želite vratiti u čvor na koji ste se prijavliki kliknite:</nodeChangeBack>
+  <nodeChangeForward>Ako se želite odjaviti i vratiti na prethodni čvor kliknite:</nodeChangeForward>
+  <serviceNotAllowedTitle>Usluga nije dostupna</serviceNotAllowedTitle>
+  <serviceNotAllowed>Usluga {1} ne postoji ili nemate potrebne dozvole da biste joj pristupili.</serviceNotAllowed>
+  <linkToHome><span>Povratak na <a href="../..">stranicu pretraživanja</a>.</span></linkToHome>
+</i18n>

@@ -36,6 +36,7 @@
                 <spa>#ES</spa>
                 <fin>#FI</fin>
                 <dut>#NL</dut>
+                <hrv>#HR</hrv>
             </sch:let>
             <sch:let name="langCode" value="normalize-space($langCodeMap//*[name() = $lang])" />
 
@@ -58,6 +59,9 @@
             <sch:let name="isDeMetadata" value="$lang = 'ger'"/>
             <sch:let name="hasDeTitle" value="$isDeMetadata and $specification_title[lower-case(normalize-space(.)) = $allTitles//ger/text()]"/>
 
+            <sch:let name="isHrMetadata" value="$lang = 'hrv'"/>
+            <sch:let name="hasHrTitle" value="$isHrMetadata and $specification_title[lower-case(normalize-space(.)) = $allTitles//hrv/text()]"/>
+
             <sch:let name="isEnMetadata" value="$lang = 'eng'"/>
             <sch:let name="hasEnTitle" value="$isEnMetadata and $specification_title[lower-case(normalize-space(.)) = $allTitles//eng/text()]"/>
 
@@ -77,7 +81,7 @@
             <sch:let name="hasNlTitle" value="$isNlMetadata and $specification_title[lower-case(normalize-space(.)) = $allTitles//dut/text()]"/>
 
             <sch:let name="correctTitle" value="$allTitles//*[name() = $lang]/text()"/>
-            <sch:assert test="$hasDeTitle or $hasEnTitle or $hasFrTitle or $hasItTitle or
+            <sch:assert test="$hasHrTitle or $hasDeTitle or $hasEnTitle or $hasFrTitle or $hasItTitle or
                               $hasEsTitle or $hasFiTitle or $hasNlTitle">
                 <sch:value-of select="$loc/strings/assert.M44.conformityActual/div"/>
 

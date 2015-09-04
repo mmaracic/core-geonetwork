@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <understandResource>Informacije o skupu podataka</understandResource>
+  <relatedResources>Referentne usluge i povezani podaci</relatedResources>
+  <techInfo>Techničke informacije</techInfo>
+  <contactInfo>Kontakt informacije</contactInfo>
+  <mdContactInfo>Kontaktna točka za metapodatke</mdContactInfo>
+  <refDate>Referentni datum</refDate>
+  <temporalRef>Vremenska informacija</temporalRef>
+  <constraintInfo>Informacije o ograničenjima pristupa</constraintInfo>
+  <xml_iso19139>Spremi ove metapodatke kao ISO19139 XML datoteku</xml_iso19139>
+  <xml_iso19139Tooai_dc>Spremi ove metapodatke kao OAI Dublin Core XML datoteku</xml_iso19139Tooai_dc>
+  
+  <!-- New strings added for the AngularJS editor -->
+  <!-- View and tabs -->
+  <advanced>Potpuni</advanced>
+  <default>Jednostavni</default>
+  <simple>Jednostavni</simple>
+  <inspire>INSPIRE</inspire>
+  <resource>Izvor</resource>
+  <xml>XML</xml>
+  <metadata>Metapodaci</metadata>
+  <identificationInfo>Identifikacija</identificationInfo>
+  <distributionInfo>Format podataka</distributionInfo>
+  <dataQualityInfo>Usklađenost za izvor podataka</dataQualityInfo>
+  <spatialRepresentationInfo>Prostorna rezolucija</spatialRepresentationInfo>
+  <referenceSystemInfo>Koordinatni referentni sustav</referenceSystemInfo>
+  <contentInfo>Sadržaj</contentInfo>
+  <portrayalCatalogueInfo>Opis</portrayalCatalogueInfo>
+  <metadataConstraints>Ograničenja pristupa</metadataConstraints>
+  <metadataMaintenance>Ažuriranje</metadataMaintenance>
+  <applicationSchemaInfo>Tema</applicationSchemaInfo>
+  <noThesaurusName>Ključne riječi</noThesaurusName>
+  <bboxesSection>Geografska lokacija</bboxesSection>
+
+  <!-- XSD error translation -->
+  <invalidElement>Neispravan element. Pronađen je neispravan sadržaj počevši s elementom: </invalidElement>
+  <onElementOf>Jedan od elemenata </onElementOf>
+  <isExpected> se očekuje.</isExpected>
+  <isNotComplete> nije potpun.</isNotComplete>
+  <elementLocated>Element roditelj je </elementLocated>
+  <missingElement>Nedostaje element. Sadržaj elementa:  </missingElement>
+  <invalidValue>Vrijednost je neispravna ili nedostaje</invalidValue>
+  <notValidFor> nije valjana vrijednost za </notValidFor>
+  <xsdErrorIs> XSD pogreška: </xsdErrorIs>
+  <inElement> u elementu </inElement>
+  <enum1>Vrijednost </enum1>
+  <enum2> nije valjana za polje </enum2>
+  <enum3>Popis vrijednosti: </enum3>
+
+  <!-- INSPIRE view labels and help -->
+  <url>Adresa izvora</url>
+  <identifier>Naziv izvora</identifier>
+  <rsIdentifier>Projekcija</rsIdentifier>
+  <referenceDate>Referentni datum</referenceDate>
+  <creationDate>Datum stvaranja</creationDate>
+  <hierarchyLevel>Razina hijerarhije</hierarchyLevel>
+  <publicationDate>Datum objavljivanja</publicationDate>
+  <revisionDate>Datum zadnje revizije</revisionDate>
+  <temporalRangeSection>Vremenski obuhvat</temporalRangeSection>
+  <beginPosition>Početak</beginPosition>
+  <endPosition>Kraj</endPosition>
+  <conformity>Usklađenost</conformity>
+  <conformity_title>Specifikacija</conformity_title>
+  <conformity_date>Datim</conformity_date>
+  <explanation>Objašenjenje</explanation>
+  <pass>Razina</pass>
+  <indeterminatePosition>Neodređena pozicija</indeterminatePosition>
+  <pointOfContact>Odgovorna strana za izvor podataka</pointOfContact>
+  <metadataPointOfContact>Kontakt za metapodatke</metadataPointOfContact>
+  <organisationName>Ime organizacije</organisationName>
+  <electronicMailAddress>Adresa elektronicke poste</electronicMailAddress>
+  <role>Uloga</role>
+  <encoding>Kodiranje</encoding>
+  <inspireTheme>INSPIRE teme</inspireTheme>
+  <format>Format</format>
+  <format_version>Inačica formata</format_version>
+  <lineage>Podrijetlo</lineage>
+  <spatialResolution>Prostorna rezolucija (mjerilo)</spatialResolution>
+  <spatialDistance>Prostorna rezolucija (udaljenost)</spatialDistance>
+  <accessConstraints>Ograničenja pristupa</accessConstraints>
+  <useLimitation>Ograničenja pristupa</useLimitation>
+  <add-resource-id>Izračunavanje identifikatora izvora</add-resource-id>
+  <add-resource-idHelp>Identifikator izvora sastoji se od URL-a kataloga i  identifikatora metapodataka (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).</add-resource-idHelp>
+  <add-extent-from-geokeywords>Izračunavanje prostornog obuhvata iz ključnih riječi</add-extent-from-geokeywords>
+  <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
+</strings>

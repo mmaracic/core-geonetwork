@@ -76,18 +76,18 @@ public class MakeISO
 //			String engDes = ft.nextToken().trim();
 //			String fraDes = ft.nextToken().trim();
 
-//			ow.write("INSERT INTO IsoLanguages(id, code) VALUES ("+ id +",\""+ code +"\");\n");
-//			ow.write("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"en\", \""+up(engDes)+"\");\n");
-//			ow.write("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"es\", \""+up(engDes)+"\");\n");
-//			ow.write("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"cn\", \""+up(engDes)+"\");\n");
-//			ow.write("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"fr\", \""+up(fraDes)+"\");\n");
+//			ow.write("insert into geonetwork.IsoLanguages(id, code) VALUES ("+ id +",\""+ code +"\");\n");
+//			ow.write("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"en\", \""+up(engDes)+"\");\n");
+//			ow.write("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"es\", \""+up(engDes)+"\");\n");
+//			ow.write("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"cn\", \""+up(engDes)+"\");\n");
+//			ow.write("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES ("+ id +",\"fr\", \""+up(fraDes)+"\");\n");
 //			ow.write("\n");
 
-//			dbms.execute("INSERT INTO IsoLanguages(id, code) VALUES (?,?)", id, code);
-//			dbms.execute("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "en", up(engDes));
-//			dbms.execute("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "es", up(engDes));
-//			dbms.execute("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "cn", up(engDes));
-//			dbms.execute("INSERT INTO IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "fr", up(fraDes));
+//			dbms.execute("insert into geonetwork.IsoLanguages(id, code) VALUES (?,?)", id, code);
+//			dbms.execute("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "en", up(engDes));
+//			dbms.execute("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "es", up(engDes));
+//			dbms.execute("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "cn", up(engDes));
+//			dbms.execute("insert into geonetwork.IsoLanguagesDes(idDes, langId, label) VALUES (?,?,?)", id, "fr", up(fraDes));
 //			dbms.commit();
 
 			String longCode = ft.nextToken();

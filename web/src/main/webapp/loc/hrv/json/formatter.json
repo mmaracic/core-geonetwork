@@ -1,0 +1,13 @@
+{
+    "abstract": "Sažetak",
+    "complete": "Poptpuno",
+    "hierarchy": "Hijerarhija",
+    "links": "Poveznice",
+    "noUuidInLink": "Nema uuid-a u poveznici",
+    "overview": "Pregled",
+    "parent": "Roditelj",
+    "testString": "This String is here for testing don't delete",
+    "xml": "XML",
+    "uncategorizedKeywords" : "Bez kategorije",
+    "uncategorized" : "Bez kategorije"
+}

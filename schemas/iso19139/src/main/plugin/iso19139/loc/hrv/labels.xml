@@ -1,0 +1,2663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gts="http://www.isotc211.org/2005/gts"
+    xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml"
+    xmlns:srv="http://www.isotc211.org/2005/srv"
+    xmlns:gmx="http://www.isotc211.org/2005/gmx">
+    
+    <element name="gmd:MD_ScopeCode">
+        <label>Kod opsega</label>
+        <description>Klasa informacija u koju pripada referencirajući entitet.</description>
+    </element>
+    <element name="code" id="207.0" context="gmd:MD_Identifier">
+        <label>Kod</label>
+        <description>Alfanumerička vrijednost koja identificira instancu u prostoru imena (namespace).</description>
+        <help>Alfanumerička vrijednost koja identificira instancu u prostoru imena (namespace).</help>
+    </element>
+    <element name="code">
+        <label>Sistemski kod</label>
+        <description>kod. Npr. EPSG kod.</description>
+    </element>
+    <element name="code" id="547.0" context="gmd:MD_CodeValue">
+        <label>Kod</label>
+        <description>Vrijednosni kod.</description>
+        <help>vrijednosni kod (npr. numerički)</help>
+    </element>
+    <element name="codeSpace" id="208.1">
+        <label>Autoritet za referencu</label>
+        <description>Autoritet koji je odgovoran za kodifikaciju. Npr. EPSG.</description>
+    </element>
+    <element name="gco:Date" id="364.0" context="gmd:CI_Citation">
+        <label>Datum izdanja</label>
+        <description>Datum izdanja.</description>
+    </element>
+    <element name="gco:Date" id="393.0">
+        <label>Datum</label>
+        <description>Formatiran kao 2007-09-12 (YYYY-MM-DD).</description>
+        <help>Referentni datum i događaj koji se koristi kako bi ga opisao</help>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gco:DateTime" id="64.0" context="gmd:MD_Usage">
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <label>Datum/Vrijeme korištenja </label>
+        <help>datum i vrijeme prvog korištenja izvora ili skupa izvora</help>
+    </element>
+    <element name="gco:DateTime" id="300.0" context="gmd:MD_StandardOrderProcess">
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <label>Planiran datum/vrijeme dostupnosti</label>
+        <help>Datum i vrijeme kada će izvor biti dostupan</help>
+    </element>
+    <!--<element name="gmd:dateTime">
+        <label>DateTime</label>
+        <description>Date and time or range of date and time on or over which the process step
+            occurred (YYYY-MM-DDThh:mm:ss).</description>
+    </element>-->
+    <element name="gco:Measure" id="100.0" context="gmd:DQ_Element">
+        <label>Ime mjerenja</label>
+        <description>Ime testa koji se primjenjuje na podatke.</description>
+    </element>
+    <element name="gco:Measure" id="357.0" context="gmd:EX_VerticalExtent">
+        <label>Jedinica mjere</label>
+        <description>Vertikalne jedinice korištene za vertikalno proširene informacije. 
+		Primjeri: metri, stope, millimetri, hektopaskali...</description>
+        <_condition>M</_condition>
+    </element>
+    <element name="gmd:CI_Address" id="380.0">
+        <label>Adresa</label>
+        <description>Lokacija odgovornog pojedinca ili organizacije.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_Citation" id="359.0">
+        <label>Citiranje</label>
+        <description>Standardised resource reference.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_Contact" id="387.0">
+        <label>Kontakt</label>
+        <description>Potrebne informacije kako bi se omogućio kontakt s odgovornom osobom i/ili
+		organizacijom.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_Date" id="393.0">
+        <label>Datum</label>
+        <description>Referentni datum i događaj koji ga opisuje (YYYY-MM-DD).</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_OnlineResource" id="396.0">
+        <label>Online izvor</label>
+        <description>Informacije o online izvorima s kojih se mogu dohvatiti podatci, 
+		specifikacije, ime "community" profila i  prošireni metadata elementi.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_ResponsibleParty" id="374.0">
+        <label>Odgovorna organizacija</label>
+        <description>Opis organizacije odgovorne za uspostavu, upravljanje, održavanje i
+		distribuciju izvora podataka.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_Series" id="403.0">
+        <label>Niz</label>
+        <description>Informacije o nizu ili agregatnom skupu podataka kojemu pripada 
+		skup podataka.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:CI_Telephone" id="407.0">
+        <label>Telefon</label>
+        <description>Telefonski brojevi za kontaktiranje odgovornih pojedinaca ili organizacija.</description>
+        <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
+    </element>
+    <element name="gmd:DQ_AbsoluteExternalPositionalAccuracy" id="117.0">
+        <label>Apsolutna vanjska pozicijska preciznost (Absolute external positional accuracy)</label>
+        <description>Blizina izviještenih koordinata koordinatama koje se smatraju točnima.</description>
+    </element>
+    <element name="gmd:DQ_AccuracyOfATimeMeasurement" id="121.0">
+        <label>Preciznost vremenske mjere</label>
+        <description>Izvještavanje o grešci pri mjerenju vremena.</description>
+    </element>
+    <element name="gmd:DQ_CompletenessCommission" id="109.0">
+        <label>Podatci viška</label>
+        <description>Podatci koji su višak u skupu podataka definiranog opsegom.</description>
+    </element>
+    <element name="gmd:DQ_CompletenessOmission" id="110.0">
+        <label>Podatci koji nedostaju</label>
+        <description>Podatci koji nedostaju u skupu podataka definiranog opsegom.</description>
+    </element>
+    <element name="gmd:DQ_ConceptualConsistency" id="112.0">
+        <label>Konceptualna konzistentnost</label>
+        <description>Poštivanje pravila konceptualne sheme.</description>
+    </element>
+    <element name="gmd:DQ_ConformanceResult" id="129.0">
+        <label>Razina usklađenosti</label>
+        <description>Informacije o rezultatu evaluiranja dobivenje vrijednosti (ili skupa vrijednosti)
+		u usporedbi s specificiranom prihvatljivom razinom kvalitete podobnosti.</description>
+    </element>
+    <element name="gmd:DQ_DataQuality" id="78.0">
+        <label>Kvaliteta podataka</label>
+        <description>Informacije o kvaliteti podataka specificirani oposegom kvalitete podataka.</description>
+    </element>
+    <element name="gmd:DQ_DomainConsistency" id="113.0">
+        <label>Domenska konzistentnost</label>
+        <description>Poštivanje domenskih ograničenja za vrijednosne tipove.</description>
+    </element>
+    <element name="gmd:DQ_FormatConsistency" id="114.0">
+        <label>Konzistentnost formata</label>
+        <description>Mjera koja pokazuje koliko su podatci pohranjeni u skladu s fizičkom strukturom 
+		skupa podataka.</description>
+    </element>
+    <element name="gmd:DQ_GriddedDataPositionalAccuracy" id="118.0">
+        <label>Pozicijska preciznost rasterskih (eng.: "gridded") podataka</label>
+        <description>Blizina pozicija rasterskih (eng.: "gridded") podataka u odnosu na pozicije koje su prihvaćene
+		kao točne.</description>
+    </element>
+    <element name="gmd:DQ_NonQuantitativeAttributeAccuracy" id="126.0">
+        <label>Ne kvantitativna atributna preciznost</label>
+        <description>Preciznost ne-kvantitativnih atributa.</description>
+    </element>
+    <element name="gmd:DQ_QuantitativeAttributeAccuracy" id="127.0">
+        <label>Kvantitativna atributna preciznost</label>
+        <description>Preciznost kvantitativnih atributa.</description>
+    </element>
+    <element name="gmd:DQ_QuantitativeResult" id="133.0">
+        <label>Kvantitativni rezultat</label>
+        <description>Vrijednost ili informacija o vrijednosti (ili skupu vrijednosti) dobivena primjenom
+		mjere kvalitete.</description>
+    </element>
+    <element name="gmd:DQ_RelativeInternalPositionalAccuracy" id="119.0">
+        <label>Relativna interna pozicijska preciznost</label>
+        <description>Blizina relativnih pozicija obilježja u okviru njihovih relativnih pozicija koje 
+		su prihvaćene kao točne.</description>
+    </element>
+    <element name="gmd:DQ_Scope" id="138.0">
+        <label>Opseg</label>
+        <description>Opis podataka specificiranih opsegom.</description>
+        <help>obujam karakteristika podataka za koje se izviještavaju podatci o kvaliteti</help>
+    </element>
+    <element name="gmd:DQ_TemporalConsistency" id="122.0">
+        <label>Vremenska konzistentnost</label>
+        <description>Točnost uređenih događaja ili nizova.</description>
+    </element>
+    <element name="gmd:DQ_TemporalValidity" id="123.0">
+        <label>Vremenska kontrola (Temporal validity)</label>
+        <description>Vremenska kontrola specificirana opsegom.</description>
+    </element>
+    <element name="gmd:DQ_ThematicClassificationCorrectness" id="125.0">
+        <label>Točnost tematske klasifikacije</label>
+        <description>Usporedba klasa dodijeljenih obilježjima ili njihovim atributima.</description>
+    </element>
+    <element name="gmd:DQ_TopologicalConsistency" id="115.0">
+        <label>Topološka konzistentnost</label>
+        <description>Točnost eksplicitno enkodiranih topoloških karakteristika podataka opisanih opsegom.</description>
+    </element>
+    <element name="gmd:EX_BoundingPolygon" id="341.0">
+        <label>Granični (okvirni) poligon</label>
+        <description>Okvir koji omeđuje skup podataka, izražen kao konačni skup (x,y) (zadnja točka
+		je jednaka kao i prva).</description>
+    </element>
+    <element name="gmd:EX_Extent" id="334.0">
+        <label>Proširenje</label>
+        <description>Informacije o horizontalnim, okomitim i vremenskim proširenjima.</description>
+    </element>
+    <element name="gmd:EX_GeographicBoundingBox" id="343.0">
+        <label>Geografski granični okvir</label>
+        <description>Geografska pozicija skupa podataka.</description>
+    </element>
+    <element name="gmd:EX_GeographicDescription" id="348.0">
+        <label>Geografski opis</label>
+        <description>Opis geografskog prostora pomoću identifikatora.</description>
+    </element>
+    <element name="gmd:EX_SpatialTemporalExtent" id="352.0">
+        <label>Prostorno vremensko proširenje</label>
+        <description>Proširenje s obzirom na datum/vrijeme i prostorna ograničenja.</description>
+    </element>
+    <element name="gmd:EX_TemporalExtent" id="350.0">
+        <label>Vremenski obuhvat podataka</label>
+        <description>Vremensko razdoblje sadržaja izvora.</description>
+    </element>
+    <element name="gmd:EX_VerticalExtent" id="354.0">
+        <label>Vertikalno proširenje</label>
+        <description>Vertikalna domena skupa podataka.</description>
+    </element>
+    <element name="gmd:ISBN" id="372.0">
+        <label>ISBN</label>
+        <description>International Standard Book Number.</description>
+    </element>
+    <element name="gmd:ISSN" id="373.0">
+        <label>ISSN</label>
+        <description>International Standard Serial Number.</description>
+    </element>
+    <element name="gmd:LI_Lineage" id="82.0">
+        <label>Podrijetlo</label>
+        <description>Informacije o događajima ili izvorima korištenim u konstrukciji podataka 
+		specificiranih opsegom ili manjak znanja o podrijetlu.</description>
+    </element>
+    <element name="gmd:LI_ProcessStep" id="86.0">
+        <label>Korak procesa</label>
+        <description>Informacije o događaju u procesu kreiranja podataka.</description>
+        <help>informacije o događaju ili transformaciji u životu podataka, uključujući proces održavanja
+		podataka</help>
+    </element>
+    <element name="gmd:LI_Source" id="92.0">
+        <label>Izvor</label>
+        <description>Informacije o izvoru podataka korištenom u kreiranju podataka.</description>
+    </element>
+    <element name="gmd:MD_AggregateInformation" id="66.1">
+        <label>Agregatne informacije</label>
+        <description>Agregatne informacije podataka.</description>
+    </element>
+    <element name="gmd:MD_ApplicationSchemaInformation" id="320.0">
+        <description>Informacije o aplikacijskoj shemi korištenoj za izradu skupa podataka.</description>
+        <label>Informacije o aplikacijskoj shemi</label>
+    </element>
+    <element name="gmd:MD_Band" id="259.0">
+        <label>Frekvencijski opseg</label>
+        <description>Raspon valnih duljina elektromagnetskog spektra.</description>
+        <help>raspon valnih duljina elektromagnetskog spektra</help>
+    </element>
+    <element name="gmd:MD_BrowseGraphic" id="48.0">
+        <description>Slika koja pokazuje ilustraciju skupa podataka (treba uključivati legendu).</description>
+        <label>Slika</label>
+    </element>
+    <element name="gmd:MD_Constraints" id="67.0">
+        <label>Ograničenja</label>
+        <description>Ograničenja pristupa i korištenja izvora ili metapodataka.</description>
+    </element>
+    <element name="gmd:MD_CoverageDescription" id="239.0">
+        <label>Sadržaj rastera</label>
+        <description>Informacije o sadržaju rasterskih čelija.</description>
+    </element>
+    <element name="gmd:MD_DataIdentification" id="36.0">
+        <label>Identifikacija podataka</label>
+        <description>Potrebne informacije kako bi se identificirao skup podataka.</description>
+    </element>
+    <element name="gmd:MD_DigitalTransferOptions" id="274.0">
+        <label>Opcije digitalnog prijenosa</label>
+        <description>Tehnička sredstva i mediji kojima je izvor dobavljen od distributera.</description>
+    </element>
+    <element name="gmd:MD_Dimension" id="179.0">
+        <label>Dimenzija</label>
+        <description>Osobine osi.</description>
+    </element>
+    <element name="gmd:MD_Distribution" id="270.0">
+        <label>Distribucija</label>
+        <description>Informacije o distributeru i opcijama dobavljanja izvora.</description>
+    </element>
+    <element name="gmd:MD_Distributor" id="279.0">
+        <label>Distributer</label>
+        <description>Informacije o distributeru.</description>
+    </element>
+    <element name="gmd:MD_ExtendedElementInformation" id="306.0">
+        <description>Novi metadata element koji ne postoji u ISO 19115. Koristi se za opis
+		geografskih podataka.</description>
+        <label>Proširene informacije o elementu</label>
+    </element>
+    <element name="gmd:MD_FeatureCatalogueDescription" id="233.0">
+        <label>Opis kataloga obilježja</label>
+        <description>Informacije koje identificiraju katalog obilježja ili konceptualnu
+		shemu.</description>
+    </element>
+    <element name="gmd:MD_Format" id="284.0">
+        <label>Format</label>
+        <description>Opis konstrukta računalnog jezika koji specificira prikazivanje podatkovnih objekata
+		u datoteci, poruci, zapisu, uređaju za pohranu podataka ili transmisijskom kanalu.</description>
+    </element>
+    <element name="gmd:MD_GeometricObjects" id="183.0">
+        <label>Geometrijski objekti</label>
+        <description>Broj objekata u skupu podataka, poredanih po tipu geometrijskog objekta.</description>
+    </element>
+    <element name="gmd:MD_Georectified" id="162.0">
+        <label>Geocertificiran</label>
+        <description>Raster čije su čelije ravnomjerno raspoređene u geografskom koordinatnom sustavu
+		definiranom u "Spatial Referencing System"(SRS) tako da bilo koja čelija u rasteru može biti 
+		geolocirana ukoliko su poznate	njezine koordinate u rasteru, ishodište rastera, razmak čelija
+		i orijentacija.</description>
+    </element>
+    <element name="gmd:MD_Georeferenceable" id="170.0">
+        <label>Prostorno odrediv</label>
+        <description>Raster s čelijama različitih veličina u koordinatnom sustavu bilo koje geoegrafske 
+		projekcije, čije se pojedinačne ćelije mogu geolocirati koristeći geolokacijske informacije 
+		koje su navedene u podatcima, ali se ne mogu geolocirati iz samih osobina rastera.</description>
+    </element>
+    <element name="gmd:MD_GridSpatialRepresentation" id="157.0">
+        <label>Rasterski prostorni prikaz</label>
+        <description>Informacije o rasterskim prostornim objektima u skupu podataka.</description>
+    </element>
+    <element name="gmd:MD_Identifier" id="205.0">
+        <label>Identifikator</label>
+        <description>Vrijednost koja jedinstveno identificira objekt unutar prostora imena.</description>
+    </element>
+	<element name="gmd:identifier" context="gmd:CI_Citation" id="365">
+		<label>Jedinstvena oznaka izvora</label>		
+		<condition>Obavezan.</condition>
+		<description>Jedinstvena vrijednost koja označava izvor podataka.</description>
+	</element>
+    <element name="gmd:MD_ImageDescription" id="243.0">
+        <label>Opis slike</label>
+        <description>Informacije o primjerenosti slike.</description>
+    </element>
+    <element name="gmd:MD_Keywords" id="52.0">
+        <label>Ključne riječi</label>
+        <description>Ključne riječi, njihov tip i referentni izvor.</description>
+    </element>
+    <element name="gmd:MD_LegalConstraints" id="69.0">
+        <label>Pravna ograničenja</label>
+        <description>Ograničenja i pravni preduvjeti za pristup i korištenje izvora ili metapodataka.</description>
+    </element>
+    <element name="gmd:MD_MaintenanceInformation" id="142.0">
+        <label>Informacije o održavanju</label>
+        <description>Informacije o opsegu i frekvenciji osvježavanja.</description>
+    </element>
+    <element name="gmd:MD_Medium" id="291.0">
+        <label>Medij</label>
+        <description>Informacije o mediju na kojem je moguće prenositi izvore.</description>
+    </element>
+    <element name="gmd:MD_Metadata" id="1.0">
+        <label>Metapodaci</label>
+        <description>Korijenski entitet koji definira metapodatke o izvoru ili izvorima.</description>
+    </element>
+    <element name="gmd:MD_MetadataExtensionInformation" id="303.0">
+        <description>Informacije koje opisuju proširenja metapodataka.</description>
+        <label>Informacije proširenja metapodataka</label>        
+    </element>
+    <element name="gmd:MD_PortrayalCatalogueReference" id="268.0">
+        <label>Referenca kataloga prikaza</label>
+        <description>Informacije koje identificiraju korišteni katalog prikaza.</description>        
+    </element>
+    <element name="gmd:MD_RangeDimension" id="256.0">
+        <label>Dimenzija dometa</label>
+        <description>Informacije o dometu pojedinih dimenzija čelija.</description>
+    </element>
+    <element name="gmd:MD_ReferenceSystem" id="186.0">
+        <label>Referentni sustav</label>
+        <description>Referentni sustav.</description>
+        <help>Informacije o koordinatnom referentnom sustavu</help>
+    </element>
+    <element name="gmd:MD_RepresentativeFraction" id="56.0">
+        <label>Reprezentativni razlomak</label>
+        <description>Deriviran iz mjerila gdje MD_RepresentativeFraction.denominator = 1 /  Scale.measure 
+		i Scale.targetUnits = Scale.sourceUnits.</description>
+    </element>
+    <element name="gmd:MD_Resolution" id="59.0">
+        <label>Rezolucija</label>
+        <description>Nivo detalja izražen kao faktor skaliranja ili prizemna udaljenost.</description>
+    </element>
+    <element name="gmd:MD_ScopeDescription" id="149.0">
+        <label>Opis opsega</label>
+        <description>Opis klase informacija.</description>
+        <condition>Potrebni atributi, obilježja, instance obilježja, instance atributa ili skupovi podataka</condition>    
+    </element>
+    <element name="gmd:MD_SecurityConstraints" id="73.0">
+        <label>Sigurnosna ograničenja</label>
+        <description>Baratanje ograničenjima izvora zbog sigurnosti (primjerice nacionalne sigurnosti).</description>
+    </element>
+    <element name="gmd:MD_ServiceIdentification" id="47.0">
+        <label>Identifikacija usluga</label>
+        <description>Identifikacija mogućnosti koje pružatelj usluga nudi kroz skup sučelja koja opisuju
+			ponašanje - Vidi ISO 19119 - Usluge za dodatne informacije.</description>
+    </element>
+    <element name="gmd:MD_StandardOrderProcess" id="298.0">
+        <label>Standardni proces narudžbe</label>
+        <description>Uobičajeni načini nabavke izvora, pripadajuće instrukcije i informacije o naknadi.</description>
+    </element>
+    <element name="gmd:MD_Usage" id="62.0">
+        <label>Korištenje</label>
+        <description>Kratak opis načina na koji se izvor trenutno koristi.</description>
+    </element>
+    <element name="gmd:MD_VectorSpatialRepresentation" id="176.0">
+        <label>Prostorni vektorski prikaz</label>
+        <description>Informacije o vektorskim prostornim objektima u skupu podataka.</description>
+    </element>
+    <element name="gmd:PT_FreeText" id="601.0">
+        <label>Slobodan tekst</label>
+        <description>Opis višejezičnog metadata elementa za slobodni tekst.</description>
+    </element>
+    <element name="gmd:RS_Identifier" id="208.0">
+        <description>Identifikator koji se koristi za referentne sustave.</description>
+        <label>Identifikator</label>
+    </element>
+    <element name="gmd:URL" id="608.0">
+        <label>Adresa izvora</label>
+        <description>Adresa izvora.</description>
+    </element>
+    <element name="gmd:abstract" id="25.0">
+        <label>Sažetak izvora</label>
+        <description>Kratki opisni sažetak sadržaja izvora.</description>
+        <condition>Obavezan.</condition>
+    </element>
+    <element name="gmd:accessConstraints" id="70.0">
+        <label>Ograničenja javnog pristupa: pristup</label>
+        <description>Ograničenja pristupa koja se koriste kako bi osigurala privatnost ili intelektualno
+			vlasništvo te bilo koja druga posebna ograničenja vezana uz izvor.</description>
+    </element>
+    <element name="gmd:address" id="525.0" context="gmd:CI_ResponsibleParty">
+        <label>Adresa</label>
+        <description>Adresa odgovorne organizacije.</description>
+    </element>
+    <element name="gmd:address" id="389.0">
+        <label>Adresa</label>
+        <description>Fizička i adresa elektroničke pošte putem koje je moguće kontaktirati osobu ili
+		organizaciju.</description>
+    </element>
+    <element name="gmd:administrativeArea" id="383.0">
+        <label>Administrativno područje</label>
+        <description>Država, provincija lokacije.</description>
+    </element>
+    <element name="gmd:aggregateDataSetIdentifier" id="66.3">
+        <label>Identifikator agregatnih podataka</label>
+        <description>Identifikacijske informacije o agregatnom skupu podataka.</description>
+    </element>
+    <element name="gmd:aggregateDataSetName" id="66.2">
+        <label>Ime agregatnog skupa podataka</label>
+        <description>Informacije agregatnog skupa podataka.</description>
+        <_condition></_condition>
+    </element>
+    <element name="gmd:aggregationInfo" id="35.1">
+        <label>Informacije o agregaciji</label>
+        <description>Pruža informacije o agregatnom skupu podataka.</description>
+    </element>
+    <element name="gmd:alternateTitle" id="361.0">
+        <label>Alternativni naziv izvora</label>
+        <description>Kratko ime, drugo ime, akronim, kratica ili ime izvora na drugom jeziku.
+            Primjer: "DOF5" je alternativni naziv za "Digitalni ortofoto u mjerilu 1:5 000".</description>
+		<condition>Uvjetan.</condition>
+    </element>
+    <element name="gmd:amendmentNumber" id="287.0">
+        <label>Broj dopune</label>
+        <description>Broj dopuna formata.</description>
+    </element>
+    <element name="gmd:applicationProfile" id="399.0">
+        <label>Aplikacijski profil</label>
+        <description>Ime aplikacijskog profila koje se može koristiti sa online izvorom.</description>
+    </element>
+    <element name="gmd:applicationSchemaInfo" id="21.0">
+        <label>Informacije aplikacijske sheme</label>
+        <description>Pruža informacije o konceptualnoj shemi skupa podataka.</description>
+    </element>
+    <element name="gmd:associationType" id="66.4">
+        <label>Tip asocijacije</label>
+        <description>Tip asocijacije agregatnog skupa podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:attributeDescription" id="240.0">
+        <label>Opis atributa</label>
+        <description>Opis atributa opisanog mjerenom vrijednočću.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:attributeInstances" id="153.0">
+        <label>Instanca atributa</label>
+        <description>Instanca atributa na koju se odnosi informacija.</description>
+        <condition/>
+    </element>
+    <element name="gmd:attributes" id="150.0">
+        <label>Atributi</label>
+        <description>Atributi na koje se odnosi informacija.</description>
+        <condition/>
+    </element>
+    <element name="gmd:authority" id="206.0">
+        <label>Autoritet</label>
+        <description>Osoba ili organizacija odgovorna za održavanje imenskog prostora.</description>
+    </element>
+    <element name="gmd:axisDimensionProperties" id="159.0">
+        <label>Osobine osnih dimenzija</label>
+        <description>Informacije o prostorno-vremenskim osobinama osi.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:bitsPerValue" id="264.0">
+        <label>Bitova po vrijednosti</label>
+        <description>Maksimalan broj značajnih (eng. "significant") bitova u nekompresiranom 
+		formatu za vrijednosti svih dijelova svakog piksela.</description>
+    </element>
+    <element name="gmd:cameraCalibrationInformationAvailability" id="253.0">
+        <label>Dostupnost informacija za kalibraciju kamere</label>
+        <description>Govori jesu li ili ne dostupne konstante koje se koriste za kalibriranje kamera.</description>
+    </element>
+    <element name="gmd:cellGeometry" id="160.0">
+        <label>Geometrija čelije</label>
+        <description>Identifikacija rasterskih podataka kao točka ili ćelija.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:centerPoint" id="166.0">
+        <label>Centralna točka</label>
+        <description>Pozicija u SRS koordinatnom sustavu i koordinata ćelije koja je na pola puta između
+		nasuprotnih krajeva rastera.</description>
+    </element>
+    <element name="gmd:characterSet" id="4.0" context="gmd:MD_Metadata">
+        <label>Skup znakova (Character set)</label>
+        <description>Puno ime standarda za kodiranje znakova.</description>
+        <condition>Uvjetno.</condition>
+        <_condition>Uvjetno / ISO/IEC 10646-1 se ne koristi i nije definirano encodingom?</_condition>
+    </element>
+    <element name="gmd:characterSet" id="40.0" context="gmd:MD_DataIdentification">
+        <label>Skup znakova (Character set)</label>
+        <description>Puno ime standarda za kodiranje znakova.</description>
+        <_condition>Uvjetno / ISO 10646-1 se ne koristi?</_condition>
+    </element>
+    <element name="gmd:characterSet" id="4.0">
+        <label>Skup znakova (Character set)</label>
+        <description>Puno ime standarda za kodiranje znakova.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:checkPointAvailability" id="163.0">
+        <description>Govori jesu li dostupne geografske pozicije za testiranje preciznosti
+			georeferenciranog rastera.</description>
+        <condition>Obvezan.</condition>
+        <label>Dostupnost kontrolnih točaka</label>
+    </element>
+    <element name="gmd:checkPointDescription" id="164.0">
+        <description>Opis geografskih pozicija koje se koriste za testiranje preciznosti
+		georeferenciranog rastera.</description>
+        <condition>Uvjetno.</condition>
+        <label>Opis kontrolnih točaka</label>
+    </element>
+    <element name="gmd:citation" id="24.0" context="gmd:MD_Identification">
+        <label>Citat</label>
+        <description>Informacije o citiranju za izvore.</description>
+    </element>
+    <element name="gmd:citation" id="576.0" context="gmd:MD_Authority">
+        <label>Citat</label>
+        <description>Citat koji pripada autoritetnoj organizaciji.</description>
+    </element>
+    <element name="gmd:citation" id="581.0" context="gmd:MD_Thesaurus">
+        <label>Citat</label>
+        <description>Citat leksikona sinonima.</description>
+    </element>
+    <element name="gmd:citation" id="581.0">
+        <label>Citat</label>
+        <description>Informacije o citiranju za izvore.</description>
+    </element>
+    <element name="gmd:citedResponsibleParty" id="367.0">
+        <label>Citirana odgovorna organizacija</label>
+        <description>Ime i pozicija individualca ili organizacije koja je odgovorna za izvor.</description>
+    </element>
+    <element name="gmd:city" id="382.0">
+        <label>Grad</label>
+        <description>Grad lokacije.</description>
+    </element>
+    <element name="gmd:classification" id="74.0">
+        <condition>Obvezan.</condition>
+        <label>Klasifikacija</label>
+        <description>Ime ograničenja rukovanja izvorom ili metapodacima.</description>
+    </element>
+    <element name="gmd:classificationSystem" id="76.0">
+        <label>Klasifikacijski sustav</label>
+        <description>Ime klasifikacijskog sustava.</description>        
+    </element>
+    <element name="gmd:cloudCoverPercentage" id="248.0">
+        <label>Pokrivenost oblacima</label>
+        <description>Površina prostornih podataka koja je zaklonjena oblacima, izraženo
+		kao postotak prekrivene površine.</description>
+    </element>
+    <element name="gmd:code" id="207.0" context="gmd:MD_Identifier">
+        <label>Kod</label>
+        <description>Alfanumerička vrijednost koja identificira instancu u imenskom prostoru.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:code" id="207.0" context="gmd:RS_Identifier" supercontext="gmd:referenceSystemIdentifier">
+        <label>Koordinatni referentni sustav: kod</label>
+        <description>Alfanumerička vrijednost koja identificira instancu u imenskom prostoru.</description>
+        <condition>Obvezan.</condition>
+        <helper>
+             <option value = "001">HTRS96/XYZ</option>
+             <option value = "002">HTRS96/GRS80_3D</option>
+             <option value = "003">HTRS96/GRS80_2D</option>
+             <option value = "004">HTRS96/TM</option>
+             <option value = "005">HTRS96/LCC</option>
+             <option value = "006">HTRS96/UTM33N</option>
+             <option value = "007">HTRS96/UTM34N</option>
+             <option value = "008">HDKS1901/XYZ</option>
+             <option value = "009">HDKS1901/Bessel_3D</option>
+             <option value = "010">HDKS1901/Bessel_2D(MGI1901)</option>
+             <option value = "011">HDKS1901/GK5(MGI1901/Balkans zone 5)</option>
+             <option value = "012">HDKS1901/GK6(MGI1901/Balkans zone 6)</option>
+             <option value = "013">HVRS71</option>
+             <option value = "014">HVRS1875</option>
+             <option value = "015">HDKS1901/GK1630</option>
+             <option value = "016">HTRS96/TM+HVRS71</option>
+             <option value = "017">HTRS96/TM+HVRS1875</option>
+             <option value = "018">HTRS96/TM+ HTRS96/GRS80</option>
+             <option value = "019">HTRS96/GRS80_2D+HVRS71</option>
+             <option value = "020">HTRS96/GRS80_2D+HVRS1875</option>
+             <option value = "021">HDKS1901/GK5+ HVRS1875</option>
+             <option value = "022">HDKS1901/GK6+HVRS1875</option>
+             <option value = "023">HDKS1901/GK5+HVRS71</option>
+             <option value = "024">HDKS1901/GK6+HVRS71</option>
+             <option value = "025">HDKS1901/Bessel2D+HVRS1875</option>
+             <option value = "026">HDKS1901/Bessel2D+HVRS71</option>
+             <option value = "027">HDKS1901/GK5+HDKS1901/Bessel</option>
+             <option value = "028">HDKS1901/GK6+ HDKS1901/Bessel</option>
+             <option value = "029">HDKS1901/GK1630+HVRS71</option>
+             <option value = "030">HDKS1901/GK1630+HVRS1875</option>
+             <option value = "031">ETRS89/XYZ</option>
+             <option value = "032">ETRS89/GRS80_3D</option>
+             <option value = "033">ETRS89/GRS80_2D</option>
+             <option value = "034">ETRS89/TM33</option>
+             <option value = "035">ETRS89/TM34</option>
+             <option value = "036">EVRF2000/NH</option>
+             <option value = "037">EVRF2007/NH</option>
+             <option value = "038">EVRF2007/CP</option>
+             <option value = "039">EVRF2000/CP</option>
+             <option value = "040">ETRS89/LCC</option>
+             <option value = "041">ETRS89/LAEA</option>
+             <option value = "042">ETRS89+EVRF2000/NH</option>
+             <option value = "043">ETRS89+EVRF2007/NH</option>
+             <option value = "044">ETRS90/XYZ</option>
+             <option value = "045">ETRS91/XYZ</option>
+             <option value = "046">ETRS92/XYZ</option>
+             <option value = "047">ETRS93/XYZ</option>
+             <option value = "048">ETRS94/XYZ</option>
+             <option value = "049">ETRS96/XYZ</option>
+             <option value = "050">ETRS97/XYZ</option>
+             <option value = "051">ETRS2000/XYZ</option>
+             <option value = "052">ITRF88/XYZ</option>
+             <option value = "053">ITRF89/XYZ</option>
+             <option value = "054">ITRF90/XYZ</option>
+             <option value = "055">ITRF91/XYZ</option>
+             <option value = "056">ITRF92/XYZ</option>
+             <option value = "057">ITRF93/XYZ</option>
+             <option value = "058">ITRF94/XYZ</option>
+             <option value = "059">ITRF96/XYZ</option>
+             <option value = "060">ITRF97/XYZ</option>
+             <option value = "061">ITRF2000/XYZ</option>
+             <option value = "062">ITRF2005/XYZ</option>
+             <option value = "063">ITRF2008/XYZ</option>
+             <option value = "064">WGS84/XYZ</option>
+             <option value = "065">WGS84/3D</option>
+             <option value = "066">WGS84/2D</option>
+             <option value = "067">WGS84/UTM33N</option>
+             <option value = "068">WGS84/UTM34N</option>
+             <option value = "069">WGS84/Pseudo-Mercator</option>
+             <option value = "070">CRS:84</option>
+        </helper>
+    </element>
+    <element name="gmd:code" id="207.0" context="gmd:RS_Identifier" supercontext="gmd:identifier">
+        <label>Jedinstvena oznaka izvora: kod</label>
+        <description>Alfanumerička vrijednost koja identificira instancu u imenskom prostoru.</description>
+        <condition>Obvezan.</condition>
+        <!-- <helper>
+        	 <option value = "0001">0001</option>
+        </helper> -->
+    </element>
+    <element name="gmd:code" id="547.0" context="gmd:MD_CodeValue">
+        <description>Kod vrijednosti.</description>
+        <help>Kod vrijednosti (npr. numerička)</help>
+        
+    </element>
+        <element name="gmd:codeSpace" id="208.1">
+        <label>Prostor koda</label>
+        <description>Ime ili identifikator osoba ili organizacije koja je odgovorna za imenski prostor.</description>
+    </element>
+    <element name="gmd:codeSpace" id="208.1" context="gmd:RS_Identifier" supercontext="gmd:referenceSystemIdentifier">
+        <label>Koordinatni referentni sustav: prostor koda</label>
+        <description>Ime ili identifikator osoba ili organizacije koja je odgovorna za imenski prostor.</description>
+        <!-- <helper>
+             <option value = "urn:hr:nipp:dgu:">urn:hr:nipp:dgu:</option>
+        </helper> -->  
+    </element>
+        <element name="gmd:codeSpace" id="208.1" context="gmd:RS_Identifier" supercontext="gmd:identifier">
+        <label>Jedinstvena oznaka izvora: prostor koda</label>
+        <description>Ime ili identifikator osoba ili organizacije koja je odgovorna za imenski prostor.</description>
+        <!-- <helper>
+             <option value = "hr:nipp:dgu:gi:">hr:nipp:dgu:gi:</option>
+        </helper> --> 
+    </element>
+    
+    <element name="gmd:collectiveTitle" id="371.0">
+        <label>Kolektivni naziv</label>
+        <description>Common title with holdings note. NOTE title identifies elements of a series
+            collectively, combined with information about what volumes are available at the source
+            cited.</description>
+        <help>This field is used to name the Basic Geodata as defined in the GeoIV Annex I, as it is possible that there are more than 1 "physical" datasets assigned to 1 legal entry. E.g.: Entry no. 47 "Geophysikalisches Kartenwerk" consists of 3 datasets "Geophysikalische Karten 1:500000", "Geophysikalische Spezialkarten" and "Gravimetrischer Atlas 1:100000"</help>    
+    </element>
+    <element name="gmd:complianceCode" id="234.0">
+        <label>Kod suglasnosti</label>
+        <description>Indicira da li je citirani katalog obilježja u suglasnosti s ISO 19110.</description>
+    </element>
+    <element name="gmd:compressionGenerationQuantity" id="250.0">
+        <label>Kvantiteta generiranja kompresije</label>
+        <description>Broj kompresija s gubitkom podataka poduzetih na slici.</description>
+    </element>
+    <element name="gmd:condition" id="312.0">
+        <label>Uvjet</label>
+        <description>Uvjet pod kojim je prošireni element obavezan.</description>
+    </element>
+    <element name="gmd:constraintLanguage" id="323.0">
+        <label>Jezik ograničenja</label>
+        <description>Formalni jezik koji se koristi u aplikacijskoj shemi.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:contact" id="8.0" context="gmd:MD_Metadata">
+        <condition>Obvezan.</condition>
+        <label>Kontaktna točka za metapodatke</label>
+        <description>Organizacija, osoba odgovorna za metapodatke.</description>
+    </element>
+    <element name="gmd:contact" id="148.1" context="gmd:MD_MaintenanceInformation">
+        <label>Kontakt</label>
+        <description>Identifikacija i način komuniciranja s organizacijom koja je odgovorna za metapodatke.</description>
+    </element>
+    <element name="gmd:contact" id="8.0">
+        <label>Kontaktna točka za metapodatke</label>
+        <description>Opisuje organizaciju odgovornu za izradu i održavanje metapodataka..</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:contactInfo" id="378.0">
+        <description>Adresa odgovorne organizacije.</description>
+        <label>Informacije o kontaktu</label>
+    </element>
+    <element name="gmd:contactInstructions" id="392.0">
+        <label>Upute o kontaktu</label>
+        <description>Dodatne upute o tome kako ili kada kontaktirati osobu ili organizaciju.</description>
+    </element>
+    <element name="gmd:contentInfo" id="16.0">
+        <description>Pruža informacije o katalogu obilježja i opisuje pokrivenost i karakteristike slikovnih
+		podataka.</description>
+        <label>Informacije o sadržaju</label>
+    </element>
+    <element name="gmd:contentType" id="241.0">
+        <label>Tip sadržaja</label>
+        <description>Tip informacije koja se prikazuje vrijednosti u čeliji.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:controlPointAvailability" id="171.0">
+        <description>Govori postoje li ili ne kontrolne točke.</description>
+        <condition>Obvezan.</condition>
+        <label>Dostupnost kontrolnih točaka</label>
+    </element>
+    <element name="gmd:cornerPoints" id="165.0">
+        <label>Točke krajeva</label>
+        <description>Pozicija u koordinatnom sustavu definiranom "SRS" i koordinatama rastera
+		čelija na dijagonalnim krajevima prekrivenog prostora. Postoje 4 točke krajeva u georectified mreži;
+		potrebne su barem dvije točke krajeva koje pripadaju istoj dijagonali.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:country" id="612.0">
+        <label>Država</label>
+        <description>Država fizičke adrese.</description>
+    </element>
+    <element name="gmd:country" id="508.0" context="gmd:MD_Legislation">
+        <label>Država</label>
+        <description>Džava u kojoj je donesen zakon.</description>
+    </element>
+    <element name="gmd:country" id="605.0" context="PT_Group">
+        <label>Država</label>
+        <description>Država jezika korištenog za dokumentiranje slobodnog teksta.</description>
+    </element>
+    <element name="gmd:credit" id="27.0">
+        <label>Zasluge</label>
+        <description>Priznanje osobama koje su pridonjele izvoru.</description>
+    </element>
+    <element name="gmd:dataQualityInfo" id="18.0">
+        <label>Usklađenost</label>
+        <description>Informacije o stupnju usklađenosti s provedbenim pravilima, specifikacijama ili drugim aktima.</description>
+    </element>
+    <element name="gmd:dataSetURI" id="11.1">
+        <label>URI skupa podataka</label>
+        <description>Uniformed Resource Identifier (URI) skupa podataka kojemu pripadaju metapodaci.</description>
+        <help>Uniformed Resource Identifier (URI) skupa podataka kojemu pripadaju metapodaci. Ova poveznica 
+		vodi direktno na skup podataka koji je strojno čitljiv</help>
+    </element>
+    <element name="gmd:dataType" id="313.0">
+        <label>Tip podataka</label>
+        <description>Kod koji identificira tip vrijednosti u proširenom elementu.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:dataset" id="154.0">
+        <description>Skup podataka na koji se odnose informacije.</description>
+        <condition/>
+        <label>Skup podataka</label>
+    </element>
+    <element name="gmd:date" id="362.0" context="gmd:CI_Citation">
+        <condition>Obvezan.</condition>
+        <label>Datum</label>
+        <description>Referentni datum za citirani izvor.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:date" id="570.0">
+        <condition>Obvezan.</condition>
+        <label>Datum</label>
+        <description>Referentni datum za citirani izvor.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:date" id="570.0" context="gmd:MD_Revision">
+        <label>Datum zadnjeg osvježavanja</label>
+        <description>Datum zadnjeg osvježavanja.</description>
+    </element>
+    <element name="gmd:date" id="144.0" context="gmd:MD_MaintenanceInformation">
+        <label>Datum idućeg osvježavanja</label>
+        <description>Dogovoreni datum revizije izvora.</description>
+    </element>
+    <element name="gmd:date" id="394.0" context="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date">
+        <condition>Obvezan.</condition>
+        <label>Referentni datum izvora podataka</label>
+        <description>Referentni vremenski datum za izvor koji se opisuje.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:date" id="394.0" context="gmd:CI_Date">
+        <condition>Obvezan.</condition>
+        <label>Referentni datum izvora</label>
+        <description>Referentni vremenski datum za izvor koji se opisuje.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:date" id="394.0" context="gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date">
+        <condition>Obvezan.</condition>
+        <label>Referentni datum specifikacije</label>
+        <description>Referentni vremenski datum za specifikaciju koja se opisuje.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:dateOfNextUpdate" id="144.0">
+        <label>Datum idućeg osvježavanja</label>
+        <description>Dogovoreni datum revizije izvora (YYYY-MM-DD).</description>
+    </element>
+    <element name="gmd:dateStamp" id="9.0">
+        <label>Datum metapodataka</label>
+        <description>Datum koji navodi kada je zapis o metapodacima sačinjen ili ažuriran. (YYYY-MM-DDThh:mm:ss).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <!--<element name="gmd:dateTime" id="89.0">
+        <label>Date / Time</label>
+        <description>Date and time or range of date and time on or over which the process step
+            occurred (YYYY-MM-DDThh:mm:ss).</description>
+    </element>-->
+    <element name="gmd:dateTime" id="89.0" context="LI_ProcessStep">
+        <description>Datum i vrijeme ili raspon datuma i vremena kada se korak procesa odvijao (YYYY-MM-DDThh:mm:ss).</description>
+        <label>Datum / Vrijeme</label>
+        <description>Datum i vrijeme ili raspon datuma i vremena kada se korak procesa odvijao.</description>
+    </element>
+    <element name="gmd:dateTime" id="106.0" context="gmd:DQ_Element">
+        <label>Datum / Vrijeme</label>
+        <description>Datum ili raspon datuma tokom kojih se primjenjivala mjera kvalitete.</description>
+    </element>
+    <element name="gmd:dateType" id="395.0">
+        <label>Vrsta datuma</label>
+        <description>Događaj na koji se odnosi referentni datum dokumenta.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:dateType" id="395.0" context="gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType">
+        <label>Vrsta datuma specifikacije</label>
+        <description>Događaj na koji se odnosi referentni datum specifikacije.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:definition" id="310.0">
+        <label>Definicija</label>
+        <description>Definicija proširenog elementa.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:deliveryPoint" id="381.0">
+        <label>Adresa dostave pošte</label>
+        <description>Adresa dostave pošte(prema ISO 11180, annex A).</description>
+    </element>
+    <element name="gmd:denominator" id="57.0">
+        <label>Prostorna rezolucija - mjerilo</label>
+        <description>Broj koji se nalazi ispod razlomačke crte u razlomku.</description>
+        <condition>dodajte ili nazivnik ili udaljenost</condition>
+    <helper>
+    	<option value="500">1:500</option>
+    	<option value="1000">1:1´000</option>
+    	<option value="2000">1:2´000</option>
+		<option value="5000">1:5´000</option>
+		<option value="10000">1:10´000</option>
+		<option value="25000">1:25´000</option>
+		<option value="50000">1:50´000</option>
+		<option value="100000">1:100´000</option>
+		<option value="200000">1:200´000</option>
+		<option value="300000">1:300´000</option>
+		<option value="500000">1:500´000</option>
+		<option value="1000000">1:1´000´000</option>
+    </helper>
+        
+    </element>
+    <element name="gmd:density" id="293.0">
+        <label>Gustoća</label>
+        <description>Gustoća kojom su snimljeni podatci.</description>
+    </element>
+    <element name="gmd:densityUnits" id="294.0">
+        <label>Jedinica gustoće</label>
+        <description>Jedinice koje se koriste za mjerenje gustoće.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:description" id="561.0">
+        <label>Opis</label>
+        <description>Opis događaja, uključujući odgovarajuće parametre.</description>
+    </element>
+    <element name="gmd:description" id="561.0" context="gmd:MD_AbstractClass">
+        <label>Opis</label>
+        <description>Opis.</description>
+    </element>
+    <element name="gmd:description" id="87.0" context="LI_ProcessStep">
+        <condition>Obvezan.</condition>
+        <label>Opis</label>
+        <description>Opis događaja, uključujući odgovarajuće parametre.</description>
+    </element>
+    <element name="gmd:description" id="93.0" context="LI_Source">
+        <label>Opis</label>
+        <description>Detaljni opis razine podataka.</description>
+        <_condition>Uvjetno / sourceExtent nije popunjen?</_condition>
+    </element>
+    <element name="gmd:description" id="335.0" context="gmd:EX_Extent">
+        <label>Opis</label>
+        <description>Prostorno i vremensko proširenje za referencirajući objekt.</description>
+        <_condition>Uvjetno / geographicElement i temporalElement i verticalElement nisu dokumentirani?</_condition>
+    </element>
+    <element name="gmd:description" id="401.0" context="gmd:CI_OnlineResource">
+        <label>Opis</label>
+        <description>Detaljni tekstualni opis online izvora.</description>
+    </element>
+    <element name="gmd:description" id="401.0" context="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description">
+        <label>Opis organizacije</label>
+        <description>Detaljni tekstualni opis organizacije.</description>
+    </element>
+    <element name="gmd:description" id="541.0" context="gmd:MD_CodeDomain">
+        <label>Opis</label>
+        <description>Opis domene koda.</description>
+    </element>
+    <element name="gmd:description" id="549.0" context="gmd:MD_CodeValue">
+        <label>Opis vrijednosti</label>
+        <description>Opis vrijednosti.</description>
+    </element>
+    <element name="gmd:description" id="552.0" context="gmd:MD_Attribute">
+        <label>Opis</label>
+        <description>Opis atributa.</description>
+    </element>
+    <element name="gmd:description" id="557.0" context="gmd:MD_Role">
+        <label>Opis</label>
+        <description>Opis uloge.</description>
+    </element>
+    <element name="gmd:descriptiveKeywords" id="33.0">
+        <label>Ključne riječi</label>
+        <description>Ključne riječi kategorije, njihov tip i referentni izvor.</description>
+    </element>
+    <element name="gmd:descriptor" id="258.0">
+        <label>Opisnik</label>
+        <description>Opis raspona mjerenih vrijednosti čelije.</description>
+    </element>
+    <element name="gmd:dimension" id="242.0">
+        <label>Dimenzija</label>
+        <description>Informacije o dimenzijama mjerenja čelijske vrijednosti.</description>
+    </element>
+    <element name="gmd:dimensionName" id="180.0">
+        <label>Ime dimenzije</label>
+        <description>Ime osi.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:dimensionSize" id="181.0">
+        <label>Veličina dimenzija</label>
+        <description>Broj elemenata duž osi.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:distance" id="61.0">
+        <label>Prostorna rezolucija - udaljenost</label>
+        <description>Prostorna udaljenost odnosi se na razinu detalja skupa podataka, 
+		u ovom slučaju oglednu površinsku udaljenost.</description>
+        <condition>Potrebno ukoliko nije definirano ekvivalentno mjerilo</condition>
+    <!-- <helper>
+    	<option value="0.01">1 cm</option>
+    	<option value="0.02">2 cm</option>
+    	<option value="0.05">5 cm</option>
+		<option value="0.10">10 cm</option>
+		<option value="0.25">25 cm</option>
+		<option value="0.50">50 cm</option>
+		<option value="1">1 m</option>
+		<option value="5">5 m</option>
+		<option value="10">10 m</option>
+		<option value="25">25 m</option>
+		<option value="50">50 m</option>
+		<option value="100">100 m</option>
+    </helper> -->
+    </element>
+    <element name="gmd:distributionFormat" id="271.0">
+        <label>Format podataka</label>
+        <condition>Obvezan.</condition>
+        <description>Format(i) prijenosa podataka izvora.</description>
+    </element>
+    <element name="gmd:distributionInfo" id="17.0">
+        <description>Pruža informacije o distributeru i opcijama dobavljanja izvora.</description>
+        <label>Informacije distribucije</label>
+    </element>
+    <element name="gmd:distributionOrderProcess" id="281.0">
+        <label>Proces distribucije/naručivanja</label>
+        <description>Pruža informacije o tome kako se izvor može dobaviti, te dodatne instrukcije
+			i informacije o naknadama.</description>
+    </element>
+    <element name="gmd:distributor" id="272.0">
+        <label>Distributer</label>
+        <description>Informacije o distributeru.</description>
+    </element>
+    <element name="gmd:distributorContact" id="280.0">
+        <label>Distributer</label>
+        <description>Organizacija od koje je moguće nabaviti izvor. Lista ne mora sadržavati sve izvore.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:distributorFormat" id="282.0">
+        <label>Format kojeg koristi distributer</label>
+        <description>Format kojeg koristi distributer.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:distributorTransferOptions" id="283.0">
+        <label>Distributerske opcije prijenosa</label>
+        <description>Informacije o tehničkim sredstvima i medijima koje koristi distributer.</description>
+    </element>
+    <element name="gmd:domainCode" id="309.0">
+        <label>Domenski kod</label>
+        <description>Troznamenkasti kod dodijeljen proširenom elementu.</description>
+        <_condition>Uvjetno / je li tip podataka ?codelistElement??</_condition>
+    </element>
+    <element name="gmd:domainOfValidity" id="197.0">
+        <label>Domena valjanosti</label>
+        <description>Raspon koji je valjan za referentni sustav.</description>
+    </element>
+    <element name="gmd:domainValue" id="315.0">
+        <label>Domenska vrijednost</label>
+        <description>Dozvoljene vrijednosti koje se mogu pridijeliti proširenom elementu.</description>
+        <_condition>Uvjetno / tip podatka nije 'codelist', 'enumeration' or
+            'codelistElement'</_condition>
+    </element>
+    <element name="gmd:eastBoundLongitude" id="345.0">
+        <label>Najistočnija geografska dužina</label>
+        <description>Najistočnija koordinata granice opsega podataka izražena dužinom u 
+		stupnjevima (pozitivna prema istoku).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:edition" id="363.0">
+        <label>Verzija</label>
+        <description>Verzija citiranog izvora.</description>
+    </element>
+    <element name="gmd:editionDate" id="364.0">
+        <label>Datum verzije</label>
+        <description>Datum verzije (YYYY-MM-DD).</description>
+    </element>
+    <element name="gmd:electronicMailAddress" id="386.0">
+        <label>E-pošta osobe</label>
+        <description>Adresa elektroničke pošte odgovorne organizacije ili pojedinca.</description>
+    </element>
+    <element name="gmd:environmentDescription" id="44.0">
+        <label>Opis okoline</label>
+        <description>Opis okoline u okruženju u kojem su stvoreni podatci, uključujući stvari poput
+		softwarea, operacijskog sustava, ime datoteke i veličinu podataka.</description>
+    </element>
+    <element name="gmd:equivalentScale" id="60.0">
+        <label>Prostorna rezolucija – istovjetno mjerilo</label>
+        <description>Prostorna rezolucija se odnosi na razinu detalja skupa podataka, u ovom slučaju 
+		razinu detalja podataka izraženu kao nazivnik mjerila papirnate karte.</description>
+        <_condition>Uvjetno / udaljenost nije dokumentirana?</_condition>
+    </element>
+    <element name="gmd:errorStatistic" id="136.0">
+        <label>Statistička metoda</label>
+        <description>Statistička metoda koja se koristi da bi se odredila vrijednost.</description>
+    </element>
+    <element name="gmd:evaluationMethodDescription" id="104.0">
+        <label>Opis metode evaluacije</label>
+        <description>Opis metode evaluacije.</description>
+    </element>
+    <element name="gmd:evaluationMethodType" id="103.0">
+        <label>Metoda evaluacije</label>
+        <description>Tip metode koja se koristi za evaluiranje kvalitete podataka.</description>
+    </element>
+    <element name="gmd:evaluationProcedure" id="105.0">
+        <label>Procedura evaluacije</label>
+        <description>Referenca na informacije o proceduri evaluacije.</description>
+    </element>
+    <element name="gmd:explanation" id="131.0">
+        <label>Usklađenost: objašnjenje</label>
+        <description>Objašnjenje značenja sukladnosti za ovaj rezultat.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:extendedElementInformation" id="305.0">
+        <label>Informacije o proširenom elementu</label>
+        <description>Pruža informacije o novom elementu metapodataka koji se ne nalazi u ISO 19115.</description>
+    </element>
+    <element name="gmd:extensionOnLineResource" id="304.0">
+        <label>Online izvor proširenja</label>
+        <description>Informacije o online izvoru koji sadrži ime "community" profila i proširene 
+		elemente metapodataka. Informacije za sve nove elemente metapodataka.</description>
+    </element>
+    <element name="gmd:extent" id="45.0" context="gmd:MD_DataIdentification">
+        <label>Proširenje</label>
+        <description>Informacije o proširenju, uključujući granični poligon, vertikalno i vremensko proširenje
+		podataka.</description>
+        <_condition>Uvjetno / ako hierarchyLevel jednak "dataset"? Onda:
+            extent.geographicElement.EX_GeographicBoundingBox ili
+            extent.geographicElement.EX_GeographicDescription je potreban</_condition>
+    </element>
+    <element name="gmd:extent" id="140.0" context="gmd:DQ_Scope">
+        <label>Proširenje</label>
+        <description>Informacije o horizontalnom, vertikalnom i vremenskom proširenju podataka.</description>
+    </element>
+    <element name="gmd:extent" id="351.0" context="gmd:EX_TemporalExtent">
+        <label>Vremenski obuhvat</label>
+        <description>Vremensko razdoblje sadržaja izvora.</description>
+        <_condition>Obvezan.</_condition>
+    </element>
+    <element name="gmd:extentTypeCode" id="340.0">
+        <label>Kod proširenja</label>
+        <description>Govori da li granični poligon omeđuje površinu koju prekrivaju podatci ili ne postoje podatci.
+		Moguće vrijednosti: '1' za uključenje ili '0' za isključenje.</description>
+    </element>
+    <element name="gmd:facsimile" id="409.0">
+        <label>Broj faksa osobe</label>
+        <description>Telefonski broj fax uređaja odgovorne organizacije ili pojedinca.</description>
+    </element>
+    <element name="gmd:featureCatalogueCitation" id="238.0">
+        <label>Referenca na katalog obilježja</label>
+        <description>Kompletna bibliografska referenca na jedan ili više vanjskih kataloga obilježja.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:featureInstances" id="152.0">
+        <label>Instanca obilježja</label>
+        <description>Instance obilježja na koje se odnose informacije.</description>
+        <condition/>
+    </element>
+    <element name="gmd:featureTypes" id="237.0">
+        <label>Tipovi obilježja</label>
+        <description>Podskup tipova obilježja iz citiranog kataloga obilježja koja se nalaze
+		u skupu podataka.</description>
+    </element>
+    <element name="gmd:features" id="151.0">
+        <label>Obilježja</label>
+        <description>Obilježja na koja se odnose informacije.</description>
+        <condition/>
+    </element>
+    <element name="gmd:fees" id="299.0">
+        <label>Naknade</label>
+        <description>Naknade i uvjeti za nabavku izvora. Uključuje valutu (po ISO 4217
+		specifikaciji).</description>
+    </element>
+    <element name="gmd:fileDecompressionTechnique" id="289.0">
+        <label>Tehnika dekompresije datoteke</label>
+        <description>Preporuke algoritama ili procesa koji se mogu primijeniti kako
+			bi se mogli čitati kompresirani podatci.</description>
+    </element>
+    <element name="gmd:fileDescription" id="50.0">
+        <label>Opis ilustracije</label>
+        <description>Tekstualni opis ilustracije.</description>
+    </element>
+    <element name="gmd:fileIdentifier" id="2.0">
+        <label>Identifikator datoteke</label>
+        <description>Jedinstveni identifikator za datoteku s metapodacima.</description>
+    </element>
+    <element name="gmd:fileName" id="49.0">
+        <label>Ime datoteke</label>
+        <description>Ime datoteke koja sadrži ilustraciju koja prikazuje skup podataka. Može biti URL
+		javno dostupne fotografije.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:fileType" id="51.0">
+        <label>Tip datoteke</label>
+        <description>Format u kojem je zapisana ilustracija.</description>
+        <help>ormat u kojem je zapisana ilustracija. Primjerice: CGM, EPS, GIF, JPEG, PBM, PS,
+            TIFF, XWD</help>
+    </element>
+    <element name="gmd:filmDistortionInformationAvailability" id="254.0">
+        <label>Dostupnost informacija o filmskoj distorziji</label>
+        <description>Govori jesu li dostupne informacije o Reseau kalibraciji.</description>
+    </element>
+    <element name="gmd:formatDistributor" id="290.0">
+        <label>Format kojeg koristi distributer</label>
+        <description>Informacije o formatu kojeg koristi distributer.</description>
+    </element>
+    <element name="gmd:function" id="402.0">
+        <label>Funkcija</label>
+        <description>Kod za funkciju koju izvodi online izvor.</description>
+    </element>
+    <element name="gmd:geographicElement" id="336.0">
+        <label>Geografski element</label>
+        <description>Pruža geografsku komponentu proširenja referencirajućeg objekta.</description>
+        <_condition>Uvjetno / opis i temporalElement i verticalElement nisu dokumentirani?</_condition>
+    </element>
+    <element name="gmd:geographicIdentifier" id="349.0">
+        <label>Geografski identifikator</label>
+        <description>Identifikator koji se koristi za predstavljanje geoegrafskog područja.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:geometricObjectCount" id="185.0">
+        <label>Broj geometrijskih objekata</label>
+        <description>Ukupan broj točaka ili vektora koji se pojavljuju u skupu podataka.</description>
+    </element>
+    <element name="gmd:geometricObjectType" id="184.0">
+        <label>Tip geometrijskog objekta</label>
+        <description>Ime točke i vektora koji se koriste za lociranje nula, jedan i dvodimenzionalnih
+		lokacija u skupu podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:geometricObjects" id="178.0">
+        <label>Geometrijski objekti</label>
+        <description>Informacije o geometrijskim objektima koji se koriste u skupu podataka.</description>
+    </element>
+    <element name="gmd:georeferencedParameters" id="174.0">
+        <label>Georeferencirani parametri</label>
+        <description>Georeferencirani parametri.</description>
+    </element>
+    <element name="gmd:graphicOverview" id="31.0">
+        <label>Grafički pregled</label>
+        <description>Slika koja prikazuje ilustraciju izvora (treba uključivati legendu).</description>
+    </element>
+    <element name="gmd:graphicsFile" id="325.0">
+        <label>Slikovna datoteka</label>
+        <description>Potpuna aplikacijska shema u formatu slikovne datoteke.</description>
+    </element>
+    <element name="gmd:handlingDescription" id="77.0">
+        <label>Opis rukovanja</label>
+        <description>Dodatne informacije o ograničenjima rukovanja izvorom.</description>
+    </element>
+    <element name="gmd:hierarchyLevel" id="6.0">
+        <label>Vrsta izvora</label>
+        <description>Vrsta izvora prostornih podataka koju opisuju metapodaci.</description>
+    </element>
+    <element name="gmd:hierarchyLevelName" id="7.0">
+        <label>Ime hijerarhijske razine</label>
+        <description>Ime hijerarhijskih razina za koje su priloženi metapodaci.</description>
+        <_condition>Uvjetno / hijerarhijskaRazina nije "dataset"?</_condition>
+    </element>
+    <element name="gmd:hoursOfService" id="391.0">
+        <label>Radno vrijeme</label>
+        <description>Vremenski period (uključujući vremensku zonu) kada je moguće kontaktirati
+		odgovornu organizaciju ili pojedinca.</description>        
+    </element>
+    <element name="gmd:identificationInfo" id="15.0">
+        <label>Identifikacija izvora (resursa) podataka</label>
+        <description>Osnovne informacije o izvoru (resursu) na kojeg se odnose metapodaci.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:identifier" id="573.0">
+        <label>Identifikator</label>
+        <description>Jedinstveni identifikator izvora. Primjerice: Universal Product Code (UPC),
+            National Stock Number (NSN).</description>
+    </element>
+    <element name="gmd:identifier" id="573.0" context="gmd:CI_Citation">
+        <label>Identifikator navoda</label>
+        <description>Identifikator navoda.</description>
+    </element>
+    <element name="gmd:identifier" id="575.0" context="gmd:MD_Authority">
+        <label>Identifikator</label>
+        <description>Identifikator koji pripada autoritetu.</description>
+    </element>
+    <element name="gmd:illuminationAzimuthAngle" id="245.0">
+        <label>Azimut osvjetljenja</label>
+        <description>Azimut osvjetljenja u stupnjevima (u smjeru kazaljke na satu od smjera pravog sjevera
+		u trenutku fotografiranja. Za fotografije iz uređaja za skeniranje, odnositi se prema središnjem
+		pikselu slike.</description>
+    </element>
+    <element name="gmd:illuminationElevationAngle" id="244.0">
+        <label>Visina kuta osvjetljenja</label>
+        <description>Visina osvjetljenja mjerena u stupnjeva (u smjeru kazaljke na satu od ciljane
+		ravnine u presjeku linije vida i zemljine površine. Za fotografije iz uređaja za skeniranje, 
+		odnositi se prema središnjem pikselu slike.</description>
+    </element>
+    <element name="gmd:imageQualityCode" id="247.0">
+        <label>Kod kvalitete slike</label>
+        <description>Specificira kvalitetu slike.</description>
+        <help>Specificira kvalitetu slike</help>
+    </element>
+    <element name="gmd:imagingCondition" id="246.0">
+        <label>Uvjeti pri fotografiranju</label>
+        <description>Uvjeti koji su utjecali na fotografiju.</description>
+    </element>
+    <element name="gmd:includedWithDataset" id="236.0">
+        <label>Uključeno s skupom podataka</label>
+        <description>Označava je li katalog obilježja uključen u skup podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:individualName" id="375.0" context="gmd:CI_ResponsibleParty" supercontext="gmd:pointOfContact">
+        <label>Ime i prezime osobe</label>
+        <description>Odgovorna osoba - ime, prezime i titula.</description>
+        <!--<_condition>Uvjetno / imeOrganizacije i positionName nisu dokumentirani?</_condition>-->
+		<condition>Uvjetan.</condition>
+    </element>
+    <element name="gmd:individualName" id="375.0" context="gmd:CI_ResponsibleParty" supercontext="gmd:contact">
+        <label>Ime i prezime osobe za metapodatke</label>
+        <description>Odgovorna osoba za metapodatke - ime, prezime i titula.</description>
+        <!--<_condition>Uvjetno / imeOrganizacije i positionName nisu dokumentirani?</_condition>-->
+		<condition>Uvjetan.</condition>
+    </element>
+    <element name="gmd:initiativeType" id="66.5">
+        <label>Tip inicijative</label>
+        <description>Tip inicijative pod kojim je napravljen agregatni skup podataka.</description>
+    </element>
+    <element name="gmd:issueIdentification" id="405.0">
+        <label>Identifikacija inačice</label>
+        <description>Informacije koje identificiraju inačicu podataka.</description>
+    </element>
+    <element name="gmd:keyword" id="53.0">
+        <label>Vrijednost ključne riječi</label>
+        <description>Vrijednost ključne riječi je uobičajeno korištena riječ, formalizirana riječ ili fraza koja se koristi da bi se opisao subjekt.</description>
+    </element>
+    <element name="gmd:language" context="gmd:MD_DataIdentification" id="39.0">
+        <label>Jezik izvora</label>
+        <description>Jezik korišten unutar izvora.</description>
+		<_condition>Obvezan.</_condition>
+		<helper>
+			<option value="bul">Bugarski</option>
+		    <option value="cze">Češki</option>
+		    <option value="dan">Danski</option>
+		    <option value="est">Estonski</option>
+		    <option value="fin">Finski</option>
+		    <option value="fre">Francuski</option>
+		    <option value="gre">Grčki</option>
+		    <option value="gle">Irski</option>
+		    <option value="lit">Litavski</option>
+		    <option value="lav">Latvijski</option>
+		    <option value="hun">Mađarski</option>
+		    <option value="mlt">Malteški</option>
+		    <option value="dut">Nizozemski</option>
+		    <option value="ger">Njemački</option>
+		    <option value="pol">Poljski</option>
+		    <option value="por">Portugalski</option>
+		    <option value="rum">Rumunjski</option>
+		    <option value="slo">Slovački</option>
+		    <option value="slv">Slovenski</option>
+		    <option value="spa">Španjolski</option>
+		    <option value="swe">Švedski</option>
+		    <option value="ita">Talijanski</option>
+		</helper>
+    </element>
+    <element name="gmd:language" context="gmd:MD_Metadata" id="3.0">
+        <label>Jezik metapodataka</label>
+        <description>Jezik na kojem su pisani metapodaci.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:language" context="gmd:MD_FeatureCatalogueDescription" id="235.0">
+        <label>Jezik</label>
+        <description>Jezik (ili jezici) koji se koristi u katalogu.</description>
+    </element>
+    <element name="gmd:lensDistortionInformationAvailability" id="255.0">
+        <label>Dostupnost informacija o distorziji leće</label>
+        <description>Označava jesu li dostupne informacije  o aberacijama leće.</description>
+    </element>
+    <element name="gmd:level" id="139.0">
+        <label>Vrsta izvora</label>
+        <description>Vrsta izvora prostornih podataka koju opisuju metapodaci.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:levelDescription" id="141.0">
+        <label>Opis razine</label>
+        <description>Detaljan opis razine podataka.</description>
+        <_condition>Uvjetno / hijerarhijskaRazina nije 'dataset' ili 'series'?</_condition>
+    </element>
+    <element name="gmd:lineage" id="81.0">
+        <label>Podrijetlo</label>
+        <description>Ne-kvantitativna informacija o kvaliteti podrijetla podataka.</description>
+        <_condition>Uvjetno / report nije ispunjen?</_condition>
+    </element>
+    <element name="gmd:linkage" id="397.0">
+        <label>Adresa izvora</label>
+        <description>Definira poveznicu/poveznice na izvor i/ili poveznicu na dodatne informacije o izvoru podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:maintenanceAndUpdateFrequency" id="143.0">
+        <label>Ažuriranje: učestalost</label>
+        <description>Učestalost kojom se obavljaju promjene izvora podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:maintenanceNote" id="148.0">
+        <label>Ažuriranje: bilješke</label>
+        <description>Informacije o specifičnim zahtjevima za održavanje izvora.</description>
+    </element>
+    <element name="gmd:maxValue" id="260.0">
+        <label>Maksimalna vrijednost</label>
+        <description>Najveća valna duljina koju senzor može detektirati.</description>
+    </element>
+    <element name="gmd:maximumValue" id="356.0">
+        <label>Maksimalna vrijednost</label>
+        <description>Maksimalni vertikalni doseg u skupu podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:measureDescription" id="102.0">
+        <label>Opis mjere</label>
+        <description>Opis mjere koja se vrši.</description>
+    </element>
+    <element name="gmd:measureIdentification" id="101.0">
+        <label>Identifikacija mjerne procedure</label>
+        <description>Kod koji identificira registriranu standardnu proceduru.</description>
+    </element>
+    <element name="gmd:mediumFormat" id="296.0">
+        <label>Format za medij</label>
+        <description>Metoda koja se koristi za pisanje na medij.</description>
+    </element>
+    <element name="gmd:mediumNote" id="297.0">
+        <label>Bilješka o mediju</label>
+        <description>Opis ili druga ograničenja ili zahtjevi za korištenje medija.</description>
+    </element>
+    <element name="gmd:metadataConstraints" id="20.0" context="gmd:MD_Metadata">
+        <label>Ograničenja metapodataka</label>
+        <description>Ograničenja pristupa i korištenja metapodataka.</description>
+    </element>
+    <element name="gmd:metadataConstraints">
+        <label>Ograničenja metapodataka</label>
+        <description>Ograničenja pristupa i korištenja metapodataka.</description>
+    </element>
+    <element name="gmd:metadataExtensionInfo" id="14.0">
+        <description>Informacije koje opisuju proširenja metapodataka.</description>
+        <label>Informacije proširenja metapodataka</label>
+    </element>
+    <element name="gmd:metadataMaintenance" id="22.0">
+        <label>Održavanje metapodataka</label>
+        <description>Informacije o frekvenciji i opsegu osvježavanja metapodataka.</description>
+    </element>
+    <element name="gmd:metadataStandardName" id="10.0">
+        <label>Ime standarda metapodataka</label>
+        <description>Ime korištenog standarda (uključujući i ime profila) za metapodatke.</description>
+    </element>
+    <element name="gmd:metadataStandardVersion" id="11.0">
+        <label>Verzija standarda metapodataka</label>
+        <description>Verzija standarda koja se koristi za metapodatke.</description>
+    </element>
+    <element name="gmd:minValue" id="261.0">
+        <label>Minimalna vrijednost</label>
+        <description>Najmanja valna duljina koju senzor može detektirati.</description>
+    </element>
+    <element name="gmd:minimumValue" id="355.0">
+        <label>Minimalna vrijednost</label>
+        <description>Najniži vertikalni doseg u skupu podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:name" context="gmd:MD_AbstractClass" id="560.0">
+        <label>Ime</label>
+        <description>Ime.</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_Medium" id="292.0">
+        <label>Ime</label>
+        <description>Ime medija na kojem je moguće dobaviti izvor.</description>
+    </element>
+    <element name="gmd:name" context="gmd:RS_ReferenceSystem" id="196.0">
+        <label>Ime</label>
+        <description>Ime korištenog referentnog sustava.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:name" context="gmd:MD_Format" id="285.0">
+        <label>Ime formata</label>
+        <description>Format za razmjenu podataka.</description>
+        <help>Format za razmjenu podataka</help>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:name" context="gmd:MD_ExtendedElementInformation" id="307.0">
+        <label>Ime</label>
+        <description>Ime proširenog elementa metapodataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:name" context="gmd:MD_ApplicationSchemaInformation" id="321.0">
+        <label>Ime</label>
+        <description>Ime korištene aplikacijske sheme.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:name" context="gmd:CI_OnlineResource" id="400.0">
+        <label>Ime izvora</label>
+        <description>Naziv izvora</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name" id="400.0">
+        <label>Naziv ustrojbene jedinice</label>
+        <description>Naziv ustrojbene jedinice</description>
+    </element>
+    <element name="gmd:name" context="gmd:CI_Series" id="404.0">
+        <label>Ime</label>
+        <description>Ime niza ili agregatnog skupa podataka kojemu pripada skup podataka.</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_CodeDomain" id="537.0">
+        <label>Ime</label>
+        <description>Ime kodske domene.</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_CodeValue" id="546.0">
+        <label>Ime</label>
+        <description>Ime.</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_Attribute" id="551.0">
+        <label>Ime</label>
+        <description>Ime atributa.</description>
+    </element>
+    <element name="gmd:name" context="gmd:MD_Role" id="556.0">
+        <label>Ime</label>
+        <description>Ime uloge.</description>
+    </element>
+    <element name="gmd:nameOfMeasure" id="100.0">
+        <label>Ime mjere</label>
+        <description>Ime testa koji je primijenjen na podatke.</description>
+    </element>
+    <element name="gmd:northBoundLatitude" id="347.0">
+        <label>Najsjevernija geografska dužina</label>
+        <description>Najsjevernija koordinata granice opsega podataka izražena dužinom u 
+		stupnjevima (pozitivna prema sjeveru).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:numberOfDimensions" id="158.0">
+        <label>Broj dimenzija</label>
+        <description>Broj nezavisnih vremensko prostornih osi.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:obligation" id="311.0">
+        <label>Obveza</label>
+        <description>Obaveza proširenog elementa.</description>
+    </element>
+    <element name="gmd:offLine" id="278.0">
+        <label>Offline</label>
+        <description>Informacije o offline mediju na kojem je moguće dobaviti izvor.</description>
+    </element>
+    <element name="gmd:offset" id="267.0">
+        <label>Odmak</label>
+        <description>Fizička vrijednost koja odgovara vrijednosti 0 iz čelije.</description>
+    </element>
+    <element name="gmd:onLine" id="277.0">
+        <label>Online izvor</label>
+        <description>Informacije o online izvorima iz kojih je moguće nabaviti izvor.</description>
+    </element>
+    <element name="gmd:onlineResource" id="390.0">
+        <help>URL za pristup internetskoj stranici</help>
+        <label>Internetska stranica</label>
+        <description>Online informacije koje se mogu koristiti za kontaktiranje odgovorne 
+		organizacije ili pojedinca.</description> 
+    </element>
+    <element name="gmd:orderingInstructions" id="301.0">
+        <label>Upute za naručivanje</label>
+        <description>Upute, uvjeti i usluge koje pruža distributer.</description>
+    </element>
+    <element name="gmd:organisationName" id="376.0">
+        <label>Naziv organizacije</label>
+        <description>Odgovorna organizacija za metapodatke - puno ime.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:orientationParameterAvailability" id="172.0">
+        <label>Dostupnost parametra orijentacije</label>
+        <description>Označava postoje li ili ne orijentacijski parametri.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:orientationParameterDescription" id="173.0">
+        <label>Opis orijentacijskog parametra</label>
+        <description>Opis parametara koji se koriste za opisivanje orijentacije senzora.</description>
+    </element>
+    <element name="gmd:other" id="155.0">
+        <label>Drugo</label>
+        <description>Klasa informacija koja ne spada u druge kategorije .</description>
+        <condition/>
+    </element>
+    <element name="gmd:otherCitationDetails" id="370.0">
+        <label>Drugi detalji navođenja</label>
+        <description>Druge informacije koje su potrebne za ispuniti navođenje a nisu 
+		navedene drugdje.</description>
+    </element>
+    <element name="gmd:otherConstraints" id="72.0">
+        <label>Ograničenja javnog pristupa: ostala ograničenja</label>
+        <description>Pruža informacije o vrsti i razlozima za ograničeni javni 
+		pristup skupovima, nizovima skupova i uslugama prostornih podataka.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:page" id="406.0">
+        <label>Stranica</label>
+        <description>Detalji koji označavaju na kojoj stranici publikacije je objavljen članak.</description>
+    </element>
+    <element name="gmd:parameterCitation" id="175.0">
+        <label>Parameter citation</label>
+        <description>Reference providing description of the parameters.</description>
+    </element>
+    <element name="gmd:parentEntity" id="316.0">
+        <label>Roditeljski entitet</label>
+        <description>Ime entiteta metapodataka pod kojim se može naći ovaj prošireni element metapodataka.
+		Ime može biti standardni element metapodataka ili drugi prošireni elementi.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:parentIdentifier" id="5.0">
+        <label>Identifikator roditelja</label>
+        <description>Identifikator datoteke metapodataka kojima pripadaju ovi metapodaci.</description>
+    </element>
+    <element name="gmd:pass" id="132.0">
+        <label>Usklađenost - razina</label>
+        <description>Razina usklađenosti izvora prostornih podataka sa provedbenim prvilima, specifikacijom ili drugim aktom</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:peakResponse" id="263.0">
+        <label>Valna duljina vrhunca odgovora</label>
+        <description>Najveća valna duljina na kojoj je odgovor? (Wavelength at which the response is the highest).</description>
+    </element>
+    <element name="gmd:phone" id="388.0">
+        <label>Telefon</label>
+        <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
+    </element>
+    <element name="gmd:phone" id="407.0">
+        <label>Telefon</label>
+        <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
+    </element>
+    <element name="gmd:phone" id="526.0">
+        <label>Telefon</label>
+        <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
+    </element>
+    <element name="gmd:plannedAvailableDateTime" id="300.0">
+        <label>Planirano dostupno vrijeme</label>
+        <description>Planirani datum i vrijeme kada će skup podataka biti dostupan (CCYY-MM-DDThh:mm:ss).</description>
+    </element>
+    <element name="gmd:pointInPixel" id="167.0">
+        <label>Točka u pikselu</label>
+        <description>Točka u pikselu koji odgovara zemaljskoj lokaciji piksela.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:pointOfContact" id="29.0">
+        <label>Odgovorna strana</label>
+        <description>Opis organizacije odgovornog za uspostavu, upravljanje, održavanje i 
+		distribuciju izvora podataka.</description>
+    </element>
+    <element name="gmd:polygon" id="342.0">
+        <label>Poligon</label>
+        <description>Skup točaka koje definiraju granični poligon.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:portrayalCatalogueCitation" id="269.0">
+        <label>Portrayal catalogue citation</label>
+        <description>Bibliographic reference to the portrayal catalogue cited.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:portrayalCatalogueInfo" id="19.0">
+        <label>Informacije o opisnom katalogu</label>
+        <description>Pruža informacije o katalogu pravila definiranih za opis izvora.</description>
+    </element>
+    <element name="gmd:positionName" id="377.0">
+        <label>Pozicija osobe</label>
+        <description>Uloga ili pozicija odgovorne osobe.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:postalCode" id="384.0">
+        <label>Poštanski broj</label>
+        <description>ZIP ili drugi poštanski broj.</description>
+    </element>
+    <element name="gmd:presentationForm" id="368.0">
+        <label>Prezentacijska forma</label>
+        <description>Mod u kojem je izvor prikazan.</description>
+    </element>
+    <element name="gmd:processStep" id="84.0">
+        <label>Korak procesa</label>
+        <description>Informacije o događaju u procesu kreiranja.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:processingLevelCode" id="249.0">
+        <label>Kod razine procesiranja</label>
+        <description>Kod distributera fotografija koji identificira primjenjenu razinu radiometrijskog
+		i geometrijskog procesiranja.</description>
+    </element>
+    <element name="gmd:processor" id="90.0">
+        <label>Odgovorna osoba za proces</label>
+        <description>Identifikacija i sredstvo komuniciranja s osobom ili organizacijom koja je zadužena
+		za korak procesa.</description>
+    </element>
+    <element name="gmd:protocol" id="398.0">
+        <label>Protokol</label>
+        <description>Konekcijski protokol koji se koristi.</description>
+    </element>
+    <element name="gmd:purpose" id="26.0">
+        <label>Svrha</label>
+        <description>Sažetak namjera s kojima je napravljen izvor.</description>
+    </element>
+    <element name="gmd:radiometricCalibrationDataAvailability" id="252.0">
+        <label>Dostupnost podataka za radiometrijsku kalibraciju</label>
+        <description>Označava jesu li dostupne informacije za radiometrijsku kalibraciju.</description>
+    </element>
+    <element name="gmd:rationale" id="88.0">
+        <label>Rationale</label>
+        <description>Requirement or purpose for the process step.</description>
+    </element>
+    <element name="gmd:rationale" id="318.0" context="gmd:MD_ExtendedElementInformation">
+        <label>Razlog</label>
+        <description>Razlog kreiranja proširenog elementa.</description>
+    </element>
+    <element name="gmd:referenceSystemIdentifier" id="187.0">
+        <label>Koordinatni referentni sustav</label>
+        <description>Oznaka koordinatnog (prostornog) referentnog sustava izvora podataka.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:referenceSystemInfo" id="13.0">
+        <label>Koordinatni referentni sustav</label>
+        <description>Referentni sustavi podataka.</description>
+    </element>
+    <element name="gmd:report" id="80.0">
+        <label>Izviješće</label>
+        <description>Kvantitativna informacija kvalitete podataka.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:resolution" id="182.0">
+        <label>Rezolucija</label>
+        <description>Razina detalja u rasterskim podatcima.</description>
+    </element>
+    <element name="gmd:resourceConstraints" id="35.0">
+        <label>Ograničenja izvora</label>
+        <description>Pruža informacije o ograničenjima koja se odnose na izvore.</description>
+    </element>
+    <element name="gmd:resourceFormat" id="32.0">
+        <label>Format izvora</label>
+        <description>Pruža opis formata izvora.</description>
+    </element>
+    <element name="gmd:resourceMaintenance" id="30.0">
+        <label>Održavanje izvora</label>
+        <description>Pruža informacije o frekvenciji osvježavanja izvora i opsegu 
+		osvježavanja.</description>
+    </element>
+    <element name="gmd:resourceSpecificUsage" id="34.0">
+        <label>Korištenje izvora</label>
+        <description>Pruža osnovne informacije o specifićnim primjenama za koje se koristi izvor.</description>
+    </element>
+    <element name="gmd:result" id="107.0">
+        <label>Specifikacija</label>
+        <description>Vrijednost (ili skup vrijednosti) dobijena primjenom mjere kvalitete podataka
+		u usporedbi s specificiranim prihvaćenim razinama kvalitete konformiranosti.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:role" id="566.0" context="gmd:MD_Association">
+        <label>Uloga</label>
+        <description>Referenca na uloge konkretne udruge.</description>
+    </element>
+    <element name="gmd:role" id="379.0">
+        <label>Uloga osobe</label>
+        <description>Uloga odgovorne organizacije.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:rule" id="317.0">
+        <label>Pravilo</label>
+        <description>Specificira kako se prošireni element odnosi prema drugim postojećim
+		elementima i entitetima.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:scaleDenominator" id="94.0">
+        <label>Nazivnik mjerila</label>
+        <description>Nazivnik reprezentativnog razlomka izvorišne karte.</description>
+    </element>
+    <element name="gmd:scaleFactor" id="266.0">
+        <label>Faktor skaliranja</label>
+        <description>Faktor skaliranja koji je primjenjen na vrijednost u čeliji.</description>
+    </element>
+    <element name="gmd:schemaAscii" id="324.0">
+        <description>Potpuna aplikacijska shema dana kao ASCII datoteka.</description>
+        <label>Shema ASCII</label>        
+    </element>
+    <element name="gmd:schemaLanguage" id="322.0">
+        <label>Jezik aplikacijske sheme</label>
+        <description>Identificiranje jezika koji se koristio za aplikacijsku shemu.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:scope" id="79.0">
+        <label>Opseg</label>
+        <description>Specifični podatci na koje se odnose informacije o kvaliteti podataka.</description>
+    </element>
+    <element name="gmd:sequenceIdentifier" id="257.0">
+        <label>Identifikator sekvence</label>
+        <description>Broj koji jednoznačno identificira instancu raspona valnih duljina senzora.</description>
+    </element>
+    <element name="gmd:series" id="369.0">
+        <label>Niz</label>
+        <description>Informacije o nizu ili agregatnom skupu podataka kojem pripada ovaj skup podataka.</description>
+    </element>
+    <element name="gmd:shortName" id="308.0">
+        <label>Kratko ime</label>
+        <description>Skraćeni oblik koji je pogodan za korištenje u implementacijskoj metodi, poput XML ili SGML.
+		Napomena: moguće je koristiti i druge metode.</description>
+    </element>
+    <element name="gmd:softwareDevelopmentFile" id="326.0">
+        <label>Datoteka softverskog razvoja</label>
+        <description>Potpuna aplikacijska shema dana kao datoteka softverskog razvoja.</description>
+    </element>
+    <element name="gmd:softwareDevelopmentFileFormat" id="327.0">
+        <label>Format datoteke softverskog razvoja</label>
+        <description>Format koji je ovisan o softveru te koji se koristi za datoteku koja je ovisna
+		o softveru aplikacijske sheme.</description>
+    </element>
+    <element name="gmd:source" id="85.0">
+        <label>Izvor</label>
+        <description>Informacije o izvoru podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:source" id="319.0" context="gmd:MD_ExtendedElementInformation">
+        <condition>Obvezan.</condition>
+        <label>Izvor</label>
+        <description>Ime osobe ili organizacije koja je odgovorna za kreiranje proširenog elementa.</description>
+    </element>
+    <element name="gmd:sourceCitation" id="96.0">
+        <label>Referenca izvora</label>
+        <description>Preporučena referenca za izvor podataka.</description>
+    </element>
+    <element name="gmd:sourceExtent" id="97.0">
+        <label>Domet izvora</label>
+        <description>Informacije o prostornim, vertikalnim i vremenskim dometima podataka.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:sourceReferenceSystem" id="95.0">
+        <label>Referentni sustav izvora</label>
+        <description>Prostorni referentni sustav koji koriste podatci.</description>
+    </element>
+    <element name="gmd:sourceStep" id="98.0">
+        <label>Korak procesa</label>
+        <description>Informacije o događaju u postupku kreiranja izvornih podataka.</description>
+    </element>
+    <element name="gmd:southBoundLatitude" id="346.0">
+        <label>Najjužnija geografska dužina</label>
+        <description>Najjužnija koordinata granice opsega podataka izražena dužinom u 
+		stupnjevima (pozitivna prema sjeveru).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:spatialExtent" id="353.0">
+        <label>Prostorna komponenta</label>
+        <description>Prostorna komponenta kombiniranog prostornog i vremenskog proširenja.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:spatialRepresentationInfo" id="12.0">
+        <label>Informacije prostornog prikaza</label>
+        <description>Digitalni prikaz prostornih informacija u skupu podataka.</description>
+    </element>
+    <element name="gmd:spatialRepresentationType" id="37.0">
+        <label>Tip prostornog prikaza</label>
+        <description>Metoda koja se koristi za prostorni prikaz geografskih informacija.</description>
+    </element>
+    <element name="gmd:spatialResolution" id="38.0">
+        <label>Prostorna rezolucija</label>
+        <description>Faktor koji označava gustoću podataka u skupu.</description>
+    </element>
+    <element name="gmd:specificUsage" id="63.0">
+        <label>Specifično korištenje</label>
+        <description>Kratak opis korištenja izvora.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:specification" id="130.0" context="gmd:DQ_ConformanceResult">
+        <condition>Obvezan.</condition>
+        <label>Usklađenost - specifikacija</label>
+        <description>Citiranje provedbenih pravila ili drugih dokumenata s kojima je izvor prostornih podataka usklađen.</description>
+    </element>
+    <element name="gmd:specification" id="288.0" context="gmd:MD_Format">
+        <label>Specifikacija</label>
+        <description>Ime podskupa, profila ili specifikacije formata.</description>
+    </element>
+    <element name="gmd:specification">
+        <label>Specifikacija</label>
+    </element>
+    <element name="gmd:statement" id="83.0">
+        <label>Podrijetlo</label>
+        <description>Izjava o procesnoj povijesti i/ili općenitoj kvaliteti skupa 
+		prostornih podataka.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:status" id="28.0">
+        <label>Status</label>
+        <description>Status izvora.</description>
+    </element>
+    <element name="gmd:supplementalInformation" id="46.0">
+        <label>Dopunske informacije</label>
+        <description>Bilo koje druge opisne informacije o skupu podataka.</description>
+    </element>
+    <element name="gmd:temporalElement" id="337.0">
+        <label>Vremenski element</label>
+        <description>Pruža vremensku komponentu proširenja referencirajućeg objekta.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:textGroup" id="602.0">
+        <label>TextGroup</label>
+        <description>TextGroup.</description>
+    </element>
+    <element name="gmd:thesaurusName" id="55.0">
+        <label>Popis ključnih riječi (eng. Thesaurus)</label>
+        <description>Ime formalno registriranog popisa ili sličnog mjerodavnog izvora ključnih riječi.</description>
+    </element>
+    <element name="gmd:title" context="gmd:CI_Citation" supercontext="gmd:specification" id="360">
+            <label>Naslov specifikacije</label>
+            <help/>
+            <condition>Obvezan.</condition>
+            <description>Karakteristično i često jedinstveno ime pod kojim je dokument poznat.</description>
+    </element>
+    <element name="gmd:title" context="gmd:CI_Citation" supercontext="gmd:thesaurusName" id="360">
+            <label>Naslov</label>
+            <help/>
+            <condition>Obvezan.</condition>
+            <description>Karakteristično i često jedinstveno ime pod kojim je tezaurus poznat.</description>
+    </element>
+    <element name="gmd:title" context="gmd:CI_Citation" id="360">
+            <label>Naziv izvora</label>
+            <help/>
+            <condition>Obvezan.</condition>
+            <description>Karakteristično, i često jedinstveno, ime pod kojim je izvor poznat.</description>
+    </element>
+    <element name="gmd:title" id="507.0" context="gmd:MD_Legislation">
+        <label>Naziv</label>
+        <description>Referenca na pravni naziv.</description>
+    </element>
+    <element name="gmd:title" context="gmd:CI_Citation" supercontext="gmd:citation" id="360.0">
+        <label>Naziv izvora</label>
+        <description>Naziv izvora.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:title" id="360.0">
+        <label>Naziv</label>
+        <description>Naziv izvora.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:toneGradation" id="265.0">
+        <label>Gradacija tona (Tone gradation)</label>
+        <description>Broj diskretnih numeričkih vrijednosti u rasterskim podatcima.</description>
+    </element>
+    <element name="gmd:topicCategory" id="41.0">
+        <label>Kategorija teme</label>
+        <description>Kategorija teme je generalizirana klasifikacijska shema koja pomaže grupiranju i 
+		pretrazi po temama dostupnih izvora prostornih podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:MD_TopicCategoryCode">
+        <label>Kategorija teme</label>
+        <description>Kategorija teme je generalizirana klasifikacijska shema koja pomaže grupiranju i 
+		pretrazi po temama dostupnih izvora prostornih podataka.</description>
+    </element>
+    <element name="gmd:topologyLevel" id="177.0">
+        <label>Razina topologije</label>
+        <description>Kod koji identificira stupanj kompleksnosti prostornih odnosa.</description>
+    </element>
+    <element name="gmd:transferOptions" id="273.0">
+        <label>Opcije prijenosa</label>
+        <description>Informacije o tehničkim sredstvima i medijima pomoću kojih je moguće dobaviti
+		izvor od distributera.</description>
+    </element>
+    <element name="gmd:transferSize" id="276.0">
+        <label>Veličina podataka za prijenos</label>
+        <description>Procijenjena veličina jedinice u specificiranom formatu za prijenos, 
+            izražena u megabajtima. Veličina podataka je &gt; 0.0.</description>
+    </element>
+    <element name="gmd:transformationDimensionDescription" id="168.0">
+        <label>Generalni opis transformacije</label>
+        <description>Generalni opis transformacije.</description>
+    </element>
+    <element name="gmd:transformationDimensionMapping" id="169.0">
+        <label>Mapiranje transformacija i dimenzija</label>
+        <description>Informacije o mapiranju dimenzija rastera i prostornih dimenzija.</description>
+    </element>
+    <element name="gmd:transformationParameterAvailability" id="161.0">
+        <label>Dostupnost parametara transformacije</label>
+        <condition>Obvezan.</condition>
+        <description>Označava jesu li ili ne dostupni parametri za transformaciju između geografskih i
+		koordinata slike.</description>
+    </element>
+    <element name="gmd:triangulationIndicator" id="251.0">
+        <label>Indikator triangulacije</label>
+        <description>Označava je li na slici rađena triangulacija.</description>
+    </element>
+    <element name="gmd:turnaround" id="302.0">
+        <label>Vrijeme procesiranja zahtjeva</label>
+        <description>Prosječno vrijeme procesiranja zahtjeva.</description>
+    </element>
+    <element name="gmd:type" id="54.0">
+        <label>Tip ključne riječi</label>
+        <description>Klasifikacija ključnih riječi u kategorije s obzirom na sadržaj.</description>
+    </element>
+    <element name="gmd:type" id="540.0" context="gmd:MD_CodeDomain">
+        <label>Tip kodske domene</label>
+        <description>Tip podataka kodske domene.</description>
+    </element>
+    <element name="gmd:type" id="543.0" context="gmd:MD_Type">
+        <label>Definicija tipa podataka</label>
+        <description>Definicija tipa podataka.</description>
+        <help>Definicija tipa podataka, formalna ili neformalna (primjerice Text12, Line)</help>
+    </element>
+    <element name="gmd:units" id="262.0">
+        <label>Mjerna jedinica</label>
+        <description>Mjerna jedinica u kojoj senzor izražava rezultate mjerenja.</description>
+    </element>
+    <element name="gmd:unitsOfDistribution" id="275.0">
+        <label>Jedinice distribucije</label>
+        <description>Slojevi, geografska područja itd., putem kojih su dostupni podatci.</description>
+    </element>
+    <element name="gmd:updateScope" id="146.0">
+        <label>Opseg održavanja</label>
+        <description>Opseg podataka koji se održavaju.</description>
+    </element>
+    <element name="gmd:updateScopeDescription" id="147.0">
+        <label>Opis opsega održavanja</label>
+        <description>Dodatne informacije o opsegu održavanja podataka.</description>
+    </element>
+    <element name="gmd:usageDateTime" id="64.0">
+        <label>Datum i vrijeme korištenja</label>
+        <description>Datum i vrijeme prvog korištenja ili raspona korištenja izvora ili
+		(YYYY-MM-DDThh:mm:ss).</description>
+    </element>
+    <element name="gmd:useConstraints" id="71.0">
+        <label>Ograničenja korištenja</label>
+        <description>Ograničenja korištenja koja osiguravaju zaštitu privatnosti, 
+		intelektualnog vlasništva ili bilo koja druga posebna ograničenja ili upozorenja 
+		za korištenje izvora.</description>
+    </element>
+    <element name="gmd:useLimitation" id="68.0">
+        <label>Uvjeti pristupa i korištenja</label>
+        <description>Definira uvjete za pristup i korištenje skupova, niza skupova i 
+		usluga prostornih podataka.</description>
+    </element>
+    <element name="gmd:userContactInfo" id="66.0">
+        <label>Kontakt informacije korisnika</label>
+        <description>Identifikacija i način komuniciranja s osoboma ili organizacijom koja koristi
+            izvor.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:userDefinedMaintenanceFrequency" id="145.0">
+        <label>Korisničko definirana frekvencija održavanja</label>
+        <description>Periodi održavanja koje definira korisnik.</description>
+    </element>
+    <element name="gmd:userDeterminedLimitations" id="65.0">
+        <label>Korisničko definirana ograničenja</label>
+        <description>Primjene za koje je korisnik odredio da nisu prikladne za skup podataka.</description>
+    </element>
+    <element name="gmd:userNote" id="75.0">
+        <label>Bilješka korisnika</label>
+        <description>Objašnjenje pravnih ili drugih ograničenja za nabavku i korištenje izvora
+			ili metapodataka.</description>        
+    </element>
+    <element name="gmd:value" id="137.0" context="gmd:DQ_QuantitativeResult">
+        <condition>Obvezan.</condition>
+        <label>Vrijednost</label>
+        <description>Kvantitativna vrijednost (ili vrijednosti), sadržaj određen korištenom procedurom 
+		evaluacije.</description>
+    </element>
+    <element name="gmd:value">
+        <label>Vrijednost</label>
+        <description/>
+    </element>
+    <element name="gmd:value" id="544.0" context="gmd:MD_Type">
+        <label>Vrijednost</label>
+        <description>Vrijednost tipa podataka.</description>
+    </element>
+    <element name="gmd:valueType" id="134.0">
+        <label>Tip vrijednosti</label>
+        <description>Tip vrijednosti u kojoj je dana kvantitativna mjera kvalitete usklađenja.</description>
+    </element>
+    <element name="gmd:valueUnit" id="135.0">
+        <label>Mjerna jedinica</label>
+        <description>Mjerna jedinica za izvještavanje o kvaliteti podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:version" id="208.2" context="gmd:RS_Identifier" supercontext="gmd:identifier">
+        <label>Jedinstvena oznaka izvora: verzija</label>
+        <description>Identifikator verzije prostora imena.</description>
+    </element>
+    <element name="gmd:version" id="208.2" context="gmd:RS_Identifier" supercontext="gmd:referenceSystemIdentifier">
+        <label>Koordinatni referentni sustav: verzija</label>
+        <description>Identifikator verzije prostora imena.</description>
+    </element>
+    <element name="gmd:version" id="286.0" context="gmd:MD_Format">
+        <label>Verzija formata</label>
+        <description>Verzija formata (datum, broj, itd.).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:verticalElement" id="338.0">
+        <label>Vertikalni element</label>
+        <description>Vertikalna komponente proširenja referencirajućeg objelta.</description>
+        <condition>Uvjetno.</condition>
+    </element>
+    <element name="gmd:voice" id="408.0">
+        <label>Broj telefona osobe</label>
+        <description>Telefonski broj odgovorne osobe ili organizacije.</description>
+    </element>
+    <element name="gmd:volumes" id="295.0">
+        <label>Broj medija</label>
+        <description>Broj medija. Primjerice: 4 DVDa, 34 stranica karte...</description>
+    </element>
+    <element name="gmd:westBoundLongitude" id="344.0">
+        <label>Najzapadnija geografska dužina</label>
+        <description>Najzapadnija koordinata granice opsega podataka izražena dužinom u 
+		stupnjevima (pozitivna prema istoku).</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gml:beginPosition">
+        <label>Početni datum</label>
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+    </element>
+    <element name="gml:TimePeriodTypeGROUP_ELEMENT0">
+        <label>Početni datum</label>
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+    </element>
+    <element name="gml:endPosition">
+        <label>Završni datum</label>
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+    </element>
+    <element name="gml:TimePeriodTypeGROUP_ELEMENT4">
+        <label>Završni datum</label>
+        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+    </element>
+    <element name="gml:relatedTime">
+        <label>Referentno vrijeme</label>
+        <description>Definira odnos određenog perioda i objekta.</description>
+    </element>
+
+    <element name="gml:coordinates">
+        <label>Koordinate</label>
+        <description>Za pohranjivanje niza koordinata.</description>
+    </element>
+
+    <element name="gml:Polygon">
+        <label>Poligon</label>
+        <description>gml: Poligon je posebna ploha koja je definirana jednim površinskim komadom.
+            Granica tog površinskog komada je koplanarna i poligon koristi planarnu interpolaciju
+			u svojoj unutrašnjosti.</description>
+    </element>
+
+    <element name="gml:Point">
+        <label>Točka</label>
+        <description>gml:Točka je definirana jednim parom koordinata.</description>
+        <example>74. -37.</example>
+    </element>
+
+    <element name="gml:LineString">
+        <label>Linija</label>
+        <description>gml:LineString je specijalna krivulja koja se sastoji od jednog segmenta s
+		linearnom interpolacijom. Definirana je s dvije ili više koordinate n-torke, s linearnom
+		interpolacijom između njih.</description>
+    </element>
+
+    <element name="gml:LinearRing">
+        <label>Linearni prsten</label>
+        <description>gml:Linearni prsten je definiran četirima ili više koordinatnih n-torki s 
+			linearnom interpolacijom među njima; prva i zadnja koordinata su kooncidentne.</description>
+    </element>
+
+    <element name="gml:exterior">
+        <label>Vanjska granica</label>
+        <description>Vanjska granica tijela.</description>
+    </element>
+
+    <element name="gml:interior">
+        <label>Unutrašnja granica</label>
+        <description>Unutrašnja granica tijela.</description>
+    </element>
+
+
+    <element name="gml:begin">
+        <label>Početak</label>
+        <description/>
+    </element>    
+    <element name="gml:end">
+        <label>Kraj</label>
+        <description/>
+    </element>
+    <element name="gml:duration">
+        <label>Trajanje</label>
+        <description/>
+    </element>    
+    <element name="gml:timeInterval">
+        <label>Vremenski interval</label>
+        <description/>
+    </element>
+    <element name="gml:TimeInstant">
+        <label>Vremenski trenutak</label>
+        <description/>
+    </element>
+    <element name="gml:TimePosition">
+        <label>Vremenska pozicija</label>
+        <description/>
+    </element>
+    <element name="gml:TimePeriod">
+        <label>Vremenski period</label>
+        <description/>
+    </element>
+    <element name="gml:TimeNode">
+        <label>Vremenski čvor</label>
+        <description/>
+    </element>
+    <element name="gml:TimeEdge">
+        <label>Vremenski rub</label>
+        <description/>
+    </element>
+    <element name="gml:ProjectedCRS">
+        <label>Projicirani CRS</label>
+        <description/>
+    </element>
+
+    <element name="gml:id">
+        <label>Identifikator</label>
+        <description>Jedinstveni identifikator.</description>
+    </element>
+
+    <element name="gml:id" id="191.0" context="gmd:MD_CRS">
+        <label>Elipsoid</label>
+        <description>Identitet korištenog elipsoida.</description>
+        <help>Identitet korištenog elipsoida</help>
+    </element>
+    <element name="id" id="191.0">
+        <label>Identifikator</label>
+        <description>Jedinstveni identifikator.</description>
+    </element>
+
+    <element name="srv:SV_ServiceIdentification">
+        <label>Identifikacija usluge (ISO 19119)</label>
+        <description>ISO 19119-2005 identifikacija usluge.</description>
+    </element>
+    <element name="srv:SV_ParameterDirection">
+        <label>Smjer parametra</label>
+    </element>
+    <element name="srv:serviceType"><!-- readonly="true" -->
+        <label>Vrsta usluge</label>
+        <description>Opisuje vrstu usluge prostornih podataka.</description>
+        <helper>
+		    <!--INSPIRE Service type defined in MD IR / 1.3.1 Spatial data service type-->  
+            <option value="discovery">Pronalaženje</option>
+            <option value="view">Pregled</option>
+            <option value="download">Preuzimanje</option>
+            <option value="transformation">Transformacija</option>
+			<option value="invoke">Pozivanje</option>          
+            <!--<option value="OGC:WMS">OGC:WMS</option>
+            <option value="OGC:WFS">OGC:WFS</option>-->
+			<!--<option value="OGC:CSW">OGC kataloška usluga za web</option>
+            <option value="OGC:WCS">OGC Web Coverage Service (OGC:WCS)</option>
+            <option value="W3C:HTML:DOWNLOAD">Download (W3C:HTML:DOWNLOAD)</option>
+            <option value="W3C:HTML:LINK">Information (W3C:HTML:LINK)</option>-->			
+			<option value="other">Ostale</option>        
+        </helper>
+    </element>
+    <element name="srv:serviceTypeVersion">
+        <label>Verzija usluge</label>
+        <description>Za pretragu po verziji usluge. Primjerice, korisnik može biti zainteresiran
+		za usluge samo OGC Kataloga V1.1. Ukoliko se verzija održava kao poseban atribut, korisnici mogu
+		jednostavno pretraživati sve usluge bez obzira na verziju.</description>
+    </element>
+    <element name="srv:accessProperties">
+        <label>Osobine pristupa</label>
+        <description>Informacije o dostupnosti usluga. Primjerice naknade, dostupnost, instrukcije 
+		za naručivanje itd.</description>
+    </element>
+    <element name="srv:restrictions">
+        <label>Ograničenja</label>
+        <description>Pravna i sigurnosna ograničenja pristupa usluzi.</description>
+    </element>
+    <element name="srv:containsOperations">
+        <label>Sadrži operacije</label>
+        <description>Pruža informacije o operacijama koje čine uslugu.</description>
+    </element>
+    <element name="srv:operatesOn">
+        <label>Uparen izvor</label>
+        <description>Ukoliko je izvor usluga prostornih podataka, ovaj element metapodataka 
+		utvrđuje, tamo gdje je to relevantno, ciljni skup(ove) usluga prostornih podataka 
+		kroz njihove jedinstvene oznake izvora (Unique Resource Identifiers, URI).</description>
+    </element>
+    <element name="srv:operationName">
+        <label>Ime operacije</label>
+        <description>Jedinstveni identifikator za ovo sučelje.</description>
+    </element>
+    <element name="srv:SV_OperationMetadata">
+        <label>Operacija</label>
+        <description>Metapodaci operacije.</description>
+    </element>
+    <element name="srv:DCP">
+        <label>Raspodijeljene računalne platforme</label>
+        <description>Raspodijeljene računalne platforme na kojima je implementirana operacija.</description>
+    </element>
+    <element name="srv:operationDescription">
+        <label>Opis operacije</label>
+        <description>Opis namjene i rezultata operacije u obliku slobodnog teksta.</description>
+    </element>
+    <element name="srv:invocationName">
+        <label>Ime za prizivanje (Invocation Name)</label>
+        <description>Ime koje se koristi za prizivanje sučelja unutar konteksta DCPa. Ime je 
+		identično za sve DCPove.</description>
+    </element>
+    <element name="srv:parameters">
+        <label>Parametri</label>
+        <description>Parametri koji su potrebni za ovo sučelje.</description>
+    </element>
+    <element name="srv:SV_Parameter">
+        <label>Parametar</label>
+        <description>Parametri koji su potrebni za ovo sučelje.</description>
+    </element>
+    <element name="srv:direction">
+        <label>Smjer</label>
+    </element>
+    <element name="srv:valueType">
+        <label>Tip vrijednosti ili vrijednosni tip? (Value type)</label>
+    </element>
+    <element name="srv:connectPoint">
+        <label>Točka spajanja</label>
+        <description>Točka pristupa sučelju usluga.</description>
+    </element>
+    <element name="srv:dependsOn">
+        <label>Ovisi o</label>
+        <description>Lista operacija koje se moraju izvršiti neposredno prije pozivanja trenutne operacije.
+			Strukturirano kao lista za hvatanje alternativnih putanja prethodnika, te kao skup za hvatanje
+			paralelnih putanja prethodnika.</description>
+    </element>
+    <element name="srv:providerName">
+        <label>Ime pružatelja usluga</label>
+        <description>Jedinstveni identifikator ove organizacije.</description>
+    </element>
+    <element name="srv:serviceContact">
+        <label>Kontakt za usluge</label>
+        <description>Informacije za kontaktiranje pružatelja usluga.</description>
+    </element>
+    <element name="srv:name">
+        <label>Ime</label>
+        <description>Ime koji koristi usluga za ovaj parametar ili lanac.</description>
+    </element>
+    <element name="srv:description">
+        <label>Opis</label>
+        <description>Objašnjenje usluge u lancu u obliku priče i rezultirajući izlaz 
+		ili uloga parametra.</description>
+    </element>
+    <element name="srv:optionality">
+        <label>Obveznost</label>
+        <description>Označava je li parametar nužan.</description>
+    </element>
+    <element name="srv:repeatability">
+        <label>Ponovljivost</label>
+        <description>Označava je li moguće imati više od jedne vrijednosti parametra.</description>
+    </element>
+    <element name="srv:coupledResource">
+        <label>Vezani izvor</label>
+        <description>Detalji o uslugama koje su vezane uz ovu.</description>
+        <inspireInfo>Opcionalno u INSPIRE</inspireInfo>
+    </element>
+    <element name="srv:SV_CoupledResource">
+        <label>Vezani izvor</label>
+        <description>Detalji o uslugama koje su vezane uz ovu.</description>
+    </element>
+    <element name="srv:identifier">
+        <label>Identifikator</label>
+        <description>-Identifikator izvora na koji se odnosi operacija.</description>
+    </element>
+    <element name="srv:couplingType">
+        <label>Tip veze</label>
+        <description>Tip veze.</description>
+    </element>
+    <element name="srv:extent">
+        <label>Proširenje</label>
+        <description>Geografsko/vremensko proširenje usluge.</description>
+    </element>
+    <element name="srv:keywords">
+        <label>Ključne riječi</label>
+        <description>Ključne riječi koje opisuju uslugu.</description>
+    </element>
+    <element name="gmd:LanguageCode">
+		<label>Kod jezika</label>
+		<description>Kod jezika</description>
+	</element>
+    <element name="gmd:locale">
+        <label>Drugi jezik</label>
+        <description>Koristite ovaj odjeljak za definiranje drugih jezika metapodataka (višejezični metapodaci).</description>
+    </element>
+    <element name="gmd:describes">
+        <label>Opisuje</label>
+        <description>Opisuje.</description>
+    </element>
+    <element name="gmd:propertyType">
+        <label>PropertyType</label>
+        <description>PropertyType.</description>
+    </element>
+    <element name="gmd:PT_Locale">
+        <label>Mjesto</label>
+        <description>Mjesto.</description>
+    </element>
+    <element name="gmd:PT_LocaleContainer">
+        <label>PT_LocaleContainer</label>
+        <description>PT_LocaleContainer.</description>
+    </element>
+    <element name="gmd:featureType">
+        <label>Tip obilježja</label>
+        <description>Podskup tipova obilježja iz citiranog kataloga obilježja koja se nalaze
+		u skupu podataka.</description>
+    </element>
+    <element name="gmd:featureTypes">
+        <label>Tipovi obilježja</label>
+        <description>Podskup tipova obilježja iz citiranog kataloga obilježja koja se nalaze
+		u skupu podataka.</description>
+    </element>
+    <element name="gmd:featureAttribute">
+        <label>Atribut obilježja</label>
+        <description/>
+    </element>
+    <element name="gmd:DS_Association">
+        <label>DS_Association</label>
+        <description>DS_Association.</description>
+    </element>
+    <element name="gmd:DS_DataSet">
+        <label>DS_DataSet</label>
+        <description>DS_DataSet.</description>
+    </element>
+    <element name="gmd:DS_Initiative">
+        <label>DS_Initiative</label>
+        <description>DS_Initiative.</description>
+    </element>
+    <element name="gmd:DS_OtherAggregate">
+        <label>DS_OtherAggregate</label>
+        <description>DS_OtherAggregate.</description>
+    </element>
+    <element name="gmd:DS_Platform">
+        <label>DS_Platform</label>
+        <description>DS_Platform.</description>
+    </element>
+    <element name="gmd:DS_ProductionSeries">
+        <label>DS_ProductionSeries</label>
+        <description>DS_ProductionSeries.</description>
+    </element>
+    <element name="gmd:DS_Sensor">
+        <label>DS_Sensor</label>
+        <description>DS_Sensor.</description>
+    </element>
+    <element name="gmd:DS_Series">
+        <label>DS_Series</label>
+        <description>DS_Series.</description>
+    </element>
+    <element name="gmd:DS_StereoMate">
+        <label>DS_StereoMate</label>
+        <description>DS_StereoMate.</description>
+    </element>
+    <element name="gmd:languageCode">
+        <label>Jezik</label>
+        <description>Kod jezika.</description>
+    </element>
+    <element name="gmd:characterEncoding">
+        <label>Koripteni zapis znakova</label>
+        <description>CharacterEncoding.</description>
+    </element>
+    <element name="uuidref">
+        <label>Uuid metapodataka</label>
+        <description>Jedinstveni identifikator.</description>
+    </element>
+    <element name="uom">
+        <label></label>
+        <description/>
+        <helper>
+            <option value="m">metri</option>
+        </helper>
+        <default>m</default>
+    </element>
+    <element name="gco:Record">
+        <label>Zapis</label>
+        <description/>
+    </element>
+    <element name="gco:Binary">
+        <label>Binarno</label>
+        <description/>
+    </element>
+    <element name="gco:MemberName">
+        <label>Ime člana</label>
+        <description/>
+    </element>
+    <element name="gco:aName">
+        <label>Ime</label>
+        <description/>
+    </element>
+    <element name="gco:aName" context="gco:TypeName">
+        <label>Ime tipa</label>
+        <description/>
+        <helper>
+			<option value="BOOLEAN">BOOLEAN</option>
+			<option vaue="BYTE">BYTE</option>
+			<option value="CHARACTER">CHARACTER</option>
+			<option value="DATE">DATE</option>
+			<option value="DATETIME">DATETIME</option>
+			<option value="DOUBLE">DOUBLE</option>
+			<option value="FLOAT">FLOAT</option>
+			<option value="INTEGER">INTEGER</option>
+			<option value="NUMERIC">NUMERIC</option>
+			<option value="REAL">REAL</option>
+			<option value="SERIAL">SERIAL</option>
+			<option value="VARCHAR">VARCHAR</option>
+			<option value="TEXT">TEXT</option>
+		</helper>
+    </element>
+    <element name="gco:attributeType">
+        <label>Tip atributa</label>
+        <description/>
+    </element>
+    <element name="gco:TypeName">
+        <label>Ime tipa</label>
+        <description/>
+    </element>
+    <element name="gco:ScopedName">
+        <label>Ime unutar opsega (Scoped name)</label>
+        <description/>
+    </element>
+    <element name="gmd:has">
+        <label>Sadrži</label>
+        <description>Sadrži.</description>
+    </element>
+    <element name="gmd:MD_PixelOrientationCode">
+        <label>Kod orijentacije piksela</label>
+        <description>Točka u pikselu koji odgovara zemaljskoj lokaciji piksela.</description>
+    </element>
+    <element name="gmd:MD_ObligationCode">
+        <label>Kod obveze</label>
+        <description>Obveza elementa ili entiteta.</description>
+    </element>
+    <element name="gmd:maximumOccurrence">
+        <label>Maximum occurrence</label>
+        <description>Maximum occurrence of the extended element.</description>
+    </element>
+    <element name="gco:LocalName"  context="srv:serviceType">
+        <label>Vrsta usluge</label>
+        <description>Vrsta usluge.</description>
+    </element>
+    <element name="gco:localName">
+        <label>Vrsta usluge</label>
+        <description/>
+    </element>
+    <element name="gmd:composedOf">
+        <label>SastavljenOd</label>
+        <description>SastavljenOd.</description>
+    </element>
+    <element name="gmd:partOf">
+        <label>DioOd</label>
+        <description>DioOd.</description>
+    </element>
+    <element name="gmd:seriesMetadata">
+        <label>NizMetapodataka</label>
+        <description>NizMetapodataka.</description>
+    </element>
+    <element name="gmd:subset">
+        <label>Podskup</label>
+        <description>Podskup.</description>
+    </element>
+    <element name="gmd:superset">
+        <label>Nadskup</label>
+        <description>Nadskup.</description>
+    </element>
+    <element name="gmd:CI_RoleCode">
+        <label>Kod uloge</label>
+        <description/>
+    </element>
+    <element name="gts:TM_PeriodDuration">
+        <label>Trajanje perioda</label>
+        <description>
+            Tip podataka za trajanje perioda koristi se za definiranje vremenskog intervala.
+            
+            Vremenski interval je dan u sljedećem obliku:  "PnYnMnDTnHnMnS" gdje:
+            
+            * P označava period (nužno)
+            * nY označava broj godina
+            * nM označava broj mjeseci
+            * nD označava broj dana
+            * T označava početak vremenski sekcije (nužno ukoliko se specificiraju sati, minute ili sekunde)
+            * nH označava broj sati
+            * nM označava broj minuta
+            * nS označava broj sekundi            
+        .</description>
+    </element>
+    <element name="gco:CharacterString">
+        <label>Tekst</label>
+        <description/>
+    </element>
+    <element name="gco:nilReason">
+        <label>Nil reason attribute</label>
+        <description/>
+    </element>
+    <element name="srv:DCPList">
+        <label>Lista raspodijeljenih računalnih platformi</label>
+    </element>
+    <element name="gmd:verticalCRS">
+        <label>Vertikalni CRS</label>
+        <description>Pruža informacije o ishodištu od kojeg se mjere maksimalna i minimalna visina.</description>
+    </element>
+    <element name="gmx:FileName">
+        <label>Ime datoteke</label>
+        <description>Ime datoteke i URL izvora.</description>
+    </element>
+    <element name="src">
+        <label>URL Izvora</label>
+        <description>URL dokumenta.</description>
+    </element>
+    <element name="gmx:Anchor">
+		<label>Anchor</label>
+		<description>Supports hyper-linking capabilities and ensures a web-like implementation of CharacterStrings</description>
+	</element>
+	<element name="xlink:href">
+		<label>Link href</label>
+		<description>Supplies the data that allows an XLink application to find a remote resource (or resource fragment) [W3C XLINK]</description>
+	</element>
+  	<!-- ==================================================== -->
+    <element name="hidden-elements">
+        <label>Skriveni elementi</label>
+        <description>Podređeni elementi i atributi su skriveni jer nemate prava za njihov pregled.</description>
+    </element>
+    <!-- ==================================================== -->
+    <element name="gmx:name"> 
+        <label>Naziv</label> 
+        <description>Naziv kataloga obilježja</description> 
+    </element> 
+    <element name="gmx:scope"> 
+        <label>Opseg</label> 
+        <description>Definicija opsega</description> 
+    </element> 
+    <element name="gmx:versionNumber"> 
+        <label>Verzija</label> 
+        <description>Verzija kataloga</description> 
+    </element> 
+    <element name="gmx:versionDate"> 
+        <label>Datum</label> 
+        <description>Datum kataloga</description> 
+    </element> 
+    <element name="gmx:fieldOfApplication"> 
+        <label>Područje primjene</label> 
+        <description>Područje primjene</description> 
+    </element>
+    <element name="gml:axis">
+        <label>Os</label>
+    </element>
+    <element name="gml:axisAbbrev">
+        <label>Skraćenica osi</label>
+    </element>
+    <element name="gml:axisDirection">
+        <label>Smjer osi</label>
+    </element>
+    <element name="gml:maximumValue">
+        <label>Najveća vrijednost</label>
+    </element>
+    <element name="gml:minimumValue">
+        <label>Najmanja vrijednost</label>
+    </element>
+    <element name="gml:scope">
+        <label>Opseg</label>
+    </element>
+    <element name="gml:VerticalCRS">
+        <label>Vertikalni CRS</label>
+    </element>
+    <element name="gml:remarks">
+        <label>Napomene</label>
+    </element>
+    <element name="gml:domainOfValidity">
+        <label>Domena valjanosti</label>
+    </element>
+    <element name="gml:verticalCS">
+        <label>Vertikalni CS</label>
+    </element>
+    <element name="gml:VerticalCS">
+        <label>Vertikalni CS</label>
+    </element>
+    <element name="gml:CoordinateSystemAxis">
+        <label>Os koordinatnog sustava</label>
+    </element>
+    <element name="gml:rangeMeaning">
+        <label>Značenje raspona</label>
+    </element>
+    <element name="gml:verticalDatum">
+        <label>Vertikalni datum</label>
+    </element>
+    <element name="gml:VerticalDatum">
+        <label>Vertikalni datum</label>
+    </element>
+    <element name="gml:realizationEpoch">
+        <label>Razdoblje realizacije</label>
+    </element>
+</labels>
