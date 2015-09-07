@@ -1,10 +1,10 @@
 insert into geonetwork.Languages (id, name, isinspire, isdefault) VALUES ('hrv','Hrvatski', 'y', 'y');
 
 -- Take care to table ID (related to other loc files)
-insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (57, 'hrv', 'title', '');
-insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (58, 'hrv', 'abstract', '');
-insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (59, 'hrv', 'fees', '');
-insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (60, 'hrv', 'accessConstraints', '');
+insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (65, 'hrv', 'title', '');
+insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (66, 'hrv', 'abstract', '');
+insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (67, 'hrv', 'fees', '');
+insert into geonetwork.CswServerCapabilitiesInfo (idfield, langid, field, label) VALUES (68, 'hrv', 'accessConstraints', '');
 
 insert into geonetwork.CategoriesDes (iddes, langid, label) VALUES (1,'hrv','Karte i grafike');
 insert into geonetwork.CategoriesDes (iddes, langid, label) VALUES (2,'hrv','Skupovi podataka');

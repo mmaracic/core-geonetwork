@@ -7,7 +7,7 @@
        indexing jobs (eg. importing 20,000 records) and keeping disk 
        activity for lucene index writing to a minimum.
     -->
-    <RAMBufferSizeMB>48.0d</RAMBufferSizeMB>
+    <RAMBufferSizeMB>128.0d</RAMBufferSizeMB>
 
     <!-- Determines how often segment indices are merged by addDocument(). -->
     <MergeFactor>10</MergeFactor>
