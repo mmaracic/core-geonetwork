@@ -135,7 +135,7 @@
         <description>Informacije o kvaliteti podataka specificirani oposegom kvalitete podataka.</description>
     </element>
     <element name="gmd:DQ_DomainConsistency" id="113.0">
-        <label>Domenska konzistentnost</label>
+        <label>Usklađenost izvora</label>
         <description>Poštivanje domenskih ograničenja za vrijednosne tipove.</description>
     </element>
     <element name="gmd:DQ_FormatConsistency" id="114.0">
