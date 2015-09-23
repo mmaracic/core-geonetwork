@@ -56,20 +56,43 @@
 -->
 
     <facets>
-        <facet name="keyword" indexKey="keyword" label="keywords" localized="true"/>
-        <facet name="topicCat" indexKey="topicCat" label="topicCats" localized="true"/>
-        <facet name="category" indexKey="_cat" label="categories" localized="true"/>
+        <facet name="rsIdentifier" indexKey="rsIdentifier" label="rsIdentifiers"/>
+        <facet name="altTitle" indexKey="altTitle" label="altTitles"/>
+        <facet name="reviseDateYear" indexKey="reviseDateYear" label="reviseDateYears"/>
+        <facet name="reviseDate" indexKey="reviseDate" label="reviseDates"/>
+        <facet name="publicationDate" indexKey="publicationDate" label="publicationDates"/>
+        <facet name="publicationDateYear" indexKey="publicationDateYear" label="publicationDateYears"/>
+        <facet name="responsibleParty" indexKey="responsibleParty" label="responsibleParties"/>
+        <facet name="responsiblePartyRole" indexKey="responsiblePartyRole" label="responsiblePartyRoles"/>
+        <facet name="responsiblePartyIndividualName" indexKey="responsiblePartyIndividualName" label="responsiblePartyIndividualNames"/>
+        <facet name="responsiblePartyOrganization" indexKey="responsiblePartyOrganization" label="responsiblePartyOrganizations"/>
+        <facet name="thesaurusIdentifier" indexKey="thesaurusIdentifier" label="thesaurusIdentifiers"/>
+        <facet name="acessConstraint" indexKey="acessConstraint" label="acessConstraints"/>
+        <facet name="otherConstraint" indexKey="otherConstraint" label="otherConstraints"/>
+        <facet name="useLimitation" indexKey="useLimitation" label="useLimitations"/>
+        <facet name="specificationDegree" indexKey="specificationDegree" label="specificationDegrees"/>
+        <facet name="specificationTitle" indexKey="specificationTitle" label="specificationTitles"/>
+        <facet name="specificationDate" indexKey="specificationDate" label="specificationDates"/>
+        <facet name="metadataResponsibleParty" indexKey="metadataResponsibleParty" label="metadataResponsibleParties"/>
+        <facet name="metadataRole" indexKey="metadataRole" label="metadataRoles"/>
+        <facet name="metadataOrganization" indexKey="metadataOrganization" label="metadataOrganizations"/>
+        <facet name="metadataIndividualName" indexKey="metadataIndividualName" label="metadataIndividualNames"/>
+       
+        <facet name="keyword" indexKey="keyword" label="keywords"/>
+        <facet name="topicCat" indexKey="topicCat" label="topicCats"/>
+        <facet name="category" indexKey="_cat" label="categories"/>
         <facet name="inspireTheme" indexKey="inspiretheme" label="inspireThemes"/>
         <facet name="inspireThemeWithAc" indexKey="inspirethemewithac" label="inspireThemesWithAc"/>
         <facet name="denominator" indexKey="denominator" label="denominators"/>
         <facet name="resolution" indexKey="resolution" label="resolutions"/>
         <facet name="spatialRepresentationType" indexKey="cl_spatialRepresentationType"
             label="spatialRepresentationTypes"/>
-        <facet name="orgName" indexKey="orgName" label="orgNames" localized="true"/>
+        <facet name="orgName" indexKey="orgName" label="orgNames"/>
         <facet name="metadataPOC" indexKey="metadataPOC" label="metadataPOCs"/>
         <facet name="serviceType" indexKey="serviceType" label="serviceTypes"/>
         <facet name="type" indexKey="type" label="types"/>
         <facet name="createDateYear" indexKey="createDateYear" label="createDateYears"/>
+        <facet name="createDate" indexKey="createDate" label="createDates"/>
         <facet name="format" indexKey="format" label="formats"/>
         <facet name="title" indexKey="title" label="titles"/>
         <facet name="metadataType" indexKey="_isTemplate" label="metadataTypes"/>
@@ -92,10 +115,10 @@
         <facet name="region" label="regions"
                indexKey="keyword"
                classifier="regionKeywordClassifier"/>
+        -->
         <facet name="gemetKeyword" label="gemetKeywords"
-               indexKey="keyword"
+               indexKey="gemetKeyword"
                classifier="gemetKeywordClassifier"/>
-             -->
 
         <facet name="maintenanceAndUpdateFrequency" indexKey="cl_maintenanceAndUpdateFrequency"
                label="maintenanceAndUpdateFrequencies"/>
@@ -103,26 +126,38 @@
 
       <summaryTypes>
         <summaryType name="details" format="DIMENSION">
-          <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
-          <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
-          <item facet="inspireTheme" sortBy="value" sortOrder="asc" max="35"/>
-          <!--<item facet="inspireThemeWithAc" sortBy="value" sortOrder="asc" max="35"/>-->
-          <item facet="keyword" max="15"/>
-          <item facet="orgName" max="25"/>
-          <item facet="sourceCatalog" translator="db:org.fao.geonet.repository.SourceRepository:findOneByUuid"/>
-          <item facet="createDateYear" sortBy="value" sortOrder="desc" max="40"/>
-          <item facet="format" max="15" sortBy="value" sortOrder="asc"/>
-          <item facet="spatialRepresentationType" translator="codelist:gmd:MD_SpatialRepresentationTypeCode"/>
-          <item facet="maintenanceAndUpdateFrequency" translator="codelist:gmd:MD_MaintenanceFrequencyCode"/>
-          <item facet="status" translator="codelist:gmd:MD_ProgressCode"/>
-          <item facet="serviceType"/>
-          <item facet="denominator" sortBy="numValue" sortOrder="desc"/>
-          <item facet="resolution" sortBy="numValue" sortOrder="desc"/>
+          <item facet="title" sortOrder="desc" max="200"/>
+            <item facet="altTitle" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="type" translator="codelist:gmd:MD_ScopeCode" max="200"/>
+          <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
+          <item facet="inspireTheme" sortBy="value" sortOrder="asc" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
+          <item facet="serviceType" max="200" sortBy="value" sortOrder="asc" translator="codelist:serviceType"/>
+          <item facet="keyword" max="200" sortBy="value" sortOrder="asc"/>
+          <item facet="gemetKeyword" translator="term:http://geonetwork-opensource.org/gemet" max="200"/>
+            <item facet="reviseDateYear" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="createDateYear" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="publicationDate" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="rsIdentifier" sortBy="value" sortOrder="desc" max="200" translator="labels:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="responsiblePartyOrganization" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="responsiblePartyRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="responsiblePartyIndividualName" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="metadataOrganization" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="metadataRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="metadataIndividualName" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="acessConstraint" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="otherConstraint" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="useLimitation" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="specificationDegree" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="specificationTitle" sortBy="value" sortOrder="desc" max="200"/>
+            <item facet="specificationDate" sortBy="value" sortOrder="desc" max="200"/>
+          <item facet="format" sortBy="value" sortOrder="asc" max="200"/>
+          <item facet="maintenanceAndUpdateFrequency" translator="codelist:gmd:MD_MaintenanceFrequencyCode" max="200"/>
+          <item facet="status" translator="codelist:gmd:MD_ProgressCode" max="200"/>
+          <item facet="denominator" sortBy="numValue" sortOrder="desc" max="200"/>
+          <item facet="resolution" sortBy="numValue" sortOrder="desc" max="200"/>
           <!--
           <item facet="region"
                 translator="term:http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox"/>
-          <item facet="gemetKeyword"
-                translator="term:http://geonetwork-opensource.org/gemet"/>
           -->
       </summaryType>
 

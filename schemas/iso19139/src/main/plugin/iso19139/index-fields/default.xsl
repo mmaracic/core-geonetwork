@@ -107,6 +107,15 @@
             <xsl:apply-templates mode="index" select="*"/>
         </xsl:template>
             -->
+        
+        <!-- GEMET keywords -->
+        <xsl:template mode="index"
+            match="gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/
+                        gmd:title/gco:CharacterString='GEMET - INSPIRE themes, version 1.0']/
+                        gmd:keyword[normalize-space(gco:CharacterString) != '']">
+            <Field name="gemetKeyword" string="{string(.)}" store="true" index="true"/>
+        </xsl:template>
+
 	<xsl:template mode="index" match="*|@*">
 		<xsl:apply-templates mode="index" select="*|@*"/>
 	</xsl:template>
@@ -137,63 +146,72 @@
 					<Field name="identifier" string="{string(.)}" store="true" index="true"/>
 				</xsl:for-each>
 
-                <xsl:for-each select="gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString">
-                	<Field name="identifier" string="{string(.)}" store="true" index="true"/>
-				</xsl:for-each>
+                                <xsl:for-each select="gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString">
+                                        <Field name="rsIdentifier" string="{string(.)}" store="true" index="true"/>
+                                </xsl:for-each>
 
-	
-				<xsl:for-each select="gmd:title/gco:CharacterString">
-					<Field name="title" string="{string(.)}" store="true" index="true"/>
-                    <!-- not tokenized title for sorting -->
-                    <Field name="_title" string="{string(.)}" store="false" index="true"/>
-				</xsl:for-each>
-				<xsl:for-each select="gmd:alternateTitle/gco:CharacterString">
-					<Field name="altTitle" string="{string(.)}" store="true" index="true"/>
-				</xsl:for-each>
 
-				<xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='revision']/gmd:date">
-					<Field name="revisionDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					<Field name="createDateMonth" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 8)}" store="true" index="true"/>
-					<Field name="createDateYear" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 5)}" store="true" index="true"/>
-					<xsl:if test="$useDateAsTemporalExtent">
-						<Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					</xsl:if>
-				</xsl:for-each>
+                                <xsl:for-each select="gmd:title/gco:CharacterString">
+                                    <Field name="title" string="{string(.)}" store="true" index="true"/>
+                                    <!-- not tokenized title for sorting -->
+                                    <Field name="_title" string="{string(.)}" store="false" index="true"/>
+                                </xsl:for-each>
+                                <xsl:for-each select="gmd:alternateTitle/gco:CharacterString">
+                                        <Field name="altTitle" string="{string(.)}" store="true" index="true"/>
+                                </xsl:for-each>
 
-				<xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='creation']/gmd:date">
-					<Field name="createDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					<Field name="createDateMonth" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 8)}" store="true" index="true"/>
-					<Field name="createDateYear" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 5)}" store="true" index="true"/>
-					<xsl:if test="$useDateAsTemporalExtent">
-						<Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					</xsl:if>
-				</xsl:for-each>
+                                <xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='revision']/gmd:date">
+                                        <Field name="reviseDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        <Field name="reviseDateMonth" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 8)}" store="true" index="true"/>
+                                        <Field name="reviseDateYear" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 5)}" store="true" index="true"/>
+                                        <xsl:if test="$useDateAsTemporalExtent">
+                                                <Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        </xsl:if>
+                                </xsl:for-each>
 
-				<xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='publication']/gmd:date">
-					<Field name="publicationDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					<xsl:if test="$useDateAsTemporalExtent">
-						<Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
-					</xsl:if>
-				</xsl:for-each>
+                                <xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='creation']/gmd:date">
+                                        <Field name="createDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        <Field name="createDateMonth" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 8)}" store="true" index="true"/>
+                                        <Field name="createDateYear" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 5)}" store="true" index="true"/>
+                                        <xsl:if test="$useDateAsTemporalExtent">
+                                                <Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        </xsl:if>
+                                </xsl:for-each>
 
-				<!-- fields used to search for metadata in paper or digital format -->
+                                <xsl:for-each select="gmd:date/gmd:CI_Date[gmd:dateType/gmd:CI_DateTypeCode/@codeListValue='publication']/gmd:date">
+                                        <Field name="publicationDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        <Field name="publicationDateYear" string="{substring(gco:Date[.!='']|gco:DateTime[.!=''], 0, 5)}" store="true" index="true"/>
+                                                                        <xsl:if test="$useDateAsTemporalExtent">
+                                                <Field name="tempExtentBegin" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
+                                        </xsl:if>
+                                </xsl:for-each>
 
-				<xsl:for-each select="gmd:presentationForm">
-					<xsl:if test="contains(gmd:CI_PresentationFormCode/@codeListValue, 'Digital')">
-						<Field name="digital" string="true" store="false" index="true"/>
-					</xsl:if>
-				
-					<xsl:if test="contains(gmd:CI_PresentationFormCode/@codeListValue, 'Hardcopy')">
-						<Field name="paper" string="true" store="false" index="true"/>
-					</xsl:if>
-				</xsl:for-each>
-			</xsl:for-each>
+                                <!-- fields used to search for metadata in paper or digital format -->
 
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                <xsl:for-each select="gmd:presentationForm">
+                                        <xsl:if test="contains(gmd:CI_PresentationFormCode/@codeListValue, 'Digital')">
+                                                <Field name="digital" string="true" store="false" index="true"/>
+                                        </xsl:if>
 
-            <xsl:for-each select="gmd:pointOfContact[1]/*/gmd:role/*/@codeListValue">
-            	<Field name="responsiblePartyRole" string="{string(.)}" store="true" index="true"/>
-            </xsl:for-each>
+                                        <xsl:if test="contains(gmd:CI_PresentationFormCode/@codeListValue, 'Hardcopy')">
+                                                <Field name="paper" string="true" store="false" index="true"/>
+                                        </xsl:if>
+                                </xsl:for-each>
+                        </xsl:for-each>
+
+                        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                        <xsl:for-each select="gmd:pointOfContact[1]/*/gmd:role/*/@codeListValue">
+                            <Field name="responsiblePartyRole" string="{string(.)}" store="true" index="true"/>
+                        </xsl:for-each>
+
+                        <xsl:for-each select="gmd:pointOfContact[1]/*/gmd:individualName/gco:CharacterString">
+                            <Field name="responsiblePartyIndividualName" string="{string(.)}" store="true" index="true"/>
+                        </xsl:for-each>
+
+                        <xsl:for-each select="gmd:pointOfContact[1]/*/gmd:organisationName/gco:CharacterString">
+                            <Field name="responsiblePartyOrganization" string="{string(.)}" store="true" index="true"/>
+                        </xsl:for-each>
             
 			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
 	
@@ -211,9 +229,9 @@
 			<xsl:for-each select="*/gmd:EX_Extent">
 				<xsl:apply-templates select="gmd:geographicElement/gmd:EX_GeographicBoundingBox" mode="latLon"/>
 
-        <xsl:for-each select="gmd:description/gco:CharacterString[normalize-space(.) != '']">
-          <Field name="extentDesc" string="{string(.)}" store="true" index="true"/>
-        </xsl:for-each>
+                                <xsl:for-each select="gmd:description/gco:CharacterString[normalize-space(.) != '']">
+                                  <Field name="extentDesc" string="{string(.)}" store="true" index="true"/>
+                                </xsl:for-each>
 
 				<xsl:for-each select="gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:MD_Identifier/gmd:code/gco:CharacterString">
 					<Field name="geoDescCode" string="{string(.)}" store="true" index="true"/>
@@ -249,7 +267,8 @@
                     <Field name="keyword" string="{string(.)}" store="true" index="true"/>
 					
           <!-- If INSPIRE is enabled, check if the keyword is one of the 34 themes
-          and index annex, theme and theme in english. -->
+          and index annex, theme and theme in english.
+          
                     <xsl:if test="$inspire='true'">
                         <xsl:if test="string-length(.) &gt; 0">
                          
@@ -266,7 +285,7 @@
                             </xsl:call-template>
                           </xsl:variable>
 
-                          <!-- Add the inspire field if it's one of the 34 themes -->
+                          Add the inspire field if it's one of the 34 themes
                           <xsl:if test="normalize-space($inspireannex)!=''">
                             <Field name="inspiretheme" string="{string(.)}" store="true" index="true"/>
                             <Field name="inspirethemewithac"
@@ -280,14 +299,17 @@
                 </xsl:variable>
                 <Field name="inspiretheme_en" string="{$englishInspireTheme}" store="true" index="true"/>
                           	<Field name="inspireannex" string="{$inspireannex}" store="true" index="true"/>
-                            <!-- FIXME : inspirecat field will be set multiple time if one record has many themes -->
+                            FIXME : inspirecat field will be set multiple time if one record has many themes
                           	<Field name="inspirecat" string="true" store="false" index="true"/>
                           </xsl:if>
                         </xsl:if>
                     </xsl:if>
+                    -->
+                    
                 </xsl:for-each>
 
-        <!-- Index thesaurus name to easily search for records
+        <!-- Index thesauru
+s name to easily search for records
         using keyword from a thesaurus. -->
         <xsl:for-each select="gmd:thesaurusName/gmd:CI_Citation">
           <xsl:variable name="thesaurusIdentifier"
@@ -388,7 +410,7 @@
 	
 			<xsl:for-each select="gmd:topicCategory/gmd:MD_TopicCategoryCode">
 				<Field name="topicCat" string="{string(.)}" store="true" index="true"/>
-        <Field name="keyword"
+        <Field name="inspiretheme"
                string="{util:getCodelistTranslation('gmd:MD_TopicCategoryCode', string(.), string($isoLangId))}"
                store="true"
                index="true"/>
@@ -432,18 +454,17 @@
 
 
       <xsl:for-each select="gmd:resourceConstraints/*">
-        <xsl:variable name="fieldPrefix" select="local-name()"/>
         <xsl:for-each select="gmd:accessConstraints/gmd:MD_RestrictionCode/
                                 @codeListValue[string(.) != 'otherRestrictions']">
-          <Field name="{$fieldPrefix}AccessConstraints"
+          <Field name="acessConstraints"
                  string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
         <xsl:for-each select="gmd:otherConstraints/gco:CharacterString">
-          <Field name="{$fieldPrefix}OtherConstraints"
+          <Field name="otherConstraints"
                  string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
         <xsl:for-each select="gmd:useLimitation/gco:CharacterString">
-          <Field name="{$fieldPrefix}UseLimitation"
+          <Field name="useLimitation"
                  string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
       </xsl:for-each>
@@ -663,7 +684,7 @@
 			</xsl:if>
 			
 			<xsl:for-each select="//gmd:pass/gco:Boolean">
-				<Field name="degree" string="{string(.)}" store="true" index="true"/>
+				<Field name="specificationDegree" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 			
 			<xsl:for-each select="//gmd:specification/*/gmd:title/gco:CharacterString">
@@ -775,7 +796,7 @@
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		
 		<xsl:for-each select="gmd:contact/*/gmd:organisationName/gco:CharacterString|gmd:contact/*/gmd:organisationName/gmx:Anchor">
-			<Field name="metadataPOC" string="{string(.)}" store="true" index="true"/>
+			<Field name="metadataOrganization" string="{string(.)}" store="true" index="true"/>
 			
 			<xsl:variable name="role" select="../../gmd:role/*/@codeListValue"/>
 			<xsl:variable name="roleTranslation" select="util:getCodelistTranslation('gmd:CI_RoleCode', string($role), string($isoLangId))"/>
@@ -788,9 +809,11 @@
                                           gmd:deliveryPoint|gmd:postalCode|gmd:city|
                                           gmd:administrativeArea|gmd:country)/gco:CharacterString/text(), ', ')"/>
 
-			<Field name="responsibleParty"
+			<Field name="metadataResponsibleParty"
              string="{concat($roleTranslation, '|metadata|', ., '|', $logo, '|', string-join($email, ','), '|', $individualName, '|', $positionName, '|', $address, '|', string-join($phone, ','))}"
              store="true" index="false"/>
+                        <Field name="metadataRole" string="{$roleTranslation}" store="true" index="true"/>
+                        <Field name="metadataIndividualName" string="{$individualName}" store="true" index="true"/>
 		</xsl:for-each>
 
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
