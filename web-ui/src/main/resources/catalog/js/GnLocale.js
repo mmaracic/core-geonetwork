@@ -56,8 +56,7 @@
         suffix: '.json'
       });
 
-      gnGlobalSettings.lang = gnGlobalSettings.locale.lang ||
-          location.href.split('/')[5].substring(0, 2) || 'en';
+      gnGlobalSettings.lang = location.href.split('/')[5].substring(0, 2) || gnGlobalSettings.locale.lang || 'en';
       $translateProvider.preferredLanguage(gnGlobalSettings.lang);
       moment.lang(gnGlobalSettings.lang);
     }]);
