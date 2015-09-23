@@ -10,7 +10,9 @@
 
   module.constant('gnGlobalSettings', {
     proxyUrl: '../../proxy?url=',
-    locale: {},
+    locale: {
+        lang:'hr'
+    },
     isMapViewerEnabled: false,
     is3DModeAllowed: false,
     modelOptions: {
