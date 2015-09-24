@@ -57,6 +57,7 @@ public class TranslatorFactory {
     }
 
     private static enum TranslatorTypes {
+        LABEL("label"),
         CODELIST("codelist"),
         APPLOC("apploc"),
         TERM("term"),
@@ -95,6 +96,8 @@ public class TranslatorFactory {
         Translator translator;
         if (TranslatorTypes.CODELIST.toString().equals(type)) {
             translator = new CodeListTranslator(context.getBean(SchemaManager.class), langCode, param);
+        } else if (TranslatorTypes.LABEL.toString().equals(type)) {
+            translator = new LabelTranslator(context.getBean(SchemaManager.class), langCode, param);
         } else if (TranslatorTypes.APPLOC.toString().equals(type)) {
             translator = new  JSONLocTranslator(context, langCode, param);
         } else if (TranslatorTypes.TERM.toString().equals(type)) {
