@@ -30,7 +30,7 @@
 	<!-- ========================================================================================= -->
 
   <xsl:param name="thesauriDir"/>
-  <xsl:param name="inspire">false</xsl:param>
+  <xsl:param name="inspire">true</xsl:param>
   
   <xsl:variable name="inspire-thesaurus" select="if ($inspire!='false') then document(concat('file:///', $thesauriDir, '/external/thesauri/theme/inspire-theme.rdf')) else ''"/>
   <xsl:variable name="inspire-theme" select="if ($inspire!='false') then $inspire-thesaurus//skos:Concept else ''"/>
@@ -108,13 +108,13 @@
         </xsl:template>
             -->
         
-        <!-- GEMET keywords -->
-        <xsl:template mode="index"
+        <!-- GEMET keywords 1.0 -->
+        <!-- <xsl:template mode="index"
             match="gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/
                         gmd:title/gco:CharacterString='GEMET - INSPIRE themes, version 1.0']/
                         gmd:keyword[normalize-space(gco:CharacterString) != '']">
-            <Field name="gemetKeyword" string="{string(.)}" store="true" index="true"/>
-        </xsl:template>
+            <Field name="gemetKeyword" string="{normalize-space(string(.))}" store="true" index="true"/>
+        </xsl:template> -->
 
 	<xsl:template mode="index" match="*|@*">
 		<xsl:apply-templates mode="index" select="*|@*"/>
@@ -132,7 +132,14 @@
 
 	<xsl:template match="*" mode="metadata">
 
-		<!-- === Data or Service Identification === -->		
+		<!-- === Data or Service Identification === -->	
+                
+                <!-- AZO metapodaci -->
+            <xsl:for-each select="gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation">
+                <xsl:variable name="extName" select="gmd:name/gco:CharacterString"/>
+                <xsl:variable name="extValue" select="gmd:domainValue/gco:CharacterString"/>
+                <Field name="{$extName}" string="{$extValue}" store="true" index="true"/>
+            </xsl:for-each>	
 
 		<!-- the double // here seems needed to index MD_DataIdentification when
            it is nested in a SV_ServiceIdentification class -->
@@ -267,7 +274,7 @@
                     <Field name="keyword" string="{string(.)}" store="true" index="true"/>
 					
           <!-- If INSPIRE is enabled, check if the keyword is one of the 34 themes
-          and index annex, theme and theme in english.
+          and index annex, theme and theme in english.-->
           
                     <xsl:if test="$inspire='true'">
                         <xsl:if test="string-length(.) &gt; 0">
@@ -285,7 +292,7 @@
                             </xsl:call-template>
                           </xsl:variable>
 
-                          Add the inspire field if it's one of the 34 themes
+                          <!-- Add the inspire field if it's one of the 34 themes -->
                           <xsl:if test="normalize-space($inspireannex)!=''">
                             <Field name="inspiretheme" string="{string(.)}" store="true" index="true"/>
                             <Field name="inspirethemewithac"
@@ -299,18 +306,15 @@
                 </xsl:variable>
                 <Field name="inspiretheme_en" string="{$englishInspireTheme}" store="true" index="true"/>
                           	<Field name="inspireannex" string="{$inspireannex}" store="true" index="true"/>
-                            FIXME : inspirecat field will be set multiple time if one record has many themes
+                            <!--FIXME : inspirecat field will be set multiple time if one record has many themes-->
                           	<Field name="inspirecat" string="true" store="false" index="true"/>
                           </xsl:if>
                         </xsl:if>
                     </xsl:if>
-                    -->
                     
                 </xsl:for-each>
 
-        <!-- Index thesauru
-s name to easily search for records
-        using keyword from a thesaurus. -->
+        <!-- Index thesaurus name to easily search for records using keyword from a thesaurus. -->
         <xsl:for-each select="gmd:thesaurusName/gmd:CI_Citation">
           <xsl:variable name="thesaurusIdentifier"
                         select="gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()"/>
@@ -410,52 +414,51 @@ s name to easily search for records
 	
 			<xsl:for-each select="gmd:topicCategory/gmd:MD_TopicCategoryCode">
 				<Field name="topicCat" string="{string(.)}" store="true" index="true"/>
-        <Field name="inspiretheme"
+        <Field name="topicCatLoc"
                string="{util:getCodelistTranslation('gmd:MD_TopicCategoryCode', string(.), string($isoLangId))}"
                store="true"
                index="true"/>
 			</xsl:for-each>
 
-			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
-	
-			<xsl:for-each select="gmd:language/gco:CharacterString|gmd:language/gmd:LanguageCode/@codeListValue">
-				<Field name="datasetLang" string="{string(.)}" store="true" index="true"/>
-			</xsl:for-each>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
 
-			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
-
-			<xsl:for-each select="gmd:spatialResolution/gmd:MD_Resolution">
-				<xsl:for-each select="gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer">
-					<Field name="denominator" string="{string(.)}" store="true" index="true"/>
-				</xsl:for-each>
-
-				<xsl:for-each select="gmd:distance/gco:Distance">
-					<Field name="distanceVal" string="{string(.)}" store="true" index="true"/>
-				</xsl:for-each>
-
-				<xsl:for-each select="gmd:distance/gco:Distance/@uom">
-					<Field name="distanceUom" string="{string(.)}" store="true" index="true"/>
-				</xsl:for-each>
-
-        <xsl:for-each select="gmd:distance/gco:Distance">
-          <!-- Units may be encoded as
-          http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/uom/ML_gmxUom.xml#m
-          in such case retrieve the unit acronym only. -->
-          <xsl:variable name="unit" select="if (contains(@uom, '#')) then substring-after(@uom, '#') else @uom"/>
-          <Field name="resolution" string="{concat(string(.), ' ', $unit)}" store="true" index="true"/>
+        <xsl:for-each select="gmd:language/gco:CharacterString|gmd:language/gmd:LanguageCode/@codeListValue">
+                <Field name="datasetLang" string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
-			</xsl:for-each>
 
-			<xsl:for-each select="gmd:resourceMaintenance/
-				gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/
-				gmd:MD_MaintenanceFrequencyCode/@codeListValue[. != '']">
-				<Field name="updateFrequency" string="{string(.)}" store="true" index="true"/>
-			</xsl:for-each>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->		
+
+        <xsl:for-each select="gmd:spatialResolution/gmd:MD_Resolution">
+                <xsl:for-each select="gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer">
+                        <Field name="denominator" string="{string(.)}" store="true" index="true"/>
+                </xsl:for-each>
+
+                <xsl:for-each select="gmd:distance/gco:Distance">
+                        <Field name="distanceVal" string="{string(.)}" store="true" index="true"/>
+                </xsl:for-each>
+
+                <xsl:for-each select="gmd:distance/gco:Distance/@uom">
+                        <Field name="distanceUom" string="{string(.)}" store="true" index="true"/>
+                </xsl:for-each>
+
+                <xsl:for-each select="gmd:distance/gco:Distance">
+                  <!-- Units may be encoded as
+                  http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/uom/ML_gmxUom.xml#m
+                  in such case retrieve the unit acronym only. -->
+                  <xsl:variable name="unit" select="if (contains(@uom, '#')) then substring-after(@uom, '#') else @uom"/>
+                  <Field name="resolution" string="{concat(string(.), ' ', $unit)}" store="true" index="true"/>
+                </xsl:for-each>
+    </xsl:for-each>
+
+    <xsl:for-each select="gmd:resourceMaintenance/
+            gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/
+            gmd:MD_MaintenanceFrequencyCode/@codeListValue[. != '']">
+            <Field name="updateFrequency" string="{string(.)}" store="true" index="true"/>
+    </xsl:for-each>
 
 
       <xsl:for-each select="gmd:resourceConstraints/*">
-        <xsl:for-each select="gmd:accessConstraints/gmd:MD_RestrictionCode/
-                                @codeListValue[string(.) != 'otherRestrictions']">
+        <xsl:for-each select="gmd:accessConstraints/gmd:MD_RestrictionCode/@codeListValue">
           <Field name="acessConstraints"
                  string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
@@ -465,6 +468,10 @@ s name to easily search for records
         </xsl:for-each>
         <xsl:for-each select="gmd:useLimitation/gco:CharacterString">
           <Field name="useLimitation"
+                 string="{string(.)}" store="true" index="true"/>
+        </xsl:for-each>
+        <xsl:for-each select="gmd:classification/gmd:MD_ClassificationCode/@codeListValue">
+          <Field name="classification"
                  string="{string(.)}" store="true" index="true"/>
         </xsl:for-each>
       </xsl:for-each>
