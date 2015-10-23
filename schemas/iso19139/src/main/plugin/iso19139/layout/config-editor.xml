@@ -105,6 +105,16 @@
       <directiveAttributes data-include="external.theme.inspire-theme,external.place.regions"/>
       -->
     </for>
+    
+    <!-- AZO fields -->
+    <for name="jedinstveniOznacivacIzvora" use="textarea"/>
+    <for name="akronim" use="textarea"/>
+    <for name="tematskoPodrucje" use="textarea"/>
+    <for name="tematskoPodpodrucje" use="textarea"/>
+    <for name="korisniciPodataka" use="textarea"/>
+    <for name="nazivIzvjestaja" use="textarea"/>
+    <for name="tijeloZaDostavuPodatakaIzvjesca" use="textarea"/>
+    <for name="classification" use="textarea"/>
   </fields>
 
 
@@ -146,7 +156,7 @@
     <name>gmd:verticalCRS</name>
     <name>gml:verticalCS</name>
     <name>gml:verticalDatum</name>
-    <name>gmd:identifier</name>
+    <name>gmd:identifier</name>    
   </fieldsWithFieldset>
 
   <multilingualFields>
@@ -231,8 +241,286 @@
   <!-- View configuration -->
   <views>
     <!--Turn off INSPIRE view by default -->
-    <view name="inspire" upAndDownControlHidden="true" disabled="true">
+    <view name="inspire" upAndDownControlHidden="true">
       <tab id="inspire" default="true" mode="flat">
+          
+        <!-- AZO section -->
+        <section name="AZO">
+            <field name="jedinstveniOznacivacIzvora"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='JedinstveniOznacivacIzvora']"
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>JedinstveniOznacivacIzvora</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            
+            <field name="akronim"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='Akronim']"
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>Akronim</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            
+            <field name="tematskoPodrucje"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='TematskoPodrucje']"
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>TematskoPodrucje</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            
+            <field name="tematskoPodpodrucje"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='TematskoPodpodrucje']"
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>TematskoPodpodrucje</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            
+            <field name="korisniciPodataka"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='KorisniciPodataka']"
+                del="."
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>KorisniciPodataka</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            <action type="add" name="korisniciPodataka"
+                    in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
+                    or="korisniciPodataka"
+            >
+                <template>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>KorisniciPodataka</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString/>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </action>
+
+            <field name="nazivIzvjestaja"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='NazivIzvjestaja']"
+                or="nazivIzvjestaja"
+                in="/gmd:MD_Metadata/gmd:MD_MetadataExtensionInformation"
+                del="."
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            <action type="add" name="nazivIzvjestaja"
+                    in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
+                    or="nazivIzvjestaja"
+            >
+                <template>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString/>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </action>
+            
+            <field name="tijeloZaDostavuPodatakaIzvjesca"
+                templateModeOnly="true" notDisplayedIfMissing="false"
+                xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='TijeloZaDostavuPodatakaIzvjesca']"
+                or="tijeloZaDostavuPodatakaIzvjesca"
+                in="/gmd:MD_Metadata/gmd:MD_MetadataExtensionInformation"
+                del="."
+            >
+                <template>
+                  <values>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                  </values>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString>{{value}}</gco:CharacterString>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </field>
+            <action type="add" name="tijeloZaDostavuPodatakaIzvjesca"
+                    in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation">
+                <template>
+                  <snippet>
+                    <gmd:extendedElementInformation>
+                        <gmd:MD_ExtendedElementInformation>
+                            <gmd:name>
+                                   <gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:domainValue>
+                              <gco:CharacterString/>
+                            </gmd:domainValue>
+                            <gmd:parentEntity gco:nilReason="inapplicable"/>
+                            <gmd:rule gco:nilReason="inapplicable"/>
+                            <gmd:source gco:nilReason="inapplicable"/>
+                        </gmd:MD_ExtendedElementInformation>
+                    </gmd:extendedElementInformation>
+                  </snippet>
+                </template>                
+            </action>
+            <action type="add" name="tijeloZaDostavuPodatakaIzvjesca1"/>
+        </section>
+ 
         <section name="resource">
           <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:title"/>
@@ -1209,7 +1497,7 @@
         </section>
       </tab>
     </view>
-    <view name="default">
+    <view name="simple" disabled="true">
       <tab id="default" default="true" mode="flat">
         <section xpath="/gmd:MD_Metadata/gmd:identificationInfo"/>
         <section xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo"/>
@@ -1238,7 +1526,7 @@
           <field xpath="/gmd:MD_Metadata/gmd:featureType"/>
           <field xpath="/gmd:MD_Metadata/gmd:featureAttribute"/>
         </section>
-      </tab>
+     </tab>
       
       <!-- Elements that should not use the "flat" mode --> 
       <flatModeExceptions>
@@ -1267,7 +1555,7 @@
       </thesaurusList>
       -->
     </view>
-    <view name="advanced">
+    <view name="advanced" disabled="true">
       <tab id="identificationInfo" default="true">
         <section xpath="/gmd:MD_Metadata/gmd:identificationInfo" or="identificationInfo"
                  in="/gmd:MD_Metadata"/>
