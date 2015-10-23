@@ -23,7 +23,7 @@ public class Handlers {
         packageViews = [
                 'gmd:identificationInfo', 'gmd:metadataMaintenance', 'gmd:metadataConstraints', 'gmd:spatialRepresentationInfo',
                 'gmd:distributionInfo', 'gmd:applicationSchemaInfo', 'gmd:dataQualityInfo', 'gmd:portrayalCatalogueInfo',
-                'gmd:contentInfo', 'gmd:metadataExtensionInfo', 'gmd:referenceSystemInfo', rootEl]
+                'gmd:contentInfo', 'gmd:referenceSystemInfo', rootEl]
     }
 
     def addDefaultHandlers() {
@@ -47,6 +47,7 @@ public class Handlers {
             def listItems = elems.findAll{!it.text().isEmpty()}.collect {f.codelistValueLabel("MD_TopicCategoryCode", it.text())};
             handlers.fileResult("html/list-entry.html", [label:f.nodeLabel(elems[0]), listItems: listItems])
         }
+        handlers.add name:'Extended elements', select: matchers.isExtendedElement, isoExtendedEls
 
         handlers.skip name: "skip date parent element", select: matchers.hasDateChild, {it.children()}
         handlers.skip name: "skip codelist parent element", select: matchers.hasCodeListChild, {it.children()}
@@ -435,5 +436,16 @@ public class Handlers {
                     [label: f.nodeLabel(el), childData: rootPackageData, name: rootEl.replace(":", "_")])
 
             return  rootPackageOutput.toString() + otherPackageData
+    }
+    def isoExtendedEls = { els ->
+        StringBuilder builder = new StringBuilder();
+        els.each { el ->
+            def naziv = el.'gmd:MD_ExtendedElementInformation'.'gmd:name'.'gco:CharacterString'.text();
+            def nazivLower = naziv.substring(0,1).toLowerCase() + naziv.substring(1);
+            def vrijednost = el.'gmd:MD_ExtendedElementInformation'.'gmd:domainValue'.'gco:CharacterString'.text()
+
+            builder.append(handlers.fileResult('html/text-el.html', [label: f.translate(nazivLower), text: vrijednost]));
+        }
+        return handlers.fileResult('html/2-level-entry.html', [label: f.translate('AZO'), childData: builder.toString()])
     }
 }

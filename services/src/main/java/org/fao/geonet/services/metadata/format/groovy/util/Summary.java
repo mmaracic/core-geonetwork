@@ -46,6 +46,7 @@ public class Summary {
     private String keywords = "";
     private String extent = "";
     private String formats = "";
+    private String extensions ="";
 
     public List<LinkBlock> links = Lists.newArrayList();
     public List<LinkBlock> associated = Lists.newArrayList();
@@ -67,6 +68,7 @@ public class Summary {
         params.put("title", title != null ? title : "");
         params.put("pageTitle", title != null ? title.replace('"', '\'') : "");
         params.put("abstract", abstr);
+        params.put("extensions", extensions);
         params.put("thumbnail", thumbnailUrl());
         params.put("links", links);
         params.put("associated", associated);
@@ -111,7 +113,7 @@ public class Summary {
 
         return thumbnail;
     }
-
+    
     private String resourceThumbnailUrl(String t) {
         return env.getLocalizedUrl() + "resources.get?fname=" + t + "&access=public&id=" + env.getMetadataId();
     }
@@ -196,5 +198,9 @@ public class Summary {
 
     public void setFormats(String formats) {
         this.formats = formats;
+    }
+    
+    public void setExtensions(String extensions) {
+        this.extensions = extensions;
     }
 }

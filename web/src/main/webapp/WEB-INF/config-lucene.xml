@@ -156,7 +156,15 @@
       <field name="standardName" tagName="standardName"/>
       <field name="_groupWebsite" tagName="groupWebsite"/>
       <field name="attributeTable" tagName="attributeTable"/>
-    </dumpFields>
+       
+      <!-- AZO fields -->
+        <field name="classification" tagName="classification"/>
+
+        <field name="JedinstveniOznacivacIzvora" tagName="jedinstveniOznacivacIzvora"/>
+        <field name="Akronim" tagName="akronim"/>
+        <field name="TematskoPodrucje" tagName="tematskoPodrucje"/>
+        <field name="TematskoPodpodrucje" tagName="tematskoPodpodrucje"/>
+   </dumpFields>
   </search>
 
 

@@ -13,8 +13,13 @@ public class Matchers {
             'gmd:CI_Series', 'gmd:MD_ReferenceSystem', 'gmd:identificationInfo', 'gmd:transferOptions',
             'gmd:contactInfo', 'gmd:address', 'gmd:phone', 'gmd:onlineResource', 'gmd:referenceSystemIdentifier',
             'gmd:distributorTransferOptions', 'gmd:resourceMaintenance', 'gmd:resourceConstraints', 'gmd:aggregationInfo', 'gmd:scope',
-            'gmd:DQ_DataQuality', 'gmd:lineage', 'gmd:processStep', 'gmd:MD_Distribution', 'gmd:MD_Distributor'
+            'gmd:DQ_DataQuality', 'gmd:lineage', 'gmd:processStep', 'gmd:MD_Distribution', 'gmd:MD_Distributor',
+            'gmd:metadataExtensionInfo', 'gmd:MD_MetadataExtensionInformation', 'gmd:MD_ExtendedElementInformation'
     ]
+    
+    def isExtendedElement = {!it.'gmd:MD_ExtendedElementInformation'.'gmd:name'.'gco:CharacterString'.text().isEmpty() &&
+            !it.'gmd:MD_ExtendedElementInformation'.'gmd:domainValue'.'gco:CharacterString'.text().isEmpty()
+    }
 
     def isBasicType = {el ->
         el.children().size() == 1 && simpleElements.any{!el[it].text().isEmpty()}

@@ -112,7 +112,7 @@
         <h2 data-translate="">aboutThisResource</h2>
 
         <table class="table table-striped">
-          <tbody>
+          <tbody>              
           <tr data-ng-if="mdView.current.record.inspirethemewithac.length > 0 ||
                           mdView.current.record.inspirethemewithac.length > 0">
               <th data-translate="">inspireThemes</th>
@@ -125,6 +125,25 @@
                 </div>
               </td>
             </tr>
+          
+            <!--AZO Metapodaci-->
+          <tr data-ng-if="mdView.current.record.jedinstveniOznacivacIzvora">
+              <th data-translate="">jedinstveniOznacivacIzvora</th>
+              <td>{{mdView.current.record.jedinstveniOznacivacIzvora}}</td>
+            </tr>
+          <tr data-ng-if="mdView.current.record.akronim">
+              <th data-translate="">akronim</th>
+              <td>{{mdView.current.record.akronim}}</td>
+            </tr>
+          <tr data-ng-if="mdView.current.record.tematskoPodrucje">
+              <th data-translate="">tematskoPodrucje</th>
+              <td>{{mdView.current.record.tematskoPodrucje}}</td>
+            </tr>
+          <tr data-ng-if="mdView.current.record.tematskoPodpodrucje">
+              <th data-translate="">tematskoPodpodrucje</th>
+              <td>{{mdView.current.record.tematskoPodpodrucje}}</td>
+            </tr>
+            
             <tr data-ng-if="mdView.current.record.category.length > 0 ||
                       mdView.current.record.topicCat.length > 0">
               <th data-translate="">listOfCategories</th>
@@ -529,6 +548,9 @@
           <a data-ng-href="https://www.facebook.com/sharer.php?u={{mdView.current.record.encodedUrl}}"
              target="_blank"
              class="btn btn-lg btn-default"><i class="fa fa-fw fa-facebook"></i></a>
+        <a data-ng-href="mailto:?subject={{mdView.current.record.title || mdView.current.record.defaultTitle}}&body={{mdView.current.record.encodedUrl}}"
+             target="_blank"
+             class="btn btn-lg btn-default"><i class="fa fa-fw fa-envelope-o"></i></a>
         </section></br>
 
         <section>
