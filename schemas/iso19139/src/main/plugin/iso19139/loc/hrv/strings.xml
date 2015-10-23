@@ -2,7 +2,7 @@
 <strings>
   <understandResource>Informacije o skupu podataka</understandResource>
   <relatedResources>Referentne usluge i povezani podaci</relatedResources>
-  <techInfo>Techničke informacije</techInfo>
+  <techInfo>Tehničke informacije</techInfo>
   <contactInfo>Kontakt informacije</contactInfo>
   <mdContactInfo>Kontaktna točka za metapodatke</mdContactInfo>
   <refDate>Referentni datum</refDate>
@@ -84,4 +84,13 @@
   <add-resource-idHelp>Identifikator izvora sastoji se od URL-a kataloga i  identifikatora metapodataka (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).</add-resource-idHelp>
   <add-extent-from-geokeywords>Izračunavanje prostornog obuhvata iz ključnih riječi</add-extent-from-geokeywords>
   <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
+  
+  <AZO>Agencija za zaštitu okoliša</AZO>
+  <jedinstveniOznacivacIzvora>Jedinstveni označivač izvora</jedinstveniOznacivacIzvora>
+  <akronim>Akronim</akronim>
+  <tematskoPodrucje>Tematsko područje</tematskoPodrucje>
+  <tematskoPodpodrucje>Tematsko podpodručje</tematskoPodpodrucje>
+  <korisniciPodataka>Korisnik podataka</korisniciPodataka>
+  <nazivIzvjestaja>Naziv izvještaja</nazivIzvjestaja>
+  <tijeloZaDostavuPodatakaIzvjesca>Tijelo za dostavu podataka izvješća</tijeloZaDostavuPodatakaIzvjesca>
 </strings>

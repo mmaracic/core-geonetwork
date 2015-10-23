@@ -427,6 +427,15 @@
         <description>Ograničenja pristupa koja se koriste kako bi osigurala privatnost ili intelektualno
 			vlasništvo te bilo koja druga posebna ograničenja vezana uz izvor.</description>
     </element>
+    <element name="gmd:MD_RestrictionCode" id="70.0">
+        <label>Ograničenja javnog pristupa: pristup</label>
+        <description>Ograničenja pristupa koja se koriste kako bi osigurala privatnost ili intelektualno
+			vlasništvo te bilo koja druga posebna ograničenja vezana uz izvor.</description>
+    </element>
+    <element name="gmd:MD_ClassificationCode" id="70.0">
+        <label>Sigurnosna ograničenja: Oznaka tajnosti</label>
+        <description>Ograničenja pristupa koja se koriste kako bi osigurala pravo pristupa dokumentu.</description>
+    </element>
     <element name="gmd:address" id="525.0" context="gmd:CI_ResponsibleParty">
         <label>Adresa</label>
         <description>Adresa odgovorne organizacije.</description>
@@ -1380,6 +1389,11 @@
         <condition>Obvezan.</condition>
     </element>
     <element name="gmd:maintenanceAndUpdateFrequency" id="143.0">
+        <label>Ažuriranje: učestalost</label>
+        <description>Učestalost kojom se obavljaju promjene izvora podataka.</description>
+        <condition>Obvezan.</condition>
+    </element>
+    <element name="gmd:MD_MaintenanceFrequencyCode" id="143.0">
         <label>Ažuriranje: učestalost</label>
         <description>Učestalost kojom se obavljaju promjene izvora podataka.</description>
         <condition>Obvezan.</condition>

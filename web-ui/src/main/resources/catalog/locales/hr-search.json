@@ -305,5 +305,13 @@
   "wpsDescribeProcessFailed": "DescribeProcess neuspješan",
   "wpsExecute": "Izvrši",
   "wpsExecuteFailed": "Izvršenje neuspješno",
-  "wpsErrorCodeReturned": "Kod statusa vraćen od servera"
+  "wpsErrorCodeReturned": "Kod statusa vraćen od servera",
+    "classification":"Oznaka tajnosti",
+    "jedinstveniOznacivacIzvora":"Jedinstveni označivač izvora",
+    "akronim":"Akronim",
+    "tematskoPodrucje":"Tematsko područje",
+    "tematskoPodpodrucje":"Tematsko podpodručje",
+    "korisniciPodataka":"Korisnik podataka",
+    "nazivIzvjestaja":"Naziv izvještaja",
+    "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća"
 }

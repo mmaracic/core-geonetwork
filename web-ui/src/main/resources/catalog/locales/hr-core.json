@@ -83,6 +83,8 @@
     "hour": "Sat",
     "inspireThemes": "INSPIRE teme",
     "inspiretheme": "INSPIRE teme",
+    "inspireThemesWithAc":"INSPIRE teme AC",
+    "areas":"Tematska područja",
     "ita": "Italiano",
     "keyword": "Ključna riječ",
     "keywordFilter": "Filtriraj ključnu riječ",
@@ -122,6 +124,7 @@
     "orgNames": "Kontakt za izvor",
     "topicCat" : "Tema",
     "topicCats" : "Teme",
+    "topics": "Teme",
     "organisation": "Organizacija",
     "organization": "Organizacija",
     "owner": "Vlasnik",
@@ -300,5 +303,13 @@
     "metadataOrganization":"Organizacija odgovorna za metapodatke",
     "metadataOrganizations":"Organizacije odgovorne za metapodatke",
     "metadataIndividualName":"Osoba odgovorna za metapodatke",
-    "metadataIndividualNames":"Osobe odgovorne za metapodatke" 
+    "metadataIndividualNames":"Osobe odgovorne za metapodatke",
+    "classification":"Oznaka tajnosti",
+    "jedinstveniOznacivacIzvora":"Jedinstveni označivač izvora",
+    "akronim":"Akronim",
+    "tematskoPodrucje":"Tematsko područje",
+    "tematskoPodpodrucje":"Tematsko podpodručje",
+    "korisniciPodataka":"Korisnik podataka",
+    "nazivIzvjestaja":"Naziv izvještaja",
+    "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća"
 }

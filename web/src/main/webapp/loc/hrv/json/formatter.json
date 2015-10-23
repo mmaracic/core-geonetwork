@@ -1,6 +1,6 @@
 {
     "abstract": "Sažetak",
-    "complete": "Poptpuno",
+    "complete": "Potpuno",
     "hierarchy": "Hijerarhija",
     "links": "Poveznice",
     "noUuidInLink": "Nema uuid-a u poveznici",
@@ -9,5 +9,15 @@
     "testString": "This String is here for testing don't delete",
     "xml": "XML",
     "uncategorizedKeywords" : "Bez kategorije",
-    "uncategorized" : "Bez kategorije"
+    "uncategorized" : "Bez kategorije",
+    "associated-link":"Pridružene poveznice",
+    "general":"Opći podaci",
+    "AZO":"Agencija za zaštitu okoliša",
+    "jedinstveniOznacivacIzvora":"Jedinstveni označivač izvora",
+    "akronim":"Akronim",
+    "tematskoPodrucje":"Tematsko područje",
+    "tematskoPodpodrucje":"Tematsko podpodručje",
+    "korisniciPodataka":"Korisnik podataka",
+    "nazivIzvjestaja":"Naziv izvještaja",
+    "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća"    
 }
