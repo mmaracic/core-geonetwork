@@ -48,6 +48,7 @@ class SummaryFactory {
         summary.title = this.isoHandlers.isofunc.isoText(metadata.'gmd:identificationInfo'.'*'.'gmd:citation'.'gmd:CI_Citation'.'gmd:title')
         summary.abstr = this.isoHandlers.isofunc.isoText(metadata.'gmd:identificationInfo'.'*'.'gmd:abstract')
 
+        configureExtension(metadata, summary)
         configureKeywords(metadata, summary)
         configureFormats(metadata, summary)
         configureExtent(metadata, summary)
@@ -101,6 +102,14 @@ class SummaryFactory {
             summary.keywords = this.isoHandlers.keywordsEl(keywords).toString()
         }
     }
+
+    def configureExtension(metadata, summary){
+        def elements = metadata."**".findAll this.isoHandlers.matchers.isExtendedElement
+        if (!elements.isEmpty()) {
+            summary.extensions = this.isoHandlers.isoExtendedEls(elements).toString()
+        }
+    }
+
     def configureFormats(metadata, summary) {
         def formats = metadata."**".findAll this.isoHandlers.matchers.isFormatEl
         if (!formats.isEmpty()) {
