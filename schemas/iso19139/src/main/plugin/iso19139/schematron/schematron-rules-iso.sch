@@ -169,7 +169,7 @@ USA.
 	<!-- TEST  7 FXCHECK -->
 	<sch:pattern>
 		<sch:title>$loc/strings/M13</sch:title>
-		<sch:rule context="//gmd:DQ_DataQuality[gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode/@codeListValue='dataset' 
+		<!--<sch:rule context="//gmd:DQ_DataQuality[gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode/@codeListValue='dataset' 
 			or gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode/@codeListValue='series']">
 			<sch:let name="emptyStatement" value="
 				count(*/gmd:LI_Lineage/gmd:source) + count(*/gmd:LI_Lineage/gmd:processStep) = 0 
@@ -230,7 +230,7 @@ USA.
 		</sch:rule>
 	</sch:pattern>
 	<!-- TEST  6 FXCHECK -->
-	<sch:pattern>
+	<!-- <sch:pattern>
 		<sch:title>$loc/strings/M17</sch:title>
 		<sch:rule context="//gmd:DQ_Scope">
 			<sch:let name="levelDesc" value="gmd:level/gmd:MD_ScopeCode/@codeListValue='dataset' 
@@ -246,7 +246,7 @@ USA.
 				test="$levelDesc"
 				><sch:value-of select="$loc/strings/report.M17"/> <sch:value-of select="gmd:levelDescription"/></sch:report>
 		</sch:rule>
-	</sch:pattern>
+	</sch:pattern> -->
 	<!-- anzlic/trunk/gml/3.2.0/gmd/distribution.xsd-->
 	<!-- TEST 14 FXCHECK -->
 	<sch:pattern>
@@ -456,7 +456,7 @@ USA.
 		</sch:rule>
 	</sch:pattern>
 	<!--  -->
-	<sch:pattern>
+	<!-- <sch:pattern>
 		<sch:title>$loc/strings/M61</sch:title>
 		<sch:rule context="//gmd:MD_Metadata/gmd:hierarchyLevel|//*[@gco:isoType='gmd:MD_Metadata']/gmd:hierarchyLevel">
 			<sch:let name="hl" value="count(../gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='dataset' or @codeListValue=''])=0 and 
@@ -470,7 +470,7 @@ USA.
 				test="$hl = false()"
 				><sch:value-of select=" $loc/strings/report.M61"/> "<sch:value-of select="$resourceType"/>"</sch:report>
 		</sch:rule>
-	</sch:pattern>
+	</sch:pattern> -->
 
 
     <sch:pattern>
