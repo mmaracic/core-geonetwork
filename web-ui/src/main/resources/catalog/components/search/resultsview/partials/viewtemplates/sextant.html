@@ -5,8 +5,8 @@
 
       <!-- Thumbnail -->
       <div class="pull-left gn-md-thumbnail">
-        <span ng-if="!md.getThumbnails().small" translate>noThumbnail</span>
-        <img ng-src="{{md.getThumbnails().small}}" class="img-thumbnail" ng-if="md.getThumbnails().small"/>
+        <span ng-if="!md.getThumbnails(true).small" translate>noThumbnail</span>
+        <img ng-src="{{md.getThumbnails(true).small}}" class="img-thumbnail" ng-if="md.getThumbnails(true).small"/>
       </div>
 
       <!-- Icon for types -->

@@ -638,23 +638,70 @@
         this.linksCache[key] = ret;
         return ret;
       },
-      getThumbnails: function() {
+      getThumbnails: function(podrucjeFlag) {
+        var images = {list: []};
         if (angular.isArray(this.image)) {
-          var images = {list: []};
           for (var i = 0; i < this.image.length; i++) {
             var s = this.image[i].split('|');
             var insertFn = 'push';
             if (s[0] === 'thumbnail') {
               images.small = s[1];
-              var insertFn = 'unshift';
+              insertFn = 'unshift';
             } else if (s[0] === 'overview') {
               images.big = s[1];
             }
             images.list[insertFn]({url: s[1], label: s[2]});
           }
         }
+        if (this.tematskoPodrucje && podrucjeFlag){
+            var azo_image = this.getAreaSymbol(this.tematskoPodrucje);
+            images.list.push(azo_image);
+            images.small = azo_image.url;
+        }
         return images;
       },
+      
+      /**
+       * Gets an image symbol object based on area name
+       * 
+       * @return {url, label} Image symbol
+       */
+      getAreaSymbol: function(podrucje){
+        var baseUrl=location.pathname.split('/')[1];
+        var azo_image = null;
+        switch(podrucje.toLowerCase()){
+            case 'zrak': azo_image={url:'/'+baseUrl+'/images/azo/zrak.png', label:podrucje}; break;
+            case 'kopnene vode': azo_image={url:'/'+baseUrl+'/images/azo/voda.png', label:podrucje}; break;
+            case 'more': azo_image={url:'/'+baseUrl+'/images/azo/more.png', label:podrucje}; break;
+            case 'priroda': azo_image={url:'/'+baseUrl+'/images/azo/flora_fauna.png', label:podrucje}; break;
+            case 'pedosfera i litosfera': azo_image={url:'/'+baseUrl+'/images/azo/tlo.png', label:podrucje}; break;
+            case 'otpad': azo_image={url:'/'+baseUrl+'/images/azo/otpad.png', label:podrucje}; break;
+            case 'industrija i energetika': azo_image={url:'/'+baseUrl+'/images/azo/energija.png', label:podrucje}; break;
+            case 'zdravlje i sigurnost': azo_image={url:'/'+baseUrl+'/images/azo/okoliš_zdravlje.png', label:podrucje}; break;
+            case 'opće teme zaštite okoliša': azo_image={url:'/'+baseUrl+'/images/azo/stanovništvo.png', label:podrucje}; break;
+            case 'klimatske promjene': azo_image={url:'/'+baseUrl+'/images/azo/klima.png', label:podrucje}; break;
+        }
+        return azo_image;
+      },
+      
+      /**
+       * Returns the protocol of the service if such info can be extracted
+       * 
+       * @return {String} Service protocol description
+       */
+      getServiceProtocol: function(){
+          var links = this.link;
+          for(var i=0; i<links.length; i++){
+              var link = links[i];
+              if (link.indexOf('WMS')>-1){
+                  return 'WMS';
+              }
+              else if (link.indexOf('WFS')>-1){
+                  return 'WFS';
+              }
+          }
+      },
+      
       /**
        * Return an object containing metadata contacts
        * as an array and resource contacts as array

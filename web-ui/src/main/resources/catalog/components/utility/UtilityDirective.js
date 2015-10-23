@@ -832,7 +832,7 @@
 
         element.bind('click', function() {
           var md = scope.$eval(attr['gnImgModal']);
-          var imgs = md.getThumbnails();
+          var imgs = md.getThumbnails(true);
           var img = imgs.big || imgs.small;
 
           if (img) {
