@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -34,6 +35,7 @@ public class MetadataHistory extends GeonetEntity {
     static final String ID_SEQ_NAME = "metadata_history_id_seq";
 
     private int _id;
+    private int _metadata_id;
     private String _data;
     private int _version;
     private User _user;
@@ -69,8 +71,7 @@ public class MetadataHistory extends GeonetEntity {
         return _data;
     }
     
-    public MetadataHistory setData(String data)
-    {
+    public MetadataHistory setData(String data){
         _data=data;
         return this;
     }
@@ -86,12 +87,12 @@ public class MetadataHistory extends GeonetEntity {
     }
     
     @Column(nullable = false)
-    public User getUser(){
+    @ManyToOne
+    public User getItemUser(){
         return _user;
     }
     
-    public MetadataHistory setUser(User user)
-    {
+    public MetadataHistory setItemUser(User user){
         _user = user;
         return this;
     }
@@ -104,6 +105,16 @@ public class MetadataHistory extends GeonetEntity {
     
     public MetadataHistory setItemDate(Date date){
         _datetime = date;
+        return this;
+    }
+    
+    @Column(nullable = false)
+    public int getMetadataId(){
+        return _metadata_id;
+    }
+    
+    public MetadataHistory setMetadataId(int metadataId){
+        _metadata_id=metadataId;
         return this;
     }
 }

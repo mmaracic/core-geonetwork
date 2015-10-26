@@ -113,6 +113,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.servlet.ServletContext;
 import javax.sql.DataSource;
+import org.fao.geonet.kernel.MetadataHistoryDbManager;
 
 /**
  * This is the main class, it handles http connections and inits the system.
@@ -337,6 +338,9 @@ public class Geonetwork implements ApplicationHandler {
 
         SvnManager svnManager = _applicationContext.getBean(SvnManager.class);
         XmlSerializer xmlSerializer = _applicationContext.getBean(XmlSerializer.class);
+        
+        MetadataHistoryDbManager histManager = _applicationContext.getBean(MetadataHistoryDbManager.class);
+        histManager.setContext(context);
 
         if (xmlSerializer instanceof XmlSerializerSvn && svnManager != null) {
             svnManager.setContext(context);
