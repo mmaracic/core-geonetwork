@@ -1,27 +1,28 @@
 package org.fao.geonet.domain;
 
 import org.fao.geonet.entitylistener.MetadataEntityListenerManager;
+import org.hibernate.annotations.Type;
+
 import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 
 /**
- * An entity representing a metadata object in the database. The xml, groups and operations are lazily loaded so accessing then will
- * need to
- * be done in a thread that has a bound EntityManager. Also they can trigger database access if they have not been cached and therefore
- * can
- * cause slowdowns so they should only be accessed in need.
- *
- * @author Jesse
+ * An entity containing records about changes in metadata elements
+ * 
+ * @author Marijo
  */
 @Entity
 @Table(name = MetadataHistory.TABLENAME)
@@ -35,7 +36,7 @@ public class MetadataHistory extends GeonetEntity {
     private int _id;
     private String _data;
     private int _version;
-    private int _userid;
+    private User _user;
     private Date _datetime;
 
     /**
@@ -60,6 +61,10 @@ public class MetadataHistory extends GeonetEntity {
         return this;
     }
     
+    @Column(nullable = false)
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
+    @Type(type="org.hibernate.type.StringClobType") // this is a work around for postgres so postgres can correctly load clobs
     public String getData(){
         return _data;
     }
@@ -70,6 +75,7 @@ public class MetadataHistory extends GeonetEntity {
         return this;
     }
     
+    @Column(nullable = false)
     public int getVersion(){
         return _version;
     }
@@ -79,17 +85,19 @@ public class MetadataHistory extends GeonetEntity {
         return this;
     }
     
-    public int getUserId(){
-        return _userid;
+    @Column(nullable = false)
+    public User getUser(){
+        return _user;
     }
     
-    public MetadataHistory setUserId(int id)
+    public MetadataHistory setUser(User user)
     {
-        _userid = id;
+        _user = user;
         return this;
     }
     
     @Temporal(javax.persistence.TemporalType.DATE)
+    @Column(nullable = false)
     public Date getItemDate(){
         return _datetime;
     }
