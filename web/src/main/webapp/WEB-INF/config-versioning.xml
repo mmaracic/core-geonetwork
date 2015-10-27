@@ -17,7 +17,7 @@
     <!-- <bean id="xmlSerializer" class="org.fao.geonet.kernel.XmlSerializerSvn"/> -->
     <!-- <bean id="xmlSerializer" class="org.fao.geonet.kernel.XmlSerializerDb"/> -->
 
-    <bean id="svnManager" class="org.fao.geonet.kernel.MetadataHistoryDbManager"/>
-    <!-- <bean id="svnManager" class="org.fao.geonet.kernel.SvnManager"/> -->
+    <bean id="histManager" class="org.fao.geonet.kernel.MetadataHistoryDbManager"/>
+    <bean id="svnManager" class="org.fao.geonet.kernel.SvnManager"/>
 
 </beans>

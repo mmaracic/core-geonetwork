@@ -86,7 +86,6 @@ public class MetadataHistory extends GeonetEntity {
         return this;
     }
     
-    @Column(nullable = false)
     @ManyToOne
     public User getItemUser(){
         return _user;
