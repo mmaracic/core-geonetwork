@@ -31,12 +31,12 @@ public class MetadataHistoryDbManager implements AfterCommitTransactionListener,
 
     @Override
     public void afterCommit(TransactionStatus transaction) {
-        throw new UnsupportedOperationException("AfterCommit not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return;
     }
 
     @Override
     public void beforeRollback(TransactionStatus transaction) {
-        throw new UnsupportedOperationException("BeforeRollback not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return;
     }
     
     public void setContext(ServiceContext context) {
@@ -72,7 +72,7 @@ public class MetadataHistoryDbManager implements AfterCommitTransactionListener,
             mdh.setData(mdString);
             mdh.setMetadataId(id);
             mdh.setItemDate(now);
-            mdh.setUser(managedUser);
+            mdh.setItemUser(managedUser);
             mdhRepo.save(mdh);
         } catch(NumberFormatException ex){
             ex.printStackTrace();
