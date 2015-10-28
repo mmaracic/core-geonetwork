@@ -43,7 +43,12 @@ public class MetadataHistoryDbManager implements AfterCommitTransactionListener,
         this.context = context;
     }
     
-    public void addMetadataVersion(final String strId, final ServiceContext context) throws Exception {
+    public void startMetadataVersioning(final String strId, final ServiceContext context) throws Exception {
+        deleteMetadataVersions(strId, context);
+        addMetadataVersion(strId, context, true);
+    }
+    
+    public void addMetadataVersion(final String strId, final ServiceContext context, boolean addFirst) throws Exception {
         UserSession uSess = context.getUserSession();
         MetadataHistoryRepository mdhRepo = context.getBean(MetadataHistoryRepository.class);
         UserRepository uRepo = context.getBean(UserRepository.class);
@@ -60,20 +65,23 @@ public class MetadataHistoryDbManager implements AfterCommitTransactionListener,
             Element md = dataMan.getMetadata(strId);
             String mdString = Xml.getString(md);
             List<MetadataHistory> histories = mdhRepo.findAll(MetadataHistorySpecs.hasMetadataId(id));
-            Integer version = null;
+            Integer version = 1;
+            MetadataHistory prevHistory = null;
             if (histories.size()>0){
-                MetadataHistory history = mdhRepo.findOne(MetadataHistorySpecs.hasMaximumVersion(id));
-                version = history.getVersion();
-            } else {
-                version = 1;
+                prevHistory = mdhRepo.findOne(MetadataHistorySpecs.hasMaximumVersion(id));
+                version = prevHistory.getVersion()+1;
             }
-            MetadataHistory mdh = new MetadataHistory();
-            mdh.setVersion(version);
-            mdh.setData(mdString);
-            mdh.setMetadataId(id);
-            mdh.setItemDate(now);
-            mdh.setItemUser(managedUser);
-            mdhRepo.save(mdh);
+            if ((addFirst &&  prevHistory==null) || prevHistory!=null){
+                if (prevHistory==null || mdString.compareTo(prevHistory.getData())!=0){
+                    MetadataHistory mdh = new MetadataHistory();
+                    mdh.setVersion(version);
+                    mdh.setData(mdString);
+                    mdh.setMetadataId(id);
+                    mdh.setItemDate(now);
+                    mdh.setItemUser(managedUser);
+                    mdhRepo.save(mdh);
+                }
+            }
         } catch(NumberFormatException ex){
             ex.printStackTrace();
         }

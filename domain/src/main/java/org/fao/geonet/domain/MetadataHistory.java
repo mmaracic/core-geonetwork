@@ -1,5 +1,6 @@
 package org.fao.geonet.domain;
 
+import java.io.Serializable;
 import org.fao.geonet.entitylistener.MetadataEntityListenerManager;
 import org.hibernate.annotations.Type;
 
@@ -28,9 +29,9 @@ import javax.persistence.Temporal;
 @Entity
 @Table(name = MetadataHistory.TABLENAME)
 @Access(AccessType.PROPERTY)
-@EntityListeners(MetadataEntityListenerManager.class)
+//@EntityListeners(MetadataHistoryEntityListenerManager.class)
 @SequenceGenerator(name=MetadataHistory.ID_SEQ_NAME, initialValue=100, allocationSize=1)
-public class MetadataHistory extends GeonetEntity {
+public class MetadataHistory extends GeonetEntity implements Serializable {
     public static final String TABLENAME = "MetadataHistory";
     static final String ID_SEQ_NAME = "metadata_history_id_seq";
 

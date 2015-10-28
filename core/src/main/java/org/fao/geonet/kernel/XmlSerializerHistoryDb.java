@@ -89,8 +89,7 @@ public class XmlSerializerHistoryDb extends XmlSerializer {
 		// old XML comes from the database
 		updateDb(id, xml, changeDate, xml.getQualifiedName(), updateDateStamp, uuid);
 
-		histMan.addMetadataVersion(id, context);
-
+		histMan.addMetadataVersion(id, context, false);
 	}
 
     /**

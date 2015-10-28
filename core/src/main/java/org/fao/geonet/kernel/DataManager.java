@@ -863,6 +863,9 @@ public class DataManager implements ApplicationEventPublisherAware {
         if (getSvnManager() != null) {
             getSvnManager().createMetadataDir(id, context, md);
         }
+        if (getMetadataHistoryDbManager()!= null){
+            getMetadataHistoryDbManager().startMetadataVersioning(id, context);
+        } 
     }
 
     /**
@@ -3435,6 +3438,9 @@ public class DataManager implements ApplicationEventPublisherAware {
     }
     protected SvnManager getSvnManager() {
         return getBean(SvnManager.class);
+    }
+    protected MetadataHistoryDbManager getMetadataHistoryDbManager() {
+        return getBean(MetadataHistoryDbManager.class);
     }
 
     protected ApplicationContext getApplicationContext() {
