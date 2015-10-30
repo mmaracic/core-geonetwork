@@ -388,7 +388,7 @@
             </field>
             <action type="add" name="korisniciPodataka"
                     in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
-                    or="korisniciPodataka"
+                    or="extendedElementInformation" forceLabel="true"
             >
                 <template>
                   <snippet>
@@ -443,7 +443,7 @@
             </field>
             <action type="add" name="nazivIzvjestaja"
                     in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
-                    or="nazivIzvjestaja"
+                    or="extendedElementInformation" forceLabel="true"
             >
                 <template>
                   <snippet>
@@ -497,7 +497,9 @@
                 </template>                
             </field>
             <action type="add" name="tijeloZaDostavuPodatakaIzvjesca"
-                    in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation">
+                    in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
+                    or="extendedElementInformation" forceLabel="true"
+            >
                 <template>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -520,23 +522,34 @@
             </action>
             <action type="add" name="tijeloZaDostavuPodatakaIzvjesca1"/>
         </section>
- 
+        
+        <!-- Standard elements -->
         <section name="resource">
           <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:title"/>
           <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0"/>
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"
+            del=".">
+            <action type="add" name="altTitle" or="alternativeTitle" forceLabel="true"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation">
+                <template>
+                    <snippet>
+                        <gmd:alternateTitle>
+                            <gco:CharacterString/>
+                        </gmd:alternateTitle>
+                    </snippet>
+                </template>
+            </action>
+          </field>
           <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0"/>
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:abstract"/>
 
           <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"/>
 
-          <action type="add"
+<!--          <action type="add"
                   if="count(gmd:MD_Metadata/gmd:hierarchyLevel) = 0"
                   name="hierarchyLevel" or="hierarchyLevel"
-                  in="/gmd:MD_Metadata">
+                  in="/gmd:MD_Metadata" forceLabel="true">
             <template>
               <snippet>
                 <gmd:hierarchyLevel>
@@ -546,20 +559,10 @@
                 </gmd:hierarchyLevel>
               </snippet>
             </template>
-          </action>
+          </action>-->
 
-          <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
-
-
-          <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-            gmd:descriptiveKeywords
-            [gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'INSPIRE Service taxonomy']"> </field>
-          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
-
-
-          <field name="url" templateModeOnly="true" notDisplayedIfMissing="true"
+            <!-- Adresa izvora-->
+<!--          <field name="url" templateModeOnly="true" notDisplayedIfMissing="true"
             xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions
             /gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"
             del="../..">
@@ -575,7 +578,7 @@
             </template>
           </field>
 
-          <action type="add" name="url" or="onLine"
+          <action type="add" name="url" or="onLine" forceLabel="true"
             in="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions">
             <template>
               <snippet>
@@ -588,78 +591,43 @@
                 </gmd:onLine>
               </snippet>
             </template>
-          </action>
+          </action>-->
 
-          <!-- Resource identifier for dataset, service
-          and add action to compute it if not defined. -->
-          <field name="identifier" templateModeOnly="true" notDisplayedIfMissing="true"
+          <!-- Resource identifier for dataset, service and add action to compute it if not defined. -->
+          <!-- Jedinstvena oznaka izvora -->
+          <field name="identifier" templateModeOnly="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier"
             del="."
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            >
             <template>
               <values>
-                <key label="code"
-                     xpath="gmd:MD_Identifier/gmd:code/gco:CharacterString"
-                     tooltip="gmd:code|gmd:MD_Identifier"/>
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier"/>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
               </values>
               <snippet>
                 <gmd:identifier>
-                  <gmd:MD_Identifier>
-                    <gn:copy select="gmd:authority"/>
+                  <gmd:RS_Identifier>
                     <gmd:code>
                       <gco:CharacterString>{{code}}</gco:CharacterString>
                     </gmd:code>
-                  </gmd:MD_Identifier>
-                </gmd:identifier>
-              </snippet>
-            </template>
-          </field>
-          <field name="identifier" templateModeOnly="true"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier"
-            del="."
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0">
-            <template>
-              <values>
-                <key label="code"
-                     xpath="gmd:MD_Identifier/gmd:code/gco:CharacterString"
-                     tooltip="gmd:code|gmd:MD_Identifier"/>
-              </values>
-              <snippet>
-                <gmd:identifier>
-                  <gmd:MD_Identifier>
-                    <gmd:code>
-                      <gco:CharacterString>{{code}}</gco:CharacterString>
-                    </gmd:code>
-                  </gmd:MD_Identifier>
+                    <gmd:codeSpace>
+                      <gco:CharacterString>{{codeSpace}}</gco:CharacterString>
+                    </gmd:codeSpace>
+                    <gmd:version>
+                      <gco:CharacterString>{{version}}</gco:CharacterString>
+                    </gmd:version>
+                  </gmd:RS_Identifier>
                 </gmd:identifier>
               </snippet>
             </template>
           </field>
 
-          <action type="add" name="identifier" or="identifier"
-                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation">
-            <template>
-              <snippet>
-                <gmd:identifier>
-                  <gmd:MD_Identifier>
-                    <gmd:code>
-                      <gco:CharacterString></gco:CharacterString>
-                    </gmd:code>
-                  </gmd:MD_Identifier>
-                </gmd:identifier>
-              </snippet>
-            </template>
-          </action>
-
-          <action type="batch" process="add-resource-id"
+<!--          <action type="batch" process="add-resource-id"
                   if="count(gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/
-            gmd:identifier[ends-with(gmd:MD_Identifier/gmd:code/gco:CharacterString, //gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString)]) = 0"/>
-
-
-
-
-
-          <field name="encoding" templateModeOnly="true" notDisplayedIfMissing="true"
+            gmd:identifier[ends-with(gmd:MD_Identifier/gmd:code/gco:CharacterString, //gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString)]) = 0"/>-->
+           
+<!--          <field name="encoding" templateModeOnly="true" notDisplayedIfMissing="true"
             xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat"
             del=".">
             <template>
@@ -690,7 +658,7 @@
             </template>
           </field>
 
-          <action type="add" name="encoding" or="distributionFormat"
+          <action type="add" name="encoding" or="distributionFormat" forceLabel="true"
             in="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution">
             <template>
               <snippet>
@@ -706,7 +674,90 @@
                 </gmd:distributionFormat>
               </snippet>
             </template>
+          </action>-->
+          
+          <!-- Jezik izvora-->
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification[gmd:language]"
+            del=".">
+            <action type="add" name="srcLanguage" or="language" forceLabel="true"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+                <template>
+                    <snippet>
+			<gmd:language>
+                            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
+			</gmd:language>
+                    </snippet>
+                </template>
+            </action>
+          </field>
+          
+          <!-- Koordinatni referentni sustav -->
+          <field name="rsIdentifier" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier"
+            del="../..">
+            <template>
+              <values>
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier"/>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
+              </values>
+              <snippet>
+                <gmd:referenceSystemIdentifier>
+                  <gmd:RS_Identifier>
+                    <gmd:code>
+                      <gco:CharacterString>{{code}}</gco:CharacterString>
+                    </gmd:code>
+                    <gmd:codeSpace>
+                      <gco:CharacterString>{{codeSpace}}</gco:CharacterString>
+                    </gmd:codeSpace>
+                    <gmd:version>
+                      <gco:CharacterString>{{version}}</gco:CharacterString>
+                    </gmd:version>
+                  </gmd:RS_Identifier>
+                </gmd:referenceSystemIdentifier>
+              </snippet>
+            </template>
+          </field>
+
+
+          <action type="add" name="rsIdentifier" addDirective="data-gn-crs-selector" forceLabel="true"
+            or="referenceSystemInfo" in="/gmd:MD_Metadata">
+            <template>
+              <snippet>
+                <gmd:referenceSystemInfo>
+                  <gmd:MD_ReferenceSystem>
+                    <gmd:referenceSystemIdentifier>
+                      <gmd:RS_Identifier>
+                        <gmd:code>
+                          <gco:CharacterString/>
+                        </gmd:code>
+                        <gmd:codeSpace>
+                          <gco:CharacterString>hr:nipp:crs</gco:CharacterString>
+                        </gmd:code>
+                        <gmd:version>
+                          <gco:CharacterString>1.0</gco:CharacterString>
+                        </gmd:version>
+                     </gmd:RS_Identifier>
+                    </gmd:referenceSystemIdentifier>
+                  </gmd:MD_ReferenceSystem>
+                </gmd:referenceSystemInfo>
+              </snippet>
+            </template>
           </action>
+
+          <!-- Kategorizacija -->
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory"/>
+
+          <!-- Ključne riječi -->
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords
+            [gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'INSPIRE Service taxonomy']"> </field>
+          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
 
           <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
@@ -846,54 +897,7 @@
             </template>
           </action>
 
-          <field name="rsIdentifier" templateModeOnly="true"
-            xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier"
-            del="../..">
-            <template>
-              <values>
-                <key label="code"
-                     xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString"
-                     tooltip="gmd:MD_ReferenceSystem"/>
-                <!-- TODO: Get the helper -->
-              </values>
-              <snippet>
-                <gmd:referenceSystemIdentifier>
-                  <gmd:RS_Identifier>
-                    <gn:copy select="gmd:authority"/>
-                    <gmd:code>
-                      <gco:CharacterString>{{code}}</gco:CharacterString>
-                    </gmd:code>
-                    <gn:copy select="gmd:codeSpace"/>
-                    <gn:copy select="gmd:version"/>
-                  </gmd:RS_Identifier>
-                </gmd:referenceSystemIdentifier>
-              </snippet>
-            </template>
-          </field>
-
-
-          <action type="add" name="rsIdentifier" addDirective="data-gn-crs-selector"
-            or="referenceSystemInfo" in="/gmd:MD_Metadata">
-            <template>
-              <snippet>
-                <gmd:referenceSystemInfo>
-                  <gmd:MD_ReferenceSystem>
-                    <gmd:referenceSystemIdentifier>
-                      <gmd:RS_Identifier>
-                        <gmd:code>
-                          <gco:CharacterString/>
-                        </gmd:code>
-                      </gmd:RS_Identifier>
-                    </gmd:referenceSystemIdentifier>
-                  </gmd:MD_ReferenceSystem>
-                </gmd:referenceSystemInfo>
-              </snippet>
-            </template>
-          </action>
-
-
-
-
+          <!-- Vremenska poveznica-->
           <section name="referenceDate">
             <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/
               gmd:date"/>
@@ -989,6 +993,7 @@
             </template>
           </field>
 
+          <!-- Kvaliteta -->
           <field name="lineage"
             xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement"/>
 
@@ -1002,7 +1007,7 @@
               </snippet>
             </template>
           </action>
-          <action type="add" name="lineage" or="lineage"
+<!--          <action type="add" name="lineage" or="lineage"
                   in="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality">
             <template>
               <snippet>
@@ -1015,7 +1020,7 @@
                 </gmd:lineage>
               </snippet>
             </template>
-          </action>
+          </action>-->
           <!--<field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution"
             or="spatialResolution" in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
@@ -1065,7 +1070,7 @@
           </action>
 
 
-
+          <!-- Usklađenost -->
           <field name="conformity" templateModeOnly="true"
                  xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/
                     gmd:report/gmd:DQ_DomainConsistency/gmd:result"
@@ -1181,17 +1186,29 @@
             </template>
           </action>
 
-
-
-
+          <!-- Use constraints -->
           <field
-              name="useLimitation"
-              xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
-                gmd:resourceConstraints/gmd:MD_Constraints/gmd:useLimitation"
-              if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0"/>
+              name="useLimitation" templateModeOnly="true"
+              xpath="/gmd:MD_Metadata//gmd:resourceConstraints[gmd:MD_Constraints/gmd:useLimitation]"
+                del="."
+          />
+          <template>
+              <values>
+                  <key label="useLimitation" xpath="gmd:MD_Constraints/gmd:useLimitation" tooltip="gmd:useLimitation"/>
+              </values>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_Constraints>
+                    <gmd:useLimitation>
+                        <gco:CharacterString>{{useLimitation}}</gco:CharacterString>
+                    </gmd:useLimitation>
+                  </gmd:MD_Constraints>
+                </gmd:resourceConstraints>
+                  </gmd:resourceConstraints>
+              </snippet>
+          </template>
           <action type="add" name="useLimitation" or="resourceConstraints"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification" forceLabel="true">
             <template>
               <snippet>
                 <gmd:resourceConstraints>
@@ -1205,97 +1222,108 @@
             </template>
           </action>
 
-          <field
-              name="useLimitation"
-              xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-                gmd:resourceConstraints/gmd:MD_Constraints/gmd:useLimitation"
-              if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0"/>
-          <action type="add" name="useLimitation" or="resourceConstraints"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0">
-            <template>
-              <snippet>
-                <gmd:resourceConstraints>
-                  <gmd:MD_Constraints>
-                    <gmd:useLimitation>
-                      <gco:CharacterString/>
-                    </gmd:useLimitation>
-                  </gmd:MD_Constraints>
-                </gmd:resourceConstraints>
-              </snippet>
-            </template>
-          </action>
-
-
-
-
-
-          <field name="accessConstraints"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
-            gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0"/>
-
-          <action type="add" name="accessConstraints" or="resourceConstraints"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
-            <template>
-              <snippet>
-                <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                    <gmd:accessConstraints>
-                      <gmd:MD_RestrictionCode
-                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
-                        codeListValue="otherRestrictions"/>
-                    </gmd:accessConstraints>
-                    <gmd:useConstraints/>
-                    <gmd:otherConstraints gco:nilReason="missing">
-                      <gco:CharacterString/>
-                    </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
-                </gmd:resourceConstraints>
-              </snippet>
-            </template>
-          </action>
-
-
-          <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-            gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0"/>
-
-          <action type="add" name="accessConstraints" or="resourceConstraints"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0">
-            <template>
-              <snippet>
-                <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                    <gmd:accessConstraints>
-                      <gmd:MD_RestrictionCode
-                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
-                        codeListValue="otherRestrictions"/>
-                    </gmd:accessConstraints>
-                    <gmd:useConstraints/>
-                    <gmd:otherConstraints gco:nilReason="missing">
-                      <gco:CharacterString/>
-                    </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
-                </gmd:resourceConstraints>
-              </snippet>
-            </template>
-          </action>
-
-
-
-
-          <field
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet"> </field>
-
-
-          <field name="pointOfContact" templateModeOnly="true" notDisplayedIfMissing="true"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact"
+          <!-- Access constraints-->
+          <field name="accessConstraints" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata//gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:accessConstraints]"
             del="."
+          />
+          <field name="otherConstraints"
+            xpath="/gmd:MD_Metadata//gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
+            del="."
+          />
+          <template>
+              <values>
+                  <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints"/>
+                  <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints]" tooltip="gmd:otherConstraints]"/>
+              </values>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_LegalConstraints>
+                    <gmd:accessConstraints>
+                      <gmd:MD_RestrictionCode
+                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
+                        codeListValue="{{accessConstraints}}"/>
+                    </gmd:accessConstraints>
+                    <gmd:useConstraints/>
+                    <gmd:otherConstraints>
+                        <gco:CharacterString>{{otherConstraints}}</gco:CharacterString>
+                    </gmd:otherConstraints>
+                  </gmd:MD_LegalConstraints>
+                </gmd:resourceConstraints>
+              </snippet>
+          </template>
+          <action type="add" name="accessConstraints" or="resourceConstraints"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
             if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_LegalConstraints>
+                    <gmd:accessConstraints>
+                      <gmd:MD_RestrictionCode
+                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
+                        codeListValue="otherRestrictions"/>
+                    </gmd:accessConstraints>
+                    <gmd:useConstraints/>
+                    <gmd:otherConstraints gco:nilReason="missing">
+                      <gco:CharacterString/>
+                    </gmd:otherConstraints>
+                  </gmd:MD_LegalConstraints>
+                </gmd:resourceConstraints>
+              </snippet>
+            </template>
+          </action>
+
+          <!-- Classification constraints -->
+          <field name="classification" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata//gmd:resourceConstraints[gmd:MD_SecurityConstraints/gmd:classification]"
+            del="."
+          />
+          <template>
+              <values>
+                  <key label="accessConstraints" xpath="gmd:MD_SecurityConstraints/gmd:classification" tooltip="gmd:classification]"/>
+              </values>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_SecurityConstraints>
+                    <gmd:classification>
+                        <gmd:MD_ClassificationCode
+                        codeList="./resources/codeList.xml#
+                        MD_ClassificationCode" codeListValue="{{classification}}"/>
+                    </gmd:classification>
+                  </gmd:MD_SecurityConstraints>
+                </gmd:resourceConstraints>
+              </snippet>
+          </template>
+          <action type="add" name="accessConstraints" or="resourceConstraints"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_LegalConstraints>
+                    <gmd:accessConstraints>
+                      <gmd:MD_RestrictionCode
+                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
+                        codeListValue="otherRestrictions"/>
+                    </gmd:accessConstraints>
+                    <gmd:useConstraints/>
+                    <gmd:otherConstraints gco:nilReason="missing">
+                      <gco:CharacterString/>
+                    </gmd:otherConstraints>
+                  </gmd:MD_LegalConstraints>
+                </gmd:resourceConstraints>
+              </snippet>
+            </template>
+          </action>
+
+<!--          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet"> </field>-->
+
+          <field name="pointOfContact" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata//gmd:pointOfContact"
+            del="."
+            >
             <template>
               <values readonlyIf="count(@xlink:href) > 0">
                 <key label="organisationName"
@@ -1332,9 +1360,6 @@
                             </gmd:electronicMailAddress>
                           </gmd:CI_Address>
                         </gmd:address>
-                        <gn:copy select="gmd:onlineResource"/>
-                        <gn:copy select="gmd:hoursOfService"/>
-                        <gn:copy select="gmd:contactInstructions"/>
                       </gmd:CI_Contact>
                     </gmd:contactInfo>
                     <gmd:role>
@@ -1357,74 +1382,6 @@
                     data-template-type="contact"
                     data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
           </action>
-
-
-          <field name="pointOfContact" templateModeOnly="true" notDisplayedIfMissing="true"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact"
-            del="."
-            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0">
-            <template>
-              <values readonlyIf="count(@xlink:href) > 0">
-                <key label="organisationName"
-                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
-                <key label="electronicMailAddress"
-                  xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
-                  gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
-                  use="email"/>
-                <key label="role"
-                  xpath="gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue">
-                  <codelist name="gmd:CI_RoleCode"/>
-                </key>
-              </values>
-              <snippet>
-                <gmd:pointOfContact>
-                  <gmd:CI_ResponsibleParty>
-                    <gn:copy select="gmd:individualName"/>
-                    <gmd:organisationName>
-                      <gco:CharacterString>{{organisationName}}</gco:CharacterString>
-                    </gmd:organisationName>
-                    <gn:copy select="gmd:positionName"/>
-                    <gmd:contactInfo>
-                      <gmd:CI_Contact>
-                        <gn:copy select="gmd:phone"/>
-                        <gmd:address>
-                          <gmd:CI_Address>
-                            <gn:copy select="gmd:deliveryPoint"/>
-                            <gn:copy select="gmd:city"/>
-                            <gn:copy select="gmd:administrativeArea"/>
-                            <gn:copy select="gmd:postalCode"/>
-                            <gn:copy select="gmd:country"/>
-                            <gmd:electronicMailAddress>
-                              <gco:CharacterString>{{electronicMailAddress}}</gco:CharacterString>
-                            </gmd:electronicMailAddress>
-                          </gmd:CI_Address>
-                        </gmd:address>
-                        <gn:copy select="gmd:onlineResource"/>
-                        <gn:copy select="gmd:hoursOfService"/>
-                        <gn:copy select="gmd:contactInstructions"/>
-                      </gmd:CI_Contact>
-                    </gmd:contactInfo>
-                    <gmd:role>
-                      <gmd:CI_RoleCode
-                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"
-                        codeListValue="{{role}}"/>
-                    </gmd:role>
-                  </gmd:CI_ResponsibleParty>
-                </gmd:pointOfContact>
-              </snippet>
-            </template>
-          </field>
-
-
-          <action type="add" name="pointOfContact" addDirective="data-gn-directory-entry-selector"
-            or="pointOfContact"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
-            <directiveAttributes
-                    data-template-add-action="true"
-                    data-template-type="contact"
-                    data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
-          </action>
-
         </section>
 
         <section name="metadata">
@@ -1491,7 +1448,6 @@
                     data-template-type="contact"
                     data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
           </action>
-
 
           <field xpath="/gmd:MD_Metadata/gmd:dateStamp"/>
         </section>

@@ -1619,14 +1619,14 @@
         <label>Telefon</label>
         <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
     </element>
-    <element name="gmd:phone" id="407.0">
+<!--    <element name="gmd:phone" id="407.0">
         <label>Telefon</label>
         <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
     </element>
     <element name="gmd:phone" id="526.0">
         <label>Telefon</label>
         <description>Telefonski brojevi odgovornih organizacija ili pojedinaca.</description>
-    </element>
+    </element>-->
     <element name="gmd:plannedAvailableDateTime" id="300.0">
         <label>Planirano dostupno vrijeme</label>
         <description>Planirani datum i vrijeme kada će skup podataka biti dostupan (CCYY-MM-DDThh:mm:ss).</description>
