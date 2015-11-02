@@ -311,5 +311,6 @@
     "tematskoPodpodrucje":"Tematsko podpodručje",
     "korisniciPodataka":"Korisnik podataka",
     "nazivIzvjestaja":"Naziv izvještaja",
-    "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća"
+    "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća",
+    "inspireConformance": "Usklađenost sa INSPIRE"
 }

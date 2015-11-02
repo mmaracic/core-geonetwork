@@ -85,7 +85,7 @@
   <add-extent-from-geokeywords>Izračunavanje prostornog obuhvata iz ključnih riječi</add-extent-from-geokeywords>
   <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
   
-  <AZO>Agencija za zaštitu okoliša</AZO>
+  <HAOP>Hrvatska agencija za okoliš i prirodu</HAOP>
   <jedinstveniOznacivacIzvora>Jedinstveni označivač izvora</jedinstveniOznacivacIzvora>
   <akronim>Akronim</akronim>
   <tematskoPodrucje>Tematsko područje</tematskoPodrucje>
