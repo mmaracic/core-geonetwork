@@ -84,6 +84,8 @@
   <add-resource-idHelp>Identifikator izvora sastoji se od URL-a kataloga i  identifikatora metapodataka (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).</add-resource-idHelp>
   <add-extent-from-geokeywords>Izračunavanje prostornog obuhvata iz ključnih riječi</add-extent-from-geokeywords>
   <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
+  <category>Kategorizacija</category>
+  <keywords>Keywords</keywords>
   
   <HAOP>Hrvatska agencija za okoliš i prirodu</HAOP>
   <jedinstveniOznacivacIzvora>Jedinstveni označivač izvora</jedinstveniOznacivacIzvora>

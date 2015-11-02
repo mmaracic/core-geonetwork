@@ -638,7 +638,7 @@
          </field>
          
           <!-- Koordinatni referentni sustav -->
-          <field name="rsIdentifier" templateModeOnly="true"
+          <field name="rsIdentifier" templateModeOnly="true" notDisplayedIfMissing="false"
             xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier"
             del="../..">
             <template>
@@ -690,7 +690,7 @@
           </field>
 
           <!-- Data format -->
-          <field name="encoding" templateModeOnly="true" notDisplayedIfMissing="false"
+          <field name="format" templateModeOnly="true" notDisplayedIfMissing="false"
             xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat"
             del="."
             if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0">
@@ -742,7 +742,7 @@
           <!-- Operates on-->
           <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn/@xlink:href"
-            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification>0"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
             del="."
             notDisplayedIfMissing="false" 
           />
@@ -795,8 +795,305 @@
                 </template>
             </action>           
         </section>
-        <section name="Kategorija">
+        
+        <!-- Category -->
+        <section name="category">
+          <field name="serviceType"  templateModeOnly="true" notDisplayedIfMissing="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+          >
+            <template>
+                <values>
+                  <key label="service" xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName" tooltip="srv:serviceType"/>
+                </values>
+                <snippet>
+                    <srv:serviceType>
+                        <gco:LocalName>{{service}}</gco:LocalName>
+                    </srv:serviceType>
+                </snippet>
+            </template>
+          </field>
+          <field name="dataType" templateModeOnly="true" notDisplayedIfMissing="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+            del="."
+          >
+            <template>
+                <values>
+                  <key label="dataset" xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode" tooltip="gmd:topicCategory"/>
+                </values>
+                <snippet>
+                    <gmd:topicCategory>
+                       <gmd:MD_TopicCategoryCode>{{dataset}}</gmd:MD_TopicCategoryCode>
+                   </gmd:topicCategory>
+                </snippet>
+            </template>
+            <action type="add" name="dataType" or="topicCategory" forceLabel="true"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0">
+            <template>
+                <snippet>
+                    <gmd:topicCategory>
+                        <gmd:MD_TopicCategoryCode>{{dataset}}</gmd:MD_TopicCategoryCode>
+                    </gmd:topicCategory>
+                </snippet>
+            </template>
+            </action>
+          </field>
+        </section>
+        
+        <section name="keywords">
+          <field notDisplayedIfMissing="false"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords
+            [gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'INSPIRE Service taxonomy']"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"> 
+          </field>
+          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
+
+          <field notDisplayedIfMissing="false"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode/@codeListValue='theme'
+            and not(gmd:thesaurusName)]/gmd:keyword"
+            or="keyword"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode/@codeListValue='theme'
+            and not(gmd:thesaurusName)]"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+          />
+
+          <field notDisplayedIfMissing="false"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
+            gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[not(../gmd:thesaurusName)]"
+            or="keyword"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
+            gmd:descriptiveKeywords/gmd:MD_Keywords[not(gmd:thesaurusName)]"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+          />
+
+          <!-- INSPIRE Themes -->
+          <field notDisplayedIfMissing="false"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/
+            gmd:descriptiveKeywords
+            [contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes')]"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+          />
+          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
+          <action type="add"
+                  name="inspireTheme"
+                  or="descriptiveKeywords"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/*"
+                  if="count(gmd:MD_Metadata/gmd:identificationInfo/*/
+                        gmd:descriptiveKeywords[
+                          contains(gmd:MD_Keywords/gmd:thesaurusName/
+                                      gmd:CI_Citation/gmd:title/gco:CharacterString,
+                                   'INSPIRE themes')]) = 0">
+            <template>
+              <snippet>
+                <gmd:descriptiveKeywords>
+                  <gmd:MD_Keywords>
+                    <gmd:keyword>
+                      <gco:CharacterString/>
+                    </gmd:keyword>
+                    <gmd:type>
+                      <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode"
+                                              codeListValue="theme"/>
+                    </gmd:type>
+                    <gmd:thesaurusName>
+                      <gmd:CI_Citation>
+                        <gmd:title>
+                          <gco:CharacterString>GEMET - INSPIRE themes, version 1.0</gco:CharacterString>
+                        </gmd:title>
+                        <gmd:date>
+                          <gmd:CI_Date>
+                            <gmd:date>
+                              <gco:Date>2008-06-01</gco:Date>
+                            </gmd:date>
+                            <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                            </gmd:dateType>
+                          </gmd:CI_Date>
+                        </gmd:date>
+                        <gmd:identifier>
+                          <gmd:MD_Identifier>
+                            <gmd:code>
+                              <gmx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.theme.inspire-theme">geonetwork.thesaurus.external.theme.inspire-theme</gmx:Anchor>
+                            </gmd:code>
+                          </gmd:MD_Identifier>
+                        </gmd:identifier>
+                      </gmd:CI_Citation>
+                    </gmd:thesaurusName>
+                  </gmd:MD_Keywords>
+                </gmd:descriptiveKeywords>
+              </snippet>
+            </template>
+          </action>
+        </section>
+        
+          <section name="bboxesSection">
+            <field
+              xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
+              gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox"
+              if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+            >
+                <action type="add" name="extent" or="extent"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+                  <template>
+                    <snippet>
+                      <gmd:extent>
+                        <gmd:EX_Extent>
+                          <gmd:geographicElement>
+                            <gmd:EX_GeographicBoundingBox>
+                              <gmd:westBoundLongitude>
+                                <gco:Decimal/>
+                              </gmd:westBoundLongitude>
+                              <gmd:eastBoundLongitude>
+                                <gco:Decimal/>
+                              </gmd:eastBoundLongitude>
+                              <gmd:southBoundLatitude>
+                                <gco:Decimal/>
+                              </gmd:southBoundLatitude>
+                              <gmd:northBoundLatitude>
+                                <gco:Decimal/>
+                              </gmd:northBoundLatitude>
+                            </gmd:EX_GeographicBoundingBox>
+                          </gmd:geographicElement>
+                        </gmd:EX_Extent>
+                      </gmd:extent>
+                    </snippet>
+                  </template>
+                </action>
+            </field>
             
+            <field
+              xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+              srv:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox"
+              if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+            >
+                <action type="add" name="extent" or="extent"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
+                  <template>
+                    <snippet>
+                      <srv:extent>
+                        <gmd:EX_Extent>
+                          <gmd:geographicElement>
+                            <gmd:EX_GeographicBoundingBox>
+                              <gmd:westBoundLongitude>
+                                <gco:Decimal/>
+                              </gmd:westBoundLongitude>
+                              <gmd:eastBoundLongitude>
+                                <gco:Decimal/>
+                              </gmd:eastBoundLongitude>
+                              <gmd:southBoundLatitude>
+                                <gco:Decimal/>
+                              </gmd:southBoundLatitude>
+                              <gmd:northBoundLatitude>
+                                <gco:Decimal/>
+                              </gmd:northBoundLatitude>
+                            </gmd:EX_GeographicBoundingBox>
+                          </gmd:geographicElement>
+                        </gmd:EX_Extent>
+                      </srv:extent>
+                    </snippet>
+                  </template>
+                </action>
+            </field>
+        </section>
+        
+        <!-- Vremenska poveznica-->
+        <section name="referenceDate">
+          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/
+            gmd:date">
+            <action type="add" name="referenceDate" or="date"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation">
+                <template>
+                  <snippet>
+                    <gmd:date>
+                      <gmd:CI_Date>
+                        <gmd:date>
+                          <gco:Date/>
+                        </gmd:date>
+                        <gmd:dateType>
+                          <gmd:CI_DateTypeCode
+                                  codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                                  codeListValue="revision"/>
+                        </gmd:dateType>
+                      </gmd:CI_Date>
+                    </gmd:date>
+                  </snippet>
+                </template>
+              </action>
+          </field>
+          <field name="temporalRangeSection" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement"
+            if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <values>
+                <!-- -Need a * for gml:TimePeriodTypeCHOICE_ELEMENT2 added by editor enumerated tree -->
+                <key label="beginPosition"
+                  xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:beginPosition"
+                  use="gn-date-picker"
+                  tooltip="gmd:extent|gmd:EX_TemporalExtent">
+                  <directiveAttributes data-tag-name="gml:beginPosition"/>
+                </key>
+                <key label="endPosition"
+                  xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition"
+                  use="gn-date-picker"
+                  tooltip="gmd:extent|gmd:EX_TemporalExtent"
+                >
+                  <directiveAttributes
+                      data-tag-name="gml:endPosition"
+                      data-indeterminate-position="eval#gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition/@indeterminatePosition"/>
+                </key>
+              </values>
+              <snippet>
+                <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                    <gmd:extent>
+                      <gml:TimePeriod gml:id="">
+                        {{beginPosition}}
+                        {{endPosition}}
+                      </gml:TimePeriod>
+                    </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+                </gmd:temporalElement>
+              </snippet>
+            </template>
+          </field>
+
+          <field name="temporalRangeSection" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement"
+            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0">
+            <template>
+              <values>
+                <key label="beginPosition"
+                     xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:beginPosition"
+                     use="gn-date-picker"
+                     tooltip="gmd:extent|gmd:EX_TemporalExtent"/>
+                <key label="endPosition"
+                     xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition"
+                     use="gn-date-picker"
+                     tooltip="gmd:extent|gmd:EX_TemporalExtent"
+                    />
+                <key label="indeterminatePosition"
+                     xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition/@indeterminatePosition"
+                     use="codelist"/>
+              </values>
+              <snippet>
+                <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                    <gmd:extent>
+                      <gml:TimePeriod gml:id="">
+                        <gml:beginPosition>{{beginPosition}}</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="{{indeterminatePosition}}">{{endPosition}}</gml:endPosition>
+                      </gml:TimePeriod>
+                    </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+                </gmd:temporalElement>
+              </snippet>
+            </template>
+          </field>
         </section>
       </tab>
     </view>
