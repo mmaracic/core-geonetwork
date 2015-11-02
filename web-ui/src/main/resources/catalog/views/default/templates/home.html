@@ -51,6 +51,10 @@
             <input type="radio" name="browse" value="areas" data-ng-model="browse"/>
             <span data-translate="">areas</span>
           </label>
+          <label data-ng-show="searchInfo.facet['inspireConformance'].length > 0">
+            <input type="radio" name="browse" value="INSPIRE" data-ng-model="browse"/>
+            <span data-translate="">INSPIRE</span>
+          </label>
           <!--<label data-ng-show="searchInfo.facet['categories'].length > 0">
             <input type="radio" name="browse" value="cat" data-ng-model="browse"/>
             <span data-translate="">categories</span>
@@ -80,6 +84,16 @@
                  data-ng-show="browse === 'areas'">
               <a class="thumbnail gn-icon-bg" data-ng-href="#/search?TematskoPodrucje={{facet['@name']}}">
                 <img class="azo_icon" ng-src="{{getAreaSymbol(facet['@name']).url}}" alt="Image {{facet['@name']}} does not exist."><br/>
+                <span class="gn-icon-label">{{facet['@name']}}</span>
+                <span class="badge">{{facet['@count']}}</span>
+              </a>
+            </div>
+            <!--  INSPIRE compliancy-->
+            <div data-ng-repeat="(key, facet) in searchInfo.facet['inspireConformance']"
+                 class="col-xs-6 col-sm-4 col-lg-3"
+                 data-ng-show="browse === 'INSPIRE'">
+              <a class="thumbnail gn-icon-bg" data-ng-href="#/search?inspireConformance={{facet['@name']}}">
+                <img class="azo_icon" ng-src="{{getINSPIRESymbol(facet['@name']).url}}" alt="Image {{facet['@name']}} does not exist."><br/>
                 <span class="gn-icon-label">{{facet['@name']}}</span>
                 <span class="badge">{{facet['@count']}}</span>
               </a>

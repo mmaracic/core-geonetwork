@@ -153,18 +153,33 @@
             var baseUrl=location.pathname.split('/')[1];
             var azo_image = null;
             switch(podrucje.toLowerCase()){
-                case 'zrak': azo_image={url:'/'+baseUrl+'/images/azo/zrak.png', label:podrucje}; break;
-                case 'kopnene vode': azo_image={url:'/'+baseUrl+'/images/azo/voda.png', label:podrucje}; break;
-                case 'more': azo_image={url:'/'+baseUrl+'/images/azo/more.png', label:podrucje}; break;
-                case 'priroda': azo_image={url:'/'+baseUrl+'/images/azo/flora_fauna.png', label:podrucje}; break;
-                case 'pedosfera i litosfera': azo_image={url:'/'+baseUrl+'/images/azo/tlo.png', label:podrucje}; break;
-                case 'otpad': azo_image={url:'/'+baseUrl+'/images/azo/otpad.png', label:podrucje}; break;
-                case 'industrija i energetika': azo_image={url:'/'+baseUrl+'/images/azo/energija.png', label:podrucje}; break;
-                case 'zdravlje i sigurnost': azo_image={url:'/'+baseUrl+'/images/azo/okoliš_zdravlje.png', label:podrucje}; break;
-                case 'opće teme zaštite okoliša': azo_image={url:'/'+baseUrl+'/images/azo/stanovništvo.png', label:podrucje}; break;
-                case 'klimatske promjene': azo_image={url:'/'+baseUrl+'/images/azo/klima.png', label:podrucje}; break;
+                case 'air': azo_image={url:'/'+baseUrl+'/images/azo/zrak.png', label:podrucje}; break;
+                case 'rivers and lakes': azo_image={url:'/'+baseUrl+'/images/azo/voda.png', label:podrucje}; break;
+                case 'sea': azo_image={url:'/'+baseUrl+'/images/azo/more.png', label:podrucje}; break;
+                case 'nature': azo_image={url:'/'+baseUrl+'/images/azo/flora_fauna.png', label:podrucje}; break;
+                case 'lithosphere and pedosphere': azo_image={url:'/'+baseUrl+'/images/azo/tlo.png', label:podrucje}; break;
+                case 'waste': azo_image={url:'/'+baseUrl+'/images/azo/otpad.png', label:podrucje}; break;
+                case 'industry and energetics': azo_image={url:'/'+baseUrl+'/images/azo/energija.png', label:podrucje}; break;
+                case 'health and security': azo_image={url:'/'+baseUrl+'/images/azo/okolis_zdravlje.png', label:podrucje}; break;
+                case 'general environment protection': azo_image={url:'/'+baseUrl+'/images/azo/stanovnistvo.png', label:podrucje}; break;
+                case 'climate changes': azo_image={url:'/'+baseUrl+'/images/azo/klima.png', label:podrucje}; break;
             }
             return azo_image;
+          };
+          
+          /**
+           * Returns inspire symbol image
+           * 
+           * @returns {CatController_L40.$scope.getAreaSymbol.azo_image}
+           */
+          $scope.getInspireSymbol = function(conformity){
+            var baseUrl=location.pathname.split('/')[1];
+            var insp_image = null;
+            switch(conformity.toLowerCase()){
+                case 'true': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire.png', label:conformity}; break;
+                case 'false': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire_not.png', label:conformity}; break;
+            }
+            return insp_image;
           };
           
         var userFn = {
