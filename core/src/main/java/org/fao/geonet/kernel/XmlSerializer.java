@@ -44,6 +44,7 @@ import org.jdom.Namespace;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.util.Assert;
 
 /**
  * This class is responsible of reading and writing xml on the database. 
@@ -291,8 +292,9 @@ public abstract class XmlSerializer {
 		// that aren't already in use from the xlink cache. For now we
 		// rely on the admin clearing cache and reindexing regularly
         _metadataRepository.delete(Integer.valueOf(id));
+        _metadataRepository.flush();
 
-//        Assert.isTrue(!_metadataRepository.exists(Integer.valueOf(id)), "Metadata should have been deleted");
+        Assert.isTrue(!_metadataRepository.exists(Integer.valueOf(id)), "Metadata should have been deleted");
 
 	}
 
