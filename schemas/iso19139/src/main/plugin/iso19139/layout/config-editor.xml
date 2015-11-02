@@ -244,7 +244,7 @@
       <tab id="inspire" default="true" mode="flat">
           
         <!-- AZO section -->
-        <section name="AZO">
+        <section name="HAOP">
             <field name="jedinstveniOznacivacIzvora"
                 templateModeOnly="true" notDisplayedIfMissing="false"
                 xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='JedinstveniOznacivacIzvora']"
@@ -574,6 +574,229 @@
                 </template>
             </action>
           </field>
+
+          <!-- Abstract-->
+          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract"
+                notDisplayedIfMissing="false"
+          />
+          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract"
+                notDisplayedIfMissing="false"
+          />
+           <!-- Metadata type-->
+          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"/>
+ 
+          <!-- Resource identifier for dataset, service and add action to compute it if not defined. -->
+          
+          <!-- Jedinstvena oznaka izvora -->
+          <field name="identifier" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier[gmd:RS_Identifier]"
+            del="."
+            notDisplayedIfMissing="false"
+            >
+            <template>
+              <values>
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier"/>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
+              </values>
+              <snippet>
+                <gmd:identifier>
+                  <gmd:RS_Identifier>
+                    <gmd:code>
+                      <gco:CharacterString>{{code}}</gco:CharacterString>
+                    </gmd:code>
+                    <gmd:codeSpace>
+                      <gco:CharacterString>{{codeSpace}}</gco:CharacterString>
+                    </gmd:codeSpace>
+                    <gmd:version>
+                      <gco:CharacterString>{{version}}</gco:CharacterString>
+                    </gmd:version>
+                  </gmd:RS_Identifier>
+                </gmd:identifier>
+              </snippet>
+            </template>
+           <action type="add" name="identifier" forceLabel="true"
+            or="identifier" in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation">
+            <template>
+              <snippet>
+                <gmd:identifier>
+                    <gmd:RS_Identifier>
+                      <gmd:code>
+                        <gco:CharacterString/>
+                      </gmd:code>
+                      <gmd:codeSpace>
+                        <gco:CharacterString>hr:nipp:crs</gco:CharacterString>
+                      </gmd:codeSpace>
+                      <gmd:version>
+                        <gco:CharacterString>1.0</gco:CharacterString>
+                      </gmd:version>
+                   </gmd:RS_Identifier>
+                </gmd:identifier>
+              </snippet>
+            </template>
+          </action>
+         </field>
+         
+          <!-- Koordinatni referentni sustav -->
+          <field name="rsIdentifier" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier"
+            del="../..">
+            <template>
+              <values>
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier"/>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
+              </values>
+              <snippet>
+                <gmd:referenceSystemIdentifier>
+                  <gmd:RS_Identifier>
+                    <gmd:code>
+                      <gco:CharacterString>{{code}}</gco:CharacterString>
+                    </gmd:code>
+                    <gmd:codeSpace>
+                      <gco:CharacterString>{{codeSpace}}</gco:CharacterString>
+                    </gmd:codeSpace>
+                    <gmd:version>
+                      <gco:CharacterString>{{version}}</gco:CharacterString>
+                    </gmd:version>
+                  </gmd:RS_Identifier>
+                </gmd:referenceSystemIdentifier>
+              </snippet>
+            </template>
+            <action type="add" name="rsIdentifier" addDirective="data-gn-crs-selector" forceLabel="true"
+              or="referenceSystemInfo" in="/gmd:MD_Metadata">
+              <template>
+                <snippet>
+                  <gmd:referenceSystemInfo>
+                    <gmd:MD_ReferenceSystem>
+                      <gmd:referenceSystemIdentifier>
+                        <gmd:RS_Identifier>
+                          <gmd:code>
+                            <gco:CharacterString/>
+                          </gmd:code>
+                          <gmd:codeSpace>
+                            <gco:CharacterString>hr:nipp:crs</gco:CharacterString>
+                          </gmd:codeSpace>
+                          <gmd:version>
+                            <gco:CharacterString>1.0</gco:CharacterString>
+                          </gmd:version>
+                       </gmd:RS_Identifier>
+                      </gmd:referenceSystemIdentifier>
+                    </gmd:MD_ReferenceSystem>
+                  </gmd:referenceSystemInfo>
+                </snippet>
+              </template>
+            </action>
+          </field>
+
+          <!-- Data format -->
+          <field name="encoding" templateModeOnly="true" notDisplayedIfMissing="false"
+            xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat"
+            del="."
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0">
+            <template>
+              <values>
+                <key label="format"
+                     xpath="gmd:MD_Format/gmd:name/gco:CharacterString"
+                     tooltip="gmd:name|gmd:MD_Format">
+                  <helper name="gmd:name" context="gmd:MD_Format"/>
+                </key>
+                <key label="format_version" xpath="gmd:MD_Format/gmd:version/gco:CharacterString"/>
+              </values>
+              <snippet>
+                <gmd:distributionFormat>
+                  <gmd:MD_Format>
+                    <gmd:name>
+                      <gco:CharacterString>{{format}}</gco:CharacterString>
+                    </gmd:name>
+                    <gmd:version>
+                      <gco:CharacterString>{{format_version}}</gco:CharacterString>
+                    </gmd:version>
+                    <gn:copy select="gmd:amendmentNumber"/>
+                    <gn:copy select="gmd:specification"/>
+                    <gn:copy select="gmd:fileDecompressionTechnique"/>
+                    <gn:copy select="gmd:formatDistributor"/>
+                  </gmd:MD_Format>
+                </gmd:distributionFormat>
+              </snippet>
+            </template>
+          </field>
+          <action type="add" name="encoding" or="distributionFormat" forceLabel="true"
+            in="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution">
+            <template>
+              <snippet>
+                <gmd:distributionFormat>
+                  <gmd:MD_Format>
+                    <gmd:name>
+                      <gco:CharacterString>GML</gco:CharacterString>
+                    </gmd:name>
+                    <gmd:version>
+                      <gco:CharacterString>3.2.1</gco:CharacterString>
+                    </gmd:version>
+                  </gmd:MD_Format>
+                </gmd:distributionFormat>
+              </snippet>
+            </template>
+          </action>
+
+          <!-- Operates on-->
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn/@xlink:href"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification>0"
+            del="."
+            notDisplayedIfMissing="false" 
+          />
+            <action type="add" name="operatesOn" or="operatesOn" forceLabel="true"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
+                    if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+            >
+                <template>
+                    <snippet>
+                        <srv:operatesOn/>
+                    </snippet>
+                </template>
+            </action>
+          
+          <!-- Jezik izvora-->
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+            del="."
+            notDisplayedIfMissing="false" 
+          />
+            <action type="add" name="srcLanguage" or="language" forceLabel="true"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+                    if="count(/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification)>0"
+            >
+                <template>
+                    <snippet>
+                        <gmd:language>
+                            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
+                        </gmd:language>
+                    </snippet>
+                </template>
+            </action>
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:language"
+            if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+            del="."
+            notDisplayedIfMissing="false"
+          />
+            <action type="add" name="srcLanguage" or="language" forceLabel="true"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
+                    if="count(/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification)>0"
+            >
+                <template>
+                    <snippet>
+			<gmd:language>
+                            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
+			</gmd:language>
+                    </snippet>
+                </template>
+            </action>           
+        </section>
+        <section name="Kategorija">
+            
         </section>
       </tab>
     </view>
