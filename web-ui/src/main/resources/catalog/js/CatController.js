@@ -170,6 +170,7 @@
           /**
            * Returns inspire symbol image
            * 
+           * @param {String} conformity description
            * @returns {CatController_L40.$scope.getAreaSymbol.azo_image}
            */
           $scope.getInspireSymbol = function(conformity){

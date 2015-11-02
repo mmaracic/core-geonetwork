@@ -686,7 +686,13 @@
 					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010') or
 					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification') or
 					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification'))">
-					<Field name="inspirerelated" string="on" store="false" index="true"/>
+					<Field name="inspirerelated" string="on" store="true" index="true"/>
+				</xsl:if>
+				<xsl:if test="(
+					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010')) and
+					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification')) and
+					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification')))">
+					<Field name="inspirerelated" string="off" store="true" index="true"/>
 				</xsl:if>
 			</xsl:if>
 			
@@ -706,6 +712,9 @@
 				<Field name="specificationDateType" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 		</xsl:for-each>
+                <xsl:if test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result) = 0">
+                        <Field name="inspirerelated" string="off" store="true" index="true"/>
+                </xsl:if>
 		<xsl:for-each select="gmd:dataQualityInfo/*/gmd:lineage/*/gmd:statement/gco:CharacterString">
 			<Field name="lineage" string="{string(.)}" store="true" index="true"/>
 		</xsl:for-each>
