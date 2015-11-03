@@ -28,7 +28,8 @@
   <contentInfo>Content</contentInfo>
   <portrayalCatalogueInfo>Portrayal</portrayalCatalogueInfo>
   <metadataConstraints>Md. constraints</metadataConstraints>
-  <metadataMaintenance>Md. maintenance</metadataMaintenance>
+  <metadataMaintenanceFreq>Md. maintenance frequency</metadataMaintenanceFreq>
+  <metadataMaintenanceNote>Md. maintenance note</metadataMaintenanceNote>
   <applicationSchemaInfo>Schema info</applicationSchemaInfo>
   <noThesaurusName>Keywords</noThesaurusName>
   <bboxesSection>Geographic coverage</bboxesSection>
@@ -80,12 +81,18 @@
   <spatialDistance>Spatial resolution (distance)</spatialDistance>
   <accessConstraints>Access constraints</accessConstraints>
   <useLimitation>Use limitation</useLimitation>
+  <classificationConstraints>Security constraints</classificationConstraints>
   <add-resource-id>Compute resource identifier</add-resource-id>
   <add-resource-idHelp>Compose the resource identifier using the catalog URL and the metadata identifier (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).</add-resource-idHelp>
   <add-extent-from-geokeywords>Compute extent from keyword</add-extent-from-geokeywords>
   <add-extent-from-geokeywordsHelp>Analyze each keyword of type place and add matching extent.</add-extent-from-geokeywordsHelp>
   <category>Category</category>
-  <keywords>Ključne riječi</keywords>
+  <keywords>Keywords</keywords>
+  <altTitle>Alternative title</altTitle>
+  <dataType>Data category</dataType>
+  <serviceType>Service type</serviceType>
+  <sourceURL>Operates on</sourceURL>
+  <langSource>Language</langSource>
   
   <HAOP>Croatian agency for environment and nature</HAOP>
   <jedinstveniOznacivacIzvora>Unique source identifier</jedinstveniOznacivacIzvora>
