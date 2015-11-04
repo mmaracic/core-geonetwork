@@ -536,7 +536,7 @@
           />
           
           <!-- Alternate title -->
-          <field
+          <field name="altTitle"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"
             del="."
             notDisplayedIfMissing="false"
@@ -755,17 +755,17 @@
           </action>
 
           <!-- Operates on-->
-          <field name="operatesOn"
+          <field name="operatesOn" templateModeOnly="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn"
             del="."
-            notDisplayedIfMissing="false" templateModeOnly="true"
+            notDisplayedIfMissing="false"
           >
               <template>
                   <values>
-                      <key label="sourceURL" xpath="@xlink:href" tooltip="srv:operatesOn"/>                      
+                      <key label="operatesOn" xpath="@xlink:href" tooltip="srv:operatesOn"/>                      
                   </values>
                     <snippet>
-                        <srv:operatesOn xlink:href="{{sourceURL}}"/>
+                        <srv:operatesOn xlink:href="{{operatesOn}}"/>
                   </snippet>
               </template>
           </field>
@@ -794,7 +794,7 @@
                 </gmd:language>
             </template>              
           </field>
-            <action type="add" name="srcLanguage" or="language" forceLabel="true"
+            <action type="add" name="langSource" or="language" forceLabel="true"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
             >
                 <template>
@@ -1478,7 +1478,7 @@
           </action>
 
           <!-- Access constraints-->
-          <field name="accessConstraints"
+          <field name="accessConstraints" notDisplayedIfMissing="false"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
             del="."
           >
@@ -1524,7 +1524,7 @@
               </snippet>
             </template>
           </action>
-          <field name="accessConstraints"
+          <field name="accessConstraints" notDisplayedIfMissing="false"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
             del="."
           >
@@ -1572,7 +1572,7 @@
           </action>
 
           <!-- Classification constraints -->
-          <field name="classification"
+          <field name="classificationConstraints" notDisplayedIfMissing="false"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_SecurityConstraints/gmd:classification]"
             del="."
           />
@@ -1591,7 +1591,7 @@
                 </gmd:resourceConstraints>
               </snippet>
           </template>
-          <action type="add" name="classification" or="resourceConstraints" forceLabel="true"
+          <action type="add" name="classificationConstraints" or="resourceConstraints" forceLabel="true"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
               <snippet>
@@ -1611,7 +1611,7 @@
               </snippet>
             </template>
           </action>            
-          <field name="classification"
+          <field name="classificationConstraints"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_SecurityConstraints/gmd:classification]"
             del="."
           />
@@ -1654,7 +1654,7 @@
         
         <section name="pointOfContact">
           <field name="pointOfContact" templateModeOnly="true"
-            xpath="/gmd:MD_Metadata//gmd:pointOfContact"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact"
             del="."
             >
             <template>
@@ -1784,7 +1784,7 @@
           <field xpath="/gmd:MD_Metadata/gmd:dateStamp"/>
 
           <!-- Jezik Metapodataka-->
-          <field name="langSource"
+          <field name="langMeta"
             xpath="/gmd:MD_Metadata/gmd:language/gmd:LanguageCode/@codeListValue"
             notDisplayedIfMissing="false"
           />

@@ -80,7 +80,7 @@
   <spatialResolution>Prostorna rezolucija (mjerilo)</spatialResolution>
   <spatialDistance>Prostorna rezolucija (udaljenost)</spatialDistance>
   <accessConstraints>Ograničenja pristupa</accessConstraints>
-  <useLimitation>Ograničenja pristupa</useLimitation>
+  <useLimitation>Ograničenja korištenja</useLimitation>
   <classificationConstraints>Sigurnosna ograničenja</classificationConstraints>
   <add-resource-id>Izračunavanje identifikatora izvora</add-resource-id>
   <add-resource-idHelp>Identifikator izvora sastoji se od URL-a kataloga i  identifikatora metapodataka (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).</add-resource-idHelp>
@@ -91,8 +91,12 @@
   <altTitle>Alternativni naziv izvora</altTitle>
   <dataType>Kategorija teme</dataType>
   <serviceType>Vrsta usluge</serviceType>  
-  <sourceURL>Upareni izvor</sourceURL>
+  <operatesOn>Upareni izvor</operatesOn>
   <langSource>Jezik izvora</langSource>
+  <langMeta>Jezik metapodataka</langMeta>
+  <code>Kod</code>
+  <codeSpace>Prostor koda</codeSpace>
+  <version>Verzija</version>
   
   <HAOP>Hrvatska agencija za okoliš i prirodu</HAOP>
   <jedinstveniOznacivacIzvora>Jedinstveni označivač izvora</jedinstveniOznacivacIzvora>

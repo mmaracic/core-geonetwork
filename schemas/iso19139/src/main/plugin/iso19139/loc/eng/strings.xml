@@ -91,9 +91,13 @@
   <altTitle>Alternative title</altTitle>
   <dataType>Data category</dataType>
   <serviceType>Service type</serviceType>
-  <sourceURL>Operates on</sourceURL>
+  <operatesOn>Operates on</operatesOn>
   <langSource>Language</langSource>
-  
+  <langMeta>Metadata language</langMeta>
+  <code>Code</code>
+  <codeSpace>Code space</codeSpace>
+  <version>Version</version>
+
   <HAOP>Croatian agency for environment and nature</HAOP>
   <jedinstveniOznacivacIzvora>Unique source identifier</jedinstveniOznacivacIzvora>
   <akronim>Acronym</akronim>
