@@ -63,7 +63,7 @@
   <endPosition>Kraj</endPosition>
   <conformity>Usklađenost</conformity>
   <conformity_title>Specifikacija</conformity_title>
-  <conformity_date>Datim</conformity_date>
+  <conformity_date>Datum</conformity_date>
   <explanation>Objašenjenje</explanation>
   <pass>Razina</pass>
   <indeterminatePosition>Neodređena pozicija</indeterminatePosition>
@@ -71,6 +71,12 @@
   <metadataPointOfContact>Kontakt za metapodatke</metadataPointOfContact>
   <organisationName>Ime organizacije</organisationName>
   <electronicMailAddress>Adresa elektronicke poste</electronicMailAddress>
+  <individualName>Ime i prezime</individualName>
+  <positionName>Pozicija</positionName>
+  <deliveryPoint>Ulica i broj</deliveryPoint>
+  <postalCode>Poštanski broj</postalCode>
+  <city>Naselje</city>
+  <voiceTelephone>Telefonski broj</voiceTelephone>    
   <role>Uloga</role>
   <encoding>Kodiranje</encoding>
   <inspireTheme>INSPIRE teme</inspireTheme>

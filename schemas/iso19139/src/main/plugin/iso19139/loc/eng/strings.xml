@@ -71,6 +71,12 @@
   <metadataPointOfContact>Contact for the metadata</metadataPointOfContact>
   <organisationName>Organisation name</organisationName>
   <electronicMailAddress>Email</electronicMailAddress>
+  <individualName>Individual name</individualName>
+  <positionName>Position name</positionName>
+  <deliveryPoint>Street</deliveryPoint>
+  <postalCode>Postal code</postalCode>
+  <city>City</city>
+  <voiceTelephone>Telephone</voiceTelephone>  
   <role>Role</role>
   <encoding>Encoding</encoding>
   <inspireTheme>INSPIRE themes</inspireTheme>
