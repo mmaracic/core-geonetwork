@@ -113,8 +113,8 @@
 
         <facet name="JedinstveniOznacivacIzvora" indexKey="JedinstveniOznacivacIzvora" label="jedinstveniOznacivacIzvora"/>
         <facet name="Akronim" indexKey="Akronim" label="akronim"/>
-        <facet name="TematskoPodrucje" indexKey="TematskoPodrucje" label="tematskoPodrucje"/>
-        <facet name="TematskoPodpodrucje" indexKey="tematskoPodpodrucje" label="tematskoPodpodrucje"/>
+        <facet name="TematskoPodrucje" indexKey="TematskoPodrucje" label="tematskoPodrucje" translator="codelist:AZOPodrucje"/>
+        <facet name="TematskoPodpodrucje" indexKey="tematskoPodpodrucje" label="tematskoPodpodrucje" translator="codelist:AZOPodpodrucje"/>
         <facet name="KorisniciPodataka" indexKey="KorisniciPodataka" label="korisniciPodataka"/>
         <facet name="NazivIzvjestaja" indexKey="NazivIzvjestaja" label="nazivIzvjestaja"/>
         <facet name="TijeloZaDostavuPodatakaIzvjesca" indexKey="TijeloZaDostavuPodatakaIzvjesca" label="tijeloZaDostavuPodatakaIzvjesca"/>
@@ -168,7 +168,7 @@
           <item facet="status" translator="codelist:gmd:MD_ProgressCode" max="200"/>
           <item facet="denominator" sortBy="numValue" sortOrder="desc" max="200"/>
           <item facet="resolution" sortBy="numValue" sortOrder="desc" max="200"/>
-          <item facet="inspireConformance" sortBy="value" sortOrder="desc" max="200"/>
+          <item facet="inspireConformance" sortBy="value" sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
           <!--
           <item facet="region"
                 translator="term:http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox"/>
@@ -177,8 +177,8 @@
           <item facet="classification" translator="codelist:gmd:MD_ClassificationCode" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="JedinstveniOznacivacIzvora" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="Akronim" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200"/>
+          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
+          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
           <item facet="KorisniciPodataka" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="NazivIzvjestaja" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="TijeloZaDostavuPodatakaIzvjesca" sortBy="value" sortOrder="desc" max="200"/>         
@@ -199,6 +199,7 @@
         <item facet="standard" max="15" sortBy="value"/>
         <item facet="isHarvested" max="2" sortBy="value" translator="apploc:"/>
         <item facet="metadataType" max="3" sortBy="value" translator="apploc:recordType-"/>
+        <item facet="inspireConformance" max="2" sortBy="value" translator="codelist:inspireConformance"/>
       </summaryType>
 
       <!-- (deprecated) old-style configuration supporting only
@@ -233,12 +234,13 @@
           <item facet="status" translator="codelist:gmd:MD_ProgressCode" max="200"/>
           <item facet="denominator" sortBy="numValue" sortOrder="desc" max="200"/>
           <item facet="resolution" sortBy="numValue" sortOrder="desc" max="200"/>
+          <item facet="inspireConformance" sortBy="value" sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
            <!-- AZO Facets -->
           <item facet="classification" sortBy="value" translator="codelist:gmd:MD_ClassificationCode" sortOrder="desc" max="200"/>
           <item facet="JedinstveniOznacivacIzvora" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="Akronim" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200"/>
+          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
+          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
           <item facet="KorisniciPodataka" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="NazivIzvjestaja" sortBy="value" sortOrder="desc" max="200"/>
           <item facet="TijeloZaDostavuPodatakaIzvjesca" sortBy="value" sortOrder="desc" max="200"/>         

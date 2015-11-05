@@ -684,7 +684,23 @@
         return azo_image;
       },
       
-      /**
+        /**
+         * Returns inspire conformancy symbol image
+         * 
+         * @param {String} conformity description
+         * @returns {CatController_L40.$scope.getAreaSymbol.azo_image}
+         */
+        getInspireSymbol: function(conformity){
+          var baseUrl=location.pathname.split('/')[1];
+          var insp_image = null;
+          switch(conformity.toLowerCase()){
+              case 'on': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire.png', label:conformity}; break;
+              case 'off': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire_not.png', label:conformity}; break;
+          }
+          return insp_image;
+        },
+
+        /**
        * Returns the protocol of the service if such info can be extracted
        * 
        * @return {String} Service protocol description

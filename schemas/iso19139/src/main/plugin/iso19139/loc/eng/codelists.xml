@@ -26,6 +26,167 @@
 -->
 <codelists xmlns:gmd="http://www.isotc211.org/2005/gmd">
 	<!-- ==================================================== -->
+        <codelist name="inspireConformance">
+            <entry>
+                    <code>on</code>
+                    <label>Achieved</label>
+                    <description>Achieved</description>
+            </entry>
+            <entry>
+                    <code>off</code>
+                    <label>Not achieved</label>
+                    <description>Not achieved</description>
+            </entry>
+        </codelist>
+        <codelist name="AZOPodpodrucje>
+            <entry>
+                    <code>climate changes</code>
+                    <label>Climate changes</label>
+                    <description>Climate changes</description>
+            </entry>
+            <entry>
+                    <code>ozone layer</code>
+                    <label>Ozone layer</label>
+                    <description>Ozone layer</description>
+            </entry>
+            <entry>
+                    <code>air quality</code>
+                    <label>Air quality</label>
+                    <description>Air quality</description>
+            </entry>
+            <entry>
+                    <code>water waste quantity</code>
+                    <label>Water waste quantity</label>
+                    <description>Water waste quantity</description>
+            </entry>
+            <entry>
+                    <code>water waste quality</code>
+                    <label>Water waste quality</label>
+                    <description>Water waste quality</description>
+            </entry>
+            <entry>
+                    <code>sea ecosystem</code>
+                    <label>Sea ecosystem</label>
+                    <description>Sea ecosystem</description>
+            </entry>
+            <entry>
+                    <code>coastal area</code>
+                    <label>Coastal area</label>
+                    <description>Coastal area</description>
+            </entry>
+            <entry>
+                    <code>biodiversity</code>
+                    <label>Biodiversity</label>
+                    <description>Biodiversity</description>
+            </entry>
+            <entry>
+                    <code>landscape diversity</code>
+                    <label>Landscape diversity</label>
+                    <description>Landscape diversity</description>
+            </entry>
+            <entry>
+                    <code>protected values</code>
+                    <label>Protected values</label>
+                    <description>Protected values</description>
+            </entry>
+            <entry>
+                    <code>genetically modified organisms</code>
+                    <label>Genetically modified organisms</label>
+                    <description>Genetically modified organisms</description>
+            </entry>
+            <entry>
+                    <code>pedosphere</code>
+                    <label>Pedosphere</label>
+                    <description>Pedosphere</description>
+            </entry>
+            <entry>
+                    <code>mineral usage</code>
+                    <label>Mineral usage</label>
+                    <description>Mineral usage</description>
+            </entry>
+            <entry>
+                    <code>land usage</code>
+                    <label>Land usage</label>
+                    <description>Land usage</description>
+            </entry>
+            <entry>
+                    <code>geological values</code>
+                    <label>Geological values</label>
+                    <description>Geological values</description>
+            </entry>
+            <entry>
+                    <code>waste management</code>
+                    <label>Waste management</label>
+                    <description>Waste management</description>
+            </entry>
+            <entry>
+                    <code>ecological disasters</code>
+                    <label>Ecological disasters</label>
+                    <description>Ecological disasters</description>
+            </entry>
+            <entry>
+                    <code>pollution register</code>
+                    <label>Pollution register</label>
+                    <description>Pollution register</description>
+            </entry>
+            <entry>
+                    <code>noise</code>
+                    <label>Noise</label>
+                    <description>Noise</description>
+            </entry>
+            <entry>
+                    <code>environment protection documents</code>
+                    <label>Environment protection documents</label>
+                    <description>Environment protection documents</description>
+            </entry>            
+        </codelist>
+        <codelist name="AZOPodrucje">
+            <entry>
+                    <code>air</code>
+                    <label>Air</label>
+                    <description>Air</description>
+            </entry>
+            <entry>
+                    <code>rivers and lakes</code>
+                    <label>Rivers and lakes</label>
+                    <description>Rivers and lakes</description>
+            </entry>
+            <entry>
+                    <code>sea</code>
+                    <label>Sea</label>
+                    <description>Sea</description>
+            </entry>
+            <entry>
+                    <code>nature</code>
+                    <label>Nature</label>
+                    <description>Nature</description>
+            </entry>
+            <entry>
+                    <code>lithosphere and pedosphere</code>
+                    <label>Lithosphere and pedosphere</label>
+                    <description>Lithosphere and pedosphere</description>
+            </entry>
+            <entry>
+                    <code>waste</code>
+                    <label>Waste</label>
+                    <description>Waste</description>
+            </entry>
+            <entry>
+                    <code>industry and energetics</code>
+                    <label>Industry and energetics</label>
+                    <description>Industry and energetics</description>
+            </entry>
+            <entry>
+                    <code>health and security</code>
+                    <label>Health and security</label>
+                    <description>Health and security</description>
+            </entry>
+            <entry>
+                <code>general environment protection</code>
+                <label>General environment protection</label>
+                <description>General environment protection</description>
+            </entry>                
+        </codelist>
 	<codelist name="gmd:CI_DateTypeCode">
 		<entry>
 			<code>creation</code>

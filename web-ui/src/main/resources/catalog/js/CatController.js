@@ -168,7 +168,7 @@
           };
           
           /**
-           * Returns inspire symbol image
+           * Returns inspire conformancy symbol image
            * 
            * @param {String} conformity description
            * @returns {CatController_L40.$scope.getAreaSymbol.azo_image}
@@ -177,8 +177,8 @@
             var baseUrl=location.pathname.split('/')[1];
             var insp_image = null;
             switch(conformity.toLowerCase()){
-                case 'true': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire.png', label:conformity}; break;
-                case 'false': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire_not.png', label:conformity}; break;
+                case 'on': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire.png', label:conformity}; break;
+                case 'off': insp_image={url:'/'+baseUrl+'/images/harvesting/inspire_not.png', label:conformity}; break;
             }
             return insp_image;
           };
