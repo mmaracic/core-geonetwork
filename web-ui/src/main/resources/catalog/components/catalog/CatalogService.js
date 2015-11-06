@@ -314,6 +314,9 @@
     publish: 'md.publish',
     unpublish: 'md.unpublish',
 
+    enablecsw: 'md.publishcsw',
+    disablecsw: 'md.unpublishcsw',
+
     processMd: 'md.processing',
     processAll: 'md.processing.batch',
     processReport: 'md.processing.batch.report',
@@ -585,6 +588,9 @@
       isPublished: function() {
         return this['geonet:info'].isPublishedToAll === 'true';
       },
+      isPublishedCSW: function() {
+        return this['geonet:info'].cswpublish === 'true';
+      },
       isOwned: function() {
         return this['geonet:info'].owner === 'true';
       },
@@ -596,6 +602,10 @@
       },
       publish: function() {
         this['geonet:info'].isPublishedToAll = this.isPublished() ?
+            'false' : 'true';
+      },
+      publishCSW: function() {
+        this['geonet:info'].cswpublish = this.isPublishedCSW() ?
             'false' : 'true';
       },
 

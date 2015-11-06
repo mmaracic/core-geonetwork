@@ -44,6 +44,14 @@
         <span data-ng-if="!md.isPublished()" data-translate="">publish</span>
       </a>
     </li>
+    <li data-ng-if="user.canEditRecord(md) && user.isReviewerOrMore()">
+      <a data-ng-click="mdService.publishCSW(md)">
+        <i class="fa"
+           data-ng-class="md.isPublishedCSW() ? 'fa-stop' : 'fa-play'"></i>&nbsp;
+        <span data-ng-if="md.isPublishedCSW()" data-translate="">disableCSW</span>
+        <span data-ng-if="!md.isPublishedCSW()" data-translate="">enableCSW</span>
+      </a>
+    </li>
     <!-- TODO: Some installation only allows status update
     based on current status. -->
     <li><a data-ng-href=""

@@ -98,6 +98,7 @@ public final class Edit{
 			public static final String VIEW     	= "view";
 			public static final String GUEST_DOWNLOAD	= "guestdownload";
 			public static final String OWNER    	= "owner";
+			public static final String CSWPUBLISH    	= "cswpublish";
             public static final String VALID = "valid";
 		}
 	}

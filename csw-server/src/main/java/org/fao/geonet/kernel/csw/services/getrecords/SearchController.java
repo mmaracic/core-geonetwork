@@ -241,6 +241,13 @@ public class SearchController {
 		if (schema.equals("fgdc-std") || schema.equals("dublin-core"))
 		    if(outSchema != OutputSchema.OGC_CORE)
 		    	return null;
+                
+                //skip metadata that's not ment to be pubblished through CSW
+                String cswStatus = info.getChildText("cswpublish");
+                boolean cswPublish = Boolean.parseBoolean(cswStatus);
+                if (!cswPublish){
+                    return null;
+                }
         
 		// apply stylesheet according to setName and schema
         //

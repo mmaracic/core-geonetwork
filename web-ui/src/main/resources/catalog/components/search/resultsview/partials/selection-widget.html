@@ -44,7 +44,16 @@
     <li ng-if="user.isReviewerOrMore()" class="disabgit led">
       <a ng-click="mdService.publish(undefined, 'off')" >
       <i class="fa fa-lock"></i>&nbsp;<span translate>unpublish</span></a></li>
-    <li ng-if="user.isUserAdminOrMore()">
+
+    <li ng-if="user.isReviewerOrMore()" class="disabgit led">
+      <a ng-click="mdService.publishCSW(undefined, 'on')" >
+      <i class="fa fa-play"></i>&nbsp;<span translate>enableCSW</span></a></li>
+    <li ng-if="user.isReviewerOrMore()" class="disabgit led">
+      <a ng-click="mdService.publishCSW(undefined, 'off')" >
+      <i class="fa fa-stop"></i>&nbsp;<span translate>disableCSW</span></a></li>
+      
+      
+      <li ng-if="user.isUserAdminOrMore()">
       <a href="" data-ng-click="mdService.openTransferOwnership(md, getCatScope())">
       <i class="fa fa-user"></i>&nbsp;<span translate>transferOwnership</span></a></li>
     <li class="divider" data-ng-if="user.isConnected()"></li>

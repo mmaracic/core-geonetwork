@@ -31,7 +31,11 @@ public enum ReservedOperation {
     /**
      * Operation that allows the metadata to be one of the featured metadata.
      */
-    featured(6);
+    featured(6),
+    /**
+     * Operation that allows metadata to be published by the CSW service
+     */
+    cswpublish(7);
 
     // Not final so Tests can change id
     private int _id;

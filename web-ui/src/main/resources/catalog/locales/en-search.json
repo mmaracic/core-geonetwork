@@ -307,5 +307,19 @@
   "wpsDescribeProcessFailed": "DescribeProcess failed",
   "wpsExecute": "Execute",
   "wpsExecuteFailed": "Execute failed",
-  "wpsErrorCodeReturned": "The serveur returned status code"
+  "wpsErrorCodeReturned": "The serveur returned status code",
+  "classification":"Classification",
+  "jedinstveniOznacivacIzvora":"Unique source identifier",
+  "akronim":"Acronym",
+  "tematskoPodrucje":"Theme field",
+  "tematskoPodpodrucje":"Theme subfield",
+  "korisniciPodataka":"Data user",
+  "nazivIzvjestaja":"Report title",
+  "tijeloZaDostavuPodatakaIzvjesca":"Organization to deliver report",
+  "disableCSW":"Enable CSW",
+  "enableCSW":"Disable CSW",
+  "disablecsw":"Disable CSW",
+  "enablecsw":"Enable CSW",
+  "enablecswCompleted": "CSW enabled",
+  "disablecswCompleted": "CSW disabled"      
 }

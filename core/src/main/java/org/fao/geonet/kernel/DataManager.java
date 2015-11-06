@@ -3201,6 +3201,7 @@ public class DataManager implements ApplicationEventPublisherAware {
                 false);
         final SetMultimap<Integer, ReservedOperation> operationsPerMetadata = loadOperationsAllowed(context, where(operationAllowedSpec).and(OperationAllowedSpecs.hasGroupIdIn(allUserGroups)));
         final Set<Integer> visibleToAll = loadOperationsAllowed(context, where(operationAllowedSpec).and(OperationAllowedSpecs.isPublic(ReservedOperation.view))).keySet();
+        final Set<Integer> publishableCSWToAll = loadOperationsAllowed(context, where(operationAllowedSpec).and(OperationAllowedSpecs.isPublic(ReservedOperation.cswpublish))).keySet();
         final Set<Integer> downloadableByGuest = loadOperationsAllowed(context, where(operationAllowedSpec).and(OperationAllowedSpecs.hasGroupId(ReservedGroup.guest.getId())).and(OperationAllowedSpecs.hasOperation(ReservedOperation.download))).keySet();
         final Map<Integer, MetadataSourceInfo> allSourceInfo = getMetadataRepository().findAllSourceInfo(MetadataSpecs.hasMetadataIdIn
                 (metadataIds));
@@ -3234,6 +3235,7 @@ public class DataManager implements ApplicationEventPublisherAware {
             addElement(infoEl, ReservedOperation.download.name(), operations.contains(ReservedOperation.download));
             addElement(infoEl, ReservedOperation.dynamic.name(), operations.contains(ReservedOperation.dynamic));
             addElement(infoEl, ReservedOperation.featured.name(), operations.contains(ReservedOperation.featured));
+            addElement(infoEl, ReservedOperation.cswpublish.name(), publishableCSWToAll.contains(mdId));
 
             if (!operations.contains(ReservedOperation.download)) {
                 addElement(infoEl, Edit.Info.Elem.GUEST_DOWNLOAD, downloadableByGuest.contains(mdId));

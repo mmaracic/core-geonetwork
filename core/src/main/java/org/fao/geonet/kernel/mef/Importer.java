@@ -294,6 +294,8 @@ public class Importer {
                             .setAttribute("name", "dynamic"));
                     privileges.addContent(new Element("operation")
                             .setAttribute("name", "featured"));
+                    privileges.addContent(new Element("operation")
+                            .setAttribute("name", "publishcsw"));
 
                     if (isTemplate == MetadataType.METADATA) {
                         // Get the Metadata uuid if it's not a template.

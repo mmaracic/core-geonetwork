@@ -277,6 +277,64 @@
           return gnHttp.callService(service, {}).then(publishNotification);
         }
       };
+      
+      /**
+       * Update publication through CSW on metadata (one or selection).
+       * If a md is provided, it updates CSW publication of the given md, depending
+       * on its current state. If no metadata is given, it updates the
+       * CSW publication on all selected metadata to the given flag (on|off).
+       * @param {Object|undefined} md
+       * @param {string} flag
+       * @return {*}
+       */
+      this.publishCSW = function(md, flag) {
+
+        if (md) {
+          flag = md.isPublishedCSW() ? 'off' : 'on';
+        }
+        var service = flag === 'on' ? 'enablecsw' : 'disablecsw';
+
+        var publishNotification = function(data) {
+          var message = '<h4>' + $translate(service + 'Completed') +
+              '</h4><dl class="dl-horizontal"><dt>' +
+              $translate('mdPublished') + '</dt><dd>' +
+              data.data.published + '</dd><dt>' +
+              $translate('mdUnpublished') + '</dt><dd>' +
+              data.data.unpublished + '</dd><dt>' +
+              $translate('mdUnmodified') + '</dt><dd>' +
+              data.data.unmodified + '</dd><dt>' +
+              $translate('mdDisallowed') + '</dt><dd>' +
+              data.data.disallowed + '</dd></dl>';
+
+          var success = 'success';
+          if (md) {
+            if ((flag === 'on' && data.data.published === 0) ||
+                (flag !== 'on' && data.data.unpublished === 0)) {
+              if (data.data.unmodified > 0) {
+                message = $translate('metadataUnchanged');
+              } else if (data.data.disallowed > 0) {
+                message = $translate('accessRestricted');
+              }
+              success = 'danger';
+            }
+          }
+          gnAlertService.addAlert({
+            msg: message,
+            type: success
+          });
+
+          if (md && success === 'success') {
+            md.publishCSW();
+          }
+        };
+        if (angular.isDefined(md)) {
+          return gnHttp.callService(service, {
+            ids: md.getId()
+          }).then(publishNotification);
+        } else {
+          return gnHttp.callService(service, {}).then(publishNotification);
+        }
+      };
 
       this.assignGroup = function(metadataId, groupId) {
         var defer = $q.defer();

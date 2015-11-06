@@ -545,6 +545,7 @@ insert into geonetwork.Operations (id, name) VALUES  (2,'editing');
 insert into geonetwork.Operations (id, name) VALUES  (3,'notify');
 insert into geonetwork.Operations (id, name) VALUES  (5,'dynamic');
 insert into geonetwork.Operations (id, name) VALUES  (6,'featured');
+insert into geonetwork.Operations (id, name) VALUES  (7,'publishcsw');
 
 
 -- ======================================================================
