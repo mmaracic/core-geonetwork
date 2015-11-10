@@ -50,7 +50,8 @@
 
 
           // Load the config from the textarea containing the helpers
-          scope.config =
+          scope.config = {};
+          scope.config.option =
               angular.fromJson($('#' + scope.ref + '_config')[0].value);
 
           // If only one option, convert to an array
