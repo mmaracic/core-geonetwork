@@ -51,7 +51,7 @@
 
   <!-- INSPIRE view labels and help -->
   <url>Adresa izvora</url>
-  <identifier>Naziv izvora</identifier>
+  <identifier>Identifikacija</identifier>
   <rsIdentifier>Projekcija</rsIdentifier>
   <referenceDate>Referentni datum</referenceDate>
   <creationDate>Datum stvaranja</creationDate>
@@ -94,6 +94,7 @@
   <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
   <category>Kategorizacija</category>
   <keywords>Ključne riječi</keywords>
+  <addKeyword>Add keyword</addKeyword>
   <altTitle>Alternativni naziv izvora</altTitle>
   <dataType>Kategorija teme</dataType>
   <serviceType>Vrsta usluge</serviceType>  

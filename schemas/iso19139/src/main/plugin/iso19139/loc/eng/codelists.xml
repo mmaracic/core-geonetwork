@@ -187,6 +187,44 @@
                 <description>General environment protection</description>
             </entry>                
         </codelist>
+	<codelist name="serviceType">
+		<entry>
+			<code>discovery</code>
+			<label>Discovery</label>
+			<description>Discovery service</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>view</code>
+			<label>View</label>
+			<description>View service</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>download</code>
+			<label>Download</label>
+			<description>Download service</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>transformation</code>
+			<label>Transformation</label>
+			<description>Transformation service</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>invoke</code>
+			<label>invoke</label>
+			<description>Invoke service</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>other</code>
+			<label>Other</label>
+			<description>Other services</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
 	<codelist name="gmd:CI_DateTypeCode">
 		<entry>
 			<code>creation</code>

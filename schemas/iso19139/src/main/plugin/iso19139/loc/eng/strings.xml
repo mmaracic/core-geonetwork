@@ -94,6 +94,7 @@
   <add-extent-from-geokeywordsHelp>Analyze each keyword of type place and add matching extent.</add-extent-from-geokeywordsHelp>
   <category>Category</category>
   <keywords>Keywords</keywords>
+  <addKeyword>Dodaj ključnu riječ</addKeyword>
   <altTitle>Alternative title</altTitle>
   <dataType>Data category</dataType>
   <serviceType>Service type</serviceType>

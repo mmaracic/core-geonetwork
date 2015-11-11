@@ -1331,12 +1331,14 @@
         <description>Jezik korišten unutar izvora.</description>
 		<_condition>Obvezan.</_condition>
 		<helper>
-			<option value="bul">Bugarski</option>
+                    <option value="bul">Bugarski</option>
 		    <option value="cze">Češki</option>
 		    <option value="dan">Danski</option>
+                    <option value="eng">Engleski</option>
 		    <option value="est">Estonski</option>
 		    <option value="fin">Finski</option>
 		    <option value="fre">Francuski</option>
+                    <option value="hrv">Hrvatski</option>
 		    <option value="gre">Grčki</option>
 		    <option value="gle">Irski</option>
 		    <option value="lit">Litavski</option>
