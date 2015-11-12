@@ -139,111 +139,111 @@
 
       <summaryTypes>
         <summaryType name="details" format="DIMENSION">
-          <item facet="title" sortOrder="desc" max="200"/>
-            <item facet="altTitle" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="type" translator="codelist:gmd:MD_ScopeCode" max="200"/>
-          <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
-          <item facet="inspireTheme" sortBy="value" sortOrder="asc" max="200"/>
-          <item facet="inspireThemeWithAc" sortBy="value" sortOrder="asc" max="200"/>
-          <item facet="serviceType" max="200" sortBy="value" sortOrder="asc" translator="codelist:serviceType"/>
-          <item facet="keyword" max="200" sortBy="value" sortOrder="asc"/>
-            <item facet="reviseDateYear" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="createDateYear" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="publicationDate" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="rsIdentifier" sortBy="value" sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
-            <item facet="responsiblePartyOrganization" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="responsiblePartyRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
-            <item facet="responsiblePartyIndividualName" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="metadataOrganization" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="metadataRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
-            <item facet="metadataIndividualName" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="acessConstraint" translator="codelist:gmd:MD_RestrictionCode" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="otherConstraint" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="useLimitation" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationDegree" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationTitle" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationDate" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="format" sortBy="value" sortOrder="asc" max="200"/>
-          <item facet="maintenanceAndUpdateFrequency" translator="codelist:gmd:MD_MaintenanceFrequencyCode" max="200"/>
-          <item facet="status" translator="codelist:gmd:MD_ProgressCode" max="200"/>
+          <item facet="title" sortOrder="desc"  max="200"/>
+            <item facet="altTitle"  sortOrder="desc" max="200"/>
+            <item facet="type" sortOrder="desc"  translator="codelist:gmd:MD_ScopeCode" max="200"/>
+          <item facet="topicCat" sortOrder="desc"  translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
+          <item facet="inspireTheme"  sortOrder="desc" max="200"/>
+          <item facet="inspireThemeWithAc"  sortOrder="desc" max="200"/>
+          <item facet="serviceType" max="200"  sortOrder="desc" translator="codelist:serviceType"/>
+          <item facet="keyword" max="200"  sortOrder="desc"/>
+            <item facet="reviseDateYear"  sortOrder="desc" max="200"/>
+            <item facet="createDateYear"  sortOrder="desc" max="200"/>
+            <item facet="publicationDate"  sortOrder="desc" max="200"/>
+            <item facet="rsIdentifier"  sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="responsiblePartyOrganization"  sortOrder="desc" max="200"/>
+            <item facet="responsiblePartyRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="responsiblePartyIndividualName"  sortOrder="desc" max="200"/>
+            <item facet="metadataOrganization"  sortOrder="desc" max="200"/>
+            <item facet="metadataRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="metadataIndividualName"  sortOrder="desc" max="200"/>
+            <item facet="acessConstraint" translator="codelist:gmd:MD_RestrictionCode"  sortOrder="desc" max="200"/>
+            <item facet="otherConstraint"  sortOrder="desc" max="200"/>
+            <item facet="useLimitation"  sortOrder="desc" max="200"/>
+            <item facet="specificationDegree"  sortOrder="desc" max="200"/>
+            <item facet="specificationTitle"  sortOrder="desc" max="200"/>
+            <item facet="specificationDate"  sortOrder="desc" max="200"/>
+          <item facet="format"  sortOrder="desc" max="200"/>
+          <item facet="maintenanceAndUpdateFrequency" sortOrder="desc"  translator="codelist:gmd:MD_MaintenanceFrequencyCode" max="200"/>
+          <item facet="status" translator="codelist:gmd:MD_ProgressCode" sortOrder="desc"  max="200"/>
           <item facet="denominator" sortBy="numValue" sortOrder="desc" max="200"/>
           <item facet="resolution" sortBy="numValue" sortOrder="desc" max="200"/>
-          <item facet="inspireConformance" sortBy="value" sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
+          <item facet="inspireConformance"  sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
           <!--
           <item facet="region"
                 translator="term:http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox"/>
           -->
            <!-- AZO Facets -->
-          <item facet="classification" translator="codelist:gmd:MD_ClassificationCode" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="JedinstveniOznacivacIzvora" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="Akronim" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
-          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
-          <item facet="KorisniciPodataka" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="NazivIzvjestaja" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TijeloZaDostavuPodatakaIzvjesca" sortBy="value" sortOrder="desc" max="200"/>         
+          <item facet="classification" translator="codelist:gmd:MD_ClassificationCode"  sortOrder="desc" max="200"/>
+          <item facet="JedinstveniOznacivacIzvora"  sortOrder="desc" max="200"/>
+          <item facet="Akronim"  sortOrder="desc" max="200"/>
+          <item facet="TematskoPodrucje"  sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
+          <item facet="TematskoPodpodrucje"  sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
+          <item facet="KorisniciPodataka"  sortOrder="desc" max="200"/>
+          <item facet="NazivIzvjestaja"  sortOrder="desc" max="200"/>
+          <item facet="TijeloZaDostavuPodatakaIzvjesca"  sortOrder="desc" max="200"/>         
       </summaryType>
 
       <summaryType name="manager" format="DIMENSION">
-        <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
-        <item facet="category" max="99" sortBy="value"
+        <item facet="type" translator="codelist:gmd:MD_ScopeCode" sortOrder="desc"/>
+        <item facet="category" max="99" sortOrder="desc" 
               translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
-        <item facet="mdStatus" max="10" sortBy="value"
+        <item facet="mdStatus" max="10" sortOrder="desc"
               translator="db:org.fao.geonet.repository.StatusValueRepository:findOne:int"/>
-        <item facet="sourceCatalog" translator="db:org.fao.geonet.repository.SourceRepository:findOneByUuid"/>
-        <item facet="isValid" max="3" sortBy="value" translator="apploc:validStatus-"/>
-        <item facet="groupOwner" max="199" sortBy="value"
+        <item facet="sourceCatalog" sortOrder="desc" translator="db:org.fao.geonet.repository.SourceRepository:findOneByUuid"/>
+        <item facet="isValid" max="3"  translator="apploc:validStatus-" sortOrder="desc"/>
+        <item facet="groupOwner" max="199" sortOrder="desc"
               translator="db:org.fao.geonet.repository.GroupRepository:findOne:int"/>
-        <item facet="publishedForGroup" max="199" sortBy="value"
+        <item facet="publishedForGroup" max="199" sortOrder="desc"
               translator="db:org.fao.geonet.repository.GroupRepository:findOneByName"/>
-        <item facet="standard" max="15" sortBy="value"/>
-        <item facet="isHarvested" max="2" sortBy="value" translator="apploc:"/>
-        <item facet="metadataType" max="3" sortBy="value" translator="apploc:recordType-"/>
-        <item facet="inspireConformance" max="2" sortBy="value" translator="codelist:inspireConformance"/>
+        <item facet="standard" max="15" sortOrder="desc"/>
+        <item facet="isHarvested" max="2"  translator="apploc:" sortOrder="desc"/>
+        <item facet="metadataType" max="3"  translator="apploc:recordType-" sortOrder="desc"/>
+        <item facet="inspireConformance" max="2"  translator="codelist:inspireConformance" sortOrder="desc"/>
       </summaryType>
 
       <!-- (deprecated) old-style configuration supporting only
       flat facet. It's recommended to use format="DIMENSION" for facet.
       See above. -->
       <summaryType name="hits">
-          <item facet="title" sortOrder="desc" max="200"/>
-            <item facet="altTitle" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="type" translator="codelist:gmd:MD_ScopeCode" max="200"/>
-          <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
-          <item facet="inspireTheme" sortBy="value" sortOrder="asc" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
-          <item facet="serviceType" max="200" sortBy="value" sortOrder="asc" translator="codelist:serviceType"/>
-          <item facet="keyword" max="200" sortBy="value" sortOrder="asc"/>
-            <item facet="reviseDateYear" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="createDateYear" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="publicationDate" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="rsIdentifier" sortBy="value" sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
-            <item facet="responsiblePartyOrganization" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="responsiblePartyRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
-            <item facet="responsiblePartyIndividualName" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="metadataOrganization" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="metadataRole" sortBy="value" sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
-            <item facet="metadataIndividualName" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="acessConstraint" translator="codelist:gmd:MD_RestrictionCode" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="otherConstraint" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="useLimitation" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationDegree" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationTitle" sortBy="value" sortOrder="desc" max="200"/>
-            <item facet="specificationDate" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="format" sortBy="value" sortOrder="asc" max="200"/>
-          <item facet="maintenanceAndUpdateFrequency" translator="codelist:gmd:MD_MaintenanceFrequencyCode" max="200"/>
-          <item facet="status" translator="codelist:gmd:MD_ProgressCode" max="200"/>
+          <item facet="title" sortOrder="desc" sortOrder="desc" max="200"/>
+            <item facet="altTitle"  sortOrder="desc" max="200"/>
+            <item facet="type" sortOrder="desc" translator="codelist:gmd:MD_ScopeCode" max="200"/>
+          <item facet="topicCat" sortOrder="desc" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
+          <item facet="inspireTheme"  sortOrder="desc" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
+          <item facet="serviceType" max="200"  sortOrder="desc" translator="codelist:serviceType"/>
+          <item facet="keyword" max="200"  sortOrder="desc"/>
+            <item facet="reviseDateYear"  sortOrder="desc" max="200"/>
+            <item facet="createDateYear"  sortOrder="desc" max="200"/>
+            <item facet="publicationDate"  sortOrder="desc" max="200"/>
+            <item facet="rsIdentifier"  sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="responsiblePartyOrganization"  sortOrder="desc" max="200"/>
+            <item facet="responsiblePartyRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="responsiblePartyIndividualName"  sortOrder="desc" max="200"/>
+            <item facet="metadataOrganization"  sortOrder="desc" max="200"/>
+            <item facet="metadataRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
+            <item facet="metadataIndividualName"  sortOrder="desc" max="200"/>
+            <item facet="acessConstraint" translator="codelist:gmd:MD_RestrictionCode"  sortOrder="desc" max="200"/>
+            <item facet="otherConstraint"  sortOrder="desc" max="200"/>
+            <item facet="useLimitation"  sortOrder="desc" max="200"/>
+            <item facet="specificationDegree"  sortOrder="desc" max="200"/>
+            <item facet="specificationTitle"  sortOrder="desc" max="200"/>
+            <item facet="specificationDate"  sortOrder="desc" max="200"/>
+          <item facet="format"  sortOrder="desc" max="200"/>
+          <item facet="maintenanceAndUpdateFrequency" sortOrder="desc" translator="codelist:gmd:MD_MaintenanceFrequencyCode" max="200"/>
+          <item facet="status" sortOrder="desc" translator="codelist:gmd:MD_ProgressCode" max="200"/>
           <item facet="denominator" sortBy="numValue" sortOrder="desc" max="200"/>
           <item facet="resolution" sortBy="numValue" sortOrder="desc" max="200"/>
-          <item facet="inspireConformance" sortBy="value" sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
+          <item facet="inspireConformance"  sortOrder="desc" max="200" translator="codelist:inspireConformance"/>
            <!-- AZO Facets -->
-          <item facet="classification" sortBy="value" translator="codelist:gmd:MD_ClassificationCode" sortOrder="desc" max="200"/>
-          <item facet="JedinstveniOznacivacIzvora" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="Akronim" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TematskoPodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
-          <item facet="TematskoPodpodrucje" sortBy="value" sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
-          <item facet="KorisniciPodataka" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="NazivIzvjestaja" sortBy="value" sortOrder="desc" max="200"/>
-          <item facet="TijeloZaDostavuPodatakaIzvjesca" sortBy="value" sortOrder="desc" max="200"/>         
+          <item facet="classification"  translator="codelist:gmd:MD_ClassificationCode" sortOrder="desc" max="200"/>
+          <item facet="JedinstveniOznacivacIzvora"  sortOrder="desc" max="200"/>
+          <item facet="Akronim"  sortOrder="desc" max="200"/>
+          <item facet="TematskoPodrucje"  sortOrder="desc" max="200" translator="codelist:AZOPodrucje"/>
+          <item facet="TematskoPodpodrucje"  sortOrder="desc" max="200" translator="codelist:AZOPodpodrucje"/>
+          <item facet="KorisniciPodataka"  sortOrder="desc" max="200"/>
+          <item facet="NazivIzvjestaja"  sortOrder="desc" max="200"/>
+          <item facet="TijeloZaDostavuPodatakaIzvjesca"  sortOrder="desc" max="200"/>         
         </summaryType>
         <summaryType name="subtemplates">
             <item facet="subTemplateType"/>
