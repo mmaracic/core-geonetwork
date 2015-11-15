@@ -1236,6 +1236,24 @@
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
+			<code>threeYears</code>
+			<label>Trogodišnje</label>
+			<description>Podatak se ažurira svake tri godine</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->				
+		<entry>
+			<code>fiveYears</code>
+			<label>Petogodišnje</label>
+			<description>Podatak se ažurira svakih pet godina</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->				
+		<entry>
+			<code>sixYears</code>
+			<label>Šestogodišnje</label>
+			<description>Podatak se ažurira svakih pet godina</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->				
+		<entry>
 			<code>asNeeded</code>
 			<label>As needed</label>
 			<description>Data is updated as deemed necessary</description>

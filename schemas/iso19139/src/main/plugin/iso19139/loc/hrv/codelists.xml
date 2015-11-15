@@ -1207,6 +1207,11 @@
 			<label>Petogodišnje</label>
 			<description>Podatak se ažurira svakih pet godina</description>
 		</entry>
+		<entry>
+			<code>sixYears</code>
+			<label>Šestogodišnje</label>
+			<description>Podatak se ažurira svakih pet godina</description>
+		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
 			<code>asNeeded</code>

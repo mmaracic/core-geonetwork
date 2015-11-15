@@ -264,6 +264,8 @@
     "gemetKeywords": "GEMET ključne riječi",
     "rsIdentifier":"Identifikator koordinatnog sustava",
     "rsIdentifiers":"Identifikator koordinatnih sustava",
+    "sourceIdentifier":"Jedinstvena oznaka izvora",
+    "sourceIdentifiers":"Jedinstvena oznaka izvora",
     "altTitle":"Alternativni naziv",
     "altTitles":"Alternativni nazivi",
     "reviseDateYear":"Godina revizije",
@@ -312,5 +314,5 @@
     "korisniciPodataka":"Korisnik podataka",
     "nazivIzvjestaja":"Naziv izvještaja",
     "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća",
-    "inspireConformance": "Usklađenost sa INSPIRE"
+    "inspireConformance": "Usklađenost s INSPIRE-om"
 }

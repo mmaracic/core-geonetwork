@@ -64,6 +64,7 @@
   <conformity>Conformity</conformity>
   <conformity_title>Title</conformity_title>
   <conformity_date>Date</conformity_date>
+  <date>Datum</date>
   <explanation>Explanation</explanation>
   <pass>Conformity</pass>
   <indeterminatePosition>Indeterminate position</indeterminatePosition>
@@ -86,6 +87,7 @@
   <spatialResolution>Spatial resolution (scale)</spatialResolution>
   <spatialDistance>Spatial resolution (distance)</spatialDistance>
   <accessConstraints>Access constraints</accessConstraints>
+  <otherConstraints>Other constrains</otherConstraints>
   <useLimitation>Use limitation</useLimitation>
   <classificationConstraints>Security constraints</classificationConstraints>
   <add-resource-id>Compute resource identifier</add-resource-id>
@@ -94,7 +96,7 @@
   <add-extent-from-geokeywordsHelp>Analyze each keyword of type place and add matching extent.</add-extent-from-geokeywordsHelp>
   <category>Category</category>
   <keywords>Keywords</keywords>
-  <addKeyword>Dodaj ključnu riječ</addKeyword>
+  <addKeyword>Add keyword</addKeyword>
   <altTitle>Alternative title</altTitle>
   <dataType>Data category</dataType>
   <serviceType>Service type</serviceType>

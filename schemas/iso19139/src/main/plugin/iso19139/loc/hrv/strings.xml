@@ -64,6 +64,7 @@
   <conformity>Usklađenost</conformity>
   <conformity_title>Specifikacija</conformity_title>
   <conformity_date>Datum</conformity_date>
+  <date>Datum</date>
   <explanation>Objašenjenje</explanation>
   <pass>Razina</pass>
   <indeterminatePosition>Neodređena pozicija</indeterminatePosition>
@@ -86,6 +87,7 @@
   <spatialResolution>Prostorna rezolucija (mjerilo)</spatialResolution>
   <spatialDistance>Prostorna rezolucija (udaljenost)</spatialDistance>
   <accessConstraints>Ograničenja pristupa</accessConstraints>
+  <otherConstraints>Ostala ograničenja</otherConstraints>
   <useLimitation>Ograničenja korištenja</useLimitation>
   <classificationConstraints>Sigurnosna ograničenja</classificationConstraints>
   <add-resource-id>Izračunavanje identifikatora izvora</add-resource-id>
@@ -94,7 +96,7 @@
   <add-extent-from-geokeywordsHelp>Analiza prostornih ključnih riječi i dodavanje odgovarajućeg prostornog obuhvata.</add-extent-from-geokeywordsHelp>
   <category>Kategorizacija</category>
   <keywords>Ključne riječi</keywords>
-  <addKeyword>Add keyword</addKeyword>
+  <addKeyword>Dodaj ključnu riječ</addKeyword>
   <altTitle>Alternativni naziv izvora</altTitle>
   <dataType>Kategorija teme</dataType>
   <serviceType>Vrsta usluge</serviceType>  
