@@ -444,6 +444,17 @@ public class Handlers {
             def nazivLower = naziv.substring(0,1).toLowerCase() + naziv.substring(1);
             def vrijednost = el.'gmd:MD_ExtendedElementInformation'.'gmd:domainValue'.'gco:CharacterString'.text()
 
+            switch(nazivLower){
+                case 'tematskoPodrucje':
+                    vrijednost = f.codelistValueLabel("AZOPodrucje",vrijednost)
+                    break
+                case 'tematskoPodpodrucje':
+                    vrijednost = f.codelistValueLabel("AZOPodpodrucje",vrijednost)
+                    break
+                default:
+                    break
+            }
+
             builder.append(handlers.fileResult('html/text-el.html', [label: f.translate(nazivLower), text: vrijednost]));
         }
         return handlers.fileResult('html/2-level-entry.html', [label: f.translate('AZO'), childData: builder.toString()])

@@ -139,6 +139,14 @@
                 <xsl:variable name="extName" select="gmd:name/gco:CharacterString"/>
                 <xsl:variable name="extValue" select="gmd:domainValue/gco:CharacterString"/>
                 <Field name="{$extName}" string="{$extValue}" store="true" index="true"/>
+                <xsl:if test="$extName='TematskoPodrucje'">
+                    <xsl:variable name="podrucjeTranslation" select="util:getCodelistTranslation('AZOPodrucje', string($extValue), string($isoLangId))"/>
+                    <Field name="{concat($extName,'_local')}" string="{$podrucjeTranslation}" store="true" index="true"/>
+                </xsl:if>
+                <xsl:if test="$extName='TematskoPodpodrucje'">
+                    <xsl:variable name="podpodrucjeTranslation" select="util:getCodelistTranslation('AZOPodpodrucje', string($extValue), string($isoLangId))"/>
+                    <Field name="{concat($extName,'_local')}" string="{$podpodrucjeTranslation}" store="true" index="true"/>
+                </xsl:if>
             </xsl:for-each>	
 
 		<!-- the double // here seems needed to index MD_DataIdentification when
@@ -154,7 +162,7 @@
 				</xsl:for-each>
 
                                 <xsl:for-each select="gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString">
-                                        <Field name="rsIdentifier" string="{string(.)}" store="true" index="true"/>
+                                        <Field name="sourceIdentifier" string="{string(.)}" store="true" index="true"/>
                                 </xsl:for-each>
 
 

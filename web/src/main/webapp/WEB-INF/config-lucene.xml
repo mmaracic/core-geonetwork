@@ -163,7 +163,9 @@
         <field name="JedinstveniOznacivacIzvora" tagName="jedinstveniOznacivacIzvora"/>
         <field name="Akronim" tagName="akronim"/>
         <field name="TematskoPodrucje" tagName="tematskoPodrucje"/>
+        <field name="TematskoPodrucje_local" tagName="tematskoPodrucje_local"/>
         <field name="TematskoPodpodrucje" tagName="tematskoPodpodrucje"/>
+        <field name="TematskoPodpodrucje_local" tagName="tematskoPodpodrucje_local"/>
    </dumpFields>
   </search>
 
