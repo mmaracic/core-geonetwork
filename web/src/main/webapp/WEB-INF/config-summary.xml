@@ -56,7 +56,8 @@
 -->
 
     <facets>
-        <facet name="rsIdentifier" indexKey="rsIdentifier" label="rsIdentifiers"/>
+        <facet name="crsCode" indexKey="crsCode" label="rsIdentifiers"/>
+        <facet name="sourceIdentifier" indexKey="sourceIdentifier" label="sourceIdentifiers"/>
         <facet name="altTitle" indexKey="altTitle" label="altTitles"/>
         <facet name="reviseDateYear" indexKey="reviseDateYear" label="reviseDateYears"/>
         <facet name="reviseDate" indexKey="reviseDate" label="reviseDates"/>
@@ -150,7 +151,8 @@
             <item facet="reviseDateYear"  sortOrder="desc" max="200"/>
             <item facet="createDateYear"  sortOrder="desc" max="200"/>
             <item facet="publicationDate"  sortOrder="desc" max="200"/>
-            <item facet="rsIdentifier"  sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="crsCode" sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="sourceIdentifier"  sortOrder="desc" max="200"/>
             <item facet="responsiblePartyOrganization"  sortOrder="desc" max="200"/>
             <item facet="responsiblePartyRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
             <item facet="responsiblePartyIndividualName"  sortOrder="desc" max="200"/>
@@ -206,7 +208,7 @@
       flat facet. It's recommended to use format="DIMENSION" for facet.
       See above. -->
       <summaryType name="hits">
-          <item facet="title" sortOrder="desc" sortOrder="desc" max="200"/>
+          <item facet="title" sortOrder="desc" max="200"/>
             <item facet="altTitle"  sortOrder="desc" max="200"/>
             <item facet="type" sortOrder="desc" translator="codelist:gmd:MD_ScopeCode" max="200"/>
           <item facet="topicCat" sortOrder="desc" translator="codelist:gmd:MD_TopicCategoryCode" max="200"/>
@@ -216,7 +218,8 @@
             <item facet="reviseDateYear"  sortOrder="desc" max="200"/>
             <item facet="createDateYear"  sortOrder="desc" max="200"/>
             <item facet="publicationDate"  sortOrder="desc" max="200"/>
-            <item facet="rsIdentifier"  sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="crsCode" sortOrder="desc" max="200" translator="label:gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code"/>
+            <item facet="sourceIdentifier"  sortOrder="desc" max="200"/>
             <item facet="responsiblePartyOrganization"  sortOrder="desc" max="200"/>
             <item facet="responsiblePartyRole"  sortOrder="desc" translator="codelist:gmd:CI_RoleCode" max="200"/>
             <item facet="responsiblePartyIndividualName"  sortOrder="desc" max="200"/>
