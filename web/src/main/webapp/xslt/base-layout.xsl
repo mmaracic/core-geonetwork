@@ -17,6 +17,7 @@
   <xsl:template match="/">
     <html ng-app="{$angularModule}" lang="{$lang}" id="ng-app">
       <head>
+        <link rel="shortcut icon" href="../../images/haop.ico"/>
         <title>
           <xsl:value-of select="concat($env/system/site/name, ' - ', $env/system/site/organization)"
           />
@@ -29,7 +30,6 @@
         <meta name="keywords" content=""/>
 
 
-        <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="../../images/logos/favicon.png"/>
         <link href="rss.search?sortBy=changeDate" rel="alternate" type="application/rss+xml"
           title="{concat($env/system/site/name, ' - ', $env/system/site/organization)}"/>
         <link href="portal.opensearch" rel="search" type="application/opensearchdescription+xml"
