@@ -197,7 +197,8 @@ public class GetKeywords {
 		}
 
 		long roundedChangeDate = latestLastModified / 1000 * 1000;
-		return webRequest.checkNotModified(roundedChangeDate);
+                boolean notModified = webRequest.checkNotModified(roundedChangeDate);
+		return notModified;
 
 	}
 

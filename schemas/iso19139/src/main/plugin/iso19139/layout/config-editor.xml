@@ -790,24 +790,10 @@
           
           <!-- Jezik izvora-->
           <field name="langSource"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gmd:LanguageCode"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
-             templateModeOnly="true"
-          >
-            <template>
-                <values>
-                    <key label="langSource" xpath="@codeListValue" tooltip="gmd:language">
-                        <helper name="gmd:language" context="gmd:MD_DataIdentification"/>
-                    </key>                      
-                </values>
-                <snippet>
-                    <gmd:language>
-                        <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="{{langSource}}"/>
-                    </gmd:language>
-                </snippet>
-            </template>              
-          </field>
+          />
             <action type="add" name="langSource" or="language" forceLabel="true"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
                     if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
@@ -824,41 +810,15 @@
         
         <!-- Category -->
         <section name="category">
-          <field name="serviceType"  templateModeOnly="true" 
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"
+          <field name="serviceType"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName"
             if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-          >
-            <template>
-                <values>
-                  <key label="serviceType" xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName" tooltip="srv:serviceType">
-                    <codelist name="serviceType"/>
-                  </key>
-                </values>
-                <snippet>
-                    <srv:serviceType>
-                        <gco:LocalName>{{serviceType}}</gco:LocalName>
-                    </srv:serviceType>
-                </snippet>
-            </template>
-          </field>
-          <field name="dataType" templateModeOnly="true" 
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory"
+          />
+          <field name="dataType"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
-          >
-            <template>
-                <values>
-                  <key label="dataType" xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode" tooltip="gmd:topicCategory">
-                    <codelist name="gmd:MD_TopicCategoryCode"/>
-                  </key>
-                </values>
-                <snippet>
-                    <gmd:topicCategory>
-                       <gmd:MD_TopicCategoryCode>{{dataType}}</gmd:MD_TopicCategoryCode>
-                   </gmd:topicCategory>
-                </snippet>
-            </template>
-          </field>
+          />
             <action type="add" name="dataType" or="topicCategory" forceLabel="true"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
@@ -909,84 +869,21 @@
             <!-- INSPIRE DATA keyword-->
           <field name="keywords"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
-            gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[not(../gmd:thesaurusName)]"
-            or="keyword"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
-            gmd:descriptiveKeywords/gmd:MD_Keywords[not(gmd:thesaurusName)]"
+            gmd:descriptiveKeywords
+                [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes'))]"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          />
-           <action type="add" name="addKeyword" or="keyword" forceLabel="true"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-           >
-            <template>
-                <snippet>
-                    <gmd:keyword>
-                        <gco:CharacterString/>
-                    </gmd:keyword>
-                </snippet>
-            </template>
-            </action>
+          >
+          </field>
 
             <!-- INSPIRE DATA type keyword-->
           <!-- INSPIRE Themes -->
           <field name="keywords"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
             gmd:descriptiveKeywords
             [contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes')]"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          />
-          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
-          <action type="add"
-                  name="inspireTheme"
-                  or="descriptiveKeywords"
-                  in="/gmd:MD_Metadata/gmd:identificationInfo/*"
-                  if="count(gmd:MD_Metadata/gmd:identificationInfo/*/
-                        gmd:descriptiveKeywords[
-                          contains(gmd:MD_Keywords/gmd:thesaurusName/
-                                      gmd:CI_Citation/gmd:title/gco:CharacterString,
-                                   'INSPIRE themes')]) = 0">
-            <template>
-              <snippet>
-                <gmd:descriptiveKeywords>
-                  <gmd:MD_Keywords>
-                    <gmd:keyword>
-                      <gco:CharacterString/>
-                    </gmd:keyword>
-                    <gmd:type>
-                      <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode"
-                                              codeListValue="theme"/>
-                    </gmd:type>
-                    <gmd:thesaurusName>
-                      <gmd:CI_Citation>
-                        <gmd:title>
-                          <gco:CharacterString>GEMET - INSPIRE themes, version 1.0</gco:CharacterString>
-                        </gmd:title>
-                        <gmd:date>
-                          <gmd:CI_Date>
-                            <gmd:date>
-                              <gco:Date>2008-06-01</gco:Date>
-                            </gmd:date>
-                            <gmd:dateType>
-                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
-                                                   codeListValue="publication"/>
-                            </gmd:dateType>
-                          </gmd:CI_Date>
-                        </gmd:date>
-                        <gmd:identifier>
-                          <gmd:MD_Identifier>
-                            <gmd:code>
-                              <gmx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.theme.inspire-theme">geonetwork.thesaurus.external.theme.inspire-theme</gmx:Anchor>
-                            </gmd:code>
-                          </gmd:MD_Identifier>
-                        </gmd:identifier>
-                      </gmd:CI_Citation>
-                    </gmd:thesaurusName>
-                  </gmd:MD_Keywords>
-                </gmd:descriptiveKeywords>
-              </snippet>
-            </template>
-          </action>
+          >
+          </field>
         </section>
         
           <section name="bboxesSection">
@@ -1066,7 +963,7 @@
             gmd:date"
             if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           />
-            <action type="add" name="referenceDate" or="date"
+            <action type="add" name="referenceDate" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation"
                     if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
                 <template>
@@ -1090,7 +987,7 @@
             gmd:date"
             if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
-            <action type="add" name="referenceDate" or="date"
+            <action name="date" type="add" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation"
                     if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             >
@@ -1527,7 +1424,7 @@
                     <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
                     </key>
-                    <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints]" tooltip="gmd:otherConstraints]"/>
+                    <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints" tooltip="gmd:otherConstraints]"/>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
@@ -1578,7 +1475,7 @@
                     <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
                     </key>
-                    <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints]" tooltip="gmd:otherConstraints]"/>
+                    <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints" tooltip="gmd:otherConstraints]"/>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
