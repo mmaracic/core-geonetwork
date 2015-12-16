@@ -77,7 +77,7 @@
              });
 
              var initTooltip = function(event) {
-               if (!isInitialized && gnCurrentEdit.displayTooltips) {
+               if (!isInitialized && (gnCurrentEdit.displayTooltips || typeof(gnCurrentEdit.displayTooltips)==='undefined')) {
                  // Retrieve field information (there is a cache)
                  gnSchemaManagerService
                   .getElementInfo(attrs.gnFieldTooltip).then(function(data) {

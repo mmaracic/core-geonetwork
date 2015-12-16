@@ -91,7 +91,7 @@
         </div>
         <div style="clear:both"></div>
 
-        <div class="well" data-ng-bind-html="mdView.current.record.abstract | newlines"/>
+        <div class="well" data-ng-bind-html="mdView.current.record.abstract | newlines" data-gn-field-tooltip="iso19139|gmd:abstract"/>
 
         <!-- Display the first metadata status (apply to ISO19139 record) -->
         <div data-ng-if="mdView.current.record.status_text.length > 0"
@@ -129,19 +129,19 @@
             <!--AZO Metapodaci-->
           <tr data-ng-if="mdView.current.record.jedinstveniOznacivacIzvora">
               <th data-translate="">jedinstveniOznacivacIzvora</th>
-              <td>{{mdView.current.record.jedinstveniOznacivacIzvora}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOOznacivac">{{mdView.current.record.jedinstveniOznacivacIzvora}}</td>
             </tr>
           <tr data-ng-if="mdView.current.record.akronim">
               <th data-translate="">akronim</th>
-              <td>{{mdView.current.record.akronim}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOAkronim">{{mdView.current.record.akronim}}</td>
             </tr>
           <tr data-ng-if="mdView.current.record.tematskoPodrucje">
               <th data-translate="">tematskoPodrucje</th>
-              <td>{{mdView.current.record.tematskoPodrucje_local}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOPodrucje">{{mdView.current.record.tematskoPodrucje_local}}</td>
             </tr>
           <tr data-ng-if="mdView.current.record.tematskoPodpodrucje">
               <th data-translate="">tematskoPodpodrucje</th>
-              <td>{{mdView.current.record.tematskoPodpodrucje_local}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOPodpodrucje">{{mdView.current.record.tematskoPodpodrucje_local}}</td>
             </tr>
             
             <tr data-ng-if="mdView.current.record.category.length > 0 ||
@@ -163,7 +163,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.keyword">
               <th data-translate="">keywords</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:keyword">
 
                 <ul>
                   <li data-ng-repeat="k in mdView.current.record.keyword track by $index">
@@ -175,7 +175,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.datasetLang">
               <th data-translate="">language</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:language|gmd:MD_DataIdentification">
                 <ul>
                   <li data-ng-repeat="l in mdView.current.record.datasetLang">
                     {{l | translate}}
@@ -185,7 +185,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.identifier">
               <th data-translate="">identifier</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|code|gmd:MD_Identifier">
                 <ul>
                   <li data-ng-repeat="i in mdView.current.record.identifier">
                     {{i}}
@@ -195,18 +195,18 @@
             </tr>
             <tr data-ng-if="mdView.current.record.classification_text">
               <th data-translate="">classification</th>
-              <td>{{mdView.current.record.classification_text}}</td>
+              <td data-gn-field-tooltip="iso19139|gmd:MD_ClassificationCode">{{mdView.current.record.classification_text}}</td>
             </tr>
             <tr data-ng-if="mdView.current.record.legalConstraints">
               <th data-translate="">legalConstraints</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:MD_LegalConstraints">
                 <p data-ng-repeat="c in mdView.current.record.legalConstraints track by $index">{{c}}</p>
               </td>
             </tr>
 
             <tr data-ng-if="mdView.current.record.securityConstraints">
               <th data-translate="">securityConstraints</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:MD_SecurityConstraints">
                 <p data-ng-repeat="c in mdView.current.record.securityConstraints track by $index">{{c}}</p>
               </td>
             </tr>
@@ -221,7 +221,7 @@
 
             <tr data-ng-if="mdView.current.record.getAllContacts().resource">
               <th data-translate="">resourceContact</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:contactInfo">
                 <div class="gn-contact"
                      data-ng-repeat="c in mdView.current.record.getAllContacts().resource track by $index">
                   <h3>
@@ -285,7 +285,7 @@
           <tbody>
             <tr data-ng-if="mdView.current.record.updateFrequency">
               <th data-translate="">updateFrequency</th>
-              <td>{{mdView.current.record.maintenanceAndUpdateFrequency_text}}</td>
+              <td data-gn-field-tooltip="iso19139|gmd:maintenanceAndUpdateFrequency">{{mdView.current.record.maintenanceAndUpdateFrequency_text}}</td>
             </tr>
             <tr data-ng-if="mdView.current.record.spatialRepresentationType_text">
               <th data-translate="">spatialRepresentationType</th>
@@ -293,7 +293,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.denominator">
               <th data-translate="">scale</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:scaleDenominator">
                 <ul>
                   <li data-ng-repeat="d in mdView.current.record.denominator"
                       class="gn-scale">{{d}}</li>
@@ -302,7 +302,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.resolution">
               <th data-translate="">resolution</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:spatialResolution">
                 <ul>
                   <li data-ng-repeat="r in mdView.current.record.resolution">{{r}}</li>
                 </ul>
@@ -310,7 +310,7 @@
             </tr>
             <tr data-ng-if="mdView.current.record.crs">
               <th data-translate="">crs</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gml:ProjectedCRS">
                 <ul>
                   <li data-ng-repeat="r in mdView.current.record.crs">{{r}}</li>
                 </ul>
@@ -318,13 +318,13 @@
             </tr>
             <tr data-ng-if="mdView.current.record.format">
               <th data-translate="">format</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:MD_Format">
                 <span data-ng-repeat="f in mdView.current.record.format" class="badge">{{f}}</span>
               </td>
             </tr>
             <tr data-ng-if="mdView.current.record.lineage">
               <th data-translate="">lineage</th>
-              <td>
+              <td data-gn-field-tooltip="iso19139|gmd:lineage">
                 <p data-ng-bind-html="mdView.current.record.lineage | newlines"/>
               </td>
             </tr>
@@ -368,7 +368,7 @@
           <tbody>
           <tr>
             <th data-translate="">contact</th>
-            <td>
+            <td data-gn-field-tooltip="iso19139|gmd:contact|gmd:MD_Metadata">
               <div class="gn-contact"
                    data-ng-repeat="c in mdView.current.record.getAllContacts().metadata track by $index">
                 <h3>
@@ -404,7 +404,7 @@
           </tr>
           <tr>
             <th data-translate="">metadataLanguage</th>
-            <td>
+            <td data-gn-field-tooltip="iso19139|gmd:language|gmd:MD_Metadata">
               <ul>
                 <li data-ng-repeat="l in mdView.current.record.mdLanguage">
                   {{l | translate}}
@@ -483,7 +483,7 @@
           <dl data-ng-show="mdView.current.record.tempExtentBegin ||
                               mdView.current.record.tempExtentEnd">
             <dt data-translate>tempExtentBegin</dt>
-            <dd>
+            <dd data-gn-field-tooltip="iso19139|gmd:EX_TemporalExtent">
               <span data-gn-humanize-time="{{mdView.current.record.tempExtentBegin}}"/>
               &nbsp;<i class="fa fa-forward"></i>&nbsp;
               <span data-gn-humanize-time="{{mdView.current.record.tempExtentEnd}}"/>

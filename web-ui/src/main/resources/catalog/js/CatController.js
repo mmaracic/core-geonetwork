@@ -3,9 +3,10 @@
 
   goog.require('gn_search_manager');
   goog.require('gn_session_service');
+  goog.require('gn_fields_directive');
 
   var module = angular.module('gn_cat_controller',
-      ['gn_search_manager', 'gn_session_service']);
+      ['gn_search_manager', 'gn_session_service', 'gn_fields_directive']);
 
 
   module.constant('gnGlobalSettings', {
