@@ -97,7 +97,7 @@ public class MetadataHistory extends GeonetEntity implements Serializable {
         return this;
     }
     
-    @Temporal(javax.persistence.TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     @Column(nullable = false)
     public Date getItemDate(){
         return _datetime;
