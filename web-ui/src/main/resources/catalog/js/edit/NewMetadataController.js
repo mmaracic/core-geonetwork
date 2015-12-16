@@ -97,6 +97,15 @@
                     types.push(type);
                   }
                 }
+                
+                //if dataset is available index has to be available and vice versa
+                if (types.indexOf('service')>=0 && types.indexOf('dataset')<0 ){
+                    types.push('dataset');
+                }
+                if (types.indexOf('service')<0 && types.indexOf('dataset')>=0 ){
+                    types.push('service');
+                }
+
                 types.sort();
                 $scope.mdTypes = types;
 
@@ -124,7 +133,11 @@
             if (mdType.indexOf(type) >= 0) {
               tpls.push($scope.mdList.metadata[i]);
             }
-          } else if (mdType == type) {
+          } else if (mdType === type) {
+            tpls.push($scope.mdList.metadata[i]);
+          } else if (mdType === 'service' && type === 'dataset') {
+            tpls.push($scope.mdList.metadata[i]);
+          } else if (mdType === 'dataset' && type === 'service') {
             tpls.push($scope.mdList.metadata[i]);
           }
         }
@@ -140,7 +153,8 @@
         tpls.sort(compare);
 
         $scope.tpls = tpls;
-        $scope.activeType = type;
+        $scope.destType = type;
+        $scope.sourceType = mdType;
         $scope.setActiveTpl($scope.tpls[0]);
         return false;
       };
@@ -160,7 +174,9 @@
 
       $scope.createNewMetadata = function(isPublic) {
         return gnMetadataManager.create(
-            $scope.activeTpl['geonet:info'].id,
+           $scope.sourceType,
+           $scope.destType,
+           $scope.activeTpl['geonet:info'].id,
             $scope.ownerGroup,
             isPublic || false,
             $scope.isTemplate,

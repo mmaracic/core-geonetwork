@@ -1504,6 +1504,8 @@ public class DataManager implements ApplicationEventPublisherAware {
      * @param groupOwner
      * @param source
      * @param owner
+     * @param sourceType Type of the original metadata
+     * @param destType Desired type of the metadata
      * @param parentUuid
      * @param isTemplate TODO
      * @param fullRightsForGroup TODO
@@ -1511,8 +1513,12 @@ public class DataManager implements ApplicationEventPublisherAware {
      * @throws Exception
      */
     public String createMetadata(ServiceContext context, String templateId, String groupOwner,
-                                 String source, int owner,
+                                 String source, int owner, String sourceType, String destType,
                                  String parentUuid, String isTemplate, boolean fullRightsForGroup) throws Exception {
+        
+        String DATASET_FROM_SERVICE = "Service2Dataset.xsl";
+        String SERVICE_FROM_DATASET = "Dataset2Service.xsl";
+        
         Metadata templateMetadata = getMetadataRepository().findOne(templateId);
         if (templateMetadata == null) {
             throw new IllegalArgumentException("Template id not found : " + templateId);
@@ -1522,6 +1528,22 @@ public class DataManager implements ApplicationEventPublisherAware {
         String data   = templateMetadata.getData();
         String uuid   = UUID.randomUUID().toString();
         Element xml = Xml.loadString(data, false);
+        
+        //transformation form service to dataset and vice-versa
+        if ((sourceType.compareTo("dataset")==0 || sourceType.compareTo("service")==0) && (destType.compareTo("dataset")==0 || destType.compareTo("service")==0)){
+            Map<String, Object> params = new HashMap<>();
+            if (sourceType.compareTo("dataset")==0 && destType.compareTo("service")==0){
+                java.nio.file.Path trStyleSheet = getSchemaDir("iso19139").resolve(SERVICE_FROM_DATASET);                
+                Element trXml = Xml.transform(xml, trStyleSheet, params);
+                xml = trXml;
+            }
+            else if (sourceType.compareTo("service")==0 && destType.compareTo("dataset")==0){
+                java.nio.file.Path trStyleSheet = getSchemaDir("iso19139").resolve(DATASET_FROM_SERVICE);                
+                Element trXml = Xml.transform(xml, trStyleSheet, params);
+                xml = trXml;
+            }
+        }
+
         if (templateMetadata.getDataInfo().getType() == MetadataType.METADATA) {
             xml = updateFixedInfo(schema, Optional.<Integer>absent(), uuid, xml, parentUuid, UpdateDatestamp.NO, context);
         }

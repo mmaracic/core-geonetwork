@@ -77,6 +77,8 @@ public class Create extends NotInReadOnlyModeService {
 		String isTemplate = Util.getParam(params, Params.TEMPLATE, "n");
 		String id;
 		String uuid;
+                String sourceType = Util.getParam(params, Params.SOURCE_TYPE, "dataset");
+                String destType = Util.getParam(params, Params.DEST_TYPE, "dataset");
 		boolean haveAllRights = Boolean.valueOf(Util.getParam(params, Params.FULL_PRIVILEGES, "false"));
 		
 		// does the request contain a UUID ?
@@ -116,7 +118,7 @@ public class Create extends NotInReadOnlyModeService {
 		//--- query the data manager
         SettingManager settingManager = gc.getBean(SettingManager.class);
         String newId = dm.createMetadata(context, id, groupOwner,
-                settingManager.getSiteId(), context.getUserSession().getUserIdAsInt(),
+                settingManager.getSiteId(), context.getUserSession().getUserIdAsInt(), sourceType, destType,
                 (child.equals("n") ? null : uuid), isTemplate, haveAllRights);
 
 

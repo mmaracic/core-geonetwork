@@ -14,7 +14,6 @@
       <div class="panel panel-default dynamic-list">
         <div class="panel-heading">
           <span data-translate="">createA</span>
-          <strong>{{(activeType || '...') | translate}}</strong>
         </div>
         <div class="panel-body">
           <div class="list-group gn-record-type">
@@ -60,13 +59,13 @@
       <div class="btn-group">
         <button type="button" class="btn btn-success btn-lg"
           data-gn-click-and-spin="createNewMetadata()"
-          data-ng-class="{'disabled': (!activeType || !activeTpl || !ownerGroup)}">
+          data-ng-class="{'disabled': (!sourceType || !destType || !activeTpl || !ownerGroup)}">
           <i class="fa fa-plus"/>
           <span data-translate="">createMetadata</span>
         </button>
         <button type="button"
                 class="btn btn-success btn-lg dropdown-toggle"
-                data-ng-class="{'disabled': (!activeType || !activeTpl || !ownerGroup)}"
+                data-ng-class="{'disabled': (!sourceType || !destType || !activeTpl || !ownerGroup)}"
                 data-toggle="dropdown">
           <span class="caret"></span>&nbsp;
         </button>

@@ -61,6 +61,7 @@
            * of the original metadata and will be of the same type (isTemplate,
            * isChild, fullPrivileges).
            *
+           **@param {string} type Type of mrtadata i.e. dataset, service etc.
            * @param {string} id Internal id of the metadata to be copied.
            * @param {string} groupId Internal id of the group of the metadata
            * @param {boolean} withFullPrivileges privileges to assign.
@@ -68,12 +69,14 @@
            * @param {boolean} isChild is child of a parent metadata
            * @return {HttpPromise} Future object
            */
-        copy: function(id, groupId, withFullPrivileges, 
+        copy: function(sourceType, destType, id, groupId, withFullPrivileges, 
             isTemplate, isChild) {
           var url = gnUrlUtils.append('md.create',
               gnUrlUtils.toKeyValue({
                 _content_type: 'json',
                 group: groupId,
+                sourceType: sourceType,
+                destType: destType,
                 id: id,
                 template: isTemplate ? (isTemplate === 's' ? 's' : 'y') : 'n',
                 child: isChild ? 'y' : 'n',
@@ -165,6 +168,7 @@
            * Create a new metadata as a copy of an existing template.
            * Will forward to `copy` method.
            *
+           *@param {string} type Type of mrtadata i.e. dataset, service etc.
            * @param {string} id Internal id of the metadata to be copied.
            * @param {string} groupId Internal id of the group of the metadata
            * @param {boolean} withFullPrivileges privileges to assign.
@@ -172,9 +176,9 @@
            * @param {boolean} isChild is child of a parent metadata
            * @return {HttpPromise} Future object
            */
-        create: function(id, groupId, withFullPrivileges, 
+        create: function(sourceType, destType, id, groupId, withFullPrivileges, 
             isTemplate, isChild, tab) {
-          return this.copy(id, groupId, withFullPrivileges,
+          return this.copy(sourceType, destType, id, groupId, withFullPrivileges,
               isTemplate, isChild).success(function(data) {
             var path = '/metadata/' + data.id;
             if (tab) {
