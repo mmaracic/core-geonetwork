@@ -2,6 +2,11 @@
   <table
     class="table-content table table-striped table-hover table-condensed">
     <tbody>
+        <tr>
+            <th></th>
+            <th data-translate="">title</th>
+            <th data-translate="">name</th>            
+        </tr>
       <tr data-ng-repeat="layer in layers | orderBy:'title':reverse"
           data-ng-click="select(layer)"
           title="{{layer.abstract}}"
@@ -11,7 +16,8 @@
         <td class="add col-first">
           <div class="icon-zoom-in"></div>
         </td>
-        <td>{{layer.Title}} ({{layer.Name}})</td>
+        <td>{{layer.Title}}</td>
+        <td>({{layer.Name}})</td>
       </tr>
     </tbody>
   </table>
