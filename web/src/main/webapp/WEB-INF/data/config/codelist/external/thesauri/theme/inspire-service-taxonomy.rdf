@@ -36,7 +36,7 @@
     <skos:prefLabel xml:lang="bg">humanInteractionService</skos:prefLabel>
     <skos:prefLabel xml:lang="da">humanInteractionService</skos:prefLabel>
     <skos:prefLabel xml:lang="cs">humanInteractionService</skos:prefLabel>
-	<skos:prefLabel xml:lang="hr">Usluge ljudske geografske interakcije (humanInteractionService=</skos:prefLabel>
+	<skos:prefLabel xml:lang="hr">Usluge ljudske geografske interakcije (humanInteractionService)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="urn:inspire:service:taxonomy:humanCatalogueViewer">
     <skos:prefLabel xml:lang="fr">humanCatalogueViewer</skos:prefLabel>

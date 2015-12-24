@@ -45,6 +45,7 @@
     "comments": "Komentar",
     "contactDetailsSentTo": "Elektronička pošta je poslana ",
     "country": "Država",
+    "county": "Regije",
     "regions": "Regije",
     "gemetKeywords": "GEMET ključne riječi",
     "createAnAccount": "Izrada korisničkog računa",
@@ -237,6 +238,7 @@
     "layerNotAvailableInMapProj": "WMS servis ne poslužuje slojeve u referentnom koordinatnom sustavu karte. Sloj će biti dodan na kartu, ali možda neće biti ispravno prikazan.",
     "layerCRSNotFound": "WMS sloj nema informaciju o referentnom koordinatnom sustavu. Moguće da je WMS verzija ranija od 1.3.0.",
     "layerTileLoadError": "Nešto je pošlo krivo prilikom učitavanja tajla <a href='{{url}}'>'{{url | limitTo: 30}} ...'</a> za sloj '{{layer}}'.",
+    "layerAdded": "Layer added",
     "getCapFailure":"WMS getCapabilities zahtjev nije prošao",
     "standards": "Standard metapodataka",
     "metadataTypes": "Tip zapisa",
@@ -314,5 +316,6 @@
     "korisniciPodataka":"Korisnik podataka",
     "nazivIzvjestaja":"Naziv izvještaja",
     "tijeloZaDostavuPodatakaIzvjesca":"Tijelo za dostavu podataka izvješća",
-    "inspireConformance": "Usklađenost s INSPIRE-om"
+    "inspireConformance": "Usklađenost s INSPIRE-om",
+    "Graticule": "Kartografska mreža"
 }
