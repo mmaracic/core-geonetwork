@@ -139,7 +139,8 @@
   module.directive('gnKmlImport', [
     'ngeoDecorateLayer',
     'gnAlertService',
-    function(ngeoDecorateLayer, gnAlertService) {
+    '$translate',
+    function(ngeoDecorateLayer, gnAlertService, $translate) {
       return {
         restrict: 'A',
         replace: true,
@@ -200,7 +201,7 @@
                 map.getSize());
 
             gnAlertService.addAlert({
-              msg: 'Une couche ajoutée : <strong>' +
+              msg: $translate('layerAdded') + ': <strong>' +
                   layer.get('label') + '</strong>',
               type: 'success'
             });
@@ -363,7 +364,8 @@
   module.directive('gnCapTreeElt', [
     '$compile',
     'gnAlertService',
-    function($compile, gnAlertService) {
+    '$translate',
+    function($compile, gnAlertService, $translate) {
       return {
         restrict: 'E',
         require: '^gnWmsImport',
@@ -381,7 +383,7 @@
           var select = function() {
             controller.addLayer(scope.member);
             gnAlertService.addAlert({
-              msg: 'Une couche ajoutée : <strong>' +
+              msg: $translate('layerAdded') + ': <strong>' +
                   (scope.member.Title || scope.member.title) + '</strong>',
               type: 'success'
             });
