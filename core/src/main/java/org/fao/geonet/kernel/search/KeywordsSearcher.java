@@ -241,7 +241,11 @@ public class KeywordsSearcher {
         
         elKeyword.addContent(elSelected);
         elKeyword.addContent(new Element("id").addContent(Integer.toString(kb.getId())));
-        elKeyword.addContent(new Element("value").addContent(kb.getDefaultValue()).setAttribute("language", defaultLang));
+        String defaultKeywordValue = kb.getDefaultValue();
+        if (kb.getThesaurusKey().compareTo("external.theme.inspire-service-taxonomy")==0 && defaultLang.compareTo("hrv")==0){
+            defaultKeywordValue=defaultKeywordValue.substring(defaultKeywordValue.indexOf("(")+1, defaultKeywordValue.indexOf(")"));
+        }        
+        elKeyword.addContent(new Element("value").addContent(defaultKeywordValue).setAttribute("language", defaultLang));
         elKeyword.addContent(new Element("definition").addContent(kb.getDefaultDefinition()).setAttribute("language", defaultLang));
         elKeyword.addContent(new Element("defaultLang").addContent(defaultLang));
         Element thesaurusElement = new Element("thesaurus");
@@ -265,7 +269,7 @@ public class KeywordsSearcher {
         Element values = new Element(rootElemName);
         for (Map.Entry<String, String> entry : map.entrySet()) {
             values.addContent(new Element(leafElemName).addContent(entry.getValue()).setAttribute("language", entry.getKey()));
-        }
+            }
         return values;
     }
 

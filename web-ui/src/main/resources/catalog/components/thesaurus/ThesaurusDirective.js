@@ -243,8 +243,12 @@
                  var counter = 0;
                  angular.forEach(scope.initialKeywords, function(keyword) {
                    // One keyword only and exact match search
+                   var searchType = 2;
+                   if (scope.thesaurusKey === 'external.theme.inspire-service-taxonomy'){
+                       searchType=1;
+                   }
                    gnThesaurusService.getKeywords(keyword,
-                   scope.thesaurusKey, 1, 2).then(function(listOfKeywords) {
+                   scope.thesaurusKey, 1, searchType).then(function(listOfKeywords) {
                       counter++;
 
                       listOfKeywords[0] &&
