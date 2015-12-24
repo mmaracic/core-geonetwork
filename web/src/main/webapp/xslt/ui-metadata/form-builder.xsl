@@ -347,6 +347,7 @@
     <!-- Parameters for custom add directive -->
     <xsl:param name="addDirective" required="no"/>
     <xsl:param name="directiveAttributes" required="no"/>
+    <xsl:param name="templateRequired" required="no"/>
     <xsl:param name="qname" required="no"/>
     <xsl:param name="parentRef" required="no"/>
     <!-- Label to display if element is missing. The field
@@ -372,7 +373,7 @@
          id="gn-el-{if ($refToDelete) then $refToDelete/@ref else generate-id()}"
          data-gn-field-highlight="">
 
-      <label class="col-sm-2 control-label">
+      <label class="col-sm-2 control-label {if ($templateRequired='true') then 'gn-custom-required' else ''}">
         <xsl:value-of select="$name"/>
       </label>
       <div class="col-sm-9">
@@ -435,13 +436,18 @@
               The directive takes care of setting values. -->
               <xsl:for-each select="$template/values/key">
                 <xsl:variable name="valueLabelKey" select="@label"/>
+                <xsl:variable name="required" select="required"/>
                 <xsl:variable name="helper" select="if ($keyValues) then $keyValues/field[@name = $valueLabelKey]/helper else ''"/>
                 <xsl:variable name="codelist" select="if ($keyValues) then $keyValues/field[@name = $valueLabelKey]/codelist else ''"/>
                 <xsl:variable name="readonly" select="if ($keyValues) then $keyValues/field[@name = $valueLabelKey]/readonly else ''"/>
-
+                
+                <!--<xsl:message>
+                    Required: <xsl:value-of select="$valueLabelKey"/>: <xsl:value-of select="$required"/>
+                </xsl:message>-->
+                
                 <!-- Only display label if more than one key to match -->
                 <xsl:if test="count($template/values/key) > 1">
-                  <label for="{$id}_{@label}">
+                  <label for="{$id}_{@label}" class="{if ($required='true') then 'gn-custom-part-required' else ''}">
                     <xsl:value-of select="$strings/*[name() = $valueLabelKey]"/>
                   </label>
                 </xsl:if>
@@ -453,6 +459,9 @@
                               id="{$id}_{@label}">
                       <xsl:if test="$readonly = 'true'">
                         <xsl:attribute name="disabled"/>
+                      </xsl:if>
+                      <xsl:if test="$required = 'true'">
+                          <xsl:attribute name="required">required</xsl:attribute>
                       </xsl:if>
                     </textarea>
                   </xsl:when>

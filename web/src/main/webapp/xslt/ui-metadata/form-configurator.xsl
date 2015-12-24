@@ -236,6 +236,7 @@
             if defined in a view.
             -->
           <xsl:variable name="name" select="@name"/>
+          <xsl:variable name="required" select="@required"/>
           <xsl:variable name="del" select="@del"/>
           <xsl:variable name="template" select="template"/>
           <xsl:for-each select="$nodes/*">
@@ -303,6 +304,14 @@
                     </saxon:call-template>
                   </xsl:variable>
                   <value><xsl:value-of select="normalize-space($matchingNodeValue)"/></value>
+                  
+<!--                  <xsl:message>
+                    -Key-<xsl:value-of select="$template/values/key"/>
+                    -Label-<xsl:value-of select="@label"/>
+                    -CurrentNode-<xsl:value-of select="$currentNode"/>
+                    -Xpath-<xsl:value-of select="@xpath"/>                      
+                    -Value-<xsl:copy-of select="$matchingNodeValue"/>
+                  </xsl:message>-->
 
                   <!--
                   Directive attribute are usually string but could be an XPath
@@ -401,6 +410,7 @@
               <xsl:with-param name="keyValues" select="$keyValues"/>
               <xsl:with-param name="refToDelete" select="if ($refToDelete) then $refToDelete/gn:element else ''"/>
               <xsl:with-param name="isFirst" select="position() = 1"/>
+              <xsl:with-param name="templateRequired" select="$required"/>
             </xsl:call-template>
           </xsl:for-each>
           
@@ -434,6 +444,7 @@
               <xsl:with-param name="isExisting" select="false()"/>
               <xsl:with-param name="template" select="$templateWithoutGnCopyElement"/>
               <xsl:with-param name="isMissingLabel" select="$strings/*[name() = $isMissingLabel]"/>
+              <xsl:with-param name="templateRequired" select="$required"/>
             </xsl:call-template>
           </xsl:if>
         </xsl:when>
