@@ -187,7 +187,7 @@
                 <description>General environment protection</description>
             </entry>                
         </codelist>
-	<codelist name="serviceType">
+	<codelist name="srv:serviceType">
 		<entry>
 			<code>discovery</code>
 			<label>Discovery</label>

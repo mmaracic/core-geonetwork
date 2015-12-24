@@ -178,7 +178,7 @@
                     <description>Opće teme</description>
             </entry>                
         </codelist>
-	<codelist name="serviceType">
+	<codelist name="srv:serviceType">
 		<entry>
 			<code>discovery</code>
 			<label>pronalaženje</label>
@@ -2234,19 +2234,19 @@
   <codelist name="indeterminatePosition">
     <entry>
       <code>after</code>
-      <label>After</label>
+      <label>Nakon</label>
     </entry>
     <entry>
       <code>before</code>
-      <label>Before</label>
+      <label>Prije</label>
     </entry>
     <entry>
       <code>now</code>
-      <label>Now</label>
+      <label>Trenutno</label>
     </entry>
     <entry>
       <code>unknown</code>
-      <label>Unknown</label>
+      <label>Nepoznato</label>
 
     </entry>
   </codelist>	
