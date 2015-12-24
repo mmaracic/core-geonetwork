@@ -86,7 +86,13 @@
 						<gco:CharacterString>JedinstveniOznacivacIzvora</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -101,7 +107,13 @@
 						<gco:CharacterString>Akronim</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -116,7 +128,13 @@
 						<gco:CharacterString>TematskoPodrucje</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -131,7 +149,13 @@
 						<gco:CharacterString>TematskoPodpodrucje</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -146,7 +170,13 @@
 						<gco:CharacterString>KorisniciPodataka</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -161,22 +191,13 @@
 						<gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
-					<gmd:domainValue>
-						<gco:CharacterString/>
-					</gmd:domainValue>
-					<gmd:parentEntity gco:nilReason="inapplicable"/>
-					<gmd:rule gco:nilReason="inapplicable"/>
-					<gmd:source gco:nilReason="inapplicable"/>
-				</gmd:MD_ExtendedElementInformation>
-			</gmd:extendedElementInformation>
-			<gmd:extendedElementInformation>
-				<gmd:MD_ExtendedElementInformation>
-					<gmd:name>
-						<gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
-					</gmd:name>
-					<gmd:definition gco:nilReason="inapplicable"/>
-					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
@@ -191,7 +212,13 @@
 						<gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
 					</gmd:name>
 					<gmd:definition gco:nilReason="inapplicable"/>
+                                        <gmd:obligation>
+                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                        </gmd:obligation>					 
 					<gmd:dataType gco:nilReason="inapplicable"/>
+                                        <gmd:maximumOccurrence>
+                                           <gco:CharacterString>*</gco:CharacterString>
+                                        </gmd:maximumOccurrence>
 					<gmd:domainValue>
 						<gco:CharacterString/>
 					</gmd:domainValue>
