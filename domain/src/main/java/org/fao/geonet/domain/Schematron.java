@@ -138,6 +138,15 @@ public class Schematron extends Localized {
             if (lowerCaseFile.endsWith("."+requirement.name().toLowerCase() + ".xsl")) {
                 return requirement;
             }
+            else if (lowerCaseFile.endsWith("."+requirement.name().toLowerCase() + ".sch")) {
+                return requirement;
+            }
+            else if (lowerCaseFile.endsWith(".xsl"+"."+requirement.name().toLowerCase())) {
+                return requirement;
+            }
+            else if (lowerCaseFile.endsWith(".sch"+"."+requirement.name().toLowerCase())) {
+                return requirement;
+            }
         }
         return SchematronRequirement.REQUIRED;
     }
