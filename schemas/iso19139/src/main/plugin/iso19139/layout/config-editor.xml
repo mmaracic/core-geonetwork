@@ -250,7 +250,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOOznacivac"/>
                   </values>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -278,7 +278,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOAkronim"/>
                   </values>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -306,7 +306,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage">
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOPodrucje">
                         <codelist name="AZOPodrucje"/>
                     </key>
                   </values>
@@ -336,7 +336,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage">
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOPodpodrucje">
                         <codelist name="AZOPodpodrucje"/>
                     </key>
                   </values>
@@ -367,7 +367,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOKorisnikPodataka"/>
                   </values>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -422,7 +422,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZONazivIzvjestaja"/>
                   </values>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -477,7 +477,7 @@
             >
                 <template>
                   <values>
-                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="gmd:linkage"/>
+                    <key label="value" xpath="gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString" tooltip="AZOTijeloZaDostavu"/>
                   </values>
                   <snippet>
                     <gmd:extendedElementInformation>
@@ -529,17 +529,17 @@
           <!-- title -->
           <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title"            
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           />
            <field
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:title"            
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
           
           <!-- Alternate title -->
           <field name="altTitle"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
             templateModeOnly="true"
           >
@@ -555,7 +555,7 @@
             </template>
           </field>
             <action type="add" name="altTitle" or="alternateTitle" forceLabel="true"
-                    if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+                    if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation">
                 <template>
                     <snippet>
@@ -567,7 +567,7 @@
             </action>
           <field name="altTitle"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."           
             templateModeOnly="true"
           >
@@ -583,7 +583,7 @@
             </template>
           </field>
             <action type="add" name="altTitle" or="alternateTitle" forceLabel="true"
-                    if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                    if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation">
                 <template>
                     <snippet>
@@ -596,26 +596,34 @@
 
           <!-- Abstract-->
           <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract"
-          if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"                
+          if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"                
           />
           <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract"
-          if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"            
+          if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"            
           />
            <!-- Metadata type-->
-          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"/>
+          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"
+          del=""
+          />
  
           <!-- Resource identifier for dataset and add action to compute it if not defined. -->          
           <!-- Jedinstvena oznaka izvora -->
-          <field name="identifier" templateModeOnly="true"
+          <field name="identifier" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier[gmd:RS_Identifier]"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."            
             >
             <template>
               <values>
-                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier"/>
-                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
-                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier" required="true">
+                    <required>true</required>
+                </key>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier">
+                    <required>true</required>
+                </key>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier">
+                    <required>true</required>
+                </key>
               </values>
               <snippet>
                 <gmd:identifier>
@@ -635,7 +643,7 @@
             </template>
           </field>
            <action type="add" name="identifier" forceLabel="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             or="identifier" in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation">
             <template>
               <snippet>
@@ -657,16 +665,21 @@
           </action>
          
           <!-- Koordinatni referentni sustav -->
-          <field name="rsIdentifier" templateModeOnly="true" 
+          <field name="rsIdentifier" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier"
             del="../..">
             <template>
               <values>
                 <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier">
                     <helper name="gmd:code" context="gmd:RS_Identifier"/>
+                    <required>true</required>
                 </key>
-                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier"/>
-                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier"/>
+                <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier">
+                    <required>true</required>
+                </key>
+                <key label="version" xpath="gmd:RS_Identifier/gmd:version/gco:CharacterString" tooltip="gmd:version|gmd:RS_Identifier">
+                    <required>true</required>
+                </key>
               </values>
               <snippet>
                 <gmd:referenceSystemIdentifier>
@@ -711,9 +724,9 @@
         </action>
 
           <!-- Data format -->
-          <field name="format" templateModeOnly="true" 
+          <field name="format" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
             >
             <template>
@@ -722,6 +735,7 @@
                      xpath="gmd:MD_Format/gmd:name/gco:CharacterString"
                      tooltip="gmd:name|gmd:MD_Format">
                   <helper name="gmd:name" context="gmd:MD_Format"/>
+                  <required>true</required>
                 </key>
                 <key label="format_version" xpath="gmd:MD_Format/gmd:version/gco:CharacterString"/>
               </values>
@@ -744,7 +758,7 @@
             </template>
           </field>
           <action type="add" name="format" or="distributionFormat" forceLabel="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution">
             <template>
               <snippet>
@@ -765,7 +779,7 @@
           <!-- Operates on-->
           <field name="operatesOn" templateModeOnly="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."            
           >
               <template>
@@ -779,7 +793,7 @@
           </field>
             <action type="add" name="operatesOn" or="operatesOn" forceLabel="true"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
-                    if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                    if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             >
                 <template>
                     <snippet>
@@ -789,14 +803,27 @@
             </action>
           
           <!-- Jezik izvora-->
-          <field name="langSource"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gmd:LanguageCode"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          <field name="langSource" templateModeOnly="true" required="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
-          />
-            <action type="add" name="langSource" or="language" forceLabel="true"
+          >
+            <template>
+                <values>
+                    <key label="langSource" xpath="@codeListValue" tooltip="gmd:language|gmd:MD_DataIdentification">
+                        <helper name="gmd:language" context="gmd:MD_DataIdentification"/>
+                    </key>
+                </values>
+                 <snippet>
+                     <gmd:language>
+                         <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="{{langSource}}"/>
+                     </gmd:language>
+                 </snippet>
+             </template>              
+          </field>
+            <action type="add" name="langSource" or="language" forceLabel="true" required="true"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
-                    if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+                    if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             >
                 <template>
                     <snippet>
@@ -810,17 +837,30 @@
         
         <!-- Category -->
         <section name="category">
-          <field name="serviceType"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-          />
-          <field name="dataType"
+          <field name="serviceType" templateModeOnly="true" required="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+          >
+              <template>
+                  <values>
+                      <key label="serviceType" xpath="gco:LocalName" tooltip="srv:serviceType">
+                        <codelist name="srv:serviceType"/>
+                      </key>
+                  </values>
+                  <snippet>
+                    <srv:serviceType>
+                        <gco:LocalName>{{serviceType}}</gco:LocalName>
+                    </srv:serviceType>                      
+                  </snippet>
+              </template>
+          </field>
+          <field name="dataType" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
           />
             <action type="add" name="dataType" or="topicCategory" forceLabel="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
                 <snippet>
@@ -834,46 +874,30 @@
         
         <!-- Ključne riječi -->
         <section name="keywords">
+          <!-- INSPIRE SERVICE keyword-->
+          <field name="keywords"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords
+            [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'ISO - 19119 geographic services taxonomy'))]"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+          />
+
             <!-- INSPIRE SERVICE type keyword-->
           <field name="keywords"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
             gmd:descriptiveKeywords
-            [gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'INSPIRE Service taxonomy']"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0">
-          </field>
-          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
-
-          <!-- INSPIRE SERVICE keyword-->
-          <field name="keywords"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-            gmd:descriptiveKeywords/gmd:MD_Keywords[not(gmd:thesaurusName)]/gmd:keyword"
-            or="keyword"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-            gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode/@codeListValue='theme'
-            and not(gmd:thesaurusName)]"
+            [gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'ISO - 19119 geographic services taxonomy']"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
-           <action type="add" name="addKeyword" or="keyword" forceLabel="true"
-           in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords"
-           if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-           >
-            <template>
-                <snippet>
-                    <gmd:keyword>
-                        <gco:CharacterString/>
-                    </gmd:keyword>
-                </snippet>
-            </template>
-            </action>
+          <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
 
             <!-- INSPIRE DATA keyword-->
           <field name="keywords"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
             gmd:descriptiveKeywords
                 [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes'))]"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          >
-          </field>
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          />
 
             <!-- INSPIRE DATA type keyword-->
           <!-- INSPIRE Themes -->
@@ -881,19 +905,18 @@
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
             gmd:descriptiveKeywords
             [contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes')]"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          >
-          </field>
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          />
         </section>
         
           <section name="bboxesSection">
             <field 
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
               gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox"
-              if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             />
 <!--            <action type="add" name="extent" or="extent"
-              if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
               in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
               <template>
                 <snippet>
@@ -924,10 +947,10 @@
             <field
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
               srv:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox"
-              if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+              if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             />
 <!--            <action type="add" name="extent" or="extent"
-                if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
               in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
               <template>
                 <snippet>
@@ -961,11 +984,11 @@
           <!-- Pojedinačni datum -->
           <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/
             gmd:date"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           />
             <action type="add" name="referenceDate" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation"
-                    if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
+                    if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
                 <template>
                   <snippet>
                     <gmd:date>
@@ -985,11 +1008,11 @@
               </action>
           <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/
             gmd:date"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
             <action name="date" type="add" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation"
-                    if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                    if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             >
                 <template>
                   <snippet>
@@ -1012,7 +1035,7 @@
             <!-- Raspon -->
             <field name="temporalRangeSection" templateModeOnly="true" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             >
             <template>
               <values>
@@ -1049,31 +1072,34 @@
           </field>
 
           <field name="temporalRangeSection" templateModeOnly="true" 
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:extent/gmd:EX_Extent/gmd:temporalElement"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           >
             <template>
               <values>
                 <key label="beginPosition"
                      xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:beginPosition"
                      use="gn-date-picker"
-                     tooltip="gmd:extent|gmd:EX_TemporalExtent"/>
+                     tooltip="gmd:extent|gmd:EX_TemporalExtent">
+                     <directiveAttributes data-tag-name="gml:beginPosition"/>
+                </key>
                 <key label="endPosition"
                      xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition"
                      use="gn-date-picker"
                      tooltip="gmd:extent|gmd:EX_TemporalExtent"
-                    />
-                <key label="indeterminatePosition"
-                     xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition/@indeterminatePosition"
-                     use="codelist"/>
+                    >
+                     <directiveAttributes
+                         data-tag-name="gml:endPosition"
+                         data-indeterminate-position="eval#gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition/@indeterminatePosition"/>
+                </key>
               </values>
               <snippet>
                 <gmd:temporalElement>
                   <gmd:EX_TemporalExtent>
                     <gmd:extent>
                       <gml:TimePeriod gml:id="">
-                        <gml:beginPosition>{{beginPosition}}</gml:beginPosition>
-                        <gml:endPosition indeterminatePosition="{{indeterminatePosition}}">{{endPosition}}</gml:endPosition>
+                        {{beginPosition}}
+                        {{endPosition}}
                       </gml:TimePeriod>
                     </gmd:extent>
                   </gmd:EX_TemporalExtent>
@@ -1084,12 +1110,13 @@
           
           <!-- Azuriranje -->
           <field name="metadataMaintenanceFreq"  templateModeOnly="true"
-          if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency">
               <template>
                   <values>
                       <key label="frequency" xpath="MD_MaintenanceFrequencyCode/@codeListValue" tooltip="gmd:maintenanceAndUpdateFrequency">
                         <codelist name="gmd:MD_MaintenanceFrequencyCode"/>
+                        <required>true</required>
                       </key>
                   </values>
                   <snippet>
@@ -1104,7 +1131,7 @@
           </field>
           
           <field name="metadataMaintenanceNote"
-          if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceNote"/>
         </section>
         
@@ -1119,12 +1146,34 @@
           <!-- Prostorna rezolucija -->
           <!-- Podaci -->
           <field 
+              name="spatialResolution"
+              templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:equivalentScale]"
-              if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          />
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
+              <template>
+                  <values>
+                      <key label="spatialResolution" xpath="gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer" tooltip="gmd:denominator">
+                        <helper name="gmd:denominator"/>
+                      </key>
+                  </values>
+                <snippet>
+                  <gmd:spatialResolution>
+                    <gmd:MD_Resolution>
+                      <gmd:equivalentScale>
+                        <gmd:MD_RepresentativeFraction>
+                          <gmd:denominator>
+                              <gco:Integer>{{denominator}}</gco:Integer>
+                          </gmd:denominator>
+                        </gmd:MD_RepresentativeFraction>
+                      </gmd:equivalentScale>
+                    </gmd:MD_Resolution>
+                  </gmd:spatialResolution>
+                </snippet>
+              </template>
+          </field>
           <action type="add"
                   name="spatialResolution"
-                  if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+                  if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
                   forceLabel="true"
                   or="spatialResolution"
                   in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
@@ -1145,15 +1194,34 @@
             </template>
           </action>
 
-          <field 
+          <field
+              name="spatialDistance"
+              templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:distance]"
-              if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          />
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          >
+              <template>
+                  <values>
+                      <key label="spatialDistance" xpath="gmd:MD_Resolution/gmd:distance/gco:Distance" tooltip="gmd:distance">
+                        <helper name="gmd:distance"/>
+                      </key>
+                  </values>
+              <snippet>
+                <gmd:spatialResolution>
+                  <gmd:MD_Resolution>
+                    <gmd:distance>
+                        <gco:Distance uom="m">{{distance}}</gco:Distance>
+                    </gmd:distance>
+                  </gmd:MD_Resolution>
+                </gmd:spatialResolution>
+              </snippet>
+            </template>
+          </field>
           <action type="add"
                   name="spatialDistance"
                   forceLabel="true"
                   or="spatialResolution" in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
-                  if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+                  if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           >
             <template>
               <snippet>
@@ -1171,12 +1239,12 @@
           <!-- Usluge -->
           <field 
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:equivalentScale]"
-              if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+              if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
           <action type="add"
                   name="spatialResolution"
                   forceLabel="true"
-                  if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                  if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
                   or="spatialResolution"
                   in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
             <template>
@@ -1198,13 +1266,13 @@
 
           <field 
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:distance]"
-              if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+              if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
           <action type="add"
                   name="spatialDistance"
                   forceLabel="true"
                   or="spatialResolution" in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification"
-                  if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+                  if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           >
             <template>
               <snippet>
@@ -1222,7 +1290,7 @@
         
         <!-- Usklađenost -->
         <section name="conformity">
-          <field name="conformity" templateModeOnly="true" 
+          <field name="conformity" templateModeOnly="true" required="true"
                  xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/
                     gmd:report/gmd:DQ_DomainConsistency/gmd:result"
                  del="../..">
@@ -1233,19 +1301,24 @@
                           gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString"
                      tooltip="gmd:pass">
                   <helper name="gmd:title" context="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title"/>
+                  <required>true</required>
                 </key>
                 <key label="conformity_date"
                      xpath="gmd:DQ_ConformanceResult/
                           gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date"
-                     use="date"/>
+                     use="date">
+                     <required>true</required>
+                </key>
                 <key label="explanation"
                      xpath="gmd:DQ_ConformanceResult/
                           gmd:explanation/gco:CharacterString"
-                     use="textarea"/>
+                     use="textarea">
+                </key>
                 <key label="pass"
                      xpath="gmd:DQ_ConformanceResult/gmd:pass/gco:Boolean"
                      use="gn-checkbox-with-nilreason">
-                  <directiveAttributes
+                    <required>true</required>
+                    <directiveAttributes
                           data-tag-name="gmd:pass"
                           data-nilreason="eval#gmd:DQ_ConformanceResult/gmd:pass/@gco:nilReason"
                           data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
@@ -1287,7 +1360,9 @@
                     <gmd:explanation>
                       <gco:CharacterString>{{explanation}}</gco:CharacterString>
                     </gmd:explanation>
-                    {{pass}}
+                    <gmd:pass>
+                        <gco:Boolean>{{pass}}</gco:Boolean>
+                    </gmd:pass>
                   </gmd:DQ_ConformanceResult>
                 </gmd:result>
               </snippet>
@@ -1342,12 +1417,14 @@
           <field
               name="useLimitation" templateModeOnly="true" 
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_Constraints/gmd:useLimitation]"
-              if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
               del="."
           >
             <template>
                 <values>
-                    <key label="useLimitation" xpath="gmd:MD_Constraints/gmd:useLimitation" tooltip="gmd:useLimitation"/>
+                    <key label="useLimitation" xpath="gmd:MD_Constraints/gmd:useLimitation" tooltip="gmd:useLimitation">
+                        <required>true</required>
+                    </key>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
@@ -1361,7 +1438,7 @@
             </template>
           </field>
           <action type="add" name="useLimitation" or="resourceConstraints"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification" forceLabel="true">
             <template>
               <snippet>
@@ -1378,12 +1455,14 @@
           <field
               name="useLimitation" templateModeOnly="true" 
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_Constraints/gmd:useLimitation]"
-              if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+              if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
               del="."
           >
             <template>
                 <values>
-                    <key label="useLimitation" xpath="gmd:MD_Constraints/gmd:useLimitation" tooltip="gmd:useLimitation"/>
+                    <key label="useLimitation" xpath="gmd:MD_Constraints/gmd:useLimitation" tooltip="gmd:useLimitation">
+                        <required>true</required>
+                    </key>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
@@ -1397,7 +1476,7 @@
             </template>
           </field>
           <action type="add" name="useLimitation" or="resourceConstraints"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification" forceLabel="true">
             <template>
               <snippet>
@@ -1415,7 +1494,7 @@
           <!-- Access constraints-->
           <field name="accessConstraints" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
             templateModeOnly="true"
           >
@@ -1423,6 +1502,7 @@
                 <values>
                     <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
+                        <required>true</required>
                     </key>
                     <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints" tooltip="gmd:otherConstraints]"/>
                 </values>
@@ -1444,7 +1524,7 @@
             </template>
           </field>
           <action type="add" name="accessConstraints" or="resourceConstraints" forceLabel="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
               <snippet>
@@ -1466,7 +1546,7 @@
           </action>
           <field name="accessConstraints" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."
             templateModeOnly="true"
           >
@@ -1474,6 +1554,7 @@
                 <values>
                     <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
+                        <required>true</required>
                     </key>
                     <key label="otherConstraints" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints" tooltip="gmd:otherConstraints]"/>
                 </values>
@@ -1495,7 +1576,7 @@
             </template>
           </field>
           <action type="add" name="accessConstraints" or="resourceConstraints" forceLabel="true"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
             <template>
               <snippet>
@@ -1519,7 +1600,7 @@
           <!-- Classification constraints -->
           <field name="classificationConstraints" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_SecurityConstraints/gmd:classification]"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
             templateModeOnly="true"
           >
@@ -1540,7 +1621,7 @@
             </template>
           </field>
           <action type="add" name="classificationConstraints" or="resourceConstraints" forceLabel="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
               <snippet>
@@ -1562,7 +1643,7 @@
           </action>            
           <field name="classificationConstraints"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_SecurityConstraints/gmd:classification]"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."
             templateModeOnly="true"
           >
@@ -1583,7 +1664,7 @@
             </template>
           </field>
           <action type="add" name="classification" or="resourceConstraints" forceLabel="true"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
             <template>
               <snippet>
@@ -1608,15 +1689,17 @@
         <!-- Odgovorna strana za izvor podataka-->
         <section name="pointOfContact">
           <!-- Za datasetove -->
-          <field name="pointOfContact" templateModeOnly="true"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          <field name="pointOfContact" templateModeOnly="true" required="true"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact"
             del="."
             >
             <template>
               <values readonlyIf="count(@xlink:href) > 0">
                 <key label="organisationName"
-                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString">
+                    <required>true</required>
+                </key>
                 <key label="individualName"
                   xpath="gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString"/>
                 <key label="positionName"
@@ -1632,10 +1715,13 @@
                 <key label="electronicMailAddress"
                   xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
                     gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
-                  use="email"/>
+                  use="email">
+                    <required>true</required>
+                </key>
                 <key label="role"
                   xpath="gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue">
                   <codelist name="gmd:CI_RoleCode"/>
+                  <required>true</required>
                 </key>
               </values>
               <snippet>
@@ -1692,7 +1778,7 @@
           </field>
           <action type="add" name="pointOfContact" forceLabel="true"
             or="pointOfContact"
-            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <!-- addDirective="data-gn-directory-entry-selector" -->
 <!--            <directiveAttributes
@@ -1759,15 +1845,17 @@
             </template>
           </action>
           <!-- Za servise -->            
-          <field name="pointOfContact" templateModeOnly="true"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+          <field name="pointOfContact" templateModeOnly="true" required="true"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact"
             del="."
             >
             <template>
               <values readonlyIf="count(@xlink:href) > 0">
                 <key label="organisationName"
-                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString">
+                    <required>true</required>
+                </key>
                 <key label="individualName"
                   xpath="gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString"/>
                 <key label="positionName"
@@ -1783,10 +1871,13 @@
                 <key label="electronicMailAddress"
                   xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
                     gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
-                  use="email"/>
+                  use="email">
+                    <required>true</required>
+                </key>
                 <key label="role"
                   xpath="gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue">
                   <codelist name="gmd:CI_RoleCode"/>
+                  <required>true</required>
                 </key>
               </values>
               <snippet>
@@ -1843,7 +1934,7 @@
           </field>
           <action type="add" name="pointOfContact" forceLabel="true"
             or="pointOfContact"
-            if="count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
             <!-- addDirective="data-gn-directory-entry-selector" -->
 <!--            <directiveAttributes
@@ -1913,13 +2004,15 @@
         
         <!-- Kontakt za metapodatke -->
         <section name="metadata">
-          <field name="metadataPointOfContact" templateModeOnly="true"
+          <field name="metadataPointOfContact" templateModeOnly="true" required="true"
             notDisplayedIfMissing="true"
             xpath="/gmd:MD_Metadata/gmd:contact" del=".">
             <template>
               <values readonlyIf="count(@xlink:href) > 0">
                 <key label="organisationName"
-                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                  xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString">
+                    <required>true</required>
+                </key>
                 <key label="individualName"
                   xpath="gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString"/>
                 <key label="positionName"
@@ -1935,10 +2028,13 @@
                 <key label="electronicMailAddress"
                   xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
                   gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
-                  use="email"/>
+                  use="email">
+                    <required>true</required>
+                </key>
                 <key label="role"
                      xpath="gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue">
                   <codelist name="gmd:CI_RoleCode"/>
+                  <required>true</required>
                 </key>
               </values>
               <snippet>
@@ -2065,12 +2161,14 @@
           </action>
 
           <!-- Datum metapodataka -->
-          <field xpath="/gmd:MD_Metadata/gmd:dateStamp"/>
+          <field xpath="/gmd:MD_Metadata/gmd:dateStamp"
+          del=""
+          />
 
           <!-- Jezik Metapodataka-->
           <field name="langMeta"
             xpath="/gmd:MD_Metadata/gmd:language"
-            
+            del=""
           />
         </section>        
       </tab>
