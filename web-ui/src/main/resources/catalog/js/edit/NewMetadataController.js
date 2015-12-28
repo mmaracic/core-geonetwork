@@ -161,6 +161,7 @@
 
       $scope.setActiveTpl = function(tpl) {
         $scope.activeTpl = tpl;
+        $scope.sourceType = tpl.type;
       };
 
 

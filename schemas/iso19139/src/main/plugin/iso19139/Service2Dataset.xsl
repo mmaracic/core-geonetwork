@@ -72,6 +72,24 @@
 					</gmd:MD_Keywords>
 				</gmd:descriptiveKeywords>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints"/>
+                                <gmd:spatialResolution>
+                                  <gmd:MD_Resolution>
+                                        <gmd:equivalentScale>
+                                          <gmd:MD_RepresentativeFraction>
+                                                <gmd:denominator>
+                                                  <gco:Integer/>
+                                                </gmd:denominator>
+                                          </gmd:MD_RepresentativeFraction>
+                                        </gmd:equivalentScale>
+                                  </gmd:MD_Resolution>
+                                </gmd:spatialResolution>
+                                <gmd:spatialResolution>
+                                  <gmd:MD_Resolution>
+                                        <gmd:distance>
+                                          <gco:Distance uom="m"/>
+                                        </gmd:distance>
+                                  </gmd:MD_Resolution>
+                                </gmd:spatialResolution>
 				<gmd:language>
 					<gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
 				</gmd:language>
