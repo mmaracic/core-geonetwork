@@ -922,7 +922,7 @@
         <label>Adresa dostave pošte</label>
         <description>Adresa dostave pošte(prema ISO 11180, annex A).</description>
     </element>
-    <element name="gmd:denominator" id="57.0">
+    <element name="gmd:denominator" context="gmd:equivalentScale" id="57.0">
         <label>Prostorna rezolucija - mjerilo</label>
         <description>Broj koji se nalazi ispod razlomačke crte u razlomku.</description>
         <condition>dodajte ili nazivnik ili udaljenost</condition>
@@ -1020,7 +1020,7 @@
         <description>Broj elemenata duž osi.</description>
         <condition>Obvezan.</condition>
     </element>
-    <element name="gmd:distance" id="61.0">
+    <element name="gmd:distance" context="gmd:MD_Resolution" id="61.0">
         <label>Prostorna rezolucija - udaljenost</label>
         <description>Prostorna udaljenost odnosi se na razinu detalja skupa podataka, 
 		u ovom slučaju oglednu površinsku udaljenost.</description>

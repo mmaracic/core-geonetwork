@@ -917,7 +917,7 @@
 		<description>Address line for the location (as described in ISO 11180, annex
             A)</description>
 	</element>
-	<element name="gmd:denominator" id="57.0">
+	<element name="gmd:denominator" context="gmd:equivalentScale" id="57.0">
 		<label>Denominator</label>
 		<description>The number below the line in a vulgar fraction</description>
 		<condition>add either a denominator or a distance</condition>
@@ -1011,7 +1011,7 @@
 		<description>Number of elements along the axis</description>
 		<condition>mandatory</condition>
 	</element>
-	<element name="gmd:distance" id="61.0">
+	<element name="gmd:distance" context="gmd:MD_Resolution" id="61.0">
 		<label>Distance</label>
 		<description>Ground sample distance</description>
 		<condition>Provide a distance if no equivalent Scale is documented</condition>
