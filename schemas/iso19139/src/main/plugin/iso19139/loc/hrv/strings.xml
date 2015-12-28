@@ -28,8 +28,8 @@
   <contentInfo>Sadržaj</contentInfo>
   <portrayalCatalogueInfo>Opis</portrayalCatalogueInfo>
   <metadataConstraints>Ograničenja pristupa</metadataConstraints>
-  <metadataMaintenanceFreq>Ažuriranje učestalost</metadataMaintenanceFreq>
-  <metadataMaintenanceNote>Ažuriranje bilješka</metadataMaintenanceNote>
+  <metadataMaintenanceFreq>Ažuriranje: Učestalost</metadataMaintenanceFreq>
+  <metadataMaintenanceNote>Ažuriranje: Bilješka</metadataMaintenanceNote>
   <applicationSchemaInfo>Tema</applicationSchemaInfo>
   <noThesaurusName>Ključne riječi</noThesaurusName>
   <bboxesSection>Geografska lokacija</bboxesSection>
