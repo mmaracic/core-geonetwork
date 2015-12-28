@@ -259,7 +259,13 @@
                                    <gco:CharacterString>JedinstveniOznacivacIzvora</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -287,7 +293,13 @@
                                    <gco:CharacterString>Akronim</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -317,7 +329,13 @@
                                    <gco:CharacterString>TematskoPodrucje</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -347,7 +365,13 @@
                                    <gco:CharacterString>TematskoPodpodrucje</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -376,7 +400,13 @@
                                    <gco:CharacterString>KorisniciPodataka</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -400,7 +430,13 @@
                                    <gco:CharacterString>KorisniciPodataka</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString/>
                             </gmd:domainValue>
@@ -431,7 +467,13 @@
                                    <gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -455,7 +497,13 @@
                                    <gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString/>
                             </gmd:domainValue>
@@ -486,7 +534,13 @@
                                    <gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString>{{value}}</gco:CharacterString>
                             </gmd:domainValue>
@@ -510,7 +564,13 @@
                                    <gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
                             </gmd:name>
                             <gmd:definition gco:nilReason="inapplicable"/>
+                            <gmd:obligation>
+                              <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                            </gmd:obligation>					 
                             <gmd:dataType gco:nilReason="inapplicable"/>
+                            <gmd:maximumOccurrence>
+                               <gco:CharacterString>*</gco:CharacterString>
+                            </gmd:maximumOccurrence>
                             <gmd:domainValue>
                               <gco:CharacterString/>
                             </gmd:domainValue>
@@ -1153,7 +1213,7 @@
               <template>
                   <values>
                       <key label="spatialResolution" xpath="gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer" tooltip="gmd:denominator">
-                        <helper name="gmd:denominator"/>
+                        <helper name="gmd:denominator" context="gmd:equivalentScale"/>
                       </key>
                   </values>
                 <snippet>
@@ -1162,7 +1222,7 @@
                       <gmd:equivalentScale>
                         <gmd:MD_RepresentativeFraction>
                           <gmd:denominator>
-                              <gco:Integer>{{denominator}}</gco:Integer>
+                              <gco:Integer>{{spatialResolution}}</gco:Integer>
                           </gmd:denominator>
                         </gmd:MD_RepresentativeFraction>
                       </gmd:equivalentScale>
@@ -1203,14 +1263,14 @@
               <template>
                   <values>
                       <key label="spatialDistance" xpath="gmd:MD_Resolution/gmd:distance/gco:Distance" tooltip="gmd:distance">
-                        <helper name="gmd:distance"/>
+                        <helper name="gmd:distance" context="gmd:MD_Resolution"/>
                       </key>
                   </values>
               <snippet>
                 <gmd:spatialResolution>
                   <gmd:MD_Resolution>
                     <gmd:distance>
-                        <gco:Distance uom="m">{{distance}}</gco:Distance>
+                        <gco:Distance uom="m">{{spatialDistance}}</gco:Distance>
                     </gmd:distance>
                   </gmd:MD_Resolution>
                 </gmd:spatialResolution>
@@ -1237,10 +1297,33 @@
           </action>
           
           <!-- Usluge -->
-          <field 
+          <!--<field
+              name="spatialResolution"
+              templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:equivalentScale]"
               if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-          />
+          >
+              <template>
+                  <values>
+                      <key label="spatialResolution" xpath="gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer" tooltip="gmd:denominator">
+                        <helper name="gmd:denominator" context="gmd:equivalentScale"/>
+                      </key>
+                  </values>
+                <snippet>
+                  <gmd:spatialResolution>
+                    <gmd:MD_Resolution>
+                      <gmd:equivalentScale>
+                        <gmd:MD_RepresentativeFraction>
+                          <gmd:denominator>
+                              <gco:Integer>{{spatialResolution}}</gco:Integer>
+                          </gmd:denominator>
+                        </gmd:MD_RepresentativeFraction>
+                      </gmd:equivalentScale>
+                    </gmd:MD_Resolution>
+                  </gmd:spatialResolution>
+                </snippet>
+              </template>
+          </field>
           <action type="add"
                   name="spatialResolution"
                   forceLabel="true"
@@ -1264,10 +1347,29 @@
             </template>
           </action>
 
-          <field 
+          <field
+              name="spatialDistance"
+              templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:distance]"
               if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-          />
+          >
+              <template>
+                  <values>
+                      <key label="spatialDistance" xpath="gmd:MD_Resolution/gmd:distance/gco:Distance" tooltip="gmd:distance">
+                        <helper name="gmd:distance" context="gmd:MD_Resolution"/>
+                      </key>
+                  </values>
+              <snippet>
+                <gmd:spatialResolution>
+                  <gmd:MD_Resolution>
+                    <gmd:distance>
+                        <gco:Distance uom="m">{{spatialDistance}}</gco:Distance>
+                    </gmd:distance>
+                  </gmd:MD_Resolution>
+                </gmd:spatialResolution>
+              </snippet>
+            </template>
+          </field>
           <action type="add"
                   name="spatialDistance"
                   forceLabel="true"
@@ -1285,7 +1387,7 @@
                 </gmd:spatialResolution>
               </snippet>
             </template>
-          </action>            
+          </action>-->            
         </section>
         
         <!-- Usklađenost -->
@@ -1500,7 +1602,7 @@
           >
             <template>
                 <values>
-                    <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
+                    <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/@codeListValue" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
                         <required>true</required>
                     </key>
@@ -1552,7 +1654,7 @@
           >
             <template>
                 <values>
-                    <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints" tooltip="gmd:accessConstraints">
+                    <key label="accessConstraints" xpath="gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/@codeListValue" tooltip="gmd:accessConstraints">
                         <codelist name="gmd:MD_RestrictionCode"/>
                         <required>true</required>
                     </key>
@@ -1606,14 +1708,16 @@
           >
             <template>
                 <values>
-                    <key label="classificationConstraints" xpath="gmd:MD_SecurityConstraints/gmd:classification" tooltip="gmd:classification]"/>
+                    <key label="classificationConstraints" xpath="gmd:MD_SecurityConstraints/gmd:classification/gmd:MD_ClassificationCode/@codeListValue" tooltip="gmd:classification]">
+                        <codelist name="gmd:MD_ClassificationCode"/>
+                    </key>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
                     <gmd:MD_SecurityConstraints>
                       <gmd:classification>
                           <gmd:MD_ClassificationCode
-                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="{{classification}}"/>
+                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="{{classificationConstraints}}"/>
                       </gmd:classification>
                     </gmd:MD_SecurityConstraints>
                   </gmd:resourceConstraints>
@@ -1625,19 +1729,14 @@
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
               <snippet>
-                <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                    <gmd:accessConstraints>
-                      <gmd:MD_RestrictionCode
-                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
-                        codeListValue="otherRestrictions"/>
-                    </gmd:accessConstraints>
-                    <gmd:useConstraints/>
-                    <gmd:otherConstraints gco:nilReason="missing">
-                      <gco:CharacterString/>
-                    </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
-                </gmd:resourceConstraints>
+                  <gmd:resourceConstraints>
+                    <gmd:MD_SecurityConstraints>
+                      <gmd:classification>
+                          <gmd:MD_ClassificationCode
+                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="unclassified"/>
+                      </gmd:classification>
+                    </gmd:MD_SecurityConstraints>
+                  </gmd:resourceConstraints>
               </snippet>
             </template>
           </action>            
@@ -1649,37 +1748,34 @@
           >
             <template>
                 <values>
-                    <key label="classificationConstraints" xpath="gmd:MD_SecurityConstraints/gmd:classification" tooltip="gmd:classification]"/>
+                    <key label="classificationConstraints" xpath="gmd:MD_SecurityConstraints/gmd:classification/gmd:MD_ClassificationCode/@codeListValue" tooltip="gmd:classification]">
+                        <codelist name="gmd:MD_ClassificationCode"/>
+                    </key>
                 </values>
                 <snippet>
                   <gmd:resourceConstraints>
                     <gmd:MD_SecurityConstraints>
                       <gmd:classification>
                           <gmd:MD_ClassificationCode
-                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="{{classification}}"/>
+                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="{{classificationConstraints}}"/>
                       </gmd:classification>
                     </gmd:MD_SecurityConstraints>
                   </gmd:resourceConstraints>
                 </snippet>
             </template>
           </field>
-          <action type="add" name="classification" or="resourceConstraints" forceLabel="true"
+          <action type="add" name="classificationConstraints" or="resourceConstraints" forceLabel="true"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
             <template>
               <snippet>
                 <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                    <gmd:accessConstraints>
-                      <gmd:MD_RestrictionCode
-                        codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
-                        codeListValue="otherRestrictions"/>
-                    </gmd:accessConstraints>
-                    <gmd:useConstraints/>
-                    <gmd:otherConstraints gco:nilReason="missing">
-                      <gco:CharacterString/>
-                    </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
+                    <gmd:MD_SecurityConstraints>
+                      <gmd:classification>
+                          <gmd:MD_ClassificationCode
+                          codeList="./resources/codeList.xml#MD_ClassificationCode" codeListValue="unclassified"/>
+                      </gmd:classification>
+                    </gmd:MD_SecurityConstraints>
                 </gmd:resourceConstraints>
               </snippet>
             </template>
