@@ -225,6 +225,8 @@
     "duplicate": "Duplicate",
     "createChild": "Create a child",
     "privileges": "Privileges",
+    "published": "Published",
+    "publishedCSW": "Published through CSW",
     "whoCanAccess": "Who has access",
     "actions" : "Actions",
     "reset" : "Reset",

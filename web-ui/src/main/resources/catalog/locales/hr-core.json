@@ -219,6 +219,8 @@
     "duplicate": "Dupliciraj",
     "createChild": "Stvori dijete",
     "privileges": "Privilegije",
+    "published": "Objavljeno",
+    "publishedCSW": "Objavljeno kroz CSW",
     "whoCanAccess": "Tko ima pristup",
     "actions" : "Aktivnosti",
     "reset" : "Vrati izvorno",
