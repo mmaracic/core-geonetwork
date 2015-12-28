@@ -415,6 +415,24 @@
 					</gmd:classification>
 				</gmd:MD_SecurityConstraints>
 			</gmd:resourceConstraints>
+			<gmd:spatialResolution>
+			  <gmd:MD_Resolution>
+				<gmd:equivalentScale>
+				  <gmd:MD_RepresentativeFraction>
+					<gmd:denominator>
+					  <gco:Integer/>
+					</gmd:denominator>
+				  </gmd:MD_RepresentativeFraction>
+				</gmd:equivalentScale>
+			  </gmd:MD_Resolution>
+			</gmd:spatialResolution>
+			<gmd:spatialResolution>
+			  <gmd:MD_Resolution>
+				<gmd:distance>
+				  <gco:Distance uom="m"/>
+				</gmd:distance>
+			  </gmd:MD_Resolution>
+			</gmd:spatialResolution>
 			<gmd:language>
 				<gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
 			</gmd:language>
@@ -425,9 +443,6 @@
 				<gmd:EX_Extent>
 					<gmd:geographicElement>
 						<gmd:EX_GeographicBoundingBox>
-							<gmd:extentTypeCode>
-								<gco:Boolean/>
-							</gmd:extentTypeCode>
 							<gmd:westBoundLongitude>
 								<gco:Decimal/>
 							</gmd:westBoundLongitude>
@@ -473,13 +488,6 @@
 			</gmd:distributionFormat>
 			<gmd:transferOptions>
 				<gmd:MD_DigitalTransferOptions>
-					<gmd:onLine>
-						<gmd:CI_OnlineResource>
-							<gmd:linkage>
-								<gmd:URL/>
-							</gmd:linkage>
-						</gmd:CI_OnlineResource>
-					</gmd:onLine>
 				</gmd:MD_DigitalTransferOptions>
 			</gmd:transferOptions>
 		</gmd:MD_Distribution>
