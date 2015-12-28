@@ -342,7 +342,15 @@
                     <!-- Get them, it may contains multiple helpers with context (eg. different for service and dataset) -->
                     <xsl:variable name="helper" select="gn-fn-metadata:getHelper($schema, helper/@name, helper/@context, helper/@xpath)"/>
                     <xsl:variable name="node" select="$metadata/descendant::*[gn:element/@ref = $matchingNodeValue/*/gn:element/@parent]"/>
-
+                    
+                    <!--<xsl:message>
+                        -Name- <xsl:value-of select="helper/@name"/>
+                        -Context- <xsl:value-of select="helper/@context"/>
+                        -Xpath- <xsl:value-of select="helper/@xpath"/>
+                        -Helpers- <xsl:copy-of select="$helper"/>
+                        -Node- <xsl:copy-of select="$node"/>
+                    </xsl:message>-->
+                    
                     <!-- propose the helper matching the current node type -->
                     <xsl:choose>
                       <xsl:when test="count($helper) > 1 and $node">
