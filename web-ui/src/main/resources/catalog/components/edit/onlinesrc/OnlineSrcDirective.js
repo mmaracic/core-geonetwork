@@ -646,7 +646,7 @@
                         scope.srcParams.uuidSrv = md.getUuid();
                         scope.srcParams.uuidDS = gnCurrentEdit.uuid;
 
-                        if (angular.isArray(links) && links.length == 1) {
+                        if (angular.isArray(links) && links.length >= 1) {
                           scope.loadWMSCapabilities(links[0].url);
                           scope.srcParams.url = links[0].url;
                         } else {
@@ -662,9 +662,15 @@
                             gnCurrentEdit.metadata.getLinksByType('OGC:WMS'));
                         links = links.concat(
                             gnCurrentEdit.metadata.getLinksByType('wms'));
-                        var serviceUrl = links[0].url;
-                        scope.loadWMSCapabilities(serviceUrl);
-                        scope.srcParams.url = serviceUrl;
+                        if (angular.isArray(links) && links.length >= 1) {
+                            var serviceUrl = links[0].url;
+                            scope.loadWMSCapabilities(serviceUrl);
+                            scope.srcParams.url = serviceUrl;
+                        } else {
+                          scope.srcParams.url = '';
+                          scope.alertMsg =
+                              $translate('linkToServiceWithoutURLError');                            
+                        }
                         scope.srcParams.uuidDS = md.getUuid();
                         scope.srcParams.uuidSrv = gnCurrentEdit.uuid;
                       }
