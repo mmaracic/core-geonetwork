@@ -663,7 +663,6 @@
           />
            <!-- Metadata type-->
           <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"
-          del=""
           />
  
           <!-- Resource identifier for dataset and add action to compute it if not defined. -->          
@@ -837,7 +836,8 @@
           </action>
 
           <!-- Operates on-->
-          <field name="operatesOn" templateModeOnly="true"
+          <!-- Implemented with add resource tool -->
+<!--          <field name="operatesOn" templateModeOnly="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."            
@@ -857,10 +857,10 @@
             >
                 <template>
                     <snippet>
-                        <srv:operatesOn xlink:href=""/>
+                        <srv:operatesOn xlink:href="http://www.google.com"/>
                     </snippet>
                 </template>
-            </action>
+            </action>-->
           
           <!-- Jezik izvora-->
           <field name="langSource" templateModeOnly="true" required="true"
@@ -2258,7 +2258,6 @@
 
           <!-- Datum metapodataka -->
           <field xpath="/gmd:MD_Metadata/gmd:dateStamp"
-          del=""
           />
 
           <!-- Jezik Metapodataka-->
