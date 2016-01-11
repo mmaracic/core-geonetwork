@@ -448,6 +448,7 @@
 	</gmd:identificationInfo>
 	<gmd:distributionInfo>
 		<gmd:MD_Distribution>
+                        <gmd:distributionFormat/>
 			<gmd:transferOptions>
 				<gmd:MD_DigitalTransferOptions>
 				</gmd:MD_DigitalTransferOptions>

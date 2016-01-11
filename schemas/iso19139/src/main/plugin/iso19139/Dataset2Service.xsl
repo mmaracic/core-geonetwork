@@ -75,6 +75,7 @@
 		</gmd:identificationInfo>
 		<gmd:distributionInfo>
 			<gmd:MD_Distribution>
+                                <gmd:distributionFormat/>
 				<xsl:copy-of select="gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions"/>
 			</gmd:MD_Distribution>
 		</gmd:distributionInfo>
