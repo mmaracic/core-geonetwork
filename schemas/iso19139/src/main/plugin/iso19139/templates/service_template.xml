@@ -444,7 +444,6 @@
 			<srv:coupledResource/>
 			<srv:couplingType/>
 			<srv:containsOperations/>
-			<srv:operatesOn/>
 		</srv:SV_ServiceIdentification>
 	</gmd:identificationInfo>
 	<gmd:distributionInfo>
