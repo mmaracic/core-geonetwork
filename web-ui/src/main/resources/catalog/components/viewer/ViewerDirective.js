@@ -47,8 +47,15 @@
                 gnMap.zoom(map, delta);
               };
               scope.zoomToMaxExtent = function(map) {
-                map.getView().fit(map.getView().
-                    getProjection().getExtent(), map.getSize());
+                var projection = map.getView().getProjection();
+                var extent = projection.getExtent();
+                var tl = new ol.geom.Point([13.4700, 42.3900]);
+                var br = new ol.geom.Point([19.5000, 46.5700]);
+                var tltr = tl.transform('EPSG:4326',projection);
+                var brtr = br.transform('EPSG:4326',projection);
+                var newExtent = [tltr.getFirstCoordinate()[0], tltr.getFirstCoordinate()[1], brtr.getFirstCoordinate()[0], brtr.getFirstCoordinate()[1]]
+                var size = map.getSize();
+                map.getView().fit(newExtent, size);
               };
               scope.ol3d = null;
 

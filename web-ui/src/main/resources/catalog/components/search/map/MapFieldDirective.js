@@ -32,9 +32,16 @@
                    * Fit map view to map projection max extent
                    */
                   scope.maxExtent = function() {
-                    scope.map.getView().fit(scope.map.getView().
-                            getProjection().getExtent(), scope.map.getSize());
-                  };
+                        var projection = scope.map.getView().getProjection();
+                        var extent = projection.getExtent();
+                        var tl = new ol.geom.Point([13.4700, 42.3900]);
+                        var br = new ol.geom.Point([19.5000, 46.5700]);
+                        var tltr = tl.transform('EPSG:4326',projection);
+                        var brtr = br.transform('EPSG:4326',projection);
+                        var newExtent = [tltr.getFirstCoordinate()[0], tltr.getFirstCoordinate()[1], brtr.getFirstCoordinate()[0], brtr.getFirstCoordinate()[1]]
+                        var size = scope.map.getSize();
+                        scope.map.getView().fit(newExtent, size);
+                     };
 
                   /**
                    * When the geomtry is updated, set this value in
