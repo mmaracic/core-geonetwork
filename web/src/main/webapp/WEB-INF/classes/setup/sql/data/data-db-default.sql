@@ -666,7 +666,7 @@ insert into geonetwork.Settings (name, value, datatype, position, internal) VALU
   ('map/isSaveMapInCatalogAllowed', 'true', 2, 9594, 'n');
 
 insert into geonetwork.Settings (name, value, datatype, position, internal) VALUES 
-  ('metadata/editor/schemaConfig', '{"iso19110":{"defaultTab":"default","displayToolTip":false,"related":{"display":true,"readonly":true,"categories":["dataset"]},"validation":{"display":true}},"iso19139":{"defaultTab":"inspire","displayToolTip":true,"related":{"display":true,"categories":[]},"suggestion":{"display":true},"validation":{"display":true}},"dublin-core":{"defaultTab":"default","related":{"display":true,"readonly":false,"categories":["parent","onlinesrc"]}}}', 0, 10000, 'n');
+  ('metadata/editor/schemaConfig', '{"iso19110":{"defaultTab":"default","displayToolTip":false,"related":{"display":true,"readonly":true,"categories":["dataset"]},"validation":{"display":true}},"iso19139":{"defaultTab":"inspire","displayToolTip":true,"related":{"display":true,"categories":[]},"suggestion":{"display":false},"validation":{"display":true}},"dublin-core":{"defaultTab":"default","related":{"display":true,"readonly":false,"categories":["parent","onlinesrc"]}}}', 0, 10000, 'n');
 
 
 insert into geonetwork.Settings (name, value, datatype, position, internal) VALUES ('metadata/resourceIdentifierPrefix', 'http://localhost:8080/geonetwork/srv/metadata/', 0, 10001, 'n');
