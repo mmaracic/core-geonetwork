@@ -109,6 +109,12 @@
               var selector = '#' + scope.id + '_' + fields[key];
               if ($(selector).attr('type') === 'checkbox') {
                 $(selector).attr('checked', value === 'true');
+              } else if (fields[key] === 'beginPosition'){
+                  //set initial snippet
+                  generateSnippet();
+              } else if (fields[key] === 'endPosition'){
+                  //set initial snippet
+                  generateSnippet();
               } else {
                 $(selector).val(value);
               }
