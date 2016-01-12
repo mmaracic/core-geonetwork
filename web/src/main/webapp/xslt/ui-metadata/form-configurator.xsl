@@ -425,16 +425,16 @@
           
           <!-- The element does not exist in current record. 
           Create an empty field with a template. -->
-          <xsl:if test="count($nodes/*) = 0 and not(@notDisplayedIfMissing)">
-            <!-- If the element exist, use the _X<ref> mode which
+          <!--<xsl:if test="count($nodes/*) = 0 and not(@notDisplayedIfMissing)">
+            If the element exist, use the _X<ref> mode which
             insert the snippet for the element if not use the 
             XPATH mode which will create the new element at the 
-            correct location. -->
+            correct location.
             <xsl:variable name="xpathFieldId" select="concat('_P', generate-id())"/>
             <xsl:variable name="id" select="concat($xpathFieldId, '_xml')"/>
             <xsl:variable name="isMissingLabel" select="@isMissingLabel"/>
 
-            <!-- Node does not exist, stripped gn:copy element from template. -->
+            Node does not exist, stripped gn:copy element from template.
             <xsl:variable name="templateWithoutGnCopyElement" as="node()">
               <template>
                 <xsl:copy-of select="$template/values"/>
@@ -454,7 +454,7 @@
               <xsl:with-param name="isMissingLabel" select="$strings/*[name() = $isMissingLabel]"/>
               <xsl:with-param name="templateRequired" select="$required"/>
             </xsl:call-template>
-          </xsl:if>
+          </xsl:if> -->
         </xsl:when>
       </xsl:choose>
     </xsl:if>
