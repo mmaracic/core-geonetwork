@@ -666,7 +666,7 @@
                  xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"
           >
             <template>
-              <values>
+              <values readonlyIf="true()">
                 <key label="hierarchyLevel" xpath="gmd:MD_ScopeCode/@codeListValue" tooltip="gmd:MD_ScopeCode" required="true">
                     <required>true</required>
                     <codelist name="gmd:MD_ScopeCode"/>
@@ -773,7 +773,8 @@
               </snippet>
             </template>
           </field>
-        <action type="add" name="rsIdentifier" addDirective="data-gn-crs-selector" forceLabel="true"
+        <!--<action type="add" name="rsIdentifier" addDirective="data-gn-crs-selector" forceLabel="true"-->
+        <action type="add" name="rsIdentifier" forceLabel="true"
           or="referenceSystemInfo" in="/gmd:MD_Metadata">
           <template>
             <snippet>
