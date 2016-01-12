@@ -84,7 +84,7 @@ public class SendLink extends MailSendingService {
         }
 
 		// only let registered users change their password  
-		if (user.getProfile() != Profile.RegisteredUser) {
+		if (user.getProfile() == Profile.Guest) {
 			// Don't throw OperationNotAllowedEx because it is not related to not having enough priviledges
 			throw new IllegalArgumentException("Only users with profile RegisteredUser can change their password using this option");
         }
