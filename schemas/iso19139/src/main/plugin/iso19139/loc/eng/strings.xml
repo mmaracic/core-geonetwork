@@ -56,6 +56,7 @@
   <referenceDate>Temporal information</referenceDate>
   <creationDate>Creation date</creationDate>
   <hierarchyLevel>Hierarchy level</hierarchyLevel>
+  <dateType>Date significance</dateType>
   <publicationDate>Publication date</publicationDate>
   <revisionDate>Revision date</revisionDate>
   <temporalRangeSection>Temporal extent</temporalRangeSection>

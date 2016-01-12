@@ -662,8 +662,24 @@
           if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"            
           />
            <!-- Metadata type-->
-          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"
-          />
+          <field name="hierarchyLevel" templateModeOnly="true" required="true"
+                 xpath="/gmd:MD_Metadata/gmd:hierarchyLevel"
+          >
+            <template>
+              <values>
+                <key label="hierarchyLevel" xpath="gmd:MD_ScopeCode/@codeListValue" tooltip="gmd:MD_ScopeCode" required="true">
+                    <required>true</required>
+                    <codelist name="gmd:MD_ScopeCode"/>
+                </key>
+              </values>
+              <snippet>
+                <gmd:hierarchyLevel>
+                    <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="{{hierarchyLevel}}">{{hierarchyLevel}}
+                    </gmd:MD_ScopeCode>
+                </gmd:hierarchyLevel>              
+              </snippet>
+            </template>            
+          </field>
  
           <!-- Resource identifier for dataset and add action to compute it if not defined. -->          
           <!-- Jedinstvena oznaka izvora -->
@@ -674,7 +690,7 @@
             >
             <template>
               <values>
-                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier" required="true">
+                <key label="code" xpath="gmd:RS_Identifier/gmd:code/gco:CharacterString" tooltip="gmd:code|gmd:RS_Identifier">
                     <required>true</required>
                 </key>
                 <key label="codeSpace" xpath="gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString" tooltip="gmd:codeSpace|gmd:RS_Identifier">
@@ -870,7 +886,7 @@
           >
             <template>
                 <values>
-                    <key label="langSource" xpath="@codeListValue" tooltip="gmd:language|gmd:MD_DataIdentification">
+                    <key label="langSource" xpath="gmd:LanguageCode/@codeListValue" tooltip="gmd:language|gmd:MD_DataIdentification">
                         <helper name="gmd:language" context="gmd:MD_DataIdentification"/>
                     </key>
                 </values>
@@ -914,7 +930,7 @@
                   </snippet>
               </template>
           </field>
-          <field name="dataType" required="true"
+          <field name="dataType" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
@@ -1042,10 +1058,43 @@
         <!-- Vremenska poveznica-->
         <section name="referenceDate">
           <!-- Pojedinačni datum -->
-          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/
-            gmd:date"
+          <!-- Datasets -->
+          <field name="referenceDate" templateModeOnly="true"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          />
+            del="."
+          >
+            <template>
+              <values>
+                  <key label="dateType"
+                  xpath="gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue"
+                  tooltip="gmd:CI_DateTypeCode">
+                      <codelist name="gmd:CI_DateTypeCode"/>
+                      <required>true</required>
+                  </key>
+                <key label="referenceDate"
+                  xpath="gmd:CI_Date/gmd:date/gco:Date"
+                  use="gn-date-picker"
+                  tooltip="gco:Date">
+                    <required>true</required>
+                </key>
+              </values>
+              <snippet>
+                <gmd:date>
+                  <gmd:CI_Date>
+                    <gmd:date>
+                        <gco:Date>{{referenceDate}}</gco:Date>
+                    </gmd:date>
+                    <gmd:dateType>
+                      <gmd:CI_DateTypeCode
+                              codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                              codeListValue="{{dateType}}"/>
+                    </gmd:dateType>
+                  </gmd:CI_Date>
+                </gmd:date>
+              </snippet>
+            </template>
+          </field>
             <action type="add" name="referenceDate" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation"
                     if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
@@ -1066,10 +1115,44 @@
                   </snippet>
                 </template>
               </action>
-          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/
-            gmd:date"
+          
+           <!-- Services -->
+          <field  name="referenceDate" templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:date"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
-          />
+            del="."
+          >
+            <template>
+              <values>
+                  <key label="dateType"
+                  xpath="gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue"
+                  tooltip="gmd:CI_DateTypeCode">
+                      <codelist name="gmd:CI_DateTypeCode"/>
+                      <required>true</required>
+                  </key>
+                <key label="referenceDate"
+                  xpath="gmd:CI_Date/gmd:date/gco:Date"
+                  use="gn-date-picker"
+                  tooltip="gco:Date">
+                    <required>true</required>
+                </key>
+              </values>
+              <snippet>
+                <gmd:date>
+                  <gmd:CI_Date>
+                    <gmd:date>
+                        <gco:Date>{{referenceDate}}</gco:Date>
+                    </gmd:date>
+                    <gmd:dateType>
+                      <gmd:CI_DateTypeCode
+                              codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                              codeListValue="{{dateType}}"/>
+                    </gmd:dateType>
+                  </gmd:CI_Date>
+                </gmd:date>
+              </snippet>
+            </template>              
+          </field>
             <action name="date" type="add" forceLabel="true" or="date"
                     in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation"
                     if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
@@ -1096,6 +1179,7 @@
             <field name="temporalRangeSection" templateModeOnly="true" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            del="."
             >
             <template>
               <values>
@@ -1105,6 +1189,7 @@
                   use="gn-date-picker"
                   tooltip="gmd:extent|gmd:EX_TemporalExtent">
                   <directiveAttributes data-tag-name="gml:beginPosition"/>
+                  <required>true</required>
                 </key>
                 <key label="endPosition"
                   xpath="gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition"
@@ -1114,6 +1199,7 @@
                   <directiveAttributes
                       data-tag-name="gml:endPosition"
                       data-indeterminate-position="eval#gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/*/gml:endPosition/@indeterminatePosition"/>
+                  <required>true</required>
                 </key>
               </values>
               <snippet>
@@ -1130,10 +1216,26 @@
               </snippet>
             </template>
           </field>
-
+          <action type="add" name="temporalRangeSection" forceLabel="true" or="temporalElement"
+                    in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent"
+                    if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
+            <template>
+              <snippet>
+                <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                    <gmd:extent>
+                      <gml:TimePeriod gml:id=""/>
+                    </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+                </gmd:temporalElement>
+              </snippet>
+            </template>
+          </action>
+          
           <field name="temporalRangeSection" templateModeOnly="true" 
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:extent/gmd:EX_Extent/gmd:temporalElement"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            del="."
           >
             <template>
               <values>
@@ -1167,21 +1269,36 @@
               </snippet>
             </template>
           </field>
+          <action type="add" name="temporalRangeSection" forceLabel="true" or="temporalElement"
+                    in="gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:extent/gmd:EX_Extent"
+                    if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0">
+            <template>
+              <snippet>
+                <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                    <gmd:extent>
+                      <gml:TimePeriod gml:id=""/>
+                    </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+                </gmd:temporalElement>
+              </snippet>
+            </template>
+          </action>
           
           <!-- Azuriranje -->
-          <field name="metadataMaintenanceFreq"  templateModeOnly="true"
+          <field name="metadataMaintenanceFreq"  templateModeOnly="true" required="true"
           if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency">
               <template>
                   <values>
-                      <key label="frequency" xpath="MD_MaintenanceFrequencyCode/@codeListValue" tooltip="gmd:maintenanceAndUpdateFrequency">
+                      <key label="frequency" xpath="gmd:MD_MaintenanceFrequencyCode/@codeListValue" tooltip="gmd:maintenanceAndUpdateFrequency">
                         <codelist name="gmd:MD_MaintenanceFrequencyCode"/>
                         <required>true</required>
                       </key>
                   </values>
                   <snippet>
                      <gmd:maintenanceAndUpdateFrequency>
-                         <MD_MaintenanceFrequencyCode
+                         <gmd:MD_MaintenanceFrequencyCode
                              xmlns="http://www.isotc211.org/2005/gmd"
                              codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_MaintenanceFrequencyCode"
                              codeListValue="{{frequency}}"/>
@@ -1190,18 +1307,45 @@
               </template>
           </field>
           
-          <field name="metadataMaintenanceNote"
+          <field name="metadataMaintenanceNote" templateModeOnly="true" required="true"
           if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
-          xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceNote"/>
+          xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceNote">
+              <template>
+                  <values>
+                      <key label="note" xpath="gco:CharacterString" tooltip="gmd:maintenanceNote"/>
+                  </values>
+                  <snippet>
+                     <gmd:maintenanceNote>
+                         <gco:CharacterString>{{note}}</gco:CharacterString>
+                     </gmd:maintenanceNote>                      
+                  </snippet>
+              </template>
+          </field>
         </section>
         
         <section name="dataQualityInfo">
             
           <!-- Kvaliteta -->
           <field name="lineage" 
-            xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement"
-            if="count(/gmd:MD_Metadata/gmd:identificationInfo/MD_DataIdentification)>0"
-          />
+            templateModeOnly="true" required="true"
+            xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+          >
+            <template>
+                <values>
+                    <key label="lineage" xpath="gmd:LI_Lineage/gmd:statement/gco:CharacterString" tooltip="gmd:LI_Lineage"/>
+                </values>
+              <snippet>
+                  <gmd:lineage>
+                    <gmd:LI_Lineage>
+                        <gmd:statement>
+                            <gco:CharacterString>{{lineage}}</gco:CharacterString>
+                        </gmd:statement>
+                    </gmd:LI_Lineage>
+                  </gmd:lineage>
+              </snippet>
+            </template>
+          </field>
           
           <!-- Prostorna rezolucija -->
           <!-- Podaci -->
@@ -1209,7 +1353,9 @@
               name="spatialResolution"
               templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:equivalentScale]"
-              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)">
+              if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+              del="."
+          >
               <template>
                   <values>
                       <key label="spatialResolution" xpath="gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer" tooltip="gmd:denominator">
@@ -1259,6 +1405,7 @@
               templateModeOnly="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution[gmd:MD_Resolution/gmd:distance]"
               if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+              del="."
           >
               <template>
                   <values>

@@ -55,7 +55,8 @@
   <rsIdentifier>Projekcija</rsIdentifier>
   <referenceDate>Referentni datum</referenceDate>
   <creationDate>Datum stvaranja</creationDate>
-  <hierarchyLevel>Razina hijerarhije</hierarchyLevel>
+  <hierarchyLevel>Tip izvora</hierarchyLevel>
+  <dateType>Značenje datuma</dateType>
   <publicationDate>Datum objavljivanja</publicationDate>
   <revisionDate>Datum zadnje revizije</revisionDate>
   <temporalRangeSection>Vremenski obuhvat</temporalRangeSection>
