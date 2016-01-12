@@ -262,7 +262,7 @@
     <xsl:param name="xpath" required="no"/>
     <xsl:param name="attributesSnippet" required="no"><null/></xsl:param>
     <xsl:param name="isDisabled" select="ancestor::node()[@xlink:href]"/>
-
+    <xsl:param name="required" required="no"/>
 
     <xsl:variable name="hasXlink" select="@xlink:href"/>
 
@@ -270,7 +270,7 @@
               data-gn-field-highlight=""
       class="{if ($hasXlink) then 'gn-has-xlink' else ''} gn-{substring-after(name(), ':')}">
 
-      <legend class="{$cls}"
+      <legend class="{$cls} {if ($required=true()) then 'gn-custom-part-required' else ''}"
               data-gn-slide-toggle=""
               data-gn-field-tooltip="{$schema}|{name()}|{name(..)}|">
         <!--
@@ -322,12 +322,12 @@
   <xsl:template name="render-boxed-element-control">
     <xsl:param name="editInfo"/>
 
-    <a class="btn pull-right"
+<!--    <a class="btn pull-right"
        data-gn-click-and-spin="remove({$editInfo/@ref}, {$editInfo/@parent})"
        data-gn-field-highlight-remove="{$editInfo/@ref}"
        title="{{{{'deleteFieldSet' | translate}}}}">
       <i class="fa fa-times text-danger"/>
-    </a>
+    </a>-->
   </xsl:template>
   
   
@@ -635,7 +635,7 @@
       <div class="form-group gn-field {if ($isRequired) then 'gn-required' else ''} {if ($isFirst) then '' else 'gn-extra-field'} gn-add-field"
            id="gn-el-{$id}"
            data-gn-field-highlight="">
-        <label class="col-sm-2 control-label"
+        <label class="col-sm-2 control-label gn-custom-required"
           data-gn-field-tooltip="{$schema}|{$qualifiedName}|{name(..)}|">
           <xsl:if test="normalize-space($label) != ''">
                   <xsl:value-of select="$label"/>

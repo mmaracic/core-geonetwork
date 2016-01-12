@@ -77,6 +77,10 @@
       <xsl:with-param name="cls" select="local-name()"/>
       <xsl:with-param name="xpath" select="$xpath"/>
       <xsl:with-param name="attributesSnippet" select="$attributes"/>
+      <xsl:with-param name="required"
+        select="if ($thesaurusTitle='GEMET - INSPIRE themes, version 1.0' or $thesaurusTitle='ISO - 19119 geographic services taxonomy') 
+                then true() 
+                else false()"/>
       <xsl:with-param name="subTreeSnippet">
         <xsl:apply-templates mode="mode-iso19139" select="*">
           <xsl:with-param name="schema" select="$schema"/>

@@ -171,6 +171,7 @@
           data-htop-ref="_{gmd:northBoundLatitude/gco:Decimal/gn:element/@ref}"
           data-lang="lang"></div>
       </xsl:with-param>
+      <xsl:with-param name="required" select="true()"/>
     </xsl:call-template>
   </xsl:template>
 </xsl:stylesheet>
