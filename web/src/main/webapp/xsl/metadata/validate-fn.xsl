@@ -59,6 +59,11 @@
     <xsl:param name="error" as="xs:string"/>
     <xsl:param name="schema" as="xs:string"/>
     <xsl:param name="labels" as="node()"/>
+    
+<!--    <xsl:message>
+        Error type: <xsl:value-of select="$errorType"/>
+        Error: <xsl:value-of select="$error"/>
+    </xsl:message>-->
 
     <!-- Set of rules processed : -->
     <xsl:variable name="rules">
@@ -68,7 +73,8 @@
       <rule errorType="complex-type.2.4.b">The content of element '(.*)' is not complete. One of '\{"(.*)\}' is expected\. \(Element: (.*) with parent element: (.*)\)</rule>
       <!--cvc-datatype-valid.1.2.1: '' is not a valid value for 'dateTime'. (Element: gco:DateTime with parent element: gmd:date)-->
       <!--cvc-datatype-valid.1.2.1: 'DUMMY_DENOMINATOR' is not a valid value for 'integer'. (Element: gco:Integer with parent element: gmd:denominator)-->
-      <rule errorType="datatype-valid.1.2.1">'(.*)' <xsl:value-of select="$loc/strings/notValidFor"/> '(.*)'\. \(Element: ([a-z]{3}):(.*) <xsl:value-of select="$loc/strings/elementLocated"/>: (.*)\)</rule>
+      <rule errorType="datatype-valid.1.2.1">'(.*)' is not a valid value for '(.*)'\. \(Element: ([a-z]{3}):(.*) with parent element: (.*)\)</rule>
+      <rule errorType="datatype-valid.1.2.3">'(.*)' is not a valid value of union type '(.*)'\. \(Element: ([a-z]{3}):(.*) with parent element: (.*)\)</rule>
       <!--cvc-type.3.1.3: The value 'DUMMY_DENOMINATOR' of element 'gco:Integer' is not valid. (Element: gco:Integer with parent element: gmd:denominator)-->
       <rule errorType="type.3.1.3">The value '(.*)' of element '(.*)' is not valid\. \(Element: ([a-z]{3}):(.*) with parent element: (.*)\)</rule>
       <rule errorType="enumeration-valid">Value '(.*)' is not facet-valid with respect to enumeration '\[(.*)\]'\. It must be a value from the enumeration\. \(Element: ([a-z]{3}):(.*) with parent element: (.*)\)</rule>
@@ -105,7 +111,7 @@
                   <xsl:value-of select="geonet:getTitleWithoutContext($schema, regex-group(4), $labels)"/>
                   (<xsl:value-of select="regex-group(4)"/>).
                 </xsl:when>
-                <xsl:when test="$errorType = 'datatype-valid.1.2.1' or $errorType = 'type.3.1.3'">
+                <xsl:when test="$errorType = 'datatype-valid.1.2.1' or $errorType = 'type.3.1.3' or $errorType = 'datatype-valid.1.2.3'">
                   <xsl:value-of select="$labels/validation/invalidValue"/>
                   '<xsl:value-of select="regex-group(1)"/>' 
                   <xsl:value-of select="$labels/validation/notValidFor"/>
