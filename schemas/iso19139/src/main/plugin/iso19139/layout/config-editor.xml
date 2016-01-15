@@ -931,18 +931,32 @@
                   </snippet>
               </template>
           </field>
+          
           <field name="dataType" templateModeOnly="true" required="true"
-            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
-          />
+          >
+              <template>
+                  <values>
+                      <key label="dataType" xpath="gmd:MD_TopicCategoryCode" tooltip="gmd:MD_TopicCategoryCode">
+                        <codelist name="gmd:MD_TopicCategoryCode"/>
+                      </key>
+                  </values>
+                <snippet>
+                    <gmd:topicCategory>
+                        <gmd:MD_TopicCategoryCode>{{dataType}}</gmd:MD_TopicCategoryCode>
+                    </gmd:topicCategory>
+                </snippet>
+            </template>
+          </field>
             <action type="add" name="dataType" or="topicCategory" forceLabel="true"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
                 <snippet>
                     <gmd:topicCategory>
-                        <gmd:MD_TopicCategoryCode>{{dataType}}</gmd:MD_TopicCategoryCode>
+                        <gmd:MD_TopicCategoryCode/>
                     </gmd:topicCategory>
                 </snippet>
             </template>
@@ -1546,6 +1560,13 @@
                  del="../..">
             <template>
               <values>
+                <key label="dateType"
+                    xpath="gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/
+                        gmd:dateType/gmd:CI_DateTypeCode/@codeListValue"
+                    tooltip="gmd:CI_DateTypeCode">
+                    <codelist name="gmd:CI_DateTypeCode"/>
+                    <required>true</required>
+                </key>
                 <key label="conformity_title"
                      xpath="gmd:DQ_ConformanceResult/
                           gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString"
@@ -1591,7 +1612,7 @@
                             <gmd:dateType>
                               <gmd:CI_DateTypeCode
                                       codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
-                                      codeListValue="publication"/>
+                                      codeListValue="{{dateType}}"/>
                             </gmd:dateType>
                           </gmd:CI_Date>
                         </gmd:date>
@@ -2031,7 +2052,7 @@
                     data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>-->
             <template>
               <snippet>
-                <gmd:contact>
+                <gmd:pointOfContact>
                   <gmd:CI_ResponsibleParty>
                     <gmd:individualName>
                        <gco:CharacterString/>
@@ -2084,7 +2105,7 @@
                         codeListValue="pointOfContact"/>
                     </gmd:role>
                   </gmd:CI_ResponsibleParty>
-                </gmd:contact>
+                </gmd:pointOfContact>
               </snippet>
             </template>
           </action>
@@ -2187,7 +2208,7 @@
                     data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>-->
             <template>
               <snippet>
-                <gmd:contact>
+                <gmd:pointOfContact>
                   <gmd:CI_ResponsibleParty>
                     <gmd:individualName>
                        <gco:CharacterString/>
@@ -2240,7 +2261,7 @@
                         codeListValue="pointOfContact"/>
                     </gmd:role>
                   </gmd:CI_ResponsibleParty>
-                </gmd:contact>
+                </gmd:pointOfContact>
               </snippet>
             </template>
           </action>            
