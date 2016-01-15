@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
+    <schematron.title>ISO pravila za validaciju metapodataka</schematron.title>
     <M6>Tekst (CharacterString) mora imati sadržaj ili njegov roditelj mora imati valjan nilReason atribut.</M6>
     <M7>ograničenja CRS atributa</M7>
     <M8>[ISOFTDS19139:2005-TableA1-Row24] - Potrebno je ime za kontakt</M8>

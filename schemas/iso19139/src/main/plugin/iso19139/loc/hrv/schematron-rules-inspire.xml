@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
+    <schematron.title>INSPIRE pravila za validaciju metapodataka</schematron.title>
     <!-- INSPIRE metadata rules translation / START -->
     
     <!-- List of pattern title -->
@@ -43,7 +44,7 @@
         <br/>
         <b>Upute za implementaciju</b><br/>        
         Obavezno za skup podataka i niz skupa podataka.<br/>
-        <b>Primjer:</b> 527c4cac-070c-4bca-9aaf-92bece7be902
+        <b>Primjer:</b> 001
     </div></alert.M38>
     <report.M38><div>Jedinstveni identifikator izvora je:</div></report.M38>
     <report.M38.codespace><div>Prostor imena jedinstvenog identifikatora izvora je:</div></report.M38.codespace>
@@ -314,5 +315,17 @@
     <alert.M81><div><h2>Uparen izvor pokazuje na ove metapodatke. Odaberite neki drugi upareni izvor</h2></div></alert.M81>
     <report.M81><div><h2>Uparen izvor je postavljen.</h2></div></report.M81>
     
+    <alert.M82><div><h2>INSPIRE direktiva nije navedena u popisu usklađenosti.</h2></div></alert.M82>
+    <alert.M83><div><h2>INSPIRE direktiva nema postavljen ispravan datum objave.</h2></div></alert.M83>
+    <alert.M84><div><h2>Datum INSPIRE direktive nije datum objave.</h2></div></alert.M84>
+    <report.M82><div><h2>INSPIRE direktiva je navedena pod usklađenosti.</h2></div></report.M82>
+    
+    <alert.M85><div><h2></h2>Tip referentnog datuma specifikacije nije postavljen. Tip datuma je obavezno polje.</div></alert.M85>
+    <report.M85><div><h2>Tip referentnog datuma specifikacije je postavljen.</h2></div></report.M85>
+    
+    <alert.M86><div><h2></h2>Adresa elektroničke pošte treba imati oblik somebody@company.domain</div></alert.M86>
+    
+    <alert.M87><div><h2></h2>Naziv specifikacije nije postavljen. Naziv specifikacije je obavezno polje.</div></alert.M87>
+    <report.M87><div><h2>Naziv specifikacije je postavljen.</h2></div></report.M87>
     <!-- INSPIRE metadata rules translation / END -->
 </strings>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
+    <schematron.title>GEONETWORK pravila za validaciju metapodataka</schematron.title>
     <M500>[Language] - Jezik metapodataka nije definiran a drugi jezici su definirani. Glavni jezik metapodataka NE SMIJE biti definiran u dijelu za drugi jezik .</M500>
     <alert.M500>
         <div>Provjerite mogućnost da glavni jezik metapodataka nije definiran a elementi ostalih jezika (ie.

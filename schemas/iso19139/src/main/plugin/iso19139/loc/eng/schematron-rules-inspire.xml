@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-    <schematron.title>INSPIRE Rules</schematron.title>
+    <schematron.title>INSPIRE metadata validation rules</schematron.title>
     <!-- INSPIRE metadata rules translation / START -->
     
     <!-- List of pattern title -->
@@ -325,5 +325,18 @@
     
     <alert.M81><div><h2>Coupled resource is a reference to this metadata. Select another URL.</h2></div></alert.M81>
     <report.M81><div><h2>Coupled resource is set</h2></div></report.M81>
+    
+    <alert.M82><div><h2>There is no INSPIRE Directive in Conformity section</h2></div></alert.M82>
+    <alert.M83><div><h2>INSPIRE Directive has the wrong publication date</h2></div></alert.M83>
+    <alert.M84><div><h2></h2>The date of INSPIRE Directive is not publication date</div></alert.M84>
+    <report.M82><div><h2>INSPIRE Directive in Conformity section is defined</h2></div></report.M82>
+    
+    <alert.M85><div><h2></h2>Conformity reference date type is not set. Conformance reference date type is compulsory.</div></alert.M85>
+    <report.M85><div><h2>Conformance reference date type is set.</h2></div></report.M85>
+    
+    <alert.M86><div><h2></h2>E-mail address should have form somebody@company.domain</div></alert.M86>
+    
+    <alert.M87><div><h2></h2>Conformity reference title is not set. Conformance reference date type is compulsory.</div></alert.M87>
+    <report.M87><div><h2>Conformance reference title is set.</h2></div></report.M87>
     <!-- INSPIRE metadata rules translation / END -->
 </strings>
