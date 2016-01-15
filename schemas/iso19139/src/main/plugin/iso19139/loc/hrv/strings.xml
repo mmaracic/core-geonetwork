@@ -56,7 +56,7 @@
   <referenceDate>Referentni datum</referenceDate>
   <creationDate>Datum stvaranja</creationDate>
   <hierarchyLevel>Tip izvora</hierarchyLevel>
-  <dateType>Značenje datuma</dateType>
+  <dateType>Tip datuma</dateType>
   <publicationDate>Datum objavljivanja</publicationDate>
   <revisionDate>Datum zadnje revizije</revisionDate>
   <temporalRangeSection>Vremenski obuhvat</temporalRangeSection>
@@ -72,7 +72,7 @@
   <pointOfContact>Odgovorna strana za izvor podataka</pointOfContact>
   <metadataPointOfContact>Kontakt za metapodatke</metadataPointOfContact>
   <organisationName>Ime organizacije</organisationName>
-  <electronicMailAddress>Adresa elektronicke poste</electronicMailAddress>
+  <electronicMailAddress>Adresa elektroničke pošte</electronicMailAddress>
   <individualName>Ime i prezime</individualName>
   <positionName>Pozicija</positionName>
   <deliveryPoint>Ulica i broj</deliveryPoint>
