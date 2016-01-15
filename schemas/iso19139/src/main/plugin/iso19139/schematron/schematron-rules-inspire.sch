@@ -54,7 +54,7 @@ USA.
 
 -->
 
-	<sch:title xmlns="http://www.w3.org/2001/XMLSchema">INSPIRE metadata implementing rule validation</sch:title>
+	<sch:title xmlns="http://www.w3.org/2001/XMLSchema">$loc/strings/schematron.title</sch:title>
 	<sch:ns prefix="gml" uri="http://www.opengis.net/gml"/>
 	<sch:ns prefix="gmd" uri="http://www.isotc211.org/2005/gmd"/>
     <sch:ns prefix="gmx" uri="http://www.isotc211.org/2005/gmx"/>
@@ -488,10 +488,15 @@ USA.
 		<!-- Search for on quality report result with status ... We don't really know if it's an INSPIRE conformity report or not. -->
 		<sch:rule context="/gmd:MD_Metadata">
 			<sch:let name="degree" value="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result/*/gmd:pass)"/>
-            <sch:assert test="$degree">
-                <sch:value-of select="$loc/strings/alert.M44.nonev/div"/><sch:value-of select="$degree>0"/>
-            </sch:assert>
-            <sch:report test="$degree">
+			<sch:let name="inspire_specification" value="'COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services'"/>
+                        <sch:assert test="$degree">
+                            <sch:value-of select="$loc/strings/alert.M44.nonev/div"/><sch:value-of select="$degree>0"/>
+                        </sch:assert>
+
+                        <sch:assert test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result/*[gmd:specification/*/gmd:title/*/text()=$inspire_specification])=1">$loc/strings/alert.M82/div</sch:assert>
+                        <sch:report test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result/*[gmd:specification/*/gmd:title/*/text()=$inspire_specification])=1">$loc/strings/report.M82/div</sch:report>
+
+                        <sch:report test="$degree">
 				<sch:value-of select="$loc/strings/report.M44.nonev/div"/>
 			</sch:report>
 		</sch:rule>
@@ -502,29 +507,41 @@ USA.
 			<sch:let name="specification_title" value="gmd:specification/*/gmd:title/*/text()"/>
 			<sch:let name="specification_date" value="gmd:specification/*/gmd:date/*/gmd:date/*/text()"/>
 			<sch:let name="specification_dateType" value="normalize-space(gmd:specification/*/gmd:date/*/gmd:dateType/*/@codeListValue)"/>
-			
-			<sch:report test="$specification_title"><sch:value-of select="$loc/strings/report.M44.spec/div"/>
+			<sch:let name="inspire_specification" value="'COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services'"/>
+                                                                        
+                        <sch:assert test="not(name()!='geonet:element' and index-of (('publication','creation','revision'), $specification_dateType) &lt; 1)"><sch:value-of select="$loc/strings/alert.M85/div"/></sch:assert>
+			<sch:report test="index-of (('publication','creation','revision'), $specification_dateType) &gt; 0"><sch:value-of select="$loc/strings/report.M85/div"/></sch:report>
+                        
+                        <sch:assert test="not(name()!='geonet:element' and string-length($specification_title) = 0)"><sch:value-of select="$loc/strings/alert.M87/div"/></sch:assert>
+			<sch:report test="string-length($specification_title)&gt; 0"><sch:value-of select="$loc/strings/report.M87/div"/></sch:report>
+
+                        <sch:report test="$specification_title">
+                            <sch:value-of select="$loc/strings/report.M44.spec/div"/>
 				<sch:value-of select="$specification_title"/>, (<sch:value-of select="$specification_date"/>, <sch:value-of select="$specification_dateType"/>)
 			</sch:report>
 			<sch:report test="$degree">
 				<sch:value-of select="$loc/strings/report.M44.degree/div"/>
 				<sch:value-of select="$degree"/>
 			</sch:report>
+
+                        <sch:assert test="not(compare($inspire_specification, $specification_title)=0 and compare($specification_date,'2010-12-08')!=0)">$loc/strings/alert.M83/div</sch:assert>
+                        <sch:assert test="not(compare($inspire_specification, $specification_title)=0 and compare($specification_dateType,'publication')!=0)">$loc/strings/alert.M84/div</sch:assert>
 		</sch:rule>
 		
-		<sch:rule context="//gmd:DQ_DataQuality[../../gmd:identificationInfo/gmd:MD_DataIdentification
+                <sch:rule context="//gmd:DQ_DataQuality[../../gmd:identificationInfo/gmd:MD_DataIdentification
 			or ../../gmd:identificationInfo/*/@gco:isoType = 'gmd:MD_DataIdentification']">
 			<sch:let name="date" value="not(gmd:report/*/gmd:result/*/gmd:specification/*/gmd:date/*/gmd:date/gco:Date[not(text())])"/>
-
+                        
 			<sch:assert test="$date">$loc/strings/alert.M80/div</sch:assert>
 			<sch:report test="$date">$loc/strings/report.M80/div</sch:report>
 		</sch:rule>
-	</sch:pattern>
+        </sch:pattern>
 	
 	
 	
 	
 	<sch:pattern>
+                <sch:title>$loc/strings/constraints</sch:title>
 		<sch:rule context="//gmd:MD_DataIdentification|
 			//*[@gco:isoType='gmd:MD_DataIdentification']|
 			//srv:SV_ServiceIdentification|
@@ -646,6 +663,8 @@ USA.
 		    <sch:let name="emptyRole" value="$role=''"/>
 		    <sch:let name="emailAddress" value="*/gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress/*/text()"/>			
 			
+                    <sch:assert test="matches($emailAddress, '[^@]+@[^\.]+\.[^\.]+')">$loc/strings/alert.M86/div</sch:assert>
+                    
 			<sch:assert
 				test="not($missing)"
 				><sch:value-of select="$loc/strings/alert.M47.info/div"/></sch:assert>
@@ -721,7 +740,8 @@ USA.
 		    <sch:let name="role" value="normalize-space(gmd:CI_ResponsibleParty/gmd:role/*/@codeListValue)"/>
 		    <sch:let name="emptyRole" value="$role=''"/>
 		    <sch:let name="emailAddress" value="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress/*/text()"/>			
-			
+                    
+                    <sch:assert test="matches($emailAddress, '[^@]+@[^\.]+\.[^\.]+')">$loc/strings/alert.M86/div</sch:assert>
 		    <sch:assert
 		        test="not($emptyRole)"
 		        ><sch:value-of select="$loc/strings/alert.M48.role/div"/></sch:assert>
