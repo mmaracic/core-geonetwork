@@ -137,11 +137,11 @@
             </tr>
           <tr data-ng-if="mdView.current.record.tematskoPodrucje">
               <th data-translate="">tematskoPodrucje</th>
-              <td data-gn-field-tooltip="iso19139|AZOPodrucje">{{mdView.current.record.tematskoPodrucje_local}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOPodrucje">{{mdView.current.record.tematskoPodrucje_local | translate}}</td>
             </tr>
           <tr data-ng-if="mdView.current.record.tematskoPodpodrucje">
               <th data-translate="">tematskoPodpodrucje</th>
-              <td data-gn-field-tooltip="iso19139|AZOPodpodrucje">{{mdView.current.record.tematskoPodpodrucje_local}}</td>
+              <td data-gn-field-tooltip="iso19139|AZOPodpodrucje">{{mdView.current.record.tematskoPodpodrucje_local | translate}}</td>
             </tr>
             
             <tr data-ng-if="mdView.current.record.category.length > 0 ||
@@ -195,19 +195,19 @@
             </tr>
             <tr data-ng-if="mdView.current.record.classification_text">
               <th data-translate="">classification</th>
-              <td data-gn-field-tooltip="iso19139|gmd:MD_ClassificationCode">{{mdView.current.record.classification_text}}</td>
+              <td data-gn-field-tooltip="iso19139|gmd:MD_ClassificationCode">{{mdView.current.record.classification_text | translate}}</td>
             </tr>
             <tr data-ng-if="mdView.current.record.legalConstraints">
               <th data-translate="">legalConstraints</th>
               <td data-gn-field-tooltip="iso19139|gmd:MD_LegalConstraints">
-                <p data-ng-repeat="c in mdView.current.record.legalConstraints track by $index">{{c}}</p>
+                <p data-ng-repeat="c in mdView.current.record.legalConstraints track by $index">{{c | translate}}</p>
               </td>
             </tr>
 
             <tr data-ng-if="mdView.current.record.securityConstraints">
               <th data-translate="">securityConstraints</th>
               <td data-gn-field-tooltip="iso19139|gmd:MD_SecurityConstraints">
-                <p data-ng-repeat="c in mdView.current.record.securityConstraints track by $index">{{c}}</p>
+                <p data-ng-repeat="c in mdView.current.record.securityConstraints track by $index">{{c | translate}}</p>
               </td>
             </tr>
 
@@ -215,7 +215,7 @@
             <tr data-ng-if="mdView.current.record.resourceConstraints">
               <th data-translate="">resourceConstraints</th>
               <td>
-                <p data-ng-repeat="c in mdView.current.record.resourceConstraints track by $index">{{c}}</p>
+                <p data-ng-repeat="c in mdView.current.record.resourceConstraints track by $index">{{c | translate}}</p>
               </td>
             </tr>
 
@@ -263,7 +263,7 @@
               <th data-translate="">resourceStatus</th>
               <td>
                 <ul>
-                  <li data-ng-repeat="s in mdView.current.record.status_text">{{s}}</li>
+                  <li data-ng-repeat="s in mdView.current.record.status_text">{{s | translate}}</li>
                 </ul>
               </td>
             </tr>
@@ -285,7 +285,7 @@
           <tbody>
             <tr data-ng-if="mdView.current.record.updateFrequency">
               <th data-translate="">updateFrequency</th>
-              <td data-gn-field-tooltip="iso19139|gmd:maintenanceAndUpdateFrequency">{{mdView.current.record.maintenanceAndUpdateFrequency_text}}</td>
+              <td data-gn-field-tooltip="iso19139|gmd:maintenanceAndUpdateFrequency">{{mdView.current.record.maintenanceAndUpdateFrequency_text | translate}}</td>
             </tr>
             <tr data-ng-if="mdView.current.record.spatialRepresentationType_text">
               <th data-translate="">spatialRepresentationType</th>
@@ -356,6 +356,7 @@
              data-title="{{'siblings' | translate}}">
         </div>
 
+        <!-- Metadata information -->
         <h2 data-translate="">metadataInformation</h2>
 
         <a class="btn btn-link"

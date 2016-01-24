@@ -759,6 +759,20 @@
               this.allContacts.metadata.push(contact);
             }
           }
+            if (angular.isString(this.metadataResponsibleParty)){
+                var s = this.metadataResponsibleParty.split('|');
+                var contact = {
+                  role: s[0] || '',
+                  org: s[2] || '',
+                  logo: s[3] || '',
+                  email: s[4] || '',
+                  name: s[5] || '',
+                  position: s[6] || '',
+                  address: s[7] || '',
+                  phone: s[8] || ''
+                };
+                this.allContacts.metadata.push(contact);
+            }
         }
         return this.allContacts;
       },
@@ -776,6 +790,10 @@
               ret.metadata = s[2];
             }
           }
+        }
+        if (angular.isString(this.metadataResponsibleParty)){
+            var s = this.metadataResponsibleParty.split('|');
+            ret.metadata = s[2];
         }
         return ret;
       },

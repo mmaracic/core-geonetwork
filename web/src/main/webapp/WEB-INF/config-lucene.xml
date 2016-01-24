@@ -132,6 +132,7 @@
       <field name="updateFrequency" tagName="updateFrequency"/>
       <field name="lineage" tagName="lineage"/>
       <field name="responsibleParty" tagName="responsibleParty"/>
+      <field name="metadataResponsibleParty" tagName="metadataResponsibleParty"/>
       <field name="MD_LegalConstraintsOtherConstraints" tagName="legalConstraints"/>
       <field name="MD_LegalConstraintsUseLimitation" tagName="legalConstraints"/>
       <field name="MD_SecurityConstraintsUseLimitation" tagName="securityConstraints"/>
