@@ -220,13 +220,24 @@
                     return false;
                     // Facet configuration not yet loaded
                   }
-
+                  
                   var facetQParam = scope.params['facet.q'];
                   if (facetQParam === undefined) {
                     return false;
                   }
                   var dimensionList =
                       facetQParam.split('&');
+
+                  if (scope.params.topicCat){
+                    dimensionList.push('topicCat'+'/'+scope.params.topicCat);
+                  }
+                  if (scope.params.TematskoPodrucje){
+                    dimensionList.push('TematskoPodrucje'+'/'+scope.params.TematskoPodrucje);
+                  }
+                  if (scope.params.inspirerelated){
+                    dimensionList.push('inspireConformance'+'/'+scope.params.inspirerelated);
+                  }
+
                   var categoryList = [];
                   for (var i = 0; i < dimensionList.length; i++) {
                     var dimensionFilter = dimensionList[i].split('/');
