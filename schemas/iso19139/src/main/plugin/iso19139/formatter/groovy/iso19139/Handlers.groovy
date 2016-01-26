@@ -457,6 +457,6 @@ public class Handlers {
 
             builder.append(handlers.fileResult('html/text-el.html', [label: f.translate(nazivLower), text: vrijednost]));
         }
-        return handlers.fileResult('html/2-level-entry.html', [label: f.translate('AZO'), childData: builder.toString()])
+        return handlers.fileResult('html/2-level-entry.html', [label: f.translate('HAOP'), childData: builder.toString()])
     }
 }
