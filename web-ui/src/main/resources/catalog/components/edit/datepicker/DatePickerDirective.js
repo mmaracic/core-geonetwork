@@ -49,12 +49,12 @@
                  gml: gnNamespaces.gml32
                }
              }, datePattern = new RegExp('^\\d{4}$|' +
-             '^\\d{4}-\\d{2}$|' +
-             '^\\d{4}-\\d{2}-\\d{2}$|' +
-             '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$');
+             '^\\d{2}-\\d{4}$|' +
+             '^\\d{2}-\\d{2}-\\d{4}$|' +
+             '^\\d{2}-\\d{2}-\\d{4}T\\d{2}:\\d{2}:\\d{2}$');
              // Format date when datetimepicker is used.
              scope.formatFromDatePicker = function(date) {
-               var format = 'YYYY-MM-DDTHH:mm:ss';
+               var format = 'DD-MM-YYYYTHH:mm:ss';
                var dateTime = moment(date);
                scope.dateInput = dateTime.format(format);
              };
@@ -112,6 +112,8 @@
                scope.tagName : 'gco:Date';
                var namespace = tag.split(':')[0];
 
+               var xmlDateTime = null;
+               var localFormat = 'DD-MM-YYYYTHH:mm:ss';
                if (scope.dateTypeSupported !== true) {
                  // Check date against simple date pattern
                  // to add a css class to highlight error.
@@ -129,17 +131,22 @@
                  scope.dateTime = scope.dateInput;
                } else if (scope.mode === 'year') {
                  scope.dateTime = scope.year;
+                 xmlDateTime = scope.year;
                } else if (scope.mode === 'month') {
-                 scope.dateTime = $filter('date')(scope.month, 'yyyy-MM');
-               } else if (scope.time) {
+                 scope.dateTime = $filter('date')(scope.month, 'MM-yyyy');
+                 xmlDateTime = $filter('date')(scope.month, 'yyyy-MM');
+              } else if (scope.time) {
                  tag = scope.tagName !== undefined ?
                  scope.tagName : 'gco:DateTime';
                  var time = $filter('date')(scope.time, 'HH:mm:ss');
                  // TODO: Set seconds, Timezone ?
-                 scope.dateTime = $filter('date')(scope.date, 'yyyy-MM-dd');
+                 scope.dateTime = $filter('date')(scope.date, 'dd-MM-yyyy');
                  scope.dateTime += 'T' + time;
-               } else {
-                 scope.dateTime = $filter('date')(scope.date, 'yyyy-MM-dd');
+                 xmlDateTime = $filter('date')(scope.date, 'yyyy-MM-dd');
+                 xmlDateTime += 'T' + time;
+              } else {
+                 scope.dateTime = $filter('date')(scope.date, 'dd-MM-yyyy');
+                 xmlDateTime = $filter('date')(scope.date, 'yyyy-MM-dd');
                }
                if (tag === '') {
                  scope.xmlSnippet = scope.dateTime;
@@ -157,7 +164,7 @@
                         namespace + '="' +
                         namespaces[gnCurrentEdit.schema][namespace] + '"' +
                    attribute + '>' +
-                   scope.dateTime + '</' + tag + '>';
+                   xmlDateTime + '</' + tag + '>';
                  } else {
                    scope.xmlSnippet = '';
                  }
