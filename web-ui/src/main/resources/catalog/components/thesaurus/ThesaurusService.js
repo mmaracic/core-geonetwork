@@ -65,6 +65,11 @@
               var listOfKeywords = [];
               angular.forEach(data[0], function(k) {
                 if (k.value['#text']) {
+                    if (k.defaultLang==='hrv' && k.thesaurus.key==='external.theme.inspire-service-taxonomy'){
+                       var temp = k.values[0]['#text'];
+                       var newLabel = temp.substr(0, temp.indexOf('(')-1);
+                       k.value['#text']=newLabel;
+                   } 
                   listOfKeywords.push(new Keyword(k));
                 }
               });
