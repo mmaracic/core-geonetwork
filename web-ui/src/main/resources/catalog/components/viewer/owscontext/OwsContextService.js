@@ -90,8 +90,8 @@
 
         // store the extent into view settings so that it can be used later in
         // case the map is not visible yet
-        gnViewerSettings.initialExtent = extent;
-        map.getView().fit(extent, map.getSize());
+//        gnViewerSettings.initialExtent = extent;
+//        map.getView().fit(extent, map.getSize());
 
         // load the resources
         var layers = context.resourceList.layer;
@@ -127,10 +127,12 @@
                     }));
               }
             } else {
-              var server = layer.server[0];
-              if (server.service == 'urn:ogc:serviceType:WMS') {
-                self.createLayer(layer, map);
-              }
+                if (typeof(layer.server)!=='undefined'){
+                    var server = layer.server[0];
+                    if (server.service == 'urn:ogc:serviceType:WMS') {
+                      self.createLayer(layer, map);
+                    }
+                }
             }
           }
         }

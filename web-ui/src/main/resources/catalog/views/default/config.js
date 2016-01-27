@@ -61,25 +61,26 @@
              * Define maps
              */
           var mapsConfig = {
-            center: [280274.03240585705, 6053178.654789996],
-            zoom: 2
+            center: [1835101.8057271149, 5545873.5846246215],
+            minZoom: 3,
+            maxZoom: 16,
+            zoom: 4
             //maxResolution: 9783.93962050256
           };
 
           var viewerMap = new ol.Map({
+            privateLabel: 'Viewer map',
             controls: [],
             view: new ol.View(mapsConfig)
           });
 
           var searchMap = new ol.Map({
+            privateLabel: 'Search Map',
             controls:[],
             layers: [new ol.layer.Tile({
               source: new ol.source.OSM()
             })],
-            view: new ol.View({
-              center: mapsConfig.center,
-              zoom: 2
-            })
+            view: new ol.View(mapsConfig)
           });
 
 

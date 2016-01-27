@@ -1,51 +1,6 @@
 (function() {
   goog.provide('gn_viewer');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   goog.require('gn_baselayerswitcher');
   goog.require('gn_draw');
   goog.require('gn_graticule');
@@ -101,6 +56,21 @@
 
       var map = $scope.searchObj.viewerMap;
 
+      map.on('postrender', function(e){
+            if (!e.map.initialized){
+                //set initial extent
+                var projection = e.map.getView().getProjection();
+                var tl = new ol.geom.Point([13.4700, 42.3900]);
+                var br = new ol.geom.Point([19.5000, 46.5700]);
+                var tltr = tl.transform('EPSG:4326',projection);
+                var brtr = br.transform('EPSG:4326',projection);
+                var newExtent = [tltr.getFirstCoordinate()[0], tltr.getFirstCoordinate()[1], brtr.getFirstCoordinate()[0], brtr.getFirstCoordinate()[1]]
+                var size = e.map.getSize();
+                e.map.getView().fit(newExtent, size);
+                e.map.initialized = true;
+            }
+        });
+        
       if (gnViewerSettings.wmsUrl && gnViewerSettings.layerName) {
         gnMap.addWmsFromScratch(map, gnViewerSettings.wmsUrl,
             gnViewerSettings.layerName, true).

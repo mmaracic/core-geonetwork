@@ -123,9 +123,11 @@
                ],
                renderer: 'canvas',
                view: new ol.View({
-                 center: [0, 0],
+                 center: [1835101.8057271149, 5545873.5846246215],
                  projection: scope.projs.map,
-                 zoom: 2
+                 minZoom: 3,
+                 maxZoom: 16,
+                 zoom: 4
                })
              });
 
