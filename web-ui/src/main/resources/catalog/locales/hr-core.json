@@ -250,7 +250,7 @@
     "layerNotAvailableInMapProj": "WMS servis ne poslužuje slojeve u referentnom koordinatnom sustavu karte. Sloj će biti dodan na kartu, ali možda neće biti ispravno prikazan.",
     "layerCRSNotFound": "WMS sloj nema informaciju o referentnom koordinatnom sustavu. Moguće da je WMS verzija ranija od 1.3.0.",
     "layerTileLoadError": "Nešto je pošlo krivo prilikom učitavanja tajla <a href='{{url}}'>'{{url | limitTo: 30}} ...'</a> za sloj '{{layer}}'.",
-    "layerAdded": "Layer added",
+    "layerAdded": "Sloj dodan",
     "getCapFailure":"WMS getCapabilities zahtjev nije prošao",
     "standards": "Standard metapodataka",
     "metadataTypes": "Tip zapisa",
