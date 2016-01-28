@@ -27,7 +27,7 @@
    */
   var searchFormController =
       function($scope, $location, gnSearchManagerService,
-               gnFacetService, Metadata, gnSearchLocation) {
+               gnFacetService, Metadata, gnSearchLocation, gnHttp) {
     var defaultParams = {
       fast: 'index',
       _content_type: 'json'
@@ -158,6 +158,16 @@
                   );
               paging.from = (paging.currentPage - 1) * paging.hitsPerPage + 1;
             }
+            
+            //unselect all records
+            gnHttp.callService('mdSelect', {
+              selected: 'remove-all'
+            }).success(function(res) {
+              $scope.searchResults.selectedCount = parseInt(res[0], 10);
+              $scope.searchResults.records.forEach(function(record) {
+                record['geonet:info'].selected = false;
+              });
+            });
           });
     };
 
@@ -258,7 +268,8 @@
     'gnSearchManagerService',
     'gnFacetService',
     'Metadata',
-    'gnSearchLocation'
+    'gnSearchLocation',
+    'gnHttp'
   ];
 
   module.directive('ngSearchForm', [
