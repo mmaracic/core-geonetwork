@@ -229,13 +229,28 @@
                       facetQParam.split('&');
 
                   if (scope.params.topicCat){
+                    if (dimensionList.length>1){
+                        scope.params['facet.q'] += '&';
+                    }
+                    scope.params['facet.q'] += 'topicCat'+'/'+scope.params.topicCat;
                     dimensionList.push('topicCat'+'/'+scope.params.topicCat);
+                    scope.params.topicCat = null;
                   }
                   if (scope.params.TematskoPodrucje){
+                    if (dimensionList.length>1){
+                        scope.params['facet.q'] += '&';
+                    }
+                    scope.params['facet.q'] += 'TematskoPodrucje'+'/'+scope.params.TematskoPodrucje;
                     dimensionList.push('TematskoPodrucje'+'/'+scope.params.TematskoPodrucje);
+                    scope.params.TematskoPodrucje=null;
                   }
                   if (scope.params.inspirerelated){
+                    if (dimensionList.length>1){
+                        scope.params['facet.q'] += '&';
+                    }
+                    scope.params['facet.q'] += 'inspireConformance'+'/'+scope.params.inspirerelated;
                     dimensionList.push('inspireConformance'+'/'+scope.params.inspirerelated);
+                    scope.params.inspirerelated=null;
                   }
 
                   var categoryList = [];

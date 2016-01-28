@@ -184,6 +184,11 @@
             return insp_image;
           };
           
+          //processes link parameter
+          $scope.encodeSpaces = function(text){
+              return text.replace(/\s/g, '%2520');
+          };
+          
         var userFn = {
           isAnonymous: function() {
             return this['@authenticated'] === 'false';

@@ -73,7 +73,7 @@
             <div data-ng-repeat="(key, facet) in searchInfo.facet['topicCats']"
                  class="col-xs-6 col-sm-4 col-lg-3"
                  data-ng-show="browse === 'topics'">
-              <a class="thumbnail gn-icon-bg" data-ng-href="#/search?topicCat={{facet['@name']}}">
+              <a class="thumbnail gn-icon-bg" data-ng-href="#/search?topicCat={{encodeSpaces(facet['@name'])}}">
                   <i class="fa fa-3x fa-custom gn-icon gn-icon-bg gn-icon-{{facet['@name']}}">
                     <br>
                     <div class="gn-icon-label gn-icon-label-custom">{{facet['@label']}}</div>
@@ -84,7 +84,7 @@
             <div data-ng-repeat="(key, facet) in searchInfo.facet['tematskoPodrucje']"
                  class="col-xs-6 col-sm-4 col-lg-3"
                  data-ng-show="browse === 'areas'">
-              <a class="thumbnail gn-icon-bg fa fa-3x fa-custom" data-ng-href="#/search?TematskoPodrucje={{facet['@name']}}">
+              <a class="thumbnail gn-icon-bg fa fa-3x fa-custom" data-ng-href="#/search?TematskoPodrucje={{encodeSpaces(facet['@name'])}}">
                 <img class="azo_icon" ng-src="{{getAreaSymbol(facet['@name']).url}}" alt="Image {{facet['@name']}} does not exist."><br/>
                 <div class="gn-icon-label gn-icon-label-custom">{{facet['@label']}}</div>
                 <span class="badge">{{facet['@count']}}</span>
@@ -94,7 +94,7 @@
             <div data-ng-repeat="(key, facet) in searchInfo.facet['inspireConformance']"
                  class="col-xs-6 col-sm-4 col-lg-3"
                  data-ng-show="browse === 'inspirecon'">
-              <a class="thumbnail gn-icon-bg fa fa-3x fa-custom" data-ng-href="#/search?inspirerelated={{facet['@name']}}">
+              <a class="thumbnail gn-icon-bg fa fa-3x fa-custom" data-ng-href="#/search?inspirerelated={{encodeSpaces(facet['@name'])}}">
                 <img class="azo_icon" ng-src="{{getInspireSymbol(facet['@name']).url}}" alt="Image {{facet['@name']}} does not exist."><br/>
                 <div class="gn-icon-label gn-icon-label-custom">{{facet['@label']}}</div>
                 <span class="badge">{{facet['@count']}}</span>
