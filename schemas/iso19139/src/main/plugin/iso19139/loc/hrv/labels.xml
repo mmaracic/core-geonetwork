@@ -62,17 +62,17 @@
     </element>
     <element name="gco:Date" id="393.0">
         <label>Datum</label>
-        <description>Formatiran kao 2007-09-12 (YYYY-MM-DD).</description>
+        <description>Formatiran kao 12-09-2007 (DD-MM-YYYY).</description>
         <help>Referentni datum i događaj koji se koristi kako bi ga opisao</help>
         <_condition>Koristi dužnost/uvjet iz referencirajućeg objekta</_condition>
     </element>
     <element name="gco:DateTime" id="64.0" context="gmd:MD_Usage">
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
         <label>Datum/Vrijeme korištenja </label>
         <help>datum i vrijeme prvog korištenja izvora ili skupa izvora</help>
     </element>
     <element name="gco:DateTime" id="300.0" context="gmd:MD_StandardOrderProcess">
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
         <label>Planiran datum/vrijeme dostupnosti</label>
         <help>Datum i vrijeme kada će izvor biti dostupan</help>
     </element>
@@ -2150,19 +2150,19 @@
     </element>
     <element name="gml:beginPosition">
         <label>Početni datum</label>
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
     </element>
     <element name="gml:TimePeriodTypeGROUP_ELEMENT0">
         <label>Početni datum</label>
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
     </element>
     <element name="gml:endPosition">
         <label>Završni datum</label>
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
     </element>
     <element name="gml:TimePeriodTypeGROUP_ELEMENT4">
         <label>Završni datum</label>
-        <description>Formatiran kao 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss).</description>
+        <description>Formatiran kao 12-09-2007T15:00:00 (DD-MM-YYYYTHH:mm:ss).</description>
     </element>
     <element name="gml:relatedTime">
         <label>Referentno vrijeme</label>
