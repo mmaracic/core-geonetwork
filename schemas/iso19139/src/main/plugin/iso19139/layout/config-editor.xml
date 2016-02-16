@@ -1063,7 +1063,7 @@
         </section>
         
         <!-- Vremenska poveznica-->
-        <section name="referenceDate">
+        <section name="temporalRef">
           <!-- Pojedinačni datum -->
           <!-- Datasets -->
           <field name="referenceDate" templateModeOnly="true"
@@ -1552,19 +1552,19 @@
                  del="../..">
             <template>
               <values>
-                <key label="dateType"
-                    xpath="gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/
-                        gmd:dateType/gmd:CI_DateTypeCode/@codeListValue"
-                    tooltip="gmd:CI_DateTypeCode">
-                    <codelist name="gmd:CI_DateTypeCode"/>
-                    <required>true</required>
-                </key>
                 <key label="conformity_title"
                      xpath="gmd:DQ_ConformanceResult/
                           gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString"
                      tooltip="gmd:pass">
                   <helper name="gmd:title" context="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title"/>
                   <required>true</required>
+                </key>
+                <key label="dateType"
+                    xpath="gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/
+                        gmd:dateType/gmd:CI_DateTypeCode/@codeListValue"
+                    tooltip="gmd:CI_DateTypeCode">
+                    <codelist name="gmd:CI_DateTypeCode"/>
+                    <required>true</required>
                 </key>
                 <key label="conformity_date"
                      xpath="gmd:DQ_ConformanceResult/
@@ -1678,7 +1678,7 @@
         <section name="useLimitation">
           <!-- Use constraints -->
           <field
-              name="useLimitation" templateModeOnly="true" 
+              name="useLimitation" templateModeOnly="true" required="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_Constraints/gmd:useLimitation]"
               if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
               del="."
@@ -1716,7 +1716,7 @@
             </template>
           </action>
           <field
-              name="useLimitation" templateModeOnly="true" 
+              name="useLimitation" templateModeOnly="true" required="true"
               xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_Constraints/gmd:useLimitation]"
               if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
               del="."
@@ -1755,7 +1755,7 @@
           </action>
 
           <!-- Access constraints-->
-          <field name="accessConstraints" 
+          <field name="accessConstraints" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
             del="."
@@ -1807,7 +1807,7 @@
               </snippet>
             </template>
           </action>
-          <field name="accessConstraints" 
+          <field name="accessConstraints" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints]"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
             del="."
@@ -2422,10 +2422,22 @@
           />
 
           <!-- Jezik Metapodataka-->
-          <field name="langMeta"
+          <field name="langMeta" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:language"
-            del=""
-          />
+          >
+            <template>
+                <values>
+                    <key label="langMeta" xpath="gmd:LanguageCode/@codeListValue" tooltip="gmd:language">
+                        <helper name="gmd:language" context="gmd:MD_DataIdentification"/>
+                    </key>
+                </values>
+                 <snippet>
+                     <gmd:language>
+                         <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="{{langMeta}}"/>
+                     </gmd:language>
+                 </snippet>
+             </template>              
+          </field>
         </section>        
       </tab>
     </view>
