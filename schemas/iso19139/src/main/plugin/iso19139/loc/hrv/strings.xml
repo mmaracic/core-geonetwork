@@ -22,7 +22,7 @@
   <metadata>Metapodaci</metadata>
   <identificationInfo>Identifikacija</identificationInfo>
   <distributionInfo>Format podataka</distributionInfo>
-  <dataQualityInfo>Usklađenost za izvor podataka</dataQualityInfo>
+  <dataQualityInfo>Kvaliteta podataka</dataQualityInfo>
   <spatialRepresentationInfo>Prostorna rezolucija</spatialRepresentationInfo>
   <referenceSystemInfo>Koordinatni referentni sustav</referenceSystemInfo>
   <contentInfo>Sadržaj</contentInfo>
