@@ -69,10 +69,10 @@
 						<gco:CharacterString/>
 					</gmd:code>
 					<gmd:codeSpace>
-						<gco:CharacterString/>
+                                            <gco:CharacterString>hr:nipp:crs</gco:CharacterString>
 					</gmd:codeSpace>
 					<gmd:version>
-						<gco:CharacterString/>
+                                            <gco:CharacterString>1.0</gco:CharacterString>
 					</gmd:version>
 				</gmd:RS_Identifier>
 			</gmd:referenceSystemIdentifier>
@@ -255,10 +255,10 @@
 								<gco:CharacterString/>
 							</gmd:code>
 							<gmd:codeSpace>
-								<gco:CharacterString/>
+                                                            <gco:CharacterString>hr:nipp:pp</gco:CharacterString>
 							</gmd:codeSpace>
 							<gmd:version>
-								<gco:CharacterString/>
+                                                            <gco:CharacterString>1.0</gco:CharacterString>
 							</gmd:version>
 						</gmd:RS_Identifier>
 					</gmd:identifier>
