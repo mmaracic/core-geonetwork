@@ -108,7 +108,7 @@
   "browseBy": "Dohvati sa",
   "browseTopics": "Dohvati teme",
   "browseTypes": "Dohvati izvore",
-  "versionDetails": "Powered by <span class='gn-version'>{{platform}} {{version}}.{{subversion}}</span>",
+  "versionDetails": "Temeljeno na <span class='gn-version'>{{platform}} {{version}}</span>",
   "lastRecords": "Najnovije vijesti",
   "preferredRecords": "Najpopularnije",
   "about": "O aplikaciji",
