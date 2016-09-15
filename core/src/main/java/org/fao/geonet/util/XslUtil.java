@@ -17,6 +17,7 @@ import org.fao.geonet.GeonetContext;
 import org.fao.geonet.constants.Geonet;
 import org.fao.geonet.kernel.SchemaManager;
 import org.fao.geonet.kernel.search.CodeListTranslator;
+import org.fao.geonet.kernel.search.LabelTranslator;
 import org.fao.geonet.kernel.search.LuceneSearcher;
 import org.fao.geonet.kernel.search.Translator;
 import org.fao.geonet.kernel.setting.SettingManager;
@@ -322,6 +323,37 @@ public final class XslUtil
         }
     }
 
+    /**
+     * Return a translation for a label element.
+     *
+     * @param label The label name (eg. gmd:MD_TopicCategoryCode)
+     * @param value The value to search for in the translation file
+     * @param langCode  The language
+     * @return  The translation, label value if not found or an empty string
+     * if no codelist value provided.
+     */
+    public static String getLabelTranslation(Object label, Object value, Object langCode) {
+        String labelValue = (String) value;
+        if (labelValue != null && label != null && langCode != null) {
+            String translation = labelValue;
+            try {
+                final GeonetContext gc = (GeonetContext) ServiceContext.get().getHandlerContext(Geonet.CONTEXT_NAME);
+                Translator t = new LabelTranslator(gc.getBean(SchemaManager.class),
+                        (String) langCode,
+                        (String) label);
+                translation = t.translate(labelValue);
+            } catch (Exception e) {
+                Log.error(
+                    Geonet.GEONETWORK,
+                    String.format("Failed to translate codelist value '%s' in language '%s'. Error is %s",
+                            labelValue, langCode, e.getMessage()));
+            }
+            return translation;
+        } else {
+            return "";
+        }
+    }
+    
     /**
      * Return 2 iso lang code from a 3 iso lang code. If any error occurs return "".
      *

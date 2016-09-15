@@ -322,6 +322,18 @@
                 <span data-ng-repeat="f in mdView.current.record.format" class="badge">{{f}}</span>
               </td>
             </tr>
+            <tr data-ng-if="mdView.current.record.specificationTitle">
+              <th data-translate="">conformance</th>
+              <td data-gn-field-tooltip="iso19139|gmd:DQ_ConformanceResult">
+                <ul>
+                  <li data-ng-repeat="r in mdView.current.record.specificationTitle track by $index">
+                      <div><strong data-translate="">title</strong> <div>{{r}}</div></div>
+                      <div><strong data-translate="">degree</strong> <div data-translate="">{{mdView.current.record.specificationDegree[$index]}}</div></div>
+                    <div><strong data-translate="">date</strong> <div>{{mdView.current.record.specificationDate[$index]}}</div></div>
+                </li>
+                </ul>
+              </td>
+            </tr>            
             <tr data-ng-if="mdView.current.record.lineage">
               <th data-translate="">lineage</th>
               <td data-gn-field-tooltip="iso19139|gmd:lineage">

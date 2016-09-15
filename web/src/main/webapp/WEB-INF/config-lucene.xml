@@ -157,6 +157,9 @@
       <field name="standardName" tagName="standardName"/>
       <field name="_groupWebsite" tagName="groupWebsite"/>
       <field name="attributeTable" tagName="attributeTable"/>
+      <field name="specificationTitle" tagName="specificationTitle"/>
+      <field name="specificationDegree" tagName="specificationDegree"/>
+      <field name="specificationDate" tagName="specificationDate"/>
        
       <!-- AZO fields -->
         <field name="classification" tagName="classification"/>

@@ -704,19 +704,19 @@
 				</xsl:if>
 			</xsl:if>
 			
-			<xsl:for-each select="//gmd:pass/gco:Boolean">
+			<xsl:for-each select=".//gmd:pass/gco:Boolean">
 				<Field name="specificationDegree" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 			
-			<xsl:for-each select="//gmd:specification/*/gmd:title/gco:CharacterString">
+			<xsl:for-each select=".//gmd:specification/*/gmd:title/gco:CharacterString">
 				<Field name="specificationTitle" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 			
-			<xsl:for-each select="//gmd:specification/*/gmd:date/*/gmd:date">
+			<xsl:for-each select=".//gmd:specification/*/gmd:date/*/gmd:date">
 				<Field name="specificationDate" string="{string(gco:Date[.!='']|gco:DateTime[.!=''])}" store="true" index="true"/>
 			</xsl:for-each>
 			
-			<xsl:for-each select="//gmd:specification/*/gmd:date/*/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue">
+			<xsl:for-each select=".//gmd:specification/*/gmd:date/*/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue">
 				<Field name="specificationDateType" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 		</xsl:for-each>
@@ -845,7 +845,7 @@
 
 		<xsl:for-each select="gmd:referenceSystemInfo/gmd:MD_ReferenceSystem">
 			<xsl:for-each select="gmd:referenceSystemIdentifier/gmd:RS_Identifier">
-				<xsl:variable name="crs" select="concat(string(gmd:codeSpace/gco:CharacterString),'::',string(gmd:code/gco:CharacterString))"/>
+				<xsl:variable name="crs" select="concat(string(gmd:codeSpace/gco:CharacterString),'::',util:getLabelTranslation('gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code', string(gmd:code/gco:CharacterString), string($isoLangId)))"/>
 
 				<xsl:if test="$crs != '::'">
 					<Field name="crs" string="{$crs}" store="true" index="true"/>
