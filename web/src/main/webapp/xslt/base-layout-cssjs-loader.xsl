@@ -33,6 +33,7 @@
   <xsl:template name="javascript-load">
 
     <script>var geonet = {provide:function(s){},require:function(s){}};</script>
+    <script src="{$uiResourcesPath}lib/analytics.js"></script>
     <xsl:choose>
       <xsl:when test="$isDebugMode">
 
