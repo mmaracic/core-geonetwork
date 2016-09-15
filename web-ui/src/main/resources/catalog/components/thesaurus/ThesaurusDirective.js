@@ -365,6 +365,19 @@
                  // an update of the record with an invalid
                  // state ie. keywords not loaded properly
                  scope.elementRef = '';
+                 
+                 scope.missingKeywords = [];
+                 scope.tempKeywords = [];
+                 for(var i in scope.selected){
+                     scope.tempKeywords.push(scope.selected[i].label);
+                 }
+                 
+                 for(var i in scope.initialKeywords){
+                     var index = scope.tempKeywords.indexOf(scope.initialKeywords[i]);                    
+                     if(index<0){
+                        scope.missingKeywords.push(scope.initialKeywords[i]);
+                    }
+                }
                }
              };
 
