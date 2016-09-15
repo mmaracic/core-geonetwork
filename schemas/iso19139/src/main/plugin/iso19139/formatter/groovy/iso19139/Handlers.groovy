@@ -322,6 +322,8 @@ public class Handlers {
                 date : handlers.processElements(el.'gmd:date'.'gmd:CI_Date'),
                 editionInfo: commonHandlers.func.textEl(el.'gmd:edition'.text(), el.'gmd:editionDate'.'gco:Date'.text()),
                 identifier : isofunc.isoTextEl(el.'gmd:identifier', el.'gmd:identifier'.'*'.'gmd:code'.text()),
+                codespace : isofunc.isoTextEl(el.'gmd:identifier'.'*'.'gmd:codeSpace', el.'gmd:identifier'.'*'.'gmd:codeSpace'.text()),
+                version : isofunc.isoTextEl(el.'gmd:identifier'.'*'.'gmd:version', el.'gmd:identifier'.'*'.'gmd:version'.text()),
                 presentationForm : isofunc.isoTextEl(el.'gmd:presentationForm', f.codelistValueLabel(el.'gmd:presentationForm'.'gmd:CI_PresentationFormCode')),
                 ISBN : handlers.processElements(el.'gmd:ISBN'),
                 ISSN : handlers.processElements(el.'gmd:ISSN'),
