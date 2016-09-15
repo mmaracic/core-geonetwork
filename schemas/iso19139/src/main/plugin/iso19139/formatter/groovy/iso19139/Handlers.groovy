@@ -457,6 +457,10 @@ public class Handlers {
 
             builder.append(handlers.fileResult('html/text-el.html', [label: f.translate(nazivLower), text: vrijednost]));
         }
-        return handlers.fileResult('html/2-level-entry.html', [label: f.translate('HAOP'), childData: builder.toString()])
+        if (els.size()==1 ){
+            return builder.toString();
+        } else {
+            return handlers.fileResult('html/2-level-entry.html', [label: f.translate('HAOP'), childData: builder.toString()])
+        }
     }
 }
