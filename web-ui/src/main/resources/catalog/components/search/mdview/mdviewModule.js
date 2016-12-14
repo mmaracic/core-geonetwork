@@ -77,7 +77,10 @@
       $scope.$watch('gnMdViewObj.from', function(v) {
         $scope.fromView = v ? v.substring(1) : v;
       });
-
+      
+      $scope.ckeckSpecificationTitleArray = function(){
+        return gnMdViewObj.current.record.specificationTitle instanceof Array  
+      };
 
     }]);
 

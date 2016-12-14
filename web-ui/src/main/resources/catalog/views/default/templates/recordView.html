@@ -322,7 +322,7 @@
                 <span data-ng-repeat="f in mdView.current.record.format" class="badge">{{f}}</span>
               </td>
             </tr>
-            <tr data-ng-if="mdView.current.record.specificationTitle">
+            <tr data-ng-if="mdView.current.record.specificationTitle && ckeckSpecificationTitleArray()">
               <th data-translate="">conformance</th>
               <td data-gn-field-tooltip="iso19139|gmd:DQ_ConformanceResult">
                 <ul>
@@ -330,6 +330,18 @@
                       <div><strong data-translate="">title</strong> <div>{{r}}</div></div>
                       <div><strong data-translate="">degree</strong> <div data-translate="">{{mdView.current.record.specificationDegree[$index]}}</div></div>
                     <div><strong data-translate="">date</strong> <div>{{mdView.current.record.specificationDate[$index]}}</div></div>
+                </li>
+                </ul>
+              </td>
+            </tr>            
+            <tr data-ng-if="mdView.current.record.specificationTitle && !ckeckSpecificationTitleArray()">
+              <th data-translate="">conformance</th>
+              <td data-gn-field-tooltip="iso19139|gmd:DQ_ConformanceResult">
+                <ul>
+                  <li>
+                      <div><strong data-translate="">title</strong> <div>{{mdView.current.record.specificationTitle}}</div></div>
+                      <div><strong data-translate="">degree</strong> <div data-translate="">{{mdView.current.record.specificationDegree}}</div></div>
+                    <div><strong data-translate="">date</strong> <div>{{mdView.current.record.specificationDate}}</div></div>
                 </li>
                 </ul>
               </td>

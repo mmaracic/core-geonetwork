@@ -721,15 +721,33 @@
        */
       getServiceProtocol: function(){
           var links = this.link;
-          for(var i=0; i<links.length; i++){
-              var link = links[i];
-              if (link.indexOf('WMS')>-1){
-                  return 'WMS';
-              }
-              else if (link.indexOf('WFS')>-1){
-                  return 'WFS';
-              }
-          }
+          if (typeof(links)!=='undefined'){
+            for(var i=0; i<links.length; i++){
+                var link = links[i];
+                if (link.indexOf('WMS')>-1){
+                    return 'WMS';
+                }
+                else if (link.indexOf('WFS')>-1){
+                    return 'WFS';
+                }
+            }
+        }
+        if (typeof(this.title)!=='undefined'){
+            if (this.title.indexOf('WMS')>-1){
+                return 'WMS';
+            }
+            else if (this.title.indexOf('WFS')>-1){
+                return 'WFS';
+            }            
+        }
+        if (typeof(this.defaultTitle)!=='undefined'){
+            if (this.defaultTitle.indexOf('WMS')>-1){
+                return 'WMS';
+            }
+            else if (this.defaultTitle.indexOf('WFS')>-1){
+                return 'WFS';
+            }            
+        }
       },
       
       /**

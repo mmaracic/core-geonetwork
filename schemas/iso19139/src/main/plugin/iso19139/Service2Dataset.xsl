@@ -37,6 +37,7 @@
 					</gmd:MD_MaintenanceInformation>
 				</gmd:resourceMaintenance>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords[gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'GEMET - Concepts, version 2.4']"/>
+				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords[count(gmd:MD_Keywords/gmd:thesaurusName)=0]"/>
 				<gmd:descriptiveKeywords>
 					<gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
 						<gmd:keyword>

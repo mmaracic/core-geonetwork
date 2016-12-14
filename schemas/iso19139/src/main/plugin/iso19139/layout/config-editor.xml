@@ -243,7 +243,171 @@
       <tab id="inspire" default="true" mode="flat">
           
         <!-- AZO section -->
+        
+        <!-- Generalni gumb za dodavanje ekstenzija-->
         <section name="HAOP">
+            <action type="add" name="ekstenzije"
+                    if="not(count(gmd:MD_Metadata/gmd:metadataExtensionInfo)>0)"
+                    in="/gmd:MD_Metadata"
+                    or="metadataExtensionInfo" forceLabel="true"
+            >
+                <template>
+                  <snippet>
+                        <gmd:metadataExtensionInfo>
+                                <gmd:MD_MetadataExtensionInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>JedinstveniOznacivacIzvora</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>Akronim</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>TematskoPodrucje</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>TematskoPodpodrucje</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>KorisniciPodataka</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>NazivIzvjestaja</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                        <gmd:extendedElementInformation>
+                                                <gmd:MD_ExtendedElementInformation>
+                                                        <gmd:name>
+                                                                <gco:CharacterString>TijeloZaDostavuPodatakaIzvjesca</gco:CharacterString>
+                                                        </gmd:name>
+                                                        <gmd:definition gco:nilReason="inapplicable"/>
+                                                        <gmd:obligation>
+                                                          <gmd:MD_ObligationCode>optional</gmd:MD_ObligationCode>
+                                                        </gmd:obligation>					 
+                                                        <gmd:dataType gco:nilReason="inapplicable"/>
+                                                        <gmd:maximumOccurrence>
+                                                           <gco:CharacterString>*</gco:CharacterString>
+                                                        </gmd:maximumOccurrence>
+                                                        <gmd:domainValue>
+                                                                <gco:CharacterString/>
+                                                        </gmd:domainValue>
+                                                        <gmd:parentEntity gco:nilReason="inapplicable"/>
+                                                        <gmd:rule gco:nilReason="inapplicable"/>
+                                                        <gmd:source gco:nilReason="inapplicable"/>
+                                                </gmd:MD_ExtendedElementInformation>
+                                        </gmd:extendedElementInformation>
+                                </gmd:MD_MetadataExtensionInformation>
+                        </gmd:metadataExtensionInfo>
+                  </snippet>
+                </template>
+            </action>
+            
             <field name="jedinstveniOznacivacIzvora"
                 templateModeOnly="true" 
                 xpath="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation[gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString='JedinstveniOznacivacIzvora']"
@@ -421,6 +585,7 @@
             <action type="add" name="korisniciPodataka"
                     in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
                     or="extendedElementInformation" forceLabel="true"
+                    if="count(gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation)>0"
             >
                 <template>
                   <snippet>
@@ -486,6 +651,7 @@
                 </template>                
             </field>
             <action type="add" name="nazivIzvjestaja"
+                    if="count(gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation)>0"
                     in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
                     or="extendedElementInformation" forceLabel="true"
             >
@@ -553,6 +719,7 @@
                 </template>                
             </field>
             <action type="add" name="tijeloZaDostavuPodatakaIzvjesca"
+                    if="count(gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation)>0"
                     in="/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation"
                     or="extendedElementInformation" forceLabel="true"
             >
@@ -965,11 +1132,63 @@
         
         <!-- Ključne riječi -->
         <section name="keywords">
-          <!-- INSPIRE SERVICE keyword-->
-          <field name="keywords"
+
+          <!-- SERVICE GENERAL KEYWORDS -->
+          <field name="genkeyword" templateModeOnly="true" required="true"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
-            gmd:descriptiveKeywords
-            [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'ISO - 19119 geographic services taxonomy'))]"
+            gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
+            [not(contains(../gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'ISO - 19119 geographic services taxonomy')) and
+            not(contains(../gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4'))]"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            del="."
+          >
+              <template>
+                  <values>
+                      <key label="keyword" xpath="gco:CharacterString" tooltip="gmd:MD_Keywords"/>
+                  </values>
+                <snippet>
+                    <gmd:keyword>
+                        <gco:CharacterString>{{keyword}}</gco:CharacterString>
+                    </gmd:keyword>
+                </snippet>
+            </template>
+          </field>
+            <action type="add" name="genkeyword" or="keyword" forceLabel="true"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:descriptiveKeywords/gmd:MD_Keywords
+            [not(contains(gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'ISO - 19119 geographic services taxonomy')) and
+            not(contains(gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4'))]">
+            <template>
+                <snippet>
+                    <gmd:keyword>
+                        <gco:CharacterString/>
+                    </gmd:keyword>
+                </snippet>
+            </template>
+            </action>
+
+            <!-- Adding whole general keyword structure -->
+            <action type="add" name="genkeywordcreate" or="descriptiveKeywords" forceLabel="true"
+            if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification">
+            <template>
+                <snippet>
+                    <gmd:descriptiveKeywords>
+                        <gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
+                            <gmd:keyword>
+                                    <gco:CharacterString/>
+                            </gmd:keyword>
+                        </gmd:MD_Keywords>
+                    </gmd:descriptiveKeywords>
+                </snippet>
+            </template>
+            </action>
+                                                
+            <!-- INSPIRE SERVICE keyword-->
+          <field name="keywords"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords
+            [contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4')]"
             if="count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0"
           />
 
@@ -982,11 +1201,61 @@
           />
           <!-- FIXME: MUST be provided in template and thesaurus available in the catalog, to be displayed properly -->
 
+          <!-- DATA GENERAL KEYWORDS -->
+          <field name="genkeyword" templateModeOnly="true" required="true"
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
+            [not(contains(../gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes')) and
+            not(contains(../gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4'))]"
+            if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            del="."
+          >
+              <template>
+                  <values>
+                      <key label="keyword" xpath="gco:CharacterString" tooltip="gmd:MD_Keywords"/>
+                  </values>
+                <snippet>
+                    <gmd:keyword>
+                        <gco:CharacterString>{{keyword}}</gco:CharacterString>
+                    </gmd:keyword>
+                </snippet>
+            </template>
+          </field>
+          <action type="add" name="genkeyword" or="keyword" forceLabel="true"
+            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords
+            [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes')) and
+            not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4'))]">
+            <template>
+                <snippet>
+                    <gmd:keyword>
+                        <gco:CharacterString/>
+                    </gmd:keyword>
+                </snippet>
+            </template>
+          </action>
+          
+          <!-- Adding whole general keyword structure -->
+          <action type="add" name="genkeywordcreate" or="descriptiveKeywords" forceLabel="true"
+            if="not(count(/gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+            <template>
+                <snippet>
+                    <gmd:descriptiveKeywords>
+                        <gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
+                            <gmd:keyword>
+                                    <gco:CharacterString/>
+                            </gmd:keyword>
+                        </gmd:MD_Keywords>
+                    </gmd:descriptiveKeywords>
+                </snippet>
+            </template>
+          </action>
+          
             <!-- INSPIRE DATA keyword-->
           <field name="keywords"
             xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/
             gmd:descriptiveKeywords
-                [not(contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE themes'))]"
+                [contains(gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString, 'GEMET - Concepts, version 2.4')]"
             if="not(count(gmd:MD_Metadata/gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue='service'])>0)"
           />
 
@@ -1569,7 +1838,7 @@
                 <key label="conformity_date"
                      xpath="gmd:DQ_ConformanceResult/
                           gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date"
-                     use="date">
+                     use="gn-date-picker">
                      <required>true</required>
                 </key>
                 <key label="explanation"

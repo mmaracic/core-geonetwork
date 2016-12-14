@@ -394,6 +394,13 @@
 					</gmd:thesaurusName>
 				</gmd:MD_Keywords>
 			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
+                                    <gmd:keyword>
+                                            <gco:CharacterString/>
+                                    </gmd:keyword>
+                                </gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
 			<gmd:resourceConstraints>
 				<gmd:MD_Constraints>
 					<gmd:useLimitation>

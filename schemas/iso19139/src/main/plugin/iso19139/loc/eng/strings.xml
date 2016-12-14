@@ -116,4 +116,7 @@
   <korisniciPodataka>Data user</korisniciPodataka>
   <nazivIzvjestaja>Report title</nazivIzvjestaja>
   <tijeloZaDostavuPodatakaIzvjesca>Organization to deliver report</tijeloZaDostavuPodatakaIzvjesca>
+  <ekstenzije>HAOP Extensions</ekstenzije>
+  <genkeyword>General keyword</genkeyword>
+  <genkeywordcreate>Enable general keywords</genkeywordcreate>
 </strings>
