@@ -107,8 +107,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import static com.google.common.io.Files.getNameWithoutExtension;
+import com.itextpdf.text.pdf.BaseFont;
 import static org.fao.geonet.services.metadata.format.FormatterConstants.SCHEMA_PLUGIN_FORMATTER_DIR;
 import static org.springframework.data.jpa.domain.Specifications.where;
+import org.xhtmlrenderer.pdf.ITextFontResolver;
 
 /**
  * Allows a user to display a metadata with a particular formatters
@@ -404,6 +406,13 @@ public class Format extends AbstractFormatService implements ApplicationListener
                     .getReplacedElementFactory()));
             renderer.getSharedContext().setDotsPerPixel(13);
             renderer.setDocumentFromString(htmlContent, siteUrl);
+            
+            ITextFontResolver resolver = renderer.getFontResolver();
+            resolver.addFont(
+                "C:\\Windows\\Fonts\\ARIALUNI.TTF",
+                BaseFont.IDENTITY_H,
+                BaseFont.EMBEDDED);
+        
             renderer.layout();
             renderer.createPDF(response.getOutputStream());
         } catch (final Exception e) {
@@ -411,7 +420,7 @@ public class Format extends AbstractFormatService implements ApplicationListener
             throw e;
         }
     }
-
+    
     @VisibleForTesting
     Pair<FormatterImpl, FormatterParams> loadMetadataAndCreateFormatterAndParams(ServiceContext context, Key key,final NativeWebRequest request) throws Exception {
         final Pair<Element, Metadata> elementMetadataPair = getMetadata(context, key.mdId, key.hideWithheld);

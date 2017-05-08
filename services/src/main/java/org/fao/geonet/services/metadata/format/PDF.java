@@ -23,6 +23,7 @@
 
 package org.fao.geonet.services.metadata.format;
 
+import com.itextpdf.text.pdf.BaseFont;
 import jeeves.interfaces.Service;
 import jeeves.server.ServiceConfig;
 import jeeves.server.context.ServiceContext;
@@ -37,6 +38,7 @@ import java.io.File;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.xhtmlrenderer.pdf.ITextFontResolver;
 
 /**
  * Allows a user to display a metadata in PDF with a particular formatters
@@ -63,8 +65,15 @@ public class PDF implements Service {
             String siteUrl = context.getBean(SettingManager.class).getSiteURL(context);
             renderer.getSharedContext().setReplacedElementFactory(new ImageReplacedElementFactory(siteUrl, renderer.getSharedContext().getReplacedElementFactory()));
 	        renderer.setDocumentFromString(htmlContent, siteUrl);
-	        renderer.layout();
-	        renderer.createPDF(os);
+                
+            ITextFontResolver resolver = renderer.getFontResolver();
+            resolver.addFont(
+                "C:\\Windows\\Fonts\\ARIALUNI.TTF",
+                BaseFont.IDENTITY_H,
+                BaseFont.EMBEDDED);
+                
+            renderer.layout();
+            renderer.createPDF(os);
         }
 
         return BinaryFile.encode(200, tempFile.toAbsolutePath().normalize(), true).getElement();
@@ -72,5 +81,5 @@ public class PDF implements Service {
 
 	@Override
 	public void init(Path appPath, ServiceConfig params) throws Exception {
-	}
+	}        
 }
