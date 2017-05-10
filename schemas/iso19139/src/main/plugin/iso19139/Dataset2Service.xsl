@@ -23,11 +23,16 @@
 		<xsl:copy-of select="gmd:metadataExtensionInfo"/>
 		<gmd:identificationInfo>
 			<srv:SV_ServiceIdentification>
-				<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation"/>
+				<gmd:citation>
+					<gmd:CI_Citation>
+						<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title"/>
+						<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"/>
+						<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date"/>
+					</gmd:CI_Citation>
+				</gmd:citation>				
 				<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract"/>
 				<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact"/>
 				<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'GEMET - Concepts, version 2.4']"/>
-				<xsl:copy-of select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[count(gmd:MD_Keywords/gmd:thesaurusName)=0]"/>
 				<gmd:descriptiveKeywords>
 					<gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
 						<gmd:keyword>
@@ -76,7 +81,7 @@
 		</gmd:identificationInfo>
 		<gmd:distributionInfo>
 			<gmd:MD_Distribution>
-                                <gmd:distributionFormat/>
+				<gmd:distributionFormat/>
 				<xsl:copy-of select="gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions"/>
 			</gmd:MD_Distribution>
 		</gmd:distributionInfo>

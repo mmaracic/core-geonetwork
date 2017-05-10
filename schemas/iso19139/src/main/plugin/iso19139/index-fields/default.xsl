@@ -351,8 +351,7 @@
                               $thesaurusIdentifier,
                               'geonetwork.thesaurus.')}"
                      string="{string(.)}"
-                     store="true" index="true"/>
-
+                     store="true" index="true"/>                    
             </xsl:for-each>
           </xsl:if>
         </xsl:for-each>
@@ -704,8 +703,13 @@
 				</xsl:if>
 			</xsl:if>
 			
-			<xsl:for-each select=".//gmd:pass/gco:Boolean">
-				<Field name="specificationDegree" string="{string(.)}" store="true" index="true"/>
+			<xsl:for-each select=".//gmd:pass">
+                            <xsl:if test="string(./gco:Boolean) != ''">
+				<Field name="specificationDegree" string="{string(./gco:Boolean)}" store="true" index="true"/>
+                            </xsl:if>
+                            <xsl:if test="string(./gco:Boolean) = ''">
+				<Field name="specificationDegree" string="unknown" store="true" index="true"/>
+                            </xsl:if>
 			</xsl:for-each>
 			
 			<xsl:for-each select=".//gmd:specification/*/gmd:title/gco:CharacterString">

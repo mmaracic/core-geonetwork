@@ -173,6 +173,22 @@
                 <!--<span class="badge" data-ng-repeat="k in mdView.current.record.keyword track by $index">{{k}}</span>-->
               </td>
             </tr>
+            <!-- GEMET - INSPIRE themes, version 1.0 keywords -->
+            <tr data-ng-if="mdView.current.record['thesaurus-external.theme.inspire-theme']">
+              <th data-translate="">INSPIREkeywords</th>
+              <td data-gn-field-tooltip="iso19139|gmd:keyword">
+
+                <ul data-ng-if="mdView.current.record.isAttributeType('thesaurus-external.theme.inspire-theme','object')">
+                  <li data-ng-repeat="k in mdView.current.record['thesaurus-external.theme.inspire-theme'] track by $index">
+                    {{k}}
+                  </li>
+                </ul>
+                <span data-ng-if="mdView.current.record.isAttributeType('thesaurus-external.theme.inspire-theme','string')">
+                    {{mdView.current.record['thesaurus-external.theme.inspire-theme']}}
+                </span>
+                <!--<span class="badge" data-ng-repeat="k in mdView.current.record.keyword track by $index">{{k}}</span>-->
+              </td>
+            </tr>
             <tr data-ng-if="mdView.current.record.datasetLang">
               <th data-translate="">language</th>
               <td data-gn-field-tooltip="iso19139|gmd:language|gmd:MD_DataIdentification">

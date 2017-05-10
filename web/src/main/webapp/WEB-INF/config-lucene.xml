@@ -117,6 +117,8 @@
       <field name="publicationDate" tagName="publicationDate"/>
       <field name="abstract" tagName="abstract" multilingualSortField="true"/>
       <field name="keyword" tagName="keyword"/>
+      <field name="thesaurusIdentifier" tagName="thesaurusIdentifier"/>
+      <field name="thesaurus-external.theme.inspire-theme" tagName="thesaurus-external.theme.inspire-theme"/>
       <field name="parentUuid" tagName="parentId"/>
       <field name="type" tagName="type"/>
       <field name="identifier" tagName="identifier"/>

@@ -1933,7 +1933,6 @@
                           <gco:CharacterString/>
                         </gmd:explanation>
                         <gmd:pass gco:nilReason="unknown">
-                          <gco:Boolean/>
                         </gmd:pass>
                       </gmd:DQ_ConformanceResult>
                     </gmd:result>

@@ -92,6 +92,7 @@
   "changeDate": "Modified",
   "date": "Date",
   "degree": "Conformity degree",
+  "unknown":"Unknown",
   "conformance": "Conformance",
   "links": "Links",
   "publish": "Publish",

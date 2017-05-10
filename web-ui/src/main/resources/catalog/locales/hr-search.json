@@ -92,6 +92,7 @@
   "degree": "Stupanj usklađenosti",
   "true": "Usklađen",
   "false": "Neusklađen",
+  "unknown":"Nepoznato",
   "conformance": "Usklađenost",
   "links": "Poveznice",
   "publish": "Objavi",

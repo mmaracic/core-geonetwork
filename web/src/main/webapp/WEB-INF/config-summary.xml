@@ -68,6 +68,7 @@
         <facet name="responsiblePartyIndividualName" indexKey="responsiblePartyIndividualName" label="responsiblePartyIndividualNames"/>
         <facet name="responsiblePartyOrganization" indexKey="responsiblePartyOrganization" label="responsiblePartyOrganizations"/>
         <facet name="thesaurusIdentifier" indexKey="thesaurusIdentifier" label="thesaurusIdentifiers"/>
+        <facet name="thesaurus-external.theme.inspire-theme" indexKey="thesaurus-external.theme.inspire-theme" label="thesaurus-external.theme.inspire-themes"/>
         <facet name="acessConstraint" indexKey="acessConstraint" label="acessConstraints"/>
         <facet name="otherConstraint" indexKey="otherConstraint" label="otherConstraints"/>
         <facet name="useLimitation" indexKey="useLimitation" label="useLimitations"/>

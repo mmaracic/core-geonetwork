@@ -23,7 +23,26 @@
 		<xsl:copy-of select="gmd:metadataExtensionInfo"/>
 		<gmd:identificationInfo>
 			<gmd:MD_DataIdentification>
-				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation"/>
+				<gmd:citation>
+					<gmd:CI_Citation>
+						<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:title"/>
+						<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle"/>
+						<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:date"/>
+						<gmd:identifier>
+							<gmd:RS_Identifier>
+								<gmd:code>
+									<gco:CharacterString>0008</gco:CharacterString>
+								</gmd:code>
+								<gmd:codeSpace>
+									<gco:CharacterString>hr:nipp:pp</gco:CharacterString>
+								</gmd:codeSpace>
+								<gmd:version>
+									<gco:CharacterString>1.0</gco:CharacterString>
+								</gmd:version>
+							</gmd:RS_Identifier>
+						</gmd:identifier>
+					</gmd:CI_Citation>
+				</gmd:citation>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract"/>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact"/>
 				<gmd:resourceMaintenance>
@@ -37,7 +56,6 @@
 					</gmd:MD_MaintenanceInformation>
 				</gmd:resourceMaintenance>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords[gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString = 'GEMET - Concepts, version 2.4']"/>
-				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords[count(gmd:MD_Keywords/gmd:thesaurusName)=0]"/>
 				<gmd:descriptiveKeywords>
 					<gmd:MD_Keywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
 						<gmd:keyword>
@@ -73,24 +91,6 @@
 					</gmd:MD_Keywords>
 				</gmd:descriptiveKeywords>
 				<xsl:copy-of select="gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints"/>
-                                <gmd:spatialResolution>
-                                  <gmd:MD_Resolution>
-                                        <gmd:equivalentScale>
-                                          <gmd:MD_RepresentativeFraction>
-                                                <gmd:denominator>
-                                                  <gco:Integer/>
-                                                </gmd:denominator>
-                                          </gmd:MD_RepresentativeFraction>
-                                        </gmd:equivalentScale>
-                                  </gmd:MD_Resolution>
-                                </gmd:spatialResolution>
-                                <gmd:spatialResolution>
-                                  <gmd:MD_Resolution>
-                                        <gmd:distance>
-                                          <gco:Distance uom="m"/>
-                                        </gmd:distance>
-                                  </gmd:MD_Resolution>
-                                </gmd:spatialResolution>
 				<gmd:language>
 					<gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="hrv"/>
 				</gmd:language>

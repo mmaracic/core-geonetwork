@@ -866,6 +866,10 @@
           });
         }
         return res;
+      },
+      isAttributeType: function(attribute, type){
+          var isType = typeof(this[attribute]) === type;
+          return isType;
       }
     };
     return Metadata;

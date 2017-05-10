@@ -25,7 +25,7 @@
            templateUrl: '../../catalog/components/edit/checkboxwithnilreason/' +
            'partials/checkboxwithnilreason.html',
            link: function(scope, element, attrs) {
-             scope.status = scope.nilreason || scope.value;
+             scope.status = scope.nilreason || scope.value || 'unknown';
              scope.radioLabels = attrs.labels ? angular.fromJson(attrs.labels) :
              {'true': 'true', 'false': 'false', 'unknown': 'unknown'};
 
