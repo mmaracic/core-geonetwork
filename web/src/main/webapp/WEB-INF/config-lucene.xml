@@ -162,6 +162,7 @@
       <field name="specificationTitle" tagName="specificationTitle"/>
       <field name="specificationDegree" tagName="specificationDegree"/>
       <field name="specificationDate" tagName="specificationDate"/>
+      <field name="inspirerelated" tagName="inspireConformance"/>
        
       <!-- AZO fields -->
         <field name="classification" tagName="classification"/>

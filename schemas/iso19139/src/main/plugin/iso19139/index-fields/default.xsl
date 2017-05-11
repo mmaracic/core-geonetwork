@@ -677,32 +677,6 @@
 		</xsl:for-each>
 		
 		<xsl:for-each select="gmd:dataQualityInfo/*/gmd:report/*/gmd:result">
-			<xsl:if test="$inspire='true'">
-				<!-- 
-				INSPIRE related dataset could contains a conformity section with:
-				* COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
-				* INSPIRE Data Specification on <Theme Name> - <version>
-				* INSPIRE Specification on <Theme Name> - <version> for CRS and GRID
-				
-				Index those types of citation title to found dataset related to INSPIRE (which may be better than keyword
-				which are often used for other types of datasets).
-				
-				"1089/2010" is maybe too fuzzy but could work for translated citation like "Règlement n°1089/2010, Annexe II-6" TODO improved
-				-->
-				<xsl:if test="(
-					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010') or
-					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification') or
-					contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification'))">
-					<Field name="inspirerelated" string="on" store="true" index="true"/>
-				</xsl:if>
-				<xsl:if test="(
-					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010')) and
-					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification')) and
-					not(contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification')))">
-					<Field name="inspirerelated" string="off" store="true" index="true"/>
-				</xsl:if>
-			</xsl:if>
-			
 			<xsl:for-each select=".//gmd:pass">
                             <xsl:if test="string(./gco:Boolean) != ''">
 				<Field name="specificationDegree" string="{string(./gco:Boolean)}" store="true" index="true"/>
@@ -724,9 +698,31 @@
 				<Field name="specificationDateType" string="{string(.)}" store="true" index="true"/>
 			</xsl:for-each>
 		</xsl:for-each>
-                <xsl:if test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result) = 0">
-                        <Field name="inspirerelated" string="off" store="true" index="true"/>
-                </xsl:if>
+                
+                <!-- 
+                INSPIRE related dataset could contains a conformity section with:
+                * COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
+                * INSPIRE Data Specification on <Theme Name> - <version>
+                * INSPIRE Specification on <Theme Name> - <version> for CRS and GRID
+
+                Index those types of citation title to found dataset related to INSPIRE (which may be better than keyword
+                which are often used for other types of datasets).
+
+                "1089/2010" is maybe too fuzzy but could work for translated citation like "Règlement n°1089/2010, Annexe II-6" TODO improved
+                -->
+                <xsl:choose>
+                        <xsl:when test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result[
+                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010') or
+                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification') or
+                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification')                        
+                            ]) > 0">
+                                <Field name="inspirerelated" string="on" store="true" index="true"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                                <Field name="inspirerelated" string="off" store="true" index="true"/>
+                        </xsl:otherwise>
+                </xsl:choose>
+                
 		<xsl:for-each select="gmd:dataQualityInfo/*/gmd:lineage/*/gmd:statement/gco:CharacterString">
 			<Field name="lineage" string="{string(.)}" store="true" index="true"/>
 		</xsl:for-each>
