@@ -712,10 +712,12 @@
                 -->
                 <xsl:choose>
                         <xsl:when test="count(gmd:dataQualityInfo/*/gmd:report/*/gmd:result[
-                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010') or
+                                (contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, '1089/2010') or
                                 contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Data Specification') or
-                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification')                        
-                            ]) > 0">
+                                contains(gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString, 'INSPIRE Specification'))
+                                and (gmd:DQ_ConformanceResult/gmd:pass/gco:Boolean/text() = 'true')
+                            ]) > 0
+">
                                 <Field name="inspirerelated" string="on" store="true" index="true"/>
                         </xsl:when>
                         <xsl:otherwise>
