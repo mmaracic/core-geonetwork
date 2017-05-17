@@ -199,6 +199,8 @@ public class DataManager implements ApplicationEventPublisherAware {
 
     private String baseURL;
     private ApplicationEventPublisher applicationEventPublisher;
+    
+    private String XML_FIXER = "XmlFixer.xsl";
 
     //--------------------------------------------------------------------------
     //---
@@ -1654,6 +1656,13 @@ public class DataManager implements ApplicationEventPublisherAware {
             metadataXml = updateFixedInfo(schema, Optional.<Integer>absent(), newMetadata.getUuid(), metadataXml, parentUuid, updateDatestamp, context);
         }
 
+        //Make corrections
+        Map<String, Object> params = new HashMap<>();
+        java.nio.file.Path trStyleSheet = getSchemaDir("iso19139").resolve(XML_FIXER);                
+        Element trMetadataXml = Xml.transform(metadataXml, trStyleSheet, params);
+        metadataXml = trMetadataXml;
+       
+        
         //--- store metadata
         final Metadata savedMetadata = getXmlSerializer().insert(newMetadata, metadataXml, context);
 
@@ -1869,6 +1878,12 @@ public class DataManager implements ApplicationEventPublisherAware {
                 && metadata.getDataInfo().getType() != MetadataType.SUB_TEMPLATE) {
             uuid = extractUUID(schema, metadataXml);
         }
+        
+        //Make corrections
+        Map<String, Object> params = new HashMap<>();
+        java.nio.file.Path trStyleSheet = getSchemaDir("iso19139").resolve(XML_FIXER);                
+        Element trMetadataXml = Xml.transform(metadataXml, trStyleSheet, params);
+        metadataXml = trMetadataXml;
 
         //--- write metadata to dbms
         getXmlSerializer().update(metadataId, metadataXml, changeDate, updateDateStamp, uuid, context);
